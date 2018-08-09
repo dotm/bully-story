@@ -73,6 +73,27 @@
             </objects>
             <point key="canvasLocation" x="584.79999999999995" y="36.945812807881772"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="h8v-Kg-2kZ">
+            <objects>
+                <viewController id="dbC-Ig-msh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjs-WV-KbW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qcF-hm-2hZ">
+                                <rect key="frame" x="128" y="250" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BhM-Oy-jqR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2Z-2T-K98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="784"/>
+        </scene>
         <!--Start View Controller-->
         <scene sceneID="J3y-ST-L20">
             <objects>
@@ -93,6 +114,14 @@
                                 <state key="normal" title="New Game"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="1GX-w9-ATg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
+                                <rect key="frame" x="159" y="461" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="dbC-Ig-msh" kind="show" id="Zh4-po-NVo"/>
                                 </connections>
                             </button>
                         </subviews>
