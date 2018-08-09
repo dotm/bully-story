@@ -9,16 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //MARK: Lifecycle Hooks
+    //MARK: Outlets
+    @IBOutlet weak var dialogCharacterName: UILabel!
+    @IBOutlet weak var dialogText: UITextView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
+    //MARK: Lifecycle hooks
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let startEvent = events.goToStartEvent()
+        executeEvent(startEvent)
     }
 
     //MARK: Actions
     @IBAction func next(_ sender: UIButton) {
-        print(11)
+        let nextEvent: Event? = events.goToNextEvent()
+        executeEvent(nextEvent)
     }
     
+    //MARK: Private methods (helpers)
+    private func executeEvent(_ event: Event?){
+        guard event != nil else {
+            return
+        }
+        for action in event! {
+            executeAction(action)
+        }
+    }
+    private func executeAction(_ action: StoryAction){
+        switch action {
+        case let .setDialogCharacterName(name):
+            dialogCharacterName.text = name
+        case let .setDialogText(text):
+            dialogText.text = text
+        case let .setBackgroundImage(imageName):
+            changeBackgroundImage(imageName)
+        }
+    }
+    private func changeBackgroundImage(_ newImageName: String){
+        UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {
+            self.backgroundImage.image = UIImage(named: newImageName)
+        }, completion: nil)
+    }
 }
 

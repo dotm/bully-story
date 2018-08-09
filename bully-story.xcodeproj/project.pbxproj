@@ -15,6 +15,7 @@
 		37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A91543211C09310076AFFB /* LaunchScreen.storyboard */; };
 		37A91550211C09310076AFFB /* bully_storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9154F211C09310076AFFB /* bully_storyTests.swift */; };
 		37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9155A211C0A3F0076AFFB /* StartViewController.swift */; };
+		37AF08C1211C58E800E96284 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF08C0211C58E800E96284 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		37A9154F211C09310076AFFB /* bully_storyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bully_storyTests.swift; sourceTree = "<group>"; };
 		37A91551211C09310076AFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A9155A211C0A3F0076AFFB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		37AF08C0211C58E800E96284 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				37A91537211C09300076AFFB /* AppDelegate.swift */,
 				37A91539211C09300076AFFB /* ViewController.swift */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
+				37AF08C0211C58E800E96284 /* Events.swift */,
 				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
 				37A91541211C09310076AFFB /* Assets.xcassets */,
 				37A91543211C09310076AFFB /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 				37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */,
 				37A91538211C09300076AFFB /* AppDelegate.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
+				37AF08C1211C58E800E96284 /* Events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

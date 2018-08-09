@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-Wm-hun">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="giY-C8-Oh3">
                                 <rect key="frame" x="16" y="576" width="343" height="200"/>
                                 <subviews>
@@ -46,7 +50,7 @@
                                 <rect key="frame" x="16" y="544" width="225" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axL-Zh-gA6">
-                                        <rect key="frame" x="8" y="6" width="209" height="21"/>
+                                        <rect key="frame" x="7" y="6" width="209" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -76,6 +80,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="vcd-Wm-hun" id="ioB-8a-oVV"/>
+                        <outlet property="dialogCharacterName" destination="axL-Zh-gA6" id="jJi-zE-E9z"/>
+                        <outlet property="dialogText" destination="jwf-sS-l9J" id="VNC-tB-95j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +159,7 @@
     </scenes>
     <resources>
         <image name="StartMenuImage" width="16" height="16"/>
-        <image name="nextButton" width="16" height="16"/>
+        <image name="nextButton" width="1600" height="1600"/>
+        <image name="placeholderImage" width="960" height="500"/>
     </resources>
 </document>
