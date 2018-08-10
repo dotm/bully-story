@@ -29,6 +29,7 @@ class Events {
     init(events: [Event]) {
         self.events = events
     }
+    
     //MARK: Public methods
     func goToStartEvent() -> Event? {
         return goToEvent(index: 0)
