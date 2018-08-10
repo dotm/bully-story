@@ -8,9 +8,27 @@
 
 import Foundation
 
-let events = Events()
+let event_day1: [Event] = [
+    [
+        .setDialogCharacterName(name: "Jean"),
+        .setDialogText(text: "Hello there."),
+        .setBackgroundImage(imageName: "backgroundImage"),
+    ],
+]
+let event_day2: [Event] = [
+    [
+        .setDialogCharacterName(name: "John"),
+        .setDialogText(text: "Hello Jean."),
+        .setBackgroundImage(imageName: "backgroundImage2"),
+    ],
+]
+let allEvents = event_day1 + event_day2
+let events = Events(events: allEvents)
 
 class Events {
+    init(events: [Event]) {
+        self.events = events
+    }
     //MARK: Public methods
     func goToStartEvent() -> Event? {
         return goToEvent(index: 0)
@@ -25,18 +43,7 @@ class Events {
     
     //MARK: Private properties
     private var eventIndex = 0
-    private let events: [Event] = [
-        [
-            .setDialogCharacterName(name: "Jean"),
-            .setDialogText(text: "Hello there."),
-            .setBackgroundImage(imageName: "backgroundImage"),
-        ],
-        [
-            .setDialogCharacterName(name: "John"),
-            .setDialogText(text: "Hello Jean."),
-            .setBackgroundImage(imageName: "backgroundImage2"),
-        ],
-    ]
+    private var events: [Event] = []
 }
 
 //MARK: Extra details

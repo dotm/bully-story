@@ -23,10 +23,6 @@ class ViewController: UIViewController {
     }
 
     //MARK: Actions
-//    @IBAction func next(_ sender: UIButton) {
-//        let nextEvent: Event? = events.goToNextEvent()
-//        executeEvent(nextEvent)
-//    }
     
     @IBAction func next(_ sender: UITapGestureRecognizer) {
         let nextEvent: Event? = events.goToNextEvent()
