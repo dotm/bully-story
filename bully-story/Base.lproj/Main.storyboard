@@ -60,16 +60,9 @@
                                 <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="tintColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AY8-G1-d7T">
-                                <rect key="frame" x="240" y="544" width="119" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="nextButton"/>
-                                <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8kI-b4-8cR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iqT-Qv-3dG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6DC-tc-dGy"/>
                             <constraint firstItem="iqT-Qv-3dG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="500" id="I9p-Ni-l6J"/>
@@ -79,6 +72,9 @@
                             <constraint firstItem="iqT-Qv-3dG" firstAttribute="leading" secondItem="giY-C8-Oh3" secondAttribute="leading" id="raQ-nv-TpF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GaW-N8-n7b" appends="YES" id="Sis-Gf-UnF"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="vcd-Wm-hun" id="ioB-8a-oVV"/>
@@ -87,6 +83,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GaW-N8-n7b">
+                    <connections>
+                        <action selector="next:" destination="BYZ-38-t0r" id="DDn-iY-BY7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="584.79999999999995" y="36.945812807881772"/>
         </scene>
@@ -159,7 +160,6 @@
     </scenes>
     <resources>
         <image name="StartMenuImage" width="16" height="16"/>
-        <image name="nextButton" width="1600" height="1600"/>
         <image name="placeholderImage" width="960" height="500"/>
     </resources>
 </document>
