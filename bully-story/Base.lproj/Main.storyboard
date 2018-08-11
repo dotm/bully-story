@@ -39,10 +39,44 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Kbg-ng-rP3"/>
                     </view>
+                    <connections>
+                        <segue destination="akx-Jy-jba" kind="show" identifier="choice1" id="8xD-dc-lBO"/>
+                        <segue destination="eL9-hq-SKm" kind="show" identifier="choice2" id="vsF-Kl-Tbp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AU-Ri-DfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1359" y="37"/>
+        </scene>
+        <!--Choice2 View Controller-->
+        <scene sceneID="g5G-cP-Syg">
+            <objects>
+                <viewController id="eL9-hq-SKm" customClass="Choice2ViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0G-F0-08q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yz2-gz-pSI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apm-9b-XcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2278" y="468"/>
+        </scene>
+        <!--Choice1 View Controller-->
+        <scene sceneID="RdK-EJ-Hqc">
+            <objects>
+                <viewController id="akx-Jy-jba" customClass="Choice1ViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qAp-NI-Q7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AfZ-QQ-cyn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22v-xc-Nds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279" y="-268"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -63,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2Z-2T-K98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="784"/>
+            <point key="canvasLocation" x="-179" y="1277"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="J3y-ST-L20">
@@ -108,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRB-CU-9cs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-177" y="37"/>
+            <point key="canvasLocation" x="-178" y="37"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB67211EA82100835FC3 /* Choice1ViewController.swift */; };
+		3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */; };
 		37A91538211C09300076AFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91537211C09300076AFFB /* AppDelegate.swift */; };
 		37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91539211C09300076AFFB /* Scene1ViewController.swift */; };
 		37A9153D211C09300076AFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3742DB67211EA82100835FC3 /* Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
+		3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice2ViewController.swift; sourceTree = "<group>"; };
 		37A91534211C09300076AFFB /* bully-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bully-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A91537211C09300076AFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A91539211C09300076AFFB /* Scene1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
+				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
+				3742DB67211EA82100835FC3 /* Choice1ViewController.swift */,
 				37AF08C0211C58E800E96284 /* Events.swift */,
 				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
 				37A91541211C09310076AFFB /* Assets.xcassets */,
@@ -213,9 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */,
+				3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */,
 				37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */,
 				37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */,
 				37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */,
+				3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */,
 				37A91538211C09300076AFFB /* AppDelegate.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
 				37AF08C1211C58E800E96284 /* Events.swift in Sources */,
