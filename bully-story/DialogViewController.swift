@@ -19,6 +19,7 @@ class DialogViewController: UIViewController {
     var characterNameFontStyle: UIFont {return UIFont.systemFont(ofSize: 20)}
     
     //MARK: Outlets
+    weak var dialogContainer: UIView!
     weak var dialogCharacterName: UITextView!
     weak var dialogText: UITextView!
     weak var backgroundImage: UIImageView!
@@ -27,8 +28,9 @@ class DialogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupDialogText()
-        setupCharacterName()
+        setupDialogContainer()
+        setupDialogText(parent: dialogContainer)
+        setupCharacterName(parent: dialogContainer)
         setupBackgroundImage()
         setupTapGestureRecognizer()
     }
@@ -104,12 +106,48 @@ class DialogViewController: UIViewController {
     }
     
     //MARK: Layout setup
-    private func setupDialogText() {
-        // Do any additional setup after loading the view, typically from a nib.
-        let dialogText = UITextView()
-        view.addSubview(dialogText)
+    private func setupDialogContainer(){
+        let dialogContainer = UIView()
+        view.addSubview(dialogContainer)
         
-        dialogText.layer.zPosition = 1
+        dialogContainer.backgroundColor = UIColor.red
+        dialogContainer.layer.zPosition = 1
+        
+        dialogContainer.translatesAutoresizingMaskIntoConstraints = false
+        dialogContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        dialogContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
+        dialogContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35).isActive = true
+        dialogContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+        
+        self.dialogContainer = dialogContainer
+    }
+    let dialogContainerPadding = CGFloat(10)
+    let dialogContainer_separatorBetween_characterName_andDialogText = CGFloat(50)
+    private func setupCharacterName(parent: UIView) {
+        let dialogCharacterName = UITextView()
+        parent.addSubview(dialogCharacterName)
+        
+        dialogCharacterName.layer.zPosition = 2
+        dialogCharacterName.isUserInteractionEnabled = false
+        dialogCharacterName.isScrollEnabled = false
+        dialogCharacterName.text = "Firstname Lastname"
+        dialogCharacterName.font = characterNameFontStyle
+        dialogCharacterName.backgroundColor = characterNameBackgroundColor
+        dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
+        dialogCharacterName.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogCharacterName.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainerPadding).isActive = true
+        dialogCharacterName.bottomAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainer_separatorBetween_characterName_andDialogText).isActive = true
+        dialogCharacterName.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 0.6).isActive = true
+        
+        self.dialogCharacterName = dialogCharacterName
+    }
+    private func setupDialogText(parent: UIView) {
+        let dialogText = UITextView()
+        parent.addSubview(dialogText)
+        
+        dialogText.layer.zPosition = 2
         dialogText.isUserInteractionEnabled = false
         dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.setContentOffset(CGPoint.zero, animated: false)
@@ -122,32 +160,12 @@ class DialogViewController: UIViewController {
         dialogText.font = dialogTextFontStyle
         
         dialogText.translatesAutoresizingMaskIntoConstraints = false
-        dialogText.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        dialogText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
-        dialogText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        dialogText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        dialogText.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.7).isActive = true
+        dialogText.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainer_separatorBetween_characterName_andDialogText).isActive = true
+        dialogText.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -dialogContainerPadding).isActive = true
         
         self.dialogText = dialogText
-    }
-    private func setupCharacterName() {
-        let dialogCharacterName = UITextView()
-        view.addSubview(dialogCharacterName)
-        
-        dialogCharacterName.layer.zPosition = 1
-        dialogCharacterName.isUserInteractionEnabled = false
-        dialogCharacterName.isScrollEnabled = false
-        dialogCharacterName.text = "Firstname Lastname"
-        dialogCharacterName.font = characterNameFontStyle
-        dialogCharacterName.backgroundColor = characterNameBackgroundColor
-        dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        
-        dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
-        dialogCharacterName.bottomAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.7).isActive = true
-        dialogCharacterName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        dialogCharacterName.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
-        
-        self.dialogCharacterName = dialogCharacterName
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()
