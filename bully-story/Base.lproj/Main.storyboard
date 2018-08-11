@@ -21,83 +21,10 @@
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="srK-O3-pWI" kind="show" identifier="goToScene2" id="NBG-lv-kOp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="584.79999999999995" y="36.945812807881772"/>
-        </scene>
-        <!--Scene2 View Controller-->
-        <scene sceneID="aJ3-vt-CCf">
-            <objects>
-                <viewController id="srK-O3-pWI" customClass="Scene2ViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z1F-Mc-eME">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Kbg-ng-rP3"/>
-                    </view>
-                    <connections>
-                        <segue destination="akx-Jy-jba" kind="show" identifier="choice1" id="8xD-dc-lBO"/>
-                        <segue destination="eL9-hq-SKm" kind="show" identifier="choice2" id="vsF-Kl-Tbp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5AU-Ri-DfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1359" y="37"/>
-        </scene>
-        <!--Choice2 View Controller-->
-        <scene sceneID="g5G-cP-Syg">
-            <objects>
-                <viewController id="eL9-hq-SKm" customClass="Choice2ViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="T0G-F0-08q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yz2-gz-pSI"/>
-                    </view>
-                    <connections>
-                        <segue destination="SyV-Ac-CUS" kind="show" identifier="toEnding" id="FUx-XI-BH7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="apm-9b-XcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2148" y="481"/>
-        </scene>
-        <!--Choice1 View Controller-->
-        <scene sceneID="RdK-EJ-Hqc">
-            <objects>
-                <viewController id="akx-Jy-jba" customClass="Choice1ViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qAp-NI-Q7Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="AfZ-QQ-cyn"/>
-                    </view>
-                    <connections>
-                        <segue destination="SyV-Ac-CUS" kind="show" identifier="toEnding" id="B5s-ff-Tn2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="22v-xc-Nds" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2148" y="-255"/>
-        </scene>
-        <!--Ending View Controller-->
-        <scene sceneID="Nn4-NU-nf5">
-            <objects>
-                <viewController id="SyV-Ac-CUS" customClass="EndingViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FnE-1q-jJ6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="zZ4-9a-JZH"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NiL-g0-Oms" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2940" y="50"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -169,7 +96,4 @@
     <resources>
         <image name="StartMenuImage" width="16" height="16"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="FUx-XI-BH7"/>
-    </inferredMetricsTieBreakers>
 </document>

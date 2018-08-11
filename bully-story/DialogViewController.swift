@@ -58,8 +58,8 @@ class DialogViewController: UIViewController {
             changeBackgroundImage(imageName)
         case let .presentChoices(choices):
             presentChoices(choices)
-        case let .goToNextScene(segueIdentifier):
-            goToNextScene(segueIdentifier)
+        case let .goToNextScene(viewController):
+            goToNextScene(viewController)
         case let .displayDialog(show):
             displayDialog(show)
         }
@@ -73,8 +73,8 @@ class DialogViewController: UIViewController {
             dialogCharacterName.alpha = 0
         }
     }
-    func goToNextScene(_ segueIdentifier: String){
-        performSegue(withIdentifier: segueIdentifier, sender: self)
+    func goToNextScene(_ viewController: UIViewController){
+        self.present(viewController, animated: true, completion: nil)
     }
     private func changeBackgroundImage(_ newImageName: String){
         UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {

@@ -19,7 +19,7 @@ class Choice1ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "backgroundImage2"),
                 .setDialogText(text: "I'm fine. Thanks.")
             ],
-            [.goToNextScene(segueIdentifier: "toEnding")],
+            [.goToNextScene(viewController: EndingViewController())],
         ])
         
         let startEvent = events.goToStartEvent()

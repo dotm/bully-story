@@ -24,7 +24,7 @@ class Scene1ViewController: DialogViewController {
                 .setDialogText(text: "Hello Jean."),
                 .setBackgroundImage(imageName: "backgroundImage2"),
             ],
-                [.goToNextScene(segueIdentifier: "goToScene2")],
+            [.goToNextScene(viewController: Scene2ViewController())],
             ]
         )
         let startEvent = events.goToStartEvent()

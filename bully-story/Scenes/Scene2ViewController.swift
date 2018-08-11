@@ -26,11 +26,11 @@ class Scene2ViewController: DialogViewController {
                     options: [
                         (
                             title: "I'm fine. Thanks.",
-                            handler: { _ in self.goToNextScene("choice1") }
+                            handler: { _ in self.goToNextScene(Choice1ViewController()) }
                         ),
                         (
                             title: "Fine",
-                            handler: { _ in self.goToNextScene("choice2") }
+                            handler: { _ in self.goToNextScene(Choice2ViewController()) }
                         ),
                     ]
                 ))

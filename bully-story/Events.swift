@@ -107,7 +107,7 @@ enum StoryAction {
     case setDialogText(text: String)
     case setBackgroundImage(imageName: String)
     case presentChoices(choices: Choices)
-    case goToNextScene(segueIdentifier: String)
+    case goToNextScene(viewController: UIViewController)
     case displayDialog(Bool)
 }
 
