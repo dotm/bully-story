@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     }
 
     //MARK: Actions
-    
-    @IBAction func next(_ sender: UITapGestureRecognizer) {
+    @IBAction func next(_ sender: UITapGestureRecognizer? = nil) {
         let nextEvent: Event? = events.goToNextEvent()
         executeEvent(nextEvent)
     }
@@ -46,12 +45,35 @@ class ViewController: UIViewController {
             dialogText.text = text
         case let .setBackgroundImage(imageName):
             changeBackgroundImage(imageName)
+        case let .presentChoices(choices):
+            presentChoices(choices)
         }
     }
     private func changeBackgroundImage(_ newImageName: String){
         UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {
             self.backgroundImage.image = UIImage(named: newImageName)
         }, completion: nil)
+    }
+    private func presentChoices(_ choices: Choices){
+        let alert = UIAlertController(
+            title: choices.title,
+            message: choices.message,
+            preferredStyle: .actionSheet
+        )
+        
+        for option in choices.options {
+            alert.addAction(
+                UIAlertAction(
+                    title: option.title,
+                    style: .default,
+                    handler: option.handler
+                )
+            )
+        }
+        
+        present(alert, animated: true) {
+            self.next()
+        }
     }
 }
 
