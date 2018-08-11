@@ -108,6 +108,7 @@ enum StoryAction {
     case setBackgroundImage(imageName: String)
     case presentChoices(choices: Choices)
     case goToNextScene(segueIdentifier: String)
+    case displayDialog(Bool)
 }
 
 typealias Event = [StoryAction]

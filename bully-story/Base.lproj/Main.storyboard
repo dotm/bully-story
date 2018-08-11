@@ -58,10 +58,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yz2-gz-pSI"/>
                     </view>
+                    <connections>
+                        <segue destination="SyV-Ac-CUS" kind="show" identifier="toEnding" id="FUx-XI-BH7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apm-9b-XcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2278" y="468"/>
+            <point key="canvasLocation" x="2148" y="481"/>
         </scene>
         <!--Choice1 View Controller-->
         <scene sceneID="RdK-EJ-Hqc">
@@ -73,10 +76,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AfZ-QQ-cyn"/>
                     </view>
+                    <connections>
+                        <segue destination="SyV-Ac-CUS" kind="show" identifier="toEnding" id="B5s-ff-Tn2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22v-xc-Nds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279" y="-268"/>
+            <point key="canvasLocation" x="2148" y="-255"/>
+        </scene>
+        <!--Ending View Controller-->
+        <scene sceneID="Nn4-NU-nf5">
+            <objects>
+                <viewController id="SyV-Ac-CUS" customClass="EndingViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FnE-1q-jJ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zZ4-9a-JZH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiL-g0-Oms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2940" y="50"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -148,4 +169,7 @@
     <resources>
         <image name="StartMenuImage" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FUx-XI-BH7"/>
+    </inferredMetricsTieBreakers>
 </document>

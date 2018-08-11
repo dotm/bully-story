@@ -21,15 +21,15 @@ class Scene2ViewController: DialogViewController {
             ],
             [
                 .presentChoices(choices: (
-                    title: "Choices",
-                    message: "What will you choose?",
+                    title: "How are you?",
+                    message: "How will you reply?",
                     options: [
                         (
-                            title: "Option 1",
+                            title: "I'm fine. Thanks.",
                             handler: { _ in self.goToNextScene("choice1") }
                         ),
                         (
-                            title: "Option 2",
+                            title: "Fine",
                             handler: { _ in self.goToNextScene("choice2") }
                         ),
                     ]

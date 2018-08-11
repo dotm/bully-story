@@ -60,6 +60,17 @@ class DialogViewController: UIViewController {
             presentChoices(choices)
         case let .goToNextScene(segueIdentifier):
             goToNextScene(segueIdentifier)
+        case let .displayDialog(show):
+            displayDialog(show)
+        }
+    }
+    func displayDialog(_ show: Bool){
+        if show {
+            dialogText.alpha = 1
+            dialogCharacterName.alpha = 1
+        } else {
+            dialogText.alpha = 0
+            dialogCharacterName.alpha = 0
         }
     }
     func goToNextScene(_ segueIdentifier: String){
@@ -99,8 +110,7 @@ class DialogViewController: UIViewController {
         view.addSubview(dialogText)
         
         dialogText.layer.zPosition = 1
-        dialogText.isEditable = false
-        dialogText.isScrollEnabled = false
+        dialogText.isUserInteractionEnabled = false
         dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.setContentOffset(CGPoint.zero, animated: false)
         dialogText.text = """
@@ -125,11 +135,11 @@ class DialogViewController: UIViewController {
         view.addSubview(dialogCharacterName)
         
         dialogCharacterName.layer.zPosition = 1
+        dialogCharacterName.isUserInteractionEnabled = false
+        dialogCharacterName.isScrollEnabled = false
         dialogCharacterName.text = "Firstname Lastname"
         dialogCharacterName.font = characterNameFontStyle
         dialogCharacterName.backgroundColor = characterNameBackgroundColor
-        dialogCharacterName.isEditable = false
-        dialogCharacterName.isScrollEnabled = false
         dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
         dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
