@@ -72,6 +72,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370364BB211EF428001E8D56 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				37A91539211C09300076AFFB /* Scene1ViewController.swift */,
+				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
+				3742DB67211EA82100835FC3 /* Choice1ViewController.swift */,
+				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
+				3742DB6B211EB5E500835FC3 /* EndingViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		37A9152B211C09300076AFFB = {
 			isa = PBXGroup;
 			children = (
@@ -93,16 +105,12 @@
 		37A91536211C09300076AFFB /* bully-story */ = {
 			isa = PBXGroup;
 			children = (
+				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
+				370364BB211EF428001E8D56 /* Scenes */,
 				37A91537211C09300076AFFB /* AppDelegate.swift */,
-				37A91539211C09300076AFFB /* Scene1ViewController.swift */,
-				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
-				3742DB6B211EB5E500835FC3 /* EndingViewController.swift */,
-				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
-				3742DB67211EA82100835FC3 /* Choice1ViewController.swift */,
 				37AF08C0211C58E800E96284 /* Events.swift */,
-				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
 				37A91541211C09310076AFFB /* Assets.xcassets */,
 				37A91543211C09310076AFFB /* LaunchScreen.storyboard */,
 				37A91546211C09310076AFFB /* Info.plist */,
