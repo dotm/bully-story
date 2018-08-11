@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37A91538211C09300076AFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91537211C09300076AFFB /* AppDelegate.swift */; };
-		37A9153A211C09300076AFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91539211C09300076AFFB /* ViewController.swift */; };
+		37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91539211C09300076AFFB /* Scene1ViewController.swift */; };
 		37A9153D211C09300076AFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */; };
 		37A91542211C09310076AFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A91541211C09310076AFFB /* Assets.xcassets */; };
@@ -17,6 +17,7 @@
 		37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9155A211C0A3F0076AFFB /* StartViewController.swift */; };
 		37AF08C1211C58E800E96284 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF08C0211C58E800E96284 /* Events.swift */; };
 		37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2786B211E9471005B6EFF /* DialogViewController.swift */; };
+		37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 /* Begin PBXFileReference section */
 		37A91534211C09300076AFFB /* bully-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bully-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A91537211C09300076AFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37A91539211C09300076AFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37A91539211C09300076AFFB /* Scene1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
 		37A9153C211C09300076AFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A9153F211C09300076AFFB /* bully_story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bully_story.xcdatamodel; sourceTree = "<group>"; };
 		37A91541211C09310076AFFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		37A9155A211C0A3F0076AFFB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		37AF08C0211C58E800E96284 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		37D2786B211E9471005B6EFF /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				37A91537211C09300076AFFB /* AppDelegate.swift */,
-				37A91539211C09300076AFFB /* ViewController.swift */,
+				37A91539211C09300076AFFB /* Scene1ViewController.swift */,
+				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
 				37AF08C0211C58E800E96284 /* Events.swift */,
@@ -209,8 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A9153A211C09300076AFFB /* ViewController.swift in Sources */,
+				37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */,
 				37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */,
+				37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */,
 				37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */,
 				37A91538211C09300076AFFB /* AppDelegate.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,

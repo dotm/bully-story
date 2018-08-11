@@ -10,6 +10,9 @@ import UIKit
 
 class DialogViewController: UIViewController {
     //MARK: Properties
+    var events: Events {
+        get { return Events(events: [])}
+    }
     var defaultBackgroundColor: UIColor { return UIColor.cyan }
     var dialogTextBackgroundColor: UIColor { return defaultBackgroundColor }
     var characterNameBackgroundColor: UIColor { return defaultBackgroundColor }
@@ -57,7 +60,12 @@ class DialogViewController: UIViewController {
             changeBackgroundImage(imageName)
         case let .presentChoices(choices):
             presentChoices(choices)
+        case let .goToNextScene(segueIdentifier):
+            goToNextScene(segueIdentifier)
         }
+    }
+    private func goToNextScene(_ segueIdentifier: String){
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     private func changeBackgroundImage(_ newImageName: String){
         UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {

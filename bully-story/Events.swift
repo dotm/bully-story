@@ -56,7 +56,7 @@ let event_day2_choosenEvent: Events = {
 let event_day2_afterChoice = Events(events: [
     [.setDialogText(text: "This will be displayed whatever option I choose")]
 ])
-let events = event_day1 + event_day2_beforeChoice + event_day2_choosenEvent + event_day2_afterChoice
+//let events = event_day1 + event_day2_beforeChoice + event_day2_choosenEvent + event_day2_afterChoice
 
 class Events {
     //MARK: Properties
@@ -107,6 +107,7 @@ enum StoryAction {
     case setDialogText(text: String)
     case setBackgroundImage(imageName: String)
     case presentChoices(choices: Choices)
+    case goToNextScene(segueIdentifier: String)
 }
 
 typealias Event = [StoryAction]
