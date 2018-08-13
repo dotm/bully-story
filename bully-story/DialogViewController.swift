@@ -8,15 +8,46 @@
 
 import UIKit
 
+extension UIColor {
+    convenience init(hex: String) {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+    
+        if ((cString.count) != 6) {
+            self.init(
+                red: 0,
+                green: 0,
+                blue: 0,
+                alpha: 1
+            )
+        }else{
+            var rgbValue:UInt32 = 0
+            Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+            self.init(
+                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                alpha: CGFloat(1.0)
+            )
+        }
+    }
+}
+
 class DialogViewController: UIViewController {
     //MARK: Properties
     var events: Events!
-    var defaultBackgroundColor: UIColor { return UIColor.cyan }
+    var defaultBackgroundColor: UIColor { return UIColor(hex: "D2DAF6") }
     var dialogTextBackgroundColor: UIColor { return defaultBackgroundColor }
     var characterNameBackgroundColor: UIColor { return defaultBackgroundColor }
+    var borderColor = UIColor(hex: "979797")
+    let borderWidth = CGFloat(1)
     
     var dialogTextFontStyle: UIFont {return UIFont.systemFont(ofSize: 16)}
-    var characterNameFontStyle: UIFont {return UIFont.systemFont(ofSize: 20)}
+    var characterNameFontStyle: UIFont {return UIFont.boldSystemFont(ofSize: 20)}
     
     //MARK: Outlets
     weak var dialogContainer: UIView!
@@ -110,7 +141,7 @@ class DialogViewController: UIViewController {
         let dialogContainer = UIView()
         view.addSubview(dialogContainer)
         
-        dialogContainer.backgroundColor = UIColor.red
+        dialogContainer.backgroundColor = UIColor(hex: "7C8FCD")
         dialogContainer.layer.zPosition = 1
         
         dialogContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -122,7 +153,6 @@ class DialogViewController: UIViewController {
         self.dialogContainer = dialogContainer
     }
     let dialogContainerPadding = CGFloat(10)
-    let dialogContainer_separatorBetween_characterName_andDialogText = CGFloat(50)
     private func setupCharacterName(parent: UIView) {
         let dialogCharacterName = UITextView()
         parent.addSubview(dialogCharacterName)
@@ -134,12 +164,15 @@ class DialogViewController: UIViewController {
         dialogCharacterName.font = characterNameFontStyle
         dialogCharacterName.backgroundColor = characterNameBackgroundColor
         dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        dialogCharacterName.layer.borderColor = borderColor.cgColor
+        dialogCharacterName.layer.borderWidth = borderWidth
+        dialogCharacterName.layer.cornerRadius = 10
+        dialogCharacterName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
         dialogCharacterName.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
-        dialogCharacterName.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainerPadding).isActive = true
-        dialogCharacterName.bottomAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainer_separatorBetween_characterName_andDialogText).isActive = true
-        dialogCharacterName.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 0.6).isActive = true
+        dialogCharacterName.bottomAnchor.constraint(equalTo: parent.topAnchor).isActive = true
+        dialogCharacterName.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 0.4).isActive = true
         
         self.dialogCharacterName = dialogCharacterName
     }
@@ -158,11 +191,14 @@ class DialogViewController: UIViewController {
         """
         dialogText.backgroundColor = dialogTextBackgroundColor
         dialogText.font = dialogTextFontStyle
+        dialogText.layer.cornerRadius = 10
+        dialogText.layer.borderColor = borderColor.cgColor
+        dialogText.layer.borderWidth = borderWidth
         
         dialogText.translatesAutoresizingMaskIntoConstraints = false
         dialogText.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -dialogContainerPadding).isActive = true
-        dialogText.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainer_separatorBetween_characterName_andDialogText).isActive = true
+        dialogText.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -dialogContainerPadding).isActive = true
         
         self.dialogText = dialogText
