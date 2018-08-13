@@ -52,7 +52,7 @@ class DialogViewController: UIViewController {
     //MARK: Outlets
     weak var dialogContainer: UIView!
     weak var dialogCharacterName: UITextView!
-    weak var dialogText: UITextView!
+    weak var dialogTextView: UITextView!
     weak var backgroundImage: UIImageView!
     
     //MARK: Lifecycle hooks
@@ -83,27 +83,15 @@ class DialogViewController: UIViewController {
     }
     private func executeAction(_ action: StoryAction){
         switch action {
-        case let .setDialogCharacterName(name):
-            dialogCharacterName.text = name
-        case let .setDialogText(text):
-            dialogText.text = text
         case let .setBackgroundImage(imageName):
             changeBackgroundImage(imageName)
         case let .presentChoices(choices):
             presentChoices(choices)
         case let .goToNextScene(viewController):
             goToNextScene(viewController)
-        case let .displayDialog(show):
-            displayDialog(show)
-        }
-    }
-    func displayDialog(_ show: Bool){
-        if show {
-            dialogText.alpha = 1
-            dialogCharacterName.alpha = 1
-        } else {
-            dialogText.alpha = 0
-            dialogCharacterName.alpha = 0
+        case let .presentDialog(characterName, dialogText):
+            dialogCharacterName.text = characterName
+            dialogTextView.text = dialogText
         }
     }
     func goToNextScene(_ viewController: UIViewController){
@@ -201,7 +189,7 @@ class DialogViewController: UIViewController {
         dialogText.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -dialogContainerPadding).isActive = true
         
-        self.dialogText = dialogText
+        self.dialogTextView = dialogText
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()

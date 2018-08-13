@@ -53,12 +53,10 @@ extension Collection {
 }
 
 enum StoryAction {
-    case setDialogCharacterName(name: String)
-    case setDialogText(text: String)
     case setBackgroundImage(imageName: String)
+    case presentDialog(characterName: String, dialogText: String)
     case presentChoices(choices: Choices)
     case goToNextScene(viewController: UIViewController)
-    case displayDialog(Bool)
 }
 
 typealias Event = [StoryAction]

@@ -15,7 +15,6 @@ class EndingViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .displayDialog(false),
                 .setBackgroundImage(imageName: "theEndImage"),
             ],
         ])
