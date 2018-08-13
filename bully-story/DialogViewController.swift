@@ -115,9 +115,9 @@ class DialogViewController: UIViewController {
         
         dialogContainer.translatesAutoresizingMaskIntoConstraints = false
         dialogContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        dialogContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
-        dialogContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35).isActive = true
-        dialogContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+        dialogContainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        dialogContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.30).isActive = true
+        dialogContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         self.dialogContainer = dialogContainer
     }
@@ -174,7 +174,11 @@ class DialogViewController: UIViewController {
         backgroundImage.layer.zPosition = 0
         backgroundImage.image = UIImage(named: "placeholderImage")
         
-        backgroundImage.frame = view.frame
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        backgroundImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.70).isActive = true
+        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
         self.backgroundImage = backgroundImage
     }
