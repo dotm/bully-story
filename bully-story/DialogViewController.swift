@@ -60,7 +60,6 @@ class DialogViewController: UIViewController {
         
         setupDialogContainer()
         setupBackgroundImage()
-        setupTapGestureRecognizer()
     }
     
     //MARK: Actions
@@ -99,10 +98,13 @@ class DialogViewController: UIViewController {
         }, completion: nil)
     }
     private func presentDialog(_ characterName: String, _ dialogText: String){
+        emptyDialogContainer()
         setupDialogTextView(text: dialogText)
         setupCharacterName(text: characterName)
+        setupTapGestureRecognizer_forDialog()
     }
     private func presentChoices(_ choices: Choices){
+        emptyDialogContainer()
         let alert = UIAlertController(
             title: choices.title,
             message: choices.message,
@@ -121,6 +123,11 @@ class DialogViewController: UIViewController {
         
         present(alert, animated: true) {
             self.next()
+        }
+    }
+    private func emptyDialogContainer(){
+        dialogContainer.subviews.forEach { (subview) in
+            subview.removeFromSuperview()
         }
     }
     
@@ -201,7 +208,8 @@ class DialogViewController: UIViewController {
         
         self.backgroundImage = backgroundImage
     }
-    private func setupTapGestureRecognizer(){
+    private func setupTapGestureRecognizer_forDialog(){
+        view.gestureRecognizers?.forEach(view.removeGestureRecognizer)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(next(_:)))
         view.addGestureRecognizer(recognizer)
     }
