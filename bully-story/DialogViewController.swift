@@ -90,8 +90,7 @@ class DialogViewController: UIViewController {
         case let .goToNextScene(viewController):
             goToNextScene(viewController)
         case let .presentDialog(characterName, dialogText):
-            dialogCharacterName.text = characterName
-            dialogTextView.text = dialogText
+            presentDialog(characterName, dialogText)
         }
     }
     func goToNextScene(_ viewController: UIViewController){
@@ -101,6 +100,10 @@ class DialogViewController: UIViewController {
         UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {
             self.backgroundImage.image = UIImage(named: newImageName)
         }, completion: nil)
+    }
+    private func presentDialog(_ characterName: String, _ dialogText: String){
+        dialogCharacterName.text = characterName
+        dialogTextView.text = dialogText
     }
     private func presentChoices(_ choices: Choices){
         let alert = UIAlertController(
