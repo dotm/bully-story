@@ -40,11 +40,10 @@ extension UIColor {
 class DialogViewController: UIViewController {
     //MARK: Properties
     var events: Events!
-    var defaultBackgroundColor: UIColor { return UIColor(hex: "D2DAF6") }
-    var dialogTextBackgroundColor: UIColor { return defaultBackgroundColor }
-    var characterNameBackgroundColor: UIColor { return defaultBackgroundColor }
-    var borderColor = UIColor(hex: "979797")
+    let defaultBackgroundColor = UIColor(hex: "D2DAF6")
+    let borderColor = UIColor(hex: "979797")
     let borderWidth = CGFloat(1)
+    let dialogContainerPadding = CGFloat(10)
     
     var dialogTextFontStyle: UIFont {return UIFont.systemFont(ofSize: 16)}
     var characterNameFontStyle: UIFont {return UIFont.boldSystemFont(ofSize: 20)}
@@ -60,8 +59,6 @@ class DialogViewController: UIViewController {
         super.viewDidLoad()
         
         setupDialogContainer()
-        setupDialogText(parent: dialogContainer)
-        setupCharacterName(parent: dialogContainer)
         setupBackgroundImage()
         setupTapGestureRecognizer()
     }
@@ -102,8 +99,8 @@ class DialogViewController: UIViewController {
         }, completion: nil)
     }
     private func presentDialog(_ characterName: String, _ dialogText: String){
-        dialogCharacterName.text = characterName
-        dialogTextView.text = dialogText
+        setupDialogTextView(text: dialogText)
+        setupCharacterName(text: characterName)
     }
     private func presentChoices(_ choices: Choices){
         let alert = UIAlertController(
@@ -143,17 +140,16 @@ class DialogViewController: UIViewController {
         
         self.dialogContainer = dialogContainer
     }
-    let dialogContainerPadding = CGFloat(10)
-    private func setupCharacterName(parent: UIView) {
+    private func setupCharacterName(text: String) {
         let dialogCharacterName = UITextView()
-        parent.addSubview(dialogCharacterName)
+        dialogContainer.addSubview(dialogCharacterName)
         
         dialogCharacterName.layer.zPosition = 2
         dialogCharacterName.isUserInteractionEnabled = false
         dialogCharacterName.isScrollEnabled = false
-        dialogCharacterName.text = "Firstname Lastname"
+        dialogCharacterName.text = text
         dialogCharacterName.font = characterNameFontStyle
-        dialogCharacterName.backgroundColor = characterNameBackgroundColor
+        dialogCharacterName.backgroundColor = defaultBackgroundColor
         dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogCharacterName.layer.borderColor = borderColor.cgColor
         dialogCharacterName.layer.borderWidth = borderWidth
@@ -161,36 +157,32 @@ class DialogViewController: UIViewController {
         dialogCharacterName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
-        dialogCharacterName.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
-        dialogCharacterName.bottomAnchor.constraint(equalTo: parent.topAnchor).isActive = true
-        dialogCharacterName.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 0.4).isActive = true
+        dialogCharacterName.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogCharacterName.bottomAnchor.constraint(equalTo: dialogContainer.topAnchor).isActive = true
+        dialogCharacterName.widthAnchor.constraint(equalTo: dialogContainer.widthAnchor, multiplier: 0.4).isActive = true
         
         self.dialogCharacterName = dialogCharacterName
     }
-    private func setupDialogText(parent: UIView) {
+    private func setupDialogTextView(text: String) {
         let dialogText = UITextView()
-        parent.addSubview(dialogText)
+        dialogContainer.addSubview(dialogText)
         
         dialogText.layer.zPosition = 2
         dialogText.isUserInteractionEnabled = false
         dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.setContentOffset(CGPoint.zero, animated: false)
-        dialogText.text = """
-        Lorem ipsum dolor sit amet, te duo tale putant reformidans, ex ius salutandi ocurreret, malis laoreet ex eum.
-        Te diam iuvaret scribentur pri, qui regione oportere temporibus cu.
-        In cum nostrum phaedrum maiestatis, pro ei ludus sanctus minimum. Eum paulo putant minimum ad, eos eu probo everti posidonium.
-        """
-        dialogText.backgroundColor = dialogTextBackgroundColor
+        dialogText.text = text
+        dialogText.backgroundColor = defaultBackgroundColor
         dialogText.font = dialogTextFontStyle
         dialogText.layer.cornerRadius = 10
         dialogText.layer.borderColor = borderColor.cgColor
         dialogText.layer.borderWidth = borderWidth
         
         dialogText.translatesAutoresizingMaskIntoConstraints = false
-        dialogText.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
-        dialogText.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -dialogContainerPadding).isActive = true
-        dialogText.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainerPadding).isActive = true
-        dialogText.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.bottomAnchor.constraint(equalTo: dialogContainer.bottomAnchor, constant: -dialogContainerPadding).isActive = true
         
         self.dialogTextView = dialogText
     }
