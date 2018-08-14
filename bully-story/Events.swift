@@ -60,5 +60,6 @@ enum StoryAction {
 }
 
 typealias Event = [StoryAction]
-typealias ChoiceOption = (title: String, handler: ((UIAlertAction) -> Void)?)
-typealias Choices = (title: String?, message: String?, options: [ChoiceOption])
+typealias ChoiceHandler = (() -> Void)?
+typealias ChoiceOption = (title: String, handler: ChoiceHandler)
+typealias Choices = (title: String?, options: [ChoiceOption])

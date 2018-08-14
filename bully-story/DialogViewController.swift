@@ -50,8 +50,6 @@ class DialogViewController: UIViewController {
     
     //MARK: Outlets
     weak var dialogContainer: UIView!
-    weak var dialogCharacterName: UITextView!
-    weak var dialogTextView: UITextView!
     weak var backgroundImage: UIImageView!
     
     //MARK: Lifecycle hooks
@@ -105,26 +103,11 @@ class DialogViewController: UIViewController {
     }
     private func presentChoices(_ choices: Choices){
         emptyDialogContainer()
-        let alert = UIAlertController(
-            title: choices.title,
-            message: choices.message,
-            preferredStyle: .actionSheet
-        )
-        
-        for option in choices.options {
-            alert.addAction(
-                UIAlertAction(
-                    title: option.title,
-                    style: .default,
-                    handler: option.handler
-                )
-            )
-        }
-        
-        present(alert, animated: true) {
-            self.next()
-        }
+        view.gestureRecognizers?.forEach(view.removeGestureRecognizer)
+        setupChoiceTitle(title: choices.title)
+        setupChoiceOptions(options: choices.options)
     }
+    
     private func emptyDialogContainer(){
         dialogContainer.subviews.forEach { (subview) in
             subview.removeFromSuperview()
@@ -167,12 +150,9 @@ class DialogViewController: UIViewController {
         dialogCharacterName.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
         dialogCharacterName.bottomAnchor.constraint(equalTo: dialogContainer.topAnchor).isActive = true
         dialogCharacterName.widthAnchor.constraint(equalTo: dialogContainer.widthAnchor, multiplier: 0.4).isActive = true
-        
-        self.dialogCharacterName = dialogCharacterName
     }
-    private func setupDialogTextView(text: String) {
+    func createDialogText(text: String) -> UITextView {
         let dialogText = UITextView()
-        dialogContainer.addSubview(dialogText)
         
         dialogText.layer.zPosition = 2
         dialogText.isUserInteractionEnabled = false
@@ -185,13 +165,30 @@ class DialogViewController: UIViewController {
         dialogText.layer.borderColor = borderColor.cgColor
         dialogText.layer.borderWidth = borderWidth
         
+        return dialogText
+    }
+    private func setupChoiceTitle(title: String?){
+        let dialogText = createDialogText(text: title ?? "")
+        dialogContainer.addSubview(dialogText)
+        
+        dialogText.textContainerInset = UIEdgeInsets(top: 25, left: 5, bottom: 25, right: 5)
+        dialogText.textAlignment = .center
+        
+        dialogText.translatesAutoresizingMaskIntoConstraints = false
+        dialogText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.3).isActive = true
+    }
+    private func setupDialogTextView(text: String) {
+        let dialogText = createDialogText(text: text)
+        dialogContainer.addSubview(dialogText)
+        
         dialogText.translatesAutoresizingMaskIntoConstraints = false
         dialogText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.bottomAnchor.constraint(equalTo: dialogContainer.bottomAnchor, constant: -dialogContainerPadding).isActive = true
-        
-        self.dialogTextView = dialogText
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()
@@ -212,5 +209,57 @@ class DialogViewController: UIViewController {
         view.gestureRecognizers?.forEach(view.removeGestureRecognizer)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(next(_:)))
         view.addGestureRecognizer(recognizer)
+    }
+    
+    private func setupChoiceOptions(options: [ChoiceOption]){
+        let subviews = options.map({ (option) -> UIView in
+            return createChoiceOption(title: option.title, handler: option.handler)
+        })
+        let stackView = UIStackView(arrangedSubviews: subviews)
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = CGFloat(10)
+        dialogContainer.addSubview(stackView)
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: 2*dialogContainerPadding).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -2*dialogContainerPadding).isActive = true
+        stackView.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.5).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: dialogContainer.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+    }
+    private func createChoiceOption(title: String, handler: ChoiceHandler) -> UIView {
+        let label = OptionLabel()
+        label.text = title
+        label.handler = handler!
+        
+        return label
+    }
+}
+
+class OptionLabel: UILabel {
+    var handler: ()->() = {
+        print("executing default handler")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupLayout()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupLayout()
+    }
+    func setupLayout(){
+        self.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
+        self.layer.borderColor = UIColor(hex: "979797").cgColor
+        self.layer.borderWidth = CGFloat(1)
+        self.textAlignment = .center
+        self.layer.cornerRadius = CGFloat(10)
+        
+        self.isUserInteractionEnabled = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        handler()
     }
 }
