@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="kindergarten.ttf">
+            <string>kindergarten</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Scene1 View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -55,45 +60,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartMenuImage" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-n1-OdX">
-                                <rect key="frame" x="87" y="105" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="RbO-nx-gTE"/>
-                                    <constraint firstAttribute="width" constant="200" id="SR5-WQ-CGG"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StartMenuImage" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-n1-OdX">
+                                <rect key="frame" x="87" y="236" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-0G-x7G">
-                                <rect key="frame" x="150" y="423" width="75" height="30"/>
-                                <state key="normal" title="New Game"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-0G-x7G">
+                                <rect key="frame" x="68" y="515" width="238" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="NEW GAME" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="1GX-w9-ATg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
-                                <rect key="frame" x="159" y="461" width="57" height="30"/>
+                                <rect key="frame" x="68" y="622" width="238" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="SETTINGS" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="dbC-Ig-msh" kind="show" id="Zh4-po-NVo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" bystanders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-Zw-FbR">
+                                <rect key="frame" x="53" y="122" width="269" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="hv6-Yb-zxH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.41176470588235292" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="O1n-3U-s75" firstAttribute="bottom" secondItem="VDV-0G-x7G" secondAttribute="bottom" constant="325" id="ANc-oG-v7Y"/>
-                            <constraint firstItem="nWw-n1-OdX" firstAttribute="centerX" secondItem="pX9-Cr-jeY" secondAttribute="centerX" id="Kyr-9r-74S"/>
-                            <constraint firstItem="nWw-n1-OdX" firstAttribute="top" secondItem="O1n-3U-s75" secondAttribute="top" constant="61" id="rzP-zP-48k"/>
-                            <constraint firstItem="nWw-n1-OdX" firstAttribute="centerX" secondItem="VDV-0G-x7G" secondAttribute="centerX" id="tVi-bE-gkb"/>
+                            <constraint firstItem="Jeo-Zw-FbR" firstAttribute="centerX" secondItem="pX9-Cr-jeY" secondAttribute="centerX" id="l7S-r3-Nvq"/>
+                            <constraint firstItem="Jeo-Zw-FbR" firstAttribute="top" secondItem="O1n-3U-s75" secondAttribute="top" constant="78" id="ydE-9o-6U2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1n-3U-s75"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRB-CU-9cs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="37"/>
+            <point key="canvasLocation" x="-178.40000000000001" y="36.945812807881772"/>
         </scene>
     </scenes>
     <resources>
         <image name="StartMenuImage" width="16" height="16"/>
+        <image name="paper" width="3101" height="1030"/>
     </resources>
 </document>

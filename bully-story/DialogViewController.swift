@@ -45,8 +45,8 @@ class DialogViewController: UIViewController {
     let borderWidth = CGFloat(1)
     let dialogContainerPadding = CGFloat(10)
     
-    var dialogTextFontStyle: UIFont {return UIFont.systemFont(ofSize: 16)}
-    var characterNameFontStyle: UIFont {return UIFont.boldSystemFont(ofSize: 20)}
+    var dialogTextFontStyle: UIFont {return UIFont(name: "PT Sans", size: 20)! }
+    var characterNameFontStyle: UIFont {return UIFont(name: "PTSans-Bold", size: 22)!}
     
     //MARK: Outlets
     weak var dialogContainer: UIView!

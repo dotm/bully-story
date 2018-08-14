@@ -14,7 +14,29 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        for family: String in UIFont.familyNames
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                print("== \(names)")
+            }
+        }
     }
+    
+// Font yang available
+//    PT Sans Narrow
+//    == PTSans-NarrowBold
+//    == PTSans-Narrow
+//    PT Sans
+//    == PTSans-Bold
+//    == PTSans-Regular
+//    == PTSans-BoldItalic
+//    == PTSans-Italic
+//    PT Sans Caption
+//    == PTSans-CaptionBold
+//    == PTSans-Caption
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

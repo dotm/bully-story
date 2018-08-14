@@ -10,6 +10,7 @@ import UIKit
 
 class Scene1ViewController: DialogViewController {
     //MARK: Lifecycle hooks
+    /// <#Description#>
     override func viewDidLoad() {
         super.viewDidLoad()
         
