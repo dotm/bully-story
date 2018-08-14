@@ -8,12 +8,42 @@
 
 import UIKit
 
+extension UIColor {
+    convenience init(hex: String) {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+    
+        if ((cString.count) != 6) {
+            self.init(
+                red: 0,
+                green: 0,
+                blue: 0,
+                alpha: 1
+            )
+        }else{
+            var rgbValue:UInt32 = 0
+            Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+            self.init(
+                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                alpha: CGFloat(1.0)
+            )
+        }
+    }
+}
+
 class DialogViewController: UIViewController {
     //MARK: Properties
     var events: Events!
-    var defaultBackgroundColor: UIColor { return UIColor.cyan }
-    var dialogTextBackgroundColor: UIColor { return defaultBackgroundColor }
-    var characterNameBackgroundColor: UIColor { return defaultBackgroundColor }
+    let defaultBackgroundColor = UIColor(hex: "D2DAF6")
+    let borderColor = UIColor(hex: "979797")
+    let borderWidth = CGFloat(1)
+    let dialogContainerPadding = CGFloat(10)
     
     var dialogTextFontStyle: UIFont {return UIFont(name: "PT Sans", size: 20)! }
     var characterNameFontStyle: UIFont {return UIFont(name: "PTSans-Bold", size: 22)!}
@@ -21,7 +51,7 @@ class DialogViewController: UIViewController {
     //MARK: Outlets
     weak var dialogContainer: UIView!
     weak var dialogCharacterName: UITextView!
-    weak var dialogText: UITextView!
+    weak var dialogTextView: UITextView!
     weak var backgroundImage: UIImageView!
     
     //MARK: Lifecycle hooks
@@ -29,8 +59,6 @@ class DialogViewController: UIViewController {
         super.viewDidLoad()
         
         setupDialogContainer()
-        setupDialogText(parent: dialogContainer)
-        setupCharacterName(parent: dialogContainer)
         setupBackgroundImage()
         setupTapGestureRecognizer()
     }
@@ -52,27 +80,14 @@ class DialogViewController: UIViewController {
     }
     private func executeAction(_ action: StoryAction){
         switch action {
-        case let .setDialogCharacterName(name):
-            dialogCharacterName.text = name
-        case let .setDialogText(text):
-            dialogText.text = text
         case let .setBackgroundImage(imageName):
             changeBackgroundImage(imageName)
         case let .presentChoices(choices):
             presentChoices(choices)
         case let .goToNextScene(viewController):
             goToNextScene(viewController)
-        case let .displayDialog(show):
-            displayDialog(show)
-        }
-    }
-    func displayDialog(_ show: Bool){
-        if show {
-            dialogText.alpha = 1
-            dialogCharacterName.alpha = 1
-        } else {
-            dialogText.alpha = 0
-            dialogCharacterName.alpha = 0
+        case let .presentDialog(characterName, dialogText):
+            presentDialog(characterName, dialogText)
         }
     }
     func goToNextScene(_ viewController: UIViewController){
@@ -82,6 +97,10 @@ class DialogViewController: UIViewController {
         UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {
             self.backgroundImage.image = UIImage(named: newImageName)
         }, completion: nil)
+    }
+    private func presentDialog(_ characterName: String, _ dialogText: String){
+        setupDialogTextView(text: dialogText)
+        setupCharacterName(text: characterName)
     }
     private func presentChoices(_ choices: Choices){
         let alert = UIAlertController(
@@ -110,62 +129,62 @@ class DialogViewController: UIViewController {
         let dialogContainer = UIView()
         view.addSubview(dialogContainer)
         
-        dialogContainer.backgroundColor = UIColor.red
+        dialogContainer.backgroundColor = UIColor(hex: "7C8FCD")
         dialogContainer.layer.zPosition = 1
         
         dialogContainer.translatesAutoresizingMaskIntoConstraints = false
         dialogContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        dialogContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
-        dialogContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35).isActive = true
-        dialogContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+        dialogContainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        dialogContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.30).isActive = true
+        dialogContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         self.dialogContainer = dialogContainer
     }
-    let dialogContainerPadding = CGFloat(10)
-    let dialogContainer_separatorBetween_characterName_andDialogText = CGFloat(50)
-    private func setupCharacterName(parent: UIView) {
+    private func setupCharacterName(text: String) {
         let dialogCharacterName = UITextView()
-        parent.addSubview(dialogCharacterName)
+        dialogContainer.addSubview(dialogCharacterName)
         
         dialogCharacterName.layer.zPosition = 2
         dialogCharacterName.isUserInteractionEnabled = false
         dialogCharacterName.isScrollEnabled = false
-        dialogCharacterName.text = "Firstname Lastname"
+        dialogCharacterName.text = text
         dialogCharacterName.font = characterNameFontStyle
-        dialogCharacterName.backgroundColor = characterNameBackgroundColor
+        dialogCharacterName.backgroundColor = defaultBackgroundColor
         dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        dialogCharacterName.layer.borderColor = borderColor.cgColor
+        dialogCharacterName.layer.borderWidth = borderWidth
+        dialogCharacterName.layer.cornerRadius = 10
+        dialogCharacterName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
-        dialogCharacterName.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
-        dialogCharacterName.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainerPadding).isActive = true
-        dialogCharacterName.bottomAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainer_separatorBetween_characterName_andDialogText).isActive = true
-        dialogCharacterName.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: 0.6).isActive = true
+        dialogCharacterName.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogCharacterName.bottomAnchor.constraint(equalTo: dialogContainer.topAnchor).isActive = true
+        dialogCharacterName.widthAnchor.constraint(equalTo: dialogContainer.widthAnchor, multiplier: 0.4).isActive = true
         
         self.dialogCharacterName = dialogCharacterName
     }
-    private func setupDialogText(parent: UIView) {
+    private func setupDialogTextView(text: String) {
         let dialogText = UITextView()
-        parent.addSubview(dialogText)
+        dialogContainer.addSubview(dialogText)
         
         dialogText.layer.zPosition = 2
         dialogText.isUserInteractionEnabled = false
         dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.setContentOffset(CGPoint.zero, animated: false)
-        dialogText.text = """
-        Lorem ipsum dolor sit amet, te duo tale putant reformidans, ex ius salutandi ocurreret, malis laoreet ex eum.
-        Te diam iuvaret scribentur pri, qui regione oportere temporibus cu.
-        In cum nostrum phaedrum maiestatis, pro ei ludus sanctus minimum. Eum paulo putant minimum ad, eos eu probo everti posidonium.
-        """
-        dialogText.backgroundColor = dialogTextBackgroundColor
+        dialogText.text = text
+        dialogText.backgroundColor = defaultBackgroundColor
         dialogText.font = dialogTextFontStyle
+        dialogText.layer.cornerRadius = 10
+        dialogText.layer.borderColor = borderColor.cgColor
+        dialogText.layer.borderWidth = borderWidth
         
         dialogText.translatesAutoresizingMaskIntoConstraints = false
-        dialogText.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: dialogContainerPadding).isActive = true
-        dialogText.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -dialogContainerPadding).isActive = true
-        dialogText.topAnchor.constraint(equalTo: parent.topAnchor, constant: dialogContainer_separatorBetween_characterName_andDialogText).isActive = true
-        dialogText.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
+        dialogText.bottomAnchor.constraint(equalTo: dialogContainer.bottomAnchor, constant: -dialogContainerPadding).isActive = true
         
-        self.dialogText = dialogText
+        self.dialogTextView = dialogText
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()
@@ -174,7 +193,11 @@ class DialogViewController: UIViewController {
         backgroundImage.layer.zPosition = 0
         backgroundImage.image = UIImage(named: "placeholderImage")
         
-        backgroundImage.frame = view.frame
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        backgroundImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.70).isActive = true
+        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
         self.backgroundImage = backgroundImage
     }

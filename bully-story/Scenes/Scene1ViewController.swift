@@ -16,13 +16,11 @@ class Scene1ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .setDialogCharacterName(name: "Jean"),
-                .setDialogText(text: "Hi there."),
+                .presentDialog(characterName: "Jean", dialogText: "Hi there."),
                 .setBackgroundImage(imageName: "backgroundImage"),
             ],
             [
-                .setDialogCharacterName(name: "John"),
-                .setDialogText(text: "Hello Jean."),
+                .presentDialog(characterName: "John", dialogText: "Hello Jean."),
                 .setBackgroundImage(imageName: "backgroundImage2"),
             ],
             [.goToNextScene(viewController: Scene2ViewController())],
