@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		267A996121232010008EDFD4 /* PTS76F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A99592123200F008EDFD4 /* PTS76F.ttf */; };
+		267A996221232010008EDFD4 /* PTN57F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995A21232010008EDFD4 /* PTN57F.ttf */; };
+		267A996321232010008EDFD4 /* PTC55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995B21232010008EDFD4 /* PTC55F.ttf */; };
+		267A996421232010008EDFD4 /* PTS55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995C21232010008EDFD4 /* PTS55F.ttf */; };
+		267A996521232010008EDFD4 /* PTC75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995D21232010008EDFD4 /* PTC75F.ttf */; };
+		267A996621232010008EDFD4 /* PTN77F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995E21232010008EDFD4 /* PTN77F.ttf */; };
+		267A996721232010008EDFD4 /* PTS56F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995F21232010008EDFD4 /* PTS56F.ttf */; };
+		267A996821232010008EDFD4 /* PTS75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A996021232010008EDFD4 /* PTS75F.ttf */; };
+		267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A9969212323B7008EDFD4 /* kindergarten.ttf */; };
 		3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB67211EA82100835FC3 /* Choice1ViewController.swift */; };
 		3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */; };
 		3742DB6C211EB5E500835FC3 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB6B211EB5E500835FC3 /* EndingViewController.swift */; };
@@ -34,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		267A99592123200F008EDFD4 /* PTS76F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS76F.ttf; sourceTree = "<group>"; };
+		267A995A21232010008EDFD4 /* PTN57F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN57F.ttf; sourceTree = "<group>"; };
+		267A995B21232010008EDFD4 /* PTC55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTC55F.ttf; sourceTree = "<group>"; };
+		267A995C21232010008EDFD4 /* PTS55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS55F.ttf; sourceTree = "<group>"; };
+		267A995D21232010008EDFD4 /* PTC75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTC75F.ttf; sourceTree = "<group>"; };
+		267A995E21232010008EDFD4 /* PTN77F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN77F.ttf; sourceTree = "<group>"; };
+		267A995F21232010008EDFD4 /* PTS56F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS56F.ttf; sourceTree = "<group>"; };
+		267A996021232010008EDFD4 /* PTS75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS75F.ttf; sourceTree = "<group>"; };
+		267A9969212323B7008EDFD4 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
 		3742DB67211EA82100835FC3 /* Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
 		3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice2ViewController.swift; sourceTree = "<group>"; };
 		3742DB6B211EB5E500835FC3 /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +105,15 @@
 		37A9152B211C09300076AFFB = {
 			isa = PBXGroup;
 			children = (
+				267A9969212323B7008EDFD4 /* kindergarten.ttf */,
+				267A995B21232010008EDFD4 /* PTC55F.ttf */,
+				267A995D21232010008EDFD4 /* PTC75F.ttf */,
+				267A995A21232010008EDFD4 /* PTN57F.ttf */,
+				267A995E21232010008EDFD4 /* PTN77F.ttf */,
+				267A995C21232010008EDFD4 /* PTS55F.ttf */,
+				267A995F21232010008EDFD4 /* PTS56F.ttf */,
+				267A996021232010008EDFD4 /* PTS75F.ttf */,
+				267A99592123200F008EDFD4 /* PTS76F.ttf */,
 				37A91536211C09300076AFFB /* bully-story */,
 				37A9154E211C09310076AFFB /* bully-storyTests */,
 				37A91535211C09300076AFFB /* Products */,
@@ -111,8 +138,8 @@
 				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
 				37AF08C0211C58E800E96284 /* Events.swift */,
-				37A91541211C09310076AFFB /* Assets.xcassets */,
 				37A91543211C09310076AFFB /* LaunchScreen.storyboard */,
+				37A91541211C09310076AFFB /* Assets.xcassets */,
 				37A91546211C09310076AFFB /* Info.plist */,
 				37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */,
 			);
@@ -211,7 +238,16 @@
 			files = (
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
 				37A91542211C09310076AFFB /* Assets.xcassets in Resources */,
+				267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */,
+				267A996521232010008EDFD4 /* PTC75F.ttf in Resources */,
+				267A996721232010008EDFD4 /* PTS56F.ttf in Resources */,
+				267A996121232010008EDFD4 /* PTS76F.ttf in Resources */,
+				267A996321232010008EDFD4 /* PTC55F.ttf in Resources */,
+				267A996421232010008EDFD4 /* PTS55F.ttf in Resources */,
+				267A996221232010008EDFD4 /* PTN57F.ttf in Resources */,
+				267A996621232010008EDFD4 /* PTN77F.ttf in Resources */,
 				37A9153D211C09300076AFFB /* Main.storyboard in Resources */,
+				267A996821232010008EDFD4 /* PTS75F.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

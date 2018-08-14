@@ -15,8 +15,8 @@ class DialogViewController: UIViewController {
     var dialogTextBackgroundColor: UIColor { return defaultBackgroundColor }
     var characterNameBackgroundColor: UIColor { return defaultBackgroundColor }
     
-    var dialogTextFontStyle: UIFont {return UIFont.systemFont(ofSize: 16)}
-    var characterNameFontStyle: UIFont {return UIFont.systemFont(ofSize: 20)}
+    var dialogTextFontStyle: UIFont {return UIFont(name: "PT Sans", size: 20)! }
+    var characterNameFontStyle: UIFont {return UIFont(name: "PTSans-Bold", size: 22)!}
     
     //MARK: Outlets
     weak var dialogContainer: UIView!

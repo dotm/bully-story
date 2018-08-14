@@ -2,6 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PTC55F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTC75F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTN57F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTN77F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTS55F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTS56F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTS75F.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:PTS76F.ttf">
+   </FileRef>
+   <FileRef
       location = "self:bully-story.xcodeproj">
    </FileRef>
 </Workspace>
