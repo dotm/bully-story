@@ -188,7 +188,7 @@ class DialogViewController: UIViewController {
         dialogText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
-        dialogText.bottomAnchor.constraint(equalTo: dialogContainer.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+        dialogText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()
@@ -224,8 +224,8 @@ class DialogViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: 2*dialogContainerPadding).isActive = true
         stackView.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -2*dialogContainerPadding).isActive = true
-        stackView.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.5).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: dialogContainer.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+        stackView.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.4).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -dialogContainerPadding).isActive = true
     }
     private func createChoiceOption(title: String, handler: ChoiceHandler) -> UIView {
         let label = OptionLabel()
