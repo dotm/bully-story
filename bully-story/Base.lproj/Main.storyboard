@@ -105,6 +105,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="startGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="0yg-FJ-ui2"/>
                                     <segue destination="xdF-hf-DDt" kind="show" id="wob-FK-lyd"/>
                                 </connections>
                             </button>
