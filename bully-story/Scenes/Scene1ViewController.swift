@@ -10,17 +10,28 @@ import UIKit
 
 class Scene1ViewController: DialogViewController {
     //MARK: Lifecycle hooks
-    /// <#Description#>
     override func viewDidLoad() {
         super.viewDidLoad()
         
         events = Events(events: [
             [
-                .presentDialog(characterName: "Jean", dialogText: "Hi there."),
+                .presentDialog(
+                    characterName: "Jean",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Sad",
+                    characterImagePosition: .left,
+                    dialogText: "Hi There"
+                ),
                 .setBackgroundImage(imageName: "backgroundImage"),
             ],
             [
-                .presentDialog(characterName: "John", dialogText: "Hello Jean."),
+                .presentDialog(
+                    characterName: "John",
+                    characterNamePosition: .right,
+                    characterImage: nil,
+                    characterImagePosition: .left,
+                    dialogText: "Hello Jean"
+                ),
                 .setBackgroundImage(imageName: "backgroundImage2"),
             ],
             [.goToNextScene(viewController: Scene2ViewController())],

@@ -52,9 +52,18 @@ extension Collection {
     }
 }
 
+enum DialogPosition {
+    case left, right
+}
 enum StoryAction {
     case setBackgroundImage(imageName: String)
-    case presentDialog(characterName: String, dialogText: String)
+    case presentDialog(
+        characterName: String,
+        characterNamePosition: DialogPosition,
+        characterImage: String?,
+        characterImagePosition: DialogPosition,
+        dialogText: String
+    )
     case presentChoices(choices: Choices)
     case goToNextScene(viewController: UIViewController)
 }

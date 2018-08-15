@@ -15,7 +15,13 @@ class Choice2ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .presentDialog(characterName: "John", dialogText: "Fine"),
+                .presentDialog(
+                    characterName: "John",
+                    characterNamePosition: .right,
+                    characterImage: nil,
+                    characterImagePosition: .left,
+                    dialogText: "Fine"
+                ),
                 .setBackgroundImage(imageName: "backgroundImage2"),
             ],
             [.goToNextScene(viewController: EndingViewController())],
