@@ -15,6 +15,39 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Day1 View Controller-->
+        <scene sceneID="jig-Z4-uWO">
+            <objects>
+                <viewController id="xdF-hf-DDt" customClass="Day1ViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LOz-hX-a3H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1 Scene" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-VD-alt">
+                                <rect key="frame" x="140" y="378" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="oi7-9z-klo"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oVa-Fe-t3J" appends="YES" id="o7Z-mw-7pq"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWr-vr-ViI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oVa-Fe-t3J">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="1Ur-yE-Hzb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="644" y="37"/>
+        </scene>
         <!--Scene1 View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="36.945812807881772"/>
+            <point key="canvasLocation" x="1494" y="37"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -72,7 +105,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="1GX-w9-ATg"/>
+                                    <segue destination="xdF-hf-DDt" kind="show" id="wob-FK-lyd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
