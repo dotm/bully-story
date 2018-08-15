@@ -15,7 +15,13 @@ class Scene2ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .presentDialog(characterName: "Jean", dialogText: "How are you?"),
+                .presentDialog(
+                    characterName: "Jean",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "How are you?"
+                ),
                 .setBackgroundImage(imageName: "backgroundImage"),
             ],
             [

@@ -83,8 +83,8 @@ class DialogViewController: UIViewController {
             presentChoices(choices)
         case let .goToNextScene(viewController):
             goToNextScene(viewController)
-        case let .presentDialog(characterName, dialogText):
-            presentDialog(characterName, dialogText)
+        case let .presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText):
+            presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText)
         }
     }
     func goToNextScene(_ viewController: UIViewController){
@@ -100,10 +100,17 @@ class DialogViewController: UIViewController {
             self.backgroundImage.image = UIImage(named: newImageName)
         }, completion: nil)
     }
-    private func presentDialog(_ characterName: String, _ dialogText: String){
+    private func presentDialog(
+        _ characterName: String,
+        _ characterNamePosition: DialogPosition,
+        _ characterImage: String?,
+        _ characterImagePosition: DialogPosition,
+        _ dialogText: String
+    ){
         emptyDialogContainer()
         setupDialogTextView(text: dialogText)
-        setupCharacterName(text: characterName)
+        setupCharacterName(text: characterName, position: characterNamePosition)
+        setupCharacterImage(imageName: characterImage, position: characterImagePosition)
         setupTapGestureRecognizer_forDialog()
     }
     private func presentChoices(_ choices: Choices){
@@ -135,11 +142,11 @@ class DialogViewController: UIViewController {
         
         self.dialogContainer = dialogContainer
     }
-    private func setupCharacterName(text: String) {
+    private func setupCharacterName(text: String, position: DialogPosition) {
         let dialogCharacterName = UITextView()
         dialogContainer.addSubview(dialogCharacterName)
         
-        dialogCharacterName.layer.zPosition = 2
+        dialogCharacterName.layer.zPosition = 3
         dialogCharacterName.isUserInteractionEnabled = false
         dialogCharacterName.isScrollEnabled = false
         dialogCharacterName.text = text
@@ -152,9 +159,49 @@ class DialogViewController: UIViewController {
         dialogCharacterName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
-        dialogCharacterName.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        switch position {
+        case .left:
+            dialogCharacterName.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        case .right:
+            dialogCharacterName.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        }
         dialogCharacterName.bottomAnchor.constraint(equalTo: dialogContainer.topAnchor).isActive = true
         dialogCharacterName.widthAnchor.constraint(equalTo: dialogContainer.widthAnchor, multiplier: 0.4).isActive = true
+    }
+    private func setupCharacterImage(imageName: String?, position: DialogPosition){
+        let IMAGE_TAG = 98599
+        func removeCharacterImage(){
+            dialogContainer.subviews.forEach { (view) in
+                if view.tag == IMAGE_TAG {
+                    view.removeFromSuperview()
+                }
+            }
+        }
+        
+        guard let name = imageName, let image = UIImage(named: name) else {
+            removeCharacterImage()
+            return
+        }
+        
+        let characterImage = UIImageView()
+        characterImage.tag = IMAGE_TAG
+        characterImage.image = image
+        dialogContainer.addSubview(characterImage)
+        
+        characterImage.layer.zPosition = 2
+        characterImage.contentMode = .scaleAspectFit
+        
+        characterImage.translatesAutoresizingMaskIntoConstraints = false
+        switch position {
+        case .left:
+            characterImage.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        case .right:
+            characterImage.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        }
+        characterImage.bottomAnchor.constraint(equalTo: dialogContainer.topAnchor).isActive = true
+        let multiplier = CGFloat(0.3)
+        characterImage.heightAnchor.constraint(equalToConstant: image.size.height * multiplier).isActive = true
+        characterImage.widthAnchor.constraint(equalToConstant: image.size.width * multiplier).isActive = true
     }
     func createDialogText(text: String) -> UITextView {
         let dialogText = UITextView()
