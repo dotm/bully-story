@@ -88,7 +88,12 @@ class DialogViewController: UIViewController {
         }
     }
     func goToNextScene(_ viewController: UIViewController){
-        self.present(viewController, animated: true, completion: nil)
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = kCATransitionFade
+        transition.subtype = kCATransitionFromRight
+        view.window?.layer.add(transition, forKey: kCATransition)
+        self.present(viewController, animated: false, completion: nil)
     }
     private func changeBackgroundImage(_ newImageName: String){
         UIView.transition(with: backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {
