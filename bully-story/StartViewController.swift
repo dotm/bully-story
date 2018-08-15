@@ -30,6 +30,7 @@ class StartViewController: UIViewController {
         }
     bgAudio.play()
         
+        
         // Do any additional setup after loading the view.
     }
     
