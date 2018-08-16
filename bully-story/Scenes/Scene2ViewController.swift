@@ -22,7 +22,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like."
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
+                .setBackgroundImage(imageName: "yard"),
             ],
             [
                 .presentDialog(
@@ -32,7 +32,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need to this homework.."
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
+                .setBackgroundImage(imageName: "yard"),
                 ],
             [
                 .presentDialog(
@@ -42,7 +42,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Oh? Okay. Fine then"
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
+                .setBackgroundImage(imageName: "yard"),
                 ],
             [
                 .presentDialog(
@@ -52,7 +52,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Yeah Jess. See you tomorrow in class!"
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
+                .setBackgroundImage(imageName: "yard"),
                 ],
             [
                 .presentDialog(
@@ -62,7 +62,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Yeah yeah sure."
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
+                .setBackgroundImage(imageName: "yard"),
                 ]
             
             
