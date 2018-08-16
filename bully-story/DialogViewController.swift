@@ -254,6 +254,7 @@ class DialogViewController: UIViewController {
         narrationText.textAlignment = .center
         narrationText.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
         narrationText.layer.borderColor = UIColor(hex: "979797").cgColor
+        narrationText.font = UIFont(name: "PTSans-Italic", size: 22)
         dialogContainer.addSubview(narrationText)
         
         narrationText.translatesAutoresizingMaskIntoConstraints = false
