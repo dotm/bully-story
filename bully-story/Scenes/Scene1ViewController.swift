@@ -40,6 +40,7 @@ class Scene1ViewController: DialogViewController {
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
         let startEvent = events.goToStartEvent()
+        
         executeEvent(startEvent)
     }
 }

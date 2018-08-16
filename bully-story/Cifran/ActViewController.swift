@@ -17,7 +17,7 @@ class ActViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.text = actTitle
         
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (_) in
+        Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { (_) in
             self.navigationController?.pushViewController(self.destinationVC, animated: true)
         }
     }

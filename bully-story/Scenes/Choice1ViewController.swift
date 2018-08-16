@@ -8,13 +8,23 @@
 
 import UIKit
 
+var username: NSString!
+
 class Choice1ViewController: DialogViewController {
     //MARK: Lifecycle hooks
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let inputNameVC = InputNameViewController()
+        inputNameVC.providesPresentationContextTransitionStyle = true
+        inputNameVC.definesPresentationContext = true
+        inputNameVC.modalPresentationStyle = .overCurrentContext
+        inputNameVC.prevVC = self
+        inputNameVC.username = username
+        
         events = Events(events: [
             [
+                .setBackgroundImage(imageName: "classroom"),
                 .presentDialog(
                     characterName: "Jean",
                     characterNamePosition: .left,
@@ -22,28 +32,25 @@ class Choice1ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Hi there. I’m Jane. What’s your name?"
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
-            ],[
-                .presentDialog(
-                    characterName: "###",
-                    characterNamePosition: .right,
-                    characterImage: nil,
-                    characterImagePosition: .left,
-                    dialogText: "Input Name"
-                ),
-                .setBackgroundImage(imageName: "backgroundImage2"),
-            ],[
+            ], [
+                .goToNextScene(viewController: inputNameVC)
+            ], [
                 .presentDialog(
                     characterName: "Jean",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
-                    characterImagePosition: .right,
-                    dialogText: "Hello, #name. This school looks really nice. Looking forward to more days here!"
+                    characterImagePosition: .left,
+                    dialogText: "Hello, \(username). This school looks really nice. Looking forward to more days here!"
                 ),
-                .setBackgroundImage(imageName: "backgroundImage"),
-            ],
-        ])
-        
+            ], [
+                .presentNarration(text: "From the other side of the class, Jessica is staring at Jane cynically. She realise Jane is very pretty and might be a threat for her popularity."),
+            ], [
+                .presentNarration(text: "The lesson started, they all studied quietly. At the end of the class the teacher gave them homework for them to do."),
+                    
+            ], [
+                .goToNextScene(viewController: Scene2ViewController())],
+            ]
+        )
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
     }

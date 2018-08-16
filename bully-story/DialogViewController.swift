@@ -338,6 +338,7 @@ class OptionLabel: UILabel {
         self.layer.borderWidth = CGFloat(1)
         self.textAlignment = .center
         self.layer.cornerRadius = CGFloat(10)
+        self.font = UIFont(name: "PT Sans", size: 20)
         
         self.isUserInteractionEnabled = true
     }
