@@ -15,25 +15,21 @@ class Scene1ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .presentDialog(
-                    characterName: "Jean",
-                    characterNamePosition: .left,
-                    characterImage: "jane_Sad",
-                    characterImagePosition: .left,
-                    dialogText: "Hi there. I’m Jane. What’s your name?"
-                ),
-                .setBackgroundImage(imageName: "backgroundImage"),
+                .presentChoices(choices: (
+                    title: "Jane sat beside you. What would you do?",
+                    options: [
+                        (
+                            title: "Introduce yourself",
+                            handler: { () in self.goToNextScene(Choice1ViewController()) }
+                        ),
+                        (
+                            title: "Ignore Her",
+                            handler: { () in self.goToNextScene(Choice2ViewController()) }
+                        ),
+                        ]
+                ))
             ],
-            [
-                .presentDialog(
-                    characterName: "###",
-                    characterNamePosition: .right,
-                    characterImage: nil,
-                    characterImagePosition: .left,
-                    dialogText: "Input Name"
-                ),
-                .setBackgroundImage(imageName: "backgroundImage2"),
-            ],
+            
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
         let startEvent = events.goToStartEvent()

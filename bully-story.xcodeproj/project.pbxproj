@@ -96,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				37A91539211C09300076AFFB /* Scene1ViewController.swift */,
-				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				3742DB67211EA82100835FC3 /* Choice1ViewController.swift */,
 				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
+				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				3742DB6B211EB5E500835FC3 /* EndingViewController.swift */,
 			);
 			path = Scenes;
