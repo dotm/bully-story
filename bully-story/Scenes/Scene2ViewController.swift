@@ -16,29 +16,56 @@ class Scene2ViewController: DialogViewController {
         events = Events(events: [
             [
                 .presentDialog(
-                    characterName: "Jean",
+                    characterName: "Jessica",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
                     characterImagePosition: .right,
-                    dialogText: "How are you?"
+                    dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like."
                 ),
                 .setBackgroundImage(imageName: "backgroundImage"),
             ],
             [
-                .presentChoices(choices: (
-                    title: "How are you?",
-                    options: [
-                        (
-                            title: "I'm fine. Thanks.",
-                            handler: { () in self.goToNextScene(Choice1ViewController()) }
-                        ),
-                        (
-                            title: "Fine",
-                            handler: { () in self.goToNextScene(Choice2ViewController()) }
-                        ),
-                    ]
-                ))
-            ]
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need to this homework.."
+                ),
+                .setBackgroundImage(imageName: "backgroundImage"),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "Oh? Okay. Fine then"
+                ),
+                .setBackgroundImage(imageName: "backgroundImage"),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "Yeah Jess. See you tomorrow in class!"
+                ),
+                .setBackgroundImage(imageName: "backgroundImage"),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "Yeah yeah sure."
+                ),
+                .setBackgroundImage(imageName: "backgroundImage"),
+                ]
+            
+            
         ])
 
         let startEvent = events.goToStartEvent()

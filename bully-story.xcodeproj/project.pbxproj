@@ -19,7 +19,6 @@
 		3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB67211EA82100835FC3 /* Choice1ViewController.swift */; };
 		3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */; };
 		3742DB6C211EB5E500835FC3 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB6B211EB5E500835FC3 /* EndingViewController.swift */; };
-		37A137C421242D5400892758 /* Day1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A137C321242D5400892758 /* Day1ViewController.swift */; };
 		37A91538211C09300076AFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91537211C09300076AFFB /* AppDelegate.swift */; };
 		37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91539211C09300076AFFB /* Scene1ViewController.swift */; };
 		37A9153D211C09300076AFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
@@ -31,6 +30,11 @@
 		37AF08C1211C58E800E96284 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF08C0211C58E800E96284 /* Events.swift */; };
 		37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2786B211E9471005B6EFF /* DialogViewController.swift */; };
 		37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */; };
+		851191FC21250A26008A0958 /* ActViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 851191F721250A25008A0958 /* ActViewController.xib */; };
+		851191FD21250A26008A0958 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 851191F821250A25008A0958 /* PuzzleViewController.xib */; };
+		851191FE21250A26008A0958 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191F921250A25008A0958 /* PuzzleViewController.swift */; };
+		851191FF21250A26008A0958 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191FA21250A26008A0958 /* Transitions.swift */; };
+		8511920021250A26008A0958 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191FB21250A26008A0958 /* ActViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +60,6 @@
 		3742DB67211EA82100835FC3 /* Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
 		3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice2ViewController.swift; sourceTree = "<group>"; };
 		3742DB6B211EB5E500835FC3 /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
-		37A137C321242D5400892758 /* Day1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1ViewController.swift; sourceTree = "<group>"; };
 		37A91534211C09300076AFFB /* bully-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bully-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A91537211C09300076AFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A91539211C09300076AFFB /* Scene1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +75,11 @@
 		37AF08C0211C58E800E96284 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		37D2786B211E9471005B6EFF /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
+		851191F721250A25008A0958 /* ActViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActViewController.xib; sourceTree = "<group>"; };
+		851191F821250A25008A0958 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
+		851191F921250A25008A0958 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		851191FA21250A26008A0958 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		851191FB21250A26008A0958 /* ActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				37A91539211C09300076AFFB /* Scene1ViewController.swift */,
-				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				3742DB67211EA82100835FC3 /* Choice1ViewController.swift */,
 				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
+				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				3742DB6B211EB5E500835FC3 /* EndingViewController.swift */,
 			);
 			path = Scenes;
@@ -135,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
-				37A137C321242D5400892758 /* Day1ViewController.swift */,
+				851191F621250A11008A0958 /* Act & Minigames */,
 				370364BB211EF428001E8D56 /* Scenes */,
 				37A91537211C09300076AFFB /* AppDelegate.swift */,
 				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
@@ -156,6 +164,18 @@
 				37A91551211C09310076AFFB /* Info.plist */,
 			);
 			path = "bully-storyTests";
+			sourceTree = "<group>";
+		};
+		851191F621250A11008A0958 /* Act & Minigames */ = {
+			isa = PBXGroup;
+			children = (
+				851191FB21250A26008A0958 /* ActViewController.swift */,
+				851191F721250A25008A0958 /* ActViewController.xib */,
+				851191F921250A25008A0958 /* PuzzleViewController.swift */,
+				851191F821250A25008A0958 /* PuzzleViewController.xib */,
+				851191FA21250A26008A0958 /* Transitions.swift */,
+			);
+			path = "Act & Minigames";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +261,9 @@
 			files = (
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
 				37A91542211C09310076AFFB /* Assets.xcassets in Resources */,
+				851191FD21250A26008A0958 /* PuzzleViewController.xib in Resources */,
 				267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */,
+				851191FC21250A26008A0958 /* ActViewController.xib in Resources */,
 				267A996521232010008EDFD4 /* PTC75F.ttf in Resources */,
 				267A996721232010008EDFD4 /* PTS56F.ttf in Resources */,
 				267A996121232010008EDFD4 /* PTS76F.ttf in Resources */,
@@ -269,15 +291,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */,
+				8511920021250A26008A0958 /* ActViewController.swift in Sources */,
+				851191FF21250A26008A0958 /* Transitions.swift in Sources */,
 				3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */,
 				37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */,
 				37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */,
 				37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */,
 				3742DB6C211EB5E500835FC3 /* EndingViewController.swift in Sources */,
-				37A137C421242D5400892758 /* Day1ViewController.swift in Sources */,
 				3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */,
 				37A91538211C09300076AFFB /* AppDelegate.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
+				851191FE21250A26008A0958 /* PuzzleViewController.swift in Sources */,
 				37AF08C1211C58E800E96284 /* Events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

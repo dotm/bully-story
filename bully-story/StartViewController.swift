@@ -9,11 +9,14 @@
 import UIKit
 import AVFoundation
 
-class StartViewController: UIViewController {
+class StartViewController: UIViewController, UINavigationControllerDelegate {
     var bgAudio : AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
+        
         // Do any additional setup after loading the view.
         guard let backgroundMusicData = NSDataAsset(name: "menuMusic")?.data else { return }
         do {
@@ -30,28 +33,22 @@ class StartViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        bgAudio.play()
-    }
-    
-  
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // Do any additional setup after loading the view.
     }
     
     @IBAction func startGame(_ sender: Any) {
         bgAudio.stop()
+        
+        self.navigationController?.delegate = self
+        let vc = ActViewController()
+        vc.actTitle = "Act 1"
+        vc.destinationVC = Scene1ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return FadePushAnimator()
     }
-    */
-
+    
 }

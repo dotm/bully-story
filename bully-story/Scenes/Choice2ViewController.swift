@@ -24,7 +24,7 @@ class Choice2ViewController: DialogViewController {
                 ),
                 .setBackgroundImage(imageName: "backgroundImage2"),
             ],
-            [.goToNextScene(viewController: EndingViewController())],
+            [.goToNextScene(viewController: Scene2ViewController())],
         ])
         
         let startEvent = events.goToStartEvent()

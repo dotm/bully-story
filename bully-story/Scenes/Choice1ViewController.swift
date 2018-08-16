@@ -16,18 +16,37 @@ class Choice1ViewController: DialogViewController {
         events = Events(events: [
             [
                 .presentDialog(
-                    characterName: "John",
+                    characterName: "Jean",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Sad",
+                    characterImagePosition: .left,
+                    dialogText: "Hi there. I’m Jane. What’s your name?"
+                ),
+                .setBackgroundImage(imageName: "backgroundImage"),
+                ],
+            [
+                .presentDialog(
+                    characterName: "###",
                     characterNamePosition: .right,
                     characterImage: nil,
                     characterImagePosition: .left,
-                    dialogText: "I'm fine. Thanks."
+                    dialogText: "Input Name"
                 ),
                 .setBackgroundImage(imageName: "backgroundImage2"),
-            ],
-            [.goToNextScene(viewController: EndingViewController())],
-        ])
+                ],  [
+                    .presentDialog(
+                        characterName: "Jean",
+                        characterNamePosition: .left,
+                        characterImage: "jane_Smile",
+                        characterImagePosition: .right,
+                        dialogText: "Hello, #name. This school looks really nice. Looking forward to more days here!"
+                    ),
+                    .setBackgroundImage(imageName: "backgroundImage"),
+                    ]])
         
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
     }
 }
+
+
