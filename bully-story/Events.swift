@@ -67,6 +67,10 @@ enum StoryAction {
     case presentNarration(text: String)
     case presentChoices(choices: Choices)
     case goToNextScene(viewController: UIViewController)
+    case playBGM(filename: String)
+    case stopBGM()
+    case playSFX(filename: String, delay: Double)
+    case stopSFX()
 }
 
 typealias Event = [StoryAction]

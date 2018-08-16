@@ -58,6 +58,7 @@ class DialogViewController: UIViewController {
         
         setupDialogContainer()
         setupBackgroundImage()
+        DialogAudioPlayer.setupAudioPlayer()
     }
     
     //MARK: Actions
@@ -87,6 +88,14 @@ class DialogViewController: UIViewController {
             presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText)
         case let .presentNarration(text):
             presentNarration(text)
+        case let .playBGM(filename):
+            DialogAudioPlayer.setAndPlay_BGM(mp3_filename: filename)
+        case .stopBGM:
+            DialogAudioPlayer.stopBackgroundMusic()
+        case let.playSFX(filename, delay):
+            DialogAudioPlayer.setAndPlay_SFX(mp3_filename: filename, delay: delay)
+        case .stopSFX:
+            DialogAudioPlayer.stopSoundEffect()
         }
     }
     func goToNextScene(_ viewController: UIViewController){

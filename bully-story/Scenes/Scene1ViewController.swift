@@ -23,6 +23,8 @@ class Scene1ViewController: DialogViewController {
                     dialogText: "Hi There"
                 ),
                 .setBackgroundImage(imageName: "classroom"),
+                .playBGM(filename: "sampleMusic"),
+                .playSFX(filename: "sampleSFX", delay: 3.0)
             ],
             [
                 .presentDialog(
@@ -33,6 +35,7 @@ class Scene1ViewController: DialogViewController {
                     dialogText: "Hello Jean"
                 ),
                 .setBackgroundImage(imageName: "classroom"),
+                .playBGM(filename: "sampleMusic"),
             ],
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
