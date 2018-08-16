@@ -15,28 +15,31 @@ class Scene1ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .presentDialog(
-                    characterName: "Jean",
-                    characterNamePosition: .left,
-                    characterImage: "jane_Sad",
-                    characterImagePosition: .left,
-                    dialogText: "Hi There"
-                ),
-                .setBackgroundImage(imageName: "classroom"),
+                    .setBackgroundImage(imageName: "classroom"),
+                    .presentNarration(text: "(Bell Rang) Each students returned to their seat. The teacher came in and brought a girl with him. Looks like it’s the new girl. She has a very pretty face and very charming."),
+                    ],[
+                        .presentNarration(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys. She then introduced herself, and after that she chose to sit beside you."),
+                        ],[
+                            .presentChoices(choices: (
+                                title: "Jane sat beside you. What would you do?",
+                                options: [
+                                    (
+                                        title: "Introduce yourself",
+                                        handler: { () in self.goToNextScene(Choice1ViewController()) }
+                                    ),
+                                    (
+                                        title: "Ignore Her",
+                                        handler: { () in self.goToNextScene(Choice2ViewController()) }
+                                    ),
+                                    ]
+            
+                            )),
             ],
-            [
-                .presentDialog(
-                    characterName: "John",
-                    characterNamePosition: .right,
-                    characterImage: nil,
-                    characterImagePosition: .left,
-                    dialogText: "Hello Jean"
-                ),
-                .setBackgroundImage(imageName: "classroom"),
-            ],
-            [.goToNextScene(viewController: Scene2ViewController())],
-        ])
+                          
+                          [.goToNextScene(viewController: Scene2ViewController())],
+                          ])
         let startEvent = events.goToStartEvent()
+        
         executeEvent(startEvent)
     }
 }

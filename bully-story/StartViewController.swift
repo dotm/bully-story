@@ -33,7 +33,8 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
             print(error.localizedDescription)
         }
         
-        
+        bgAudio.play()
+        bgAudio.numberOfLoops = 0
         // Do any additional setup after loading the view.
     }
     
