@@ -14,18 +14,14 @@ class Choice2ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
+            
             [
-                .presentDialog(
-                    characterName: "John",
-                    characterNamePosition: .right,
-                    characterImage: nil,
-                    characterImagePosition: .left,
-                    dialogText: "Fine"
-                ),
-                .setBackgroundImage(imageName: "backgroundImage2"),
-            ],
+                 .setBackgroundImage(imageName: "classroom"),
+                 .presentNarration(text: "You chose to ignore Jane. \n She's then preparing her things to study and you're preparing yours too."),
+                
+                ],
             [
-                .presentNarration(text: "From the other side of the class, Jessica is staring at Jane cynically. She realise Jane is very pretty and might be a threat for her popularity. She’s thinking to befriend Jane so that maybe she can be even more popular."),
+                .presentNarration(text: "From the other side of the class, Jessica is staring at Jane cynically. She realises Jane is very pretty and might be a threat for her popularity."),
                 
                 ],
             [
