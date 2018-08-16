@@ -20,17 +20,17 @@ class Scene1ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "jane_Sad",
                     characterImagePosition: .left,
-                    dialogText: "Hi There"
+                    dialogText: "Hi there. I’m Jane. What’s your name?"
                 ),
                 .setBackgroundImage(imageName: "backgroundImage"),
             ],
             [
                 .presentDialog(
-                    characterName: "John",
+                    characterName: "###",
                     characterNamePosition: .right,
                     characterImage: nil,
                     characterImagePosition: .left,
-                    dialogText: "Hello Jean"
+                    dialogText: "Input Name"
                 ),
                 .setBackgroundImage(imageName: "backgroundImage2"),
             ],
