@@ -14,6 +14,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         guard let backgroundMusicData = NSDataAsset(name: "menuMusic")?.data else { return }
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
@@ -28,7 +29,6 @@ class StartViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-    bgAudio.play()
         
         
         // Do any additional setup after loading the view.
