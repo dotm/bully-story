@@ -15,16 +15,19 @@ class Scene2ViewController: DialogViewController {
         
         events = Events(events: [
             [
+                .playSFX(filename: "Scene1Bell", delay: 0.0),
+                .playBGM(filename: "Scene2BGMusic"),
                 .setBackgroundImage(imageName : "yard"),
                 .presentNarration(text: "School is finally over. Jane is walking straight home because she wants to do the homework that was given earlier today. Jessica came up to her to ask her to play with her gang. "),
                 
                 ],
             [
+                .playSFX(filename: "Scene2SFX", delay: 0.0),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like!"
                 ),
                 .setBackgroundImage(imageName: "yard"),
@@ -44,7 +47,7 @@ class Scene2ViewController: DialogViewController {
                     characterName: "Jessica",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Oh? Okay. Fine then"
                 ),
                 .setBackgroundImage(imageName: "yard"),
@@ -64,12 +67,14 @@ class Scene2ViewController: DialogViewController {
                     characterName: "Jessica",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Yeah yeah sure."
                 ),
                 .setBackgroundImage(imageName: "yard"),
                 ],
+            [.playBGM(filename: "Scene2Narration(intense)")],
             [
+                
                 .presentNarration(text: "Jessica looks pissed because no one ever says no to her. All girls want to befriend with her because of her popularity. This is the first time someone says no to her"),
                 
                 ],
@@ -83,6 +88,7 @@ class Scene2ViewController: DialogViewController {
                     ),
                     .setBackgroundImage(imageName: "yard"),
                     ],
+             [.goToNextScene(viewController: Scene3ViewController())],
             
             
             ])
