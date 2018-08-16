@@ -15,6 +15,11 @@ class Scene1ViewController: DialogViewController {
         
         events = Events(events: [
             [
+                .setBackgroundImage(imageName: "backgroundImage"),
+                .presentNarration(text: "(Bell Rang) Each students returned to their seat. The teacher came in and brought a girl with him. Looks like it’s the new girl. She has a very pretty face and very charming."),
+            ],[
+                .presentNarration(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys. She then introduced herself, and after that she chose to sit beside you."),
+            ],[
                 .presentChoices(choices: (
                     title: "Jane sat beside you. What would you do?",
                     options: [
@@ -27,9 +32,8 @@ class Scene1ViewController: DialogViewController {
                             handler: { () in self.goToNextScene(Choice2ViewController()) }
                         ),
                         ]
-                ))
+                )),
             ],
-            
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
         let startEvent = events.goToStartEvent()
