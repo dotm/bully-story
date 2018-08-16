@@ -32,7 +32,7 @@ class Scene1ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Hello Jean"
                 ),
-                .setBackgroundImage(imageName: "ruangKelas"),
+                .setBackgroundImage(imageName: "classroom"),
             ],
             
             [.goToNextScene(viewController: Scene2ViewController())],

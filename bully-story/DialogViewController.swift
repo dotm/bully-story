@@ -248,7 +248,8 @@ class DialogViewController: UIViewController {
         
         backgroundImage.layer.zPosition = 0
         backgroundImage.image = UIImage(named: "placeholderImage")
-        
+       
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         backgroundImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
