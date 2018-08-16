@@ -34,7 +34,6 @@ class Scene1ViewController: DialogViewController {
                 ),
                 .setBackgroundImage(imageName: "classroom"),
             ],
-            
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
         let startEvent = events.goToStartEvent()

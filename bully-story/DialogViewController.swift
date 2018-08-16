@@ -85,6 +85,8 @@ class DialogViewController: UIViewController {
             goToNextScene(viewController)
         case let .presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText):
             presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText)
+        case let .presentNarration(text):
+            presentNarration(text)
         }
     }
     func goToNextScene(_ viewController: UIViewController){
@@ -111,6 +113,11 @@ class DialogViewController: UIViewController {
         setupDialogTextView(text: dialogText)
         setupCharacterName(text: characterName, position: characterNamePosition)
         setupCharacterImage(imageName: characterImage, position: characterImagePosition)
+        setupTapGestureRecognizer_forDialog()
+    }
+    private func presentNarration(_ text: String){
+        emptyDialogContainer()
+        setupNarrationTextView(text: text)
         setupTapGestureRecognizer_forDialog()
     }
     private func presentChoices(_ choices: Choices){
@@ -223,7 +230,7 @@ class DialogViewController: UIViewController {
         let dialogText = createDialogText(text: title ?? "")
         dialogContainer.addSubview(dialogText)
         
-        dialogText.textContainerInset = UIEdgeInsets(top: 25, left: 5, bottom: 25, right: 5)
+        dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.textAlignment = .center
         
         dialogText.translatesAutoresizingMaskIntoConstraints = false
@@ -241,6 +248,19 @@ class DialogViewController: UIViewController {
         dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    }
+    private func setupNarrationTextView(text: String) {
+        let narrationText = createDialogText(text: text)
+        narrationText.textAlignment = .center
+        narrationText.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
+        narrationText.layer.borderColor = UIColor(hex: "979797").cgColor
+        dialogContainer.addSubview(narrationText)
+        
+        narrationText.translatesAutoresizingMaskIntoConstraints = false
+        narrationText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        narrationText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        narrationText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
+        narrationText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()
