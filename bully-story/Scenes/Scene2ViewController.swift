@@ -20,7 +20,7 @@ class Scene2ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
                     characterImagePosition: .right,
-                    dialogText: "How are you?"
+                    dialogText: "Hello #nam"
                 ),
                 .setBackgroundImage(imageName: "backgroundImage"),
             ],
