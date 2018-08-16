@@ -35,6 +35,8 @@
 		851191FE21250A26008A0958 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191F921250A25008A0958 /* PuzzleViewController.swift */; };
 		851191FF21250A26008A0958 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191FA21250A26008A0958 /* Transitions.swift */; };
 		8511920021250A26008A0958 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191FB21250A26008A0958 /* ActViewController.swift */; };
+		85E557652125485400FDE2DA /* InputNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E557632125485400FDE2DA /* InputNameViewController.xib */; };
+		85E557662125485400FDE2DA /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E557642125485400FDE2DA /* InputNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		851191F921250A25008A0958 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		851191FA21250A26008A0958 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		851191FB21250A26008A0958 /* ActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
+		85E557632125485400FDE2DA /* InputNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputNameViewController.xib; sourceTree = "<group>"; };
+		85E557642125485400FDE2DA /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
-				851191F621250A11008A0958 /* Act & Minigames */,
+				851191F621250A11008A0958 /* Cifran */,
 				370364BB211EF428001E8D56 /* Scenes */,
 				37A91537211C09300076AFFB /* AppDelegate.swift */,
 				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
@@ -174,16 +178,18 @@
 			path = "bully-storyTests";
 			sourceTree = "<group>";
 		};
-		851191F621250A11008A0958 /* Act & Minigames */ = {
+		851191F621250A11008A0958 /* Cifran */ = {
 			isa = PBXGroup;
 			children = (
+				851191FA21250A26008A0958 /* Transitions.swift */,
+				85E557642125485400FDE2DA /* InputNameViewController.swift */,
+				85E557632125485400FDE2DA /* InputNameViewController.xib */,
 				851191FB21250A26008A0958 /* ActViewController.swift */,
 				851191F721250A25008A0958 /* ActViewController.xib */,
 				851191F921250A25008A0958 /* PuzzleViewController.swift */,
 				851191F821250A25008A0958 /* PuzzleViewController.xib */,
-				851191FA21250A26008A0958 /* Transitions.swift */,
 			);
-			path = "Act & Minigames";
+			path = Cifran;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +283,7 @@
 				267A996121232010008EDFD4 /* PTS76F.ttf in Resources */,
 				267A996321232010008EDFD4 /* PTC55F.ttf in Resources */,
 				267A996421232010008EDFD4 /* PTS55F.ttf in Resources */,
+				85E557652125485400FDE2DA /* InputNameViewController.xib in Resources */,
 				267A996221232010008EDFD4 /* PTN57F.ttf in Resources */,
 				267A996621232010008EDFD4 /* PTN77F.ttf in Resources */,
 				37A9153D211C09300076AFFB /* Main.storyboard in Resources */,
@@ -302,6 +309,7 @@
 				8511920021250A26008A0958 /* ActViewController.swift in Sources */,
 				851191FF21250A26008A0958 /* Transitions.swift in Sources */,
 				3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */,
+				85E557662125485400FDE2DA /* InputNameViewController.swift in Sources */,
 				37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */,
 				37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */,
 				37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */,
