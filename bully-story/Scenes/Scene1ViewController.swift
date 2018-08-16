@@ -35,7 +35,7 @@ class Scene1ViewController: DialogViewController {
                     dialogText: "Hello Jean"
                 ),
                 .setBackgroundImage(imageName: "classroom"),
-                .playBGM(filename: "sampleMusic"),
+                .playBGM(filename: "sampleMusic2"),
             ],
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
