@@ -68,7 +68,7 @@ class Scene3ViewController: DialogViewController {
                 ),
                 ],
             [
-                 .playSFX(filename: "Scene3SFX", delay: 0.0),
+                
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
@@ -78,7 +78,7 @@ class Scene3ViewController: DialogViewController {
                 ),
                 ],
             [
-              
+              .playSFX(filename: "Scene3SFX", delay: 0.0),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
@@ -106,7 +106,7 @@ class Scene3ViewController: DialogViewController {
                .presentNarration(text: "Her jealousy starting to increase more. But she chose to ignore that and continue to pay attention to the class."),
                 ],
             
-           
+             [.goToNextScene(viewController: Scene4ViewController())],
             ])
         let startEvent = events.goToStartEvent()
         

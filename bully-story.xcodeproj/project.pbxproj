@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2618A92D212651C900064A2A /* Scene4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618A92C212651C900064A2A /* Scene4ViewController.swift */; };
 		266D1D7E2125F7DB007BA438 /* Scene3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D1D7D2125F7DB007BA438 /* Scene3ViewController.swift */; };
 		267A996121232010008EDFD4 /* PTS76F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A99592123200F008EDFD4 /* PTS76F.ttf */; };
 		267A996221232010008EDFD4 /* PTN57F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995A21232010008EDFD4 /* PTN57F.ttf */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2618A92C212651C900064A2A /* Scene4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4ViewController.swift; sourceTree = "<group>"; };
 		266D1D7D2125F7DB007BA438 /* Scene3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3ViewController.swift; sourceTree = "<group>"; };
 		267A99592123200F008EDFD4 /* PTS76F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS76F.ttf; sourceTree = "<group>"; };
 		267A995A21232010008EDFD4 /* PTN57F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN57F.ttf; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
 				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
 				266D1D7D2125F7DB007BA438 /* Scene3ViewController.swift */,
+				2618A92C212651C900064A2A /* Scene4ViewController.swift */,
 				3742DB6B211EB5E500835FC3 /* EndingViewController.swift */,
 			);
 			path = Scenes;
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2618A92D212651C900064A2A /* Scene4ViewController.swift in Sources */,
 				37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */,
 				8511920021250A26008A0958 /* ActViewController.swift in Sources */,
 				851191FF21250A26008A0958 /* Transitions.swift in Sources */,

@@ -36,7 +36,7 @@ class Scene1ViewController: DialogViewController {
                                     handler: { () in self.goToNextScene(Choice2ViewController()) }
                                 ),
                                 ]
-                            
+                            //sini cip
                         )),
                 
                 
