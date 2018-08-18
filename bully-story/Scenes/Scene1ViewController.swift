@@ -36,12 +36,9 @@ class Scene1ViewController: DialogViewController {
                                     handler: { () in self.goToNextScene(Choice2ViewController()) }
                                 ),
                                 ]
-                            //sini cip
                         )),
-                
-                
             ],
-            
+            [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
             [.goToNextScene(viewController: Scene2ViewController())],
         ])
         let startEvent = events.goToStartEvent()

@@ -14,15 +14,36 @@ class PuzzleViewController: UIViewController {
     // 3 4
     // 5 6
     
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet var placeholderCollection: [UIImageView]!
     private var pictureCollections : [UIImageView] = []
-
+    
+    var dialogVC: DialogViewController?
+    var assetCode: Int?
+    
+    convenience init() {
+        self.init(dialogVC: nil, assetCode: nil)
+    }
+    
+    init(dialogVC: DialogViewController?, assetCode: Int?) {
+        self.dialogVC = dialogVC
+        self.assetCode = assetCode
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nextBtn.isHidden = true
+        
         for i in 0...5 {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 130, height: 150))
-            imageView.image = UIImage(named: "puzzle-\(i+1)")
+//            imageView.image = UIImage(named: "puzzle-\(assetCode!)-\(i+1)")
+            imageView.image = UIImage(named: "puzzle-1-\(i+1)")
             self.view.addSubview(imageView)
             pictureCollections.append(imageView)
             
@@ -36,7 +57,7 @@ class PuzzleViewController: UIViewController {
             
             imageView.tag = i
             placeholderCollection[i].tag = i
-            placeholderCollection[i].backgroundColor = .clear
+//            placeholderCollection[i].backgroundColor = .clear
         }
     }
     
@@ -61,10 +82,15 @@ class PuzzleViewController: UIViewController {
         if (sender.state == .cancelled || sender.state == .ended) {
             for i in 0 ... 5 {
                 if isRightPlace(placeholderCollection[i], objectDragged!) {
+                   
                     self.view.sendSubview(toBack: objectDragged!)
-                    UIView.animate(withDuration: 0.2) {
+                    self.view.sendSubview(toBack: placeholderCollection[i])
+                    
+                    UIView.animate(withDuration: 0.4, animations: {
                         objectDragged?.frame = self.placeholderCollection[i].frame
                         objectDragged?.isUserInteractionEnabled = false
+                        self.placeholderCollection[i].alpha = 0
+                    }) { _ in
                         self.snapCount += 1
                     }
                     break
@@ -76,9 +102,30 @@ class PuzzleViewController: UIViewController {
     private var snapCount = 0 {
         didSet {
             if snapCount == placeholderCollection.count {
-                self.view.backgroundColor = .black
+                
+                UIView.animate(withDuration: 2.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                    self.pictureCollections[0].transform = CGAffineTransform(translationX: 10, y: 26)
+                    self.pictureCollections[1].transform = CGAffineTransform(translationX: -10, y: 26)
+                    self.pictureCollections[2].transform = CGAffineTransform(translationX: 10, y: 0)
+                    self.pictureCollections[3].transform = CGAffineTransform(translationX: -10, y: 0)
+                    self.pictureCollections[4].transform = CGAffineTransform(translationX: 10, y: -26)
+                    self.pictureCollections[5].transform = CGAffineTransform(translationX: -10, y: -26)
+                    self.view.backgroundColor = .black
+                }) { (_) in
+                    self.nextBtn.isHidden = false
+                }
             }
         }
     }
-
+    
+    @IBAction func onTapNextBtn(_ sender: Any) {
+        let nextGame = PuzzleViewController(dialogVC: self.dialogVC, assetCode: self.assetCode!+1)
+        if assetCode! < 4 {
+            self.navigationController?.pushViewController(nextGame, animated: true)
+        } else {
+            self.dialogVC?.next()
+            self.dismiss(animated: true)
+        }
+    }
+    
 }

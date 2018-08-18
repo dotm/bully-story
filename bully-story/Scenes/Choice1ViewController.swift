@@ -8,19 +8,10 @@
 
 import UIKit
 
-var username: NSString!
-
 class Choice1ViewController: DialogViewController {
     //MARK: Lifecycle hooks
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let inputNameVC = InputNameViewController()
-        inputNameVC.providesPresentationContextTransitionStyle = true
-        inputNameVC.definesPresentationContext = true
-        inputNameVC.modalPresentationStyle = .overCurrentContext
-        inputNameVC.prevVC = self
-        inputNameVC.username = username
         
         events = Events(events: [
             [
@@ -33,14 +24,14 @@ class Choice1ViewController: DialogViewController {
                     dialogText: "Hi there. I’m Jane. What’s your name?"
                 ),
             ], [
-                .goToNextScene(viewController: inputNameVC)
+                .goToNextScene(viewController: Helper().getInputNameVC(dialogVC: self))
             ], [
                 .presentDialog(
                     characterName: "Jean",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",
                     characterImagePosition: .left,
-                    dialogText: "Hello, \(username). This school looks really nice. Looking forward to more days here!"
+                    dialogText: "Hello, #name. This school looks really nice. Looking forward to more days here!"
                 ),
             ], [
                 .presentNarration(text: "From the other side of the class, Jessica is staring at Jane cynically. She realise Jane is very pretty and might be a threat for her popularity."),

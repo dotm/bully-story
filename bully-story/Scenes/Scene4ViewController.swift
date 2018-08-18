@@ -84,7 +84,7 @@ class Scene4ViewController: DialogViewController {
             
             
             
-            [.goToNextScene(viewController: Scene4ViewController())],
+//            [.goToNextScene(viewController: Scene4ViewController())],
             
             
             ])

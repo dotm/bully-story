@@ -226,7 +226,7 @@ class DialogViewController: UIViewController {
         dialogText.isUserInteractionEnabled = false
         dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.setContentOffset(CGPoint.zero, animated: false)
-        dialogText.text = text
+        dialogText.text = text.replacingOccurrences(of: "#name", with: username)
         dialogText.backgroundColor = defaultBackgroundColor
         dialogText.font = dialogTextFontStyle
         dialogText.layer.cornerRadius = 10

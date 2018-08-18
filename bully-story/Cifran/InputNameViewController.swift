@@ -9,15 +9,20 @@
 import UIKit
 
 class InputNameViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var textField: UITextField!
     var prevVC: DialogViewController?
-    var username: NSString!
+//    var username: NSString!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField.becomeFirstResponder()
         self.view.backgroundColor = UIColor(white: 0.4, alpha: 0.8)
         self.textField.delegate = self
+        self.contentView.layer.cornerRadius = 10
+        self.contentView.layer.borderColor = UIColor(hex: "979797").cgColor
+        self.contentView.layer.borderWidth = CGFloat(1)
+        self.contentView.layer.masksToBounds = true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -27,7 +32,7 @@ class InputNameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.username = textField.text! as NSString
+        username = textField.text!
         self.textField.resignFirstResponder()
         return true
     }

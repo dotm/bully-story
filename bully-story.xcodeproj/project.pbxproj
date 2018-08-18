@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2618A92D212651C900064A2A /* Scene4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618A92C212651C900064A2A /* Scene4ViewController.swift */; };
-		266D1D7E2125F7DB007BA438 /* Scene3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D1D7D2125F7DB007BA438 /* Scene3ViewController.swift */; };
 		267A996121232010008EDFD4 /* PTS76F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A99592123200F008EDFD4 /* PTS76F.ttf */; };
 		267A996221232010008EDFD4 /* PTN57F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995A21232010008EDFD4 /* PTN57F.ttf */; };
 		267A996321232010008EDFD4 /* PTC55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995B21232010008EDFD4 /* PTC55F.ttf */; };
@@ -18,28 +16,35 @@
 		267A996721232010008EDFD4 /* PTS56F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995F21232010008EDFD4 /* PTS56F.ttf */; };
 		267A996821232010008EDFD4 /* PTS75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A996021232010008EDFD4 /* PTS75F.ttf */; };
 		267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A9969212323B7008EDFD4 /* kindergarten.ttf */; };
-		3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB67211EA82100835FC3 /* Choice1ViewController.swift */; };
-		3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */; };
-		3742DB6C211EB5E500835FC3 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742DB6B211EB5E500835FC3 /* EndingViewController.swift */; };
-		37431B6F2125BFF800E1DE2D /* DialogAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37431B6E2125BFF800E1DE2D /* DialogAudioPlayer.swift */; };
-		37A91538211C09300076AFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91537211C09300076AFFB /* AppDelegate.swift */; };
-		37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A91539211C09300076AFFB /* Scene1ViewController.swift */; };
-		37A9153D211C09300076AFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */; };
-		37A91542211C09310076AFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A91541211C09310076AFFB /* Assets.xcassets */; };
 		37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A91543211C09310076AFFB /* LaunchScreen.storyboard */; };
 		37A91550211C09310076AFFB /* bully_storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9154F211C09310076AFFB /* bully_storyTests.swift */; };
-		37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9155A211C0A3F0076AFFB /* StartViewController.swift */; };
-		37AF08C1211C58E800E96284 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF08C0211C58E800E96284 /* Events.swift */; };
-		37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2786B211E9471005B6EFF /* DialogViewController.swift */; };
-		37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */; };
-		851191FC21250A26008A0958 /* ActViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 851191F721250A25008A0958 /* ActViewController.xib */; };
-		851191FD21250A26008A0958 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 851191F821250A25008A0958 /* PuzzleViewController.xib */; };
-		851191FE21250A26008A0958 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191F921250A25008A0958 /* PuzzleViewController.swift */; };
-		851191FF21250A26008A0958 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191FA21250A26008A0958 /* Transitions.swift */; };
-		8511920021250A26008A0958 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851191FB21250A26008A0958 /* ActViewController.swift */; };
-		85E557652125485400FDE2DA /* InputNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E557632125485400FDE2DA /* InputNameViewController.xib */; };
-		85E557662125485400FDE2DA /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E557642125485400FDE2DA /* InputNameViewController.swift */; };
+		8509F62621281C9300362053 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F60D21281C9300362053 /* Global.swift */; };
+		8509F62721281C9300362053 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F60E21281C9300362053 /* PuzzleViewController.xib */; };
+		8509F62821281C9300362053 /* ActViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F60F21281C9300362053 /* ActViewController.xib */; };
+		8509F62921281C9300362053 /* HangmanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F61021281C9300362053 /* HangmanViewController.xib */; };
+		8509F62A21281C9300362053 /* InputNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F61121281C9300362053 /* InputNameViewController.xib */; };
+		8509F62B21281C9300362053 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61221281C9300362053 /* Transitions.swift */; };
+		8509F62C21281C9300362053 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61321281C9300362053 /* ActViewController.swift */; };
+		8509F62D21281C9300362053 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61421281C9300362053 /* HangmanViewController.swift */; };
+		8509F62E21281C9300362053 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61521281C9300362053 /* PuzzleViewController.swift */; };
+		8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61621281C9300362053 /* InputNameViewController.swift */; };
+		8509F63021281C9300362053 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61721281C9300362053 /* Helper.swift */; };
+		8509F63121281C9300362053 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61821281C9300362053 /* DialogViewController.swift */; };
+		8509F63221281C9300362053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61921281C9300362053 /* AppDelegate.swift */; };
+		8509F63321281C9300362053 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61A21281C9300362053 /* Events.swift */; };
+		8509F63421281C9300362053 /* wordList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8509F61B21281C9300362053 /* wordList.txt */; };
+		8509F63521281C9300362053 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61C21281C9300362053 /* StartViewController.swift */; };
+		8509F63621281C9300362053 /* Scene4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61E21281C9300362053 /* Scene4ViewController.swift */; };
+		8509F63721281C9300362053 /* Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61F21281C9300362053 /* Choice2ViewController.swift */; };
+		8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62021281C9300362053 /* Choice1ViewController.swift */; };
+		8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62121281C9300362053 /* Scene1ViewController.swift */; };
+		8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62221281C9300362053 /* Scene3ViewController.swift */; };
+		8509F63B21281C9300362053 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62321281C9300362053 /* EndingViewController.swift */; };
+		8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62421281C9300362053 /* Scene2ViewController.swift */; };
+		8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62521281C9300362053 /* DialogAudioPlayer.swift */; };
+		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
+		8509F64321281FEC00362053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509F64221281FEC00362053 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2618A92C212651C900064A2A /* Scene4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4ViewController.swift; sourceTree = "<group>"; };
-		266D1D7D2125F7DB007BA438 /* Scene3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3ViewController.swift; sourceTree = "<group>"; };
 		267A99592123200F008EDFD4 /* PTS76F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS76F.ttf; sourceTree = "<group>"; };
 		267A995A21232010008EDFD4 /* PTN57F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN57F.ttf; sourceTree = "<group>"; };
 		267A995B21232010008EDFD4 /* PTC55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTC55F.ttf; sourceTree = "<group>"; };
@@ -64,32 +67,39 @@
 		267A995F21232010008EDFD4 /* PTS56F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS56F.ttf; sourceTree = "<group>"; };
 		267A996021232010008EDFD4 /* PTS75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS75F.ttf; sourceTree = "<group>"; };
 		267A9969212323B7008EDFD4 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
-		3742DB67211EA82100835FC3 /* Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
-		3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice2ViewController.swift; sourceTree = "<group>"; };
-		3742DB6B211EB5E500835FC3 /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
-		37431B6E2125BFF800E1DE2D /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		37A91534211C09300076AFFB /* bully-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bully-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A91537211C09300076AFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37A91539211C09300076AFFB /* Scene1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
 		37A9153C211C09300076AFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A9153F211C09300076AFFB /* bully_story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bully_story.xcdatamodel; sourceTree = "<group>"; };
-		37A91541211C09310076AFFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A91544211C09310076AFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A91546211C09310076AFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A9154B211C09310076AFFB /* bully-storyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bully-storyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9154F211C09310076AFFB /* bully_storyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bully_storyTests.swift; sourceTree = "<group>"; };
 		37A91551211C09310076AFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37A9155A211C0A3F0076AFFB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		37AF08C0211C58E800E96284 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		37D2786B211E9471005B6EFF /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
-		37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
-		851191F721250A25008A0958 /* ActViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActViewController.xib; sourceTree = "<group>"; };
-		851191F821250A25008A0958 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
-		851191F921250A25008A0958 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
-		851191FA21250A26008A0958 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
-		851191FB21250A26008A0958 /* ActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
-		85E557632125485400FDE2DA /* InputNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputNameViewController.xib; sourceTree = "<group>"; };
-		85E557642125485400FDE2DA /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
+		8509F60D21281C9300362053 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		8509F60E21281C9300362053 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
+		8509F60F21281C9300362053 /* ActViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActViewController.xib; sourceTree = "<group>"; };
+		8509F61021281C9300362053 /* HangmanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HangmanViewController.xib; sourceTree = "<group>"; };
+		8509F61121281C9300362053 /* InputNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputNameViewController.xib; sourceTree = "<group>"; };
+		8509F61221281C9300362053 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		8509F61321281C9300362053 /* ActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
+		8509F61421281C9300362053 /* HangmanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
+		8509F61521281C9300362053 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		8509F61621281C9300362053 /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
+		8509F61721281C9300362053 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		8509F61821281C9300362053 /* DialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		8509F61921281C9300362053 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8509F61A21281C9300362053 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		8509F61B21281C9300362053 /* wordList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordList.txt; sourceTree = "<group>"; };
+		8509F61C21281C9300362053 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		8509F61E21281C9300362053 /* Scene4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene4ViewController.swift; sourceTree = "<group>"; };
+		8509F61F21281C9300362053 /* Choice2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice2ViewController.swift; sourceTree = "<group>"; };
+		8509F62021281C9300362053 /* Choice1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
+		8509F62121281C9300362053 /* Scene1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
+		8509F62221281C9300362053 /* Scene3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene3ViewController.swift; sourceTree = "<group>"; };
+		8509F62321281C9300362053 /* EndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
+		8509F62421281C9300362053 /* Scene2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
+		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
+		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,20 +136,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		370364BB211EF428001E8D56 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				37A91539211C09300076AFFB /* Scene1ViewController.swift */,
-				3742DB67211EA82100835FC3 /* Choice1ViewController.swift */,
-				3742DB69211EB3FE00835FC3 /* Choice2ViewController.swift */,
-				37D2786D211E9C2D005B6EFF /* Scene2ViewController.swift */,
-				266D1D7D2125F7DB007BA438 /* Scene3ViewController.swift */,
-				2618A92C212651C900064A2A /* Scene4ViewController.swift */,
-				3742DB6B211EB5E500835FC3 /* EndingViewController.swift */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		37A9152B211C09300076AFFB = {
 			isa = PBXGroup;
 			children = (
@@ -162,18 +158,19 @@
 		37A91536211C09300076AFFB /* bully-story */ = {
 			isa = PBXGroup;
 			children = (
-				37A9155A211C0A3F0076AFFB /* StartViewController.swift */,
-				851191F621250A11008A0958 /* Cifran */,
-				370364BB211EF428001E8D56 /* Scenes */,
-				37A91537211C09300076AFFB /* AppDelegate.swift */,
-				37D2786B211E9471005B6EFF /* DialogViewController.swift */,
-				37431B6E2125BFF800E1DE2D /* DialogAudioPlayer.swift */,
-				37AF08C0211C58E800E96284 /* Events.swift */,
+				8509F61921281C9300362053 /* AppDelegate.swift */,
+				8509F60C21281C9300362053 /* Cifran */,
+				8509F62521281C9300362053 /* DialogAudioPlayer.swift */,
+				8509F61821281C9300362053 /* DialogViewController.swift */,
+				8509F61A21281C9300362053 /* Events.swift */,
+				8509F61D21281C9300362053 /* Scenes */,
+				8509F61C21281C9300362053 /* StartViewController.swift */,
+				8509F61B21281C9300362053 /* wordList.txt */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
 				37A91543211C09310076AFFB /* LaunchScreen.storyboard */,
-				37A91541211C09310076AFFB /* Assets.xcassets */,
 				37A91546211C09310076AFFB /* Info.plist */,
 				37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */,
+				8509F64221281FEC00362053 /* Assets.xcassets */,
 			);
 			path = "bully-story";
 			sourceTree = "<group>";
@@ -187,18 +184,36 @@
 			path = "bully-storyTests";
 			sourceTree = "<group>";
 		};
-		851191F621250A11008A0958 /* Cifran */ = {
+		8509F60C21281C9300362053 /* Cifran */ = {
 			isa = PBXGroup;
 			children = (
-				851191FA21250A26008A0958 /* Transitions.swift */,
-				85E557642125485400FDE2DA /* InputNameViewController.swift */,
-				85E557632125485400FDE2DA /* InputNameViewController.xib */,
-				851191FB21250A26008A0958 /* ActViewController.swift */,
-				851191F721250A25008A0958 /* ActViewController.xib */,
-				851191F921250A25008A0958 /* PuzzleViewController.swift */,
-				851191F821250A25008A0958 /* PuzzleViewController.xib */,
+				8509F60D21281C9300362053 /* Global.swift */,
+				8509F60E21281C9300362053 /* PuzzleViewController.xib */,
+				8509F60F21281C9300362053 /* ActViewController.xib */,
+				8509F61021281C9300362053 /* HangmanViewController.xib */,
+				8509F61121281C9300362053 /* InputNameViewController.xib */,
+				8509F61221281C9300362053 /* Transitions.swift */,
+				8509F61321281C9300362053 /* ActViewController.swift */,
+				8509F61421281C9300362053 /* HangmanViewController.swift */,
+				8509F61521281C9300362053 /* PuzzleViewController.swift */,
+				8509F61621281C9300362053 /* InputNameViewController.swift */,
+				8509F61721281C9300362053 /* Helper.swift */,
 			);
 			path = Cifran;
+			sourceTree = "<group>";
+		};
+		8509F61D21281C9300362053 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8509F61E21281C9300362053 /* Scene4ViewController.swift */,
+				8509F61F21281C9300362053 /* Choice2ViewController.swift */,
+				8509F62021281C9300362053 /* Choice1ViewController.swift */,
+				8509F62121281C9300362053 /* Scene1ViewController.swift */,
+				8509F62221281C9300362053 /* Scene3ViewController.swift */,
+				8509F62321281C9300362053 /* EndingViewController.swift */,
+				8509F62421281C9300362053 /* Scene2ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +266,7 @@
 				TargetAttributes = {
 					37A91533211C09300076AFFB = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					37A9154A211C09310076AFFB = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -283,19 +299,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
-				37A91542211C09310076AFFB /* Assets.xcassets in Resources */,
-				851191FD21250A26008A0958 /* PuzzleViewController.xib in Resources */,
+				8509F63421281C9300362053 /* wordList.txt in Resources */,
 				267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */,
-				851191FC21250A26008A0958 /* ActViewController.xib in Resources */,
 				267A996521232010008EDFD4 /* PTC75F.ttf in Resources */,
 				267A996721232010008EDFD4 /* PTS56F.ttf in Resources */,
+				8509F64121281EFC00362053 /* Main.storyboard in Resources */,
+				8509F64321281FEC00362053 /* Assets.xcassets in Resources */,
+				8509F62921281C9300362053 /* HangmanViewController.xib in Resources */,
 				267A996121232010008EDFD4 /* PTS76F.ttf in Resources */,
 				267A996321232010008EDFD4 /* PTC55F.ttf in Resources */,
 				267A996421232010008EDFD4 /* PTS55F.ttf in Resources */,
-				85E557652125485400FDE2DA /* InputNameViewController.xib in Resources */,
+				8509F62721281C9300362053 /* PuzzleViewController.xib in Resources */,
+				8509F62821281C9300362053 /* ActViewController.xib in Resources */,
 				267A996221232010008EDFD4 /* PTN57F.ttf in Resources */,
+				8509F62A21281C9300362053 /* InputNameViewController.xib in Resources */,
 				267A996621232010008EDFD4 /* PTN77F.ttf in Resources */,
-				37A9153D211C09300076AFFB /* Main.storyboard in Resources */,
 				267A996821232010008EDFD4 /* PTS75F.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,23 +332,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2618A92D212651C900064A2A /* Scene4ViewController.swift in Sources */,
-				37A9153A211C09300076AFFB /* Scene1ViewController.swift in Sources */,
-				8511920021250A26008A0958 /* ActViewController.swift in Sources */,
-				851191FF21250A26008A0958 /* Transitions.swift in Sources */,
-				3742DB68211EA82100835FC3 /* Choice1ViewController.swift in Sources */,
-				85E557662125485400FDE2DA /* InputNameViewController.swift in Sources */,
-				266D1D7E2125F7DB007BA438 /* Scene3ViewController.swift in Sources */,
-				37A9155B211C0A3F0076AFFB /* StartViewController.swift in Sources */,
-				37D2786E211E9C2D005B6EFF /* Scene2ViewController.swift in Sources */,
-				37D2786C211E9471005B6EFF /* DialogViewController.swift in Sources */,
-				3742DB6C211EB5E500835FC3 /* EndingViewController.swift in Sources */,
-				3742DB6A211EB3FE00835FC3 /* Choice2ViewController.swift in Sources */,
-				37A91538211C09300076AFFB /* AppDelegate.swift in Sources */,
+				8509F62B21281C9300362053 /* Transitions.swift in Sources */,
+				8509F63621281C9300362053 /* Scene4ViewController.swift in Sources */,
+				8509F63321281C9300362053 /* Events.swift in Sources */,
+				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
+				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,
+				8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */,
+				8509F62621281C9300362053 /* Global.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
-				37431B6F2125BFF800E1DE2D /* DialogAudioPlayer.swift in Sources */,
-				851191FE21250A26008A0958 /* PuzzleViewController.swift in Sources */,
-				37AF08C1211C58E800E96284 /* Events.swift in Sources */,
+				8509F63B21281C9300362053 /* EndingViewController.swift in Sources */,
+				8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */,
+				8509F63521281C9300362053 /* StartViewController.swift in Sources */,
+				8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */,
+				8509F63721281C9300362053 /* Choice2ViewController.swift in Sources */,
+				8509F63121281C9300362053 /* DialogViewController.swift in Sources */,
+				8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */,
+				8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */,
+				8509F62E21281C9300362053 /* PuzzleViewController.swift in Sources */,
+				8509F62D21281C9300362053 /* HangmanViewController.swift in Sources */,
+				8509F63221281C9300362053 /* AppDelegate.swift in Sources */,
+				8509F63021281C9300362053 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N55A3MSD3W;
 				INFOPLIST_FILE = "bully-story/Info.plist";
@@ -499,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "yoshua-elmaryono.bully-story";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N55A3MSD3W;
 				INFOPLIST_FILE = "bully-story/Info.plist";
