@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HangmanViewController" customModule="bully_story" customModuleProvider="target">
+            <connections>
+                <outlet property="nextBtn" destination="p8e-Pz-xvU" id="nDK-WX-zdf"/>
+                <outlet property="timerLabel" destination="mv6-oM-xiW" id="3Qs-4M-LMH"/>
+                <outlet property="underlineStackView" destination="hiz-PI-NnC" id="vaH-I4-qhe"/>
+                <outlet property="view" destination="0s1-Vg-gYx" id="vLN-nW-Mvb"/>
+                <outlet property="wordStackView" destination="ohA-9p-d7g" id="XcC-1o-3jR"/>
+                <outletCollection property="letterButtons" destination="dBb-Ou-Qfi" collectionClass="NSMutableArray" id="gBl-T1-AY0"/>
+                <outletCollection property="letterButtons" destination="zWz-V0-A9a" collectionClass="NSMutableArray" id="NCd-Ih-d6a"/>
+                <outletCollection property="letterButtons" destination="MGq-Ow-TfL" collectionClass="NSMutableArray" id="Gg8-W4-bm1"/>
+                <outletCollection property="letterButtons" destination="r8a-qc-eIg" collectionClass="NSMutableArray" id="LQV-pf-p7D"/>
+                <outletCollection property="letterButtons" destination="4Xc-pF-xvq" collectionClass="NSMutableArray" id="V9O-Bb-XrX"/>
+                <outletCollection property="letterButtons" destination="FtH-kG-kc0" collectionClass="NSMutableArray" id="eKe-ag-6ya"/>
+                <outletCollection property="letterButtons" destination="llr-sp-crs" collectionClass="NSMutableArray" id="ePA-CS-dgj"/>
+                <outletCollection property="letterButtons" destination="24R-ZG-7jL" collectionClass="NSMutableArray" id="AAc-DH-AUG"/>
+                <outletCollection property="letterButtons" destination="8ms-eV-fDB" collectionClass="NSMutableArray" id="Bie-Am-chW"/>
+                <outletCollection property="letterButtons" destination="oi9-GH-5gu" collectionClass="NSMutableArray" id="Pez-K0-eCl"/>
+                <outletCollection property="letterButtons" destination="i1N-t3-TAL" collectionClass="NSMutableArray" id="VMw-DC-hI5"/>
+                <outletCollection property="letterButtons" destination="e37-wO-xbh" collectionClass="NSMutableArray" id="1a5-Fb-Lux"/>
+                <outletCollection property="letterButtons" destination="2gs-u9-sIa" collectionClass="NSMutableArray" id="snl-yu-Ipb"/>
+                <outletCollection property="letterButtons" destination="9S2-h0-QYL" collectionClass="NSMutableArray" id="0oJ-tW-Aof"/>
+                <outletCollection property="letterButtons" destination="8b0-4g-Jdu" collectionClass="NSMutableArray" id="7U3-bT-vdm"/>
+                <outletCollection property="letterButtons" destination="pl9-AC-6ud" collectionClass="NSMutableArray" id="tfx-aK-2fu"/>
+                <outletCollection property="letterButtons" destination="uce-vO-pty" collectionClass="NSMutableArray" id="GAj-NY-0i5"/>
+                <outletCollection property="letterButtons" destination="QmS-DA-Ob1" collectionClass="NSMutableArray" id="J9w-jC-ngM"/>
+                <outletCollection property="letterButtons" destination="y3A-tC-4A3" collectionClass="NSMutableArray" id="UBE-TL-UeG"/>
+                <outletCollection property="letterButtons" destination="U1J-WF-vKc" collectionClass="NSMutableArray" id="Var-vk-faH"/>
+                <outletCollection property="letterButtons" destination="YOj-H9-rC0" collectionClass="NSMutableArray" id="48K-B8-q8e"/>
+                <outletCollection property="letterButtons" destination="Wdg-Ww-nEh" collectionClass="NSMutableArray" id="8cU-hC-g0g"/>
+                <outletCollection property="letterButtons" destination="tbU-nw-lRf" collectionClass="NSMutableArray" id="ZaW-FT-XA8"/>
+                <outletCollection property="letterButtons" destination="Ozg-Ga-uzC" collectionClass="NSMutableArray" id="NSb-aG-QzG"/>
+                <outletCollection property="letterButtons" destination="gAE-mt-IOD" collectionClass="NSMutableArray" id="Dt6-8D-KVf"/>
+                <outletCollection property="letterButtons" destination="Ciq-zE-9lp" collectionClass="NSMutableArray" id="h1L-os-TLk"/>
+                <outletCollection property="resultImageViews" destination="Tfz-dR-CP7" collectionClass="NSMutableArray" id="u16-eS-1vz"/>
+                <outletCollection property="resultImageViews" destination="bQb-0x-Gqh" collectionClass="NSMutableArray" id="A2C-za-fCA"/>
+                <outletCollection property="resultImageViews" destination="5bK-SK-Mgr" collectionClass="NSMutableArray" id="g38-xs-BRC"/>
+                <outletCollection property="resultImageViews" destination="cfJ-s6-f7Y" collectionClass="NSMutableArray" id="Hml-Iu-eUT"/>
+                <outletCollection property="resultImageViews" destination="saV-2h-jVI" collectionClass="NSMutableArray" id="0ob-D1-iwW"/>
+                <outletCollection property="resultLabels" destination="koP-LJ-VTY" collectionClass="NSMutableArray" id="446-Vo-Yun"/>
+                <outletCollection property="resultLabels" destination="HbA-ad-wEF" collectionClass="NSMutableArray" id="eqF-FT-pfq"/>
+                <outletCollection property="resultLabels" destination="GQa-ey-EZD" collectionClass="NSMutableArray" id="5Xe-cX-33m"/>
+                <outletCollection property="resultLabels" destination="ITc-Lf-cHp" collectionClass="NSMutableArray" id="ZK0-rh-z52"/>
+                <outletCollection property="resultLabels" destination="EDa-Z6-ViL" collectionClass="NSMutableArray" id="RVC-Yd-DFb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0s1-Vg-gYx">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notebookpaper" translatesAutoresizingMaskIntoConstraints="NO" id="oLF-JX-a7d">
+                    <rect key="frame" x="16" y="0.0" width="343" height="370"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-v4-FcJ">
+                    <rect key="frame" x="142" y="60" width="190" height="523"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-YV-kOp">
+                            <rect key="frame" x="0.0" y="0.0" width="190" height="103"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Academy" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koP-LJ-VTY">
+                                    <rect key="frame" x="0.0" y="82" width="84.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tfz-dR-CP7">
+                                    <rect key="frame" x="87.5" y="0.0" width="102.5" height="98"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="4gl-YV-kOp" secondAttribute="height" multiplier="46:25" id="RFA-ib-cgt"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-rk-Psb">
+                            <rect key="frame" x="0.0" y="105" width="190" height="103"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbA-ad-wEF">
+                                    <rect key="frame" x="0.0" y="82.5" width="53.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-0x-Gqh">
+                                    <rect key="frame" x="56.5" y="0.0" width="133.5" height="98.5"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="O6E-rk-Psb" secondAttribute="height" multiplier="46:25" id="pQT-0N-OLU"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2aR-0I-FGY">
+                            <rect key="frame" x="0.0" y="210" width="190" height="103"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQa-ey-EZD">
+                                    <rect key="frame" x="0.0" y="82" width="86.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bK-SK-Mgr">
+                                    <rect key="frame" x="89.5" y="0.0" width="100.5" height="98"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2aR-0I-FGY" secondAttribute="height" multiplier="46:25" id="zDh-hx-Geh"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-Qz-v6z">
+                            <rect key="frame" x="0.0" y="315" width="190" height="103"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-Lf-cHp">
+                                    <rect key="frame" x="0.0" y="82.5" width="55.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-s6-f7Y">
+                                    <rect key="frame" x="58.5" y="0.0" width="131.5" height="98.5"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hjR-Qz-v6z" secondAttribute="height" multiplier="46:25" id="SBl-ga-V6Y"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iST-Wz-wAZ">
+                            <rect key="frame" x="0.0" y="420" width="190" height="103"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDa-Z6-ViL">
+                                    <rect key="frame" x="0.0" y="82" width="55.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="saV-2h-jVI">
+                                    <rect key="frame" x="58.5" y="0.0" width="131.5" height="98"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="iST-Wz-wAZ" secondAttribute="height" multiplier="46:25" id="kQB-1n-peb"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iST-Wz-wAZ" firstAttribute="width" secondItem="4gl-YV-kOp" secondAttribute="width" id="6Zy-sS-bOl"/>
+                        <constraint firstItem="hjR-Qz-v6z" firstAttribute="width" secondItem="4gl-YV-kOp" secondAttribute="width" id="DrT-ov-E70"/>
+                        <constraint firstItem="2aR-0I-FGY" firstAttribute="width" secondItem="4gl-YV-kOp" secondAttribute="width" id="Phr-NM-G3U"/>
+                        <constraint firstItem="hjR-Qz-v6z" firstAttribute="height" secondItem="4gl-YV-kOp" secondAttribute="height" id="YMP-ww-lhc"/>
+                        <constraint firstItem="O6E-rk-Psb" firstAttribute="width" secondItem="4gl-YV-kOp" secondAttribute="width" id="aOq-oX-cTw"/>
+                        <constraint firstItem="iST-Wz-wAZ" firstAttribute="height" secondItem="4gl-YV-kOp" secondAttribute="height" id="orA-im-Fju"/>
+                        <constraint firstItem="2aR-0I-FGY" firstAttribute="height" secondItem="4gl-YV-kOp" secondAttribute="height" id="qdS-yA-Vjl"/>
+                        <constraint firstItem="O6E-rk-Psb" firstAttribute="height" secondItem="4gl-YV-kOp" secondAttribute="height" id="sBy-7s-BCS"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8l-V5-8qp">
+                    <rect key="frame" x="16" y="409.5" width="343" height="44"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hiz-PI-NnC" userLabel="Underscores">
+                            <rect key="frame" x="156" y="4.5" width="31" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-ba-DRZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="10.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ele-dK-4NZ">
+                                    <rect key="frame" x="20.5" y="0.0" width="10.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-9p-d7g" userLabel="Word">
+                            <rect key="frame" x="154.5" y="8" width="35" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-Sd-Dod">
+                                    <rect key="frame" x="0.0" y="0.0" width="12.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuJ-a0-OeF">
+                                    <rect key="frame" x="22.5" y="0.0" width="12.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ohA-9p-d7g" firstAttribute="centerX" secondItem="s8l-V5-8qp" secondAttribute="centerX" id="Alb-0x-hn4"/>
+                        <constraint firstItem="hiz-PI-NnC" firstAttribute="centerY" secondItem="s8l-V5-8qp" secondAttribute="centerY" constant="-3" id="LGl-Dj-Bzx"/>
+                        <constraint firstAttribute="height" constant="44" id="cH3-sp-kth"/>
+                        <constraint firstItem="ohA-9p-d7g" firstAttribute="centerY" secondItem="s8l-V5-8qp" secondAttribute="centerY" id="gO1-hk-f0R"/>
+                        <constraint firstItem="hiz-PI-NnC" firstAttribute="centerX" secondItem="s8l-V5-8qp" secondAttribute="centerX" id="ujl-qW-KnS"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Onb-FW-oyd" userLabel="Keyboard">
+                    <rect key="frame" x="16" y="463.5" width="343" height="193.5"/>
+                    <subviews>
+                        <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Msr-3s-Dkk">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="NBu-6D-2vU">
+                                    <rect key="frame" x="25" y="0.5" width="293" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBb-Ou-Qfi" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.5" width="44" height="43"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="dBb-Ou-Qfi" secondAttribute="height" multiplier="1:1" id="RGZ-t1-DRa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="a">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="3OA-2d-ItK"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWz-V0-A9a" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="50" y="0.0" width="43.5" height="44"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="zWz-V0-A9a" secondAttribute="height" multiplier="1:1" id="cc6-tV-I8k"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="b">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="aTV-Bu-LaE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGq-Ow-TfL" userLabel="c" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="99.5" y="0.5" width="44" height="43"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="MGq-Ow-TfL" secondAttribute="height" multiplier="1:1" id="wGg-Jd-e22"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="c">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="aBC-6G-pVO"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-qc-eIg" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="149.5" y="0.5" width="44" height="43"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="r8a-qc-eIg" secondAttribute="height" multiplier="1:1" id="HDN-J8-LI1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="d">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="f2Z-UJ-TEG"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xc-pF-xvq" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="199.5" y="0.0" width="43.5" height="44"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="4Xc-pF-xvq" secondAttribute="height" multiplier="1:1" id="WGp-wx-fMJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="e">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="Kpe-xH-hx2"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtH-kG-kc0" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="249" y="0.5" width="44" height="43"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="FtH-kG-kc0" secondAttribute="height" multiplier="1:1" id="jgi-tV-wgP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="f">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="VJA-Bp-OCb"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="NBu-6D-2vU" firstAttribute="centerX" secondItem="Msr-3s-Dkk" secondAttribute="centerX" id="6S9-os-IU4"/>
+                                <constraint firstItem="NBu-6D-2vU" firstAttribute="centerY" secondItem="Msr-3s-Dkk" secondAttribute="centerY" id="HOz-BD-Wty"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-yJ-y1P">
+                            <rect key="frame" x="0.0" y="50" width="343" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llr-sp-crs" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="height" multiplier="1:1" id="x2M-Ad-lX9"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="g">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="3ES-B4-I54"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24R-ZG-7jL" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="50" y="0.0" width="43.5" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="24R-ZG-7jL" secondAttribute="height" multiplier="1:1" id="epW-CD-hpI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="h">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="Qq6-hJ-aG9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gs-u9-sIa" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="99.5" y="0.0" width="44" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="2gs-u9-sIa" secondAttribute="height" multiplier="1:1" id="lOV-OZ-YCJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="i">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="ViK-Bq-RkK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl9-AC-6ud" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="149.5" y="0.0" width="44" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="pl9-AC-6ud" secondAttribute="height" multiplier="1:1" id="Btw-DF-cXI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="j">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="eUk-pR-gWv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciq-zE-9lp" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="199.5" y="0.0" width="44" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ciq-zE-9lp" secondAttribute="height" multiplier="1:1" id="aKf-bQ-BYL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="k">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="Kv0-bR-gnb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAE-mt-IOD" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="249.5" y="0.0" width="43.5" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="gAE-mt-IOD" secondAttribute="height" multiplier="1:1" id="O8P-cf-r1F"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="l">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="xLY-1p-24j"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozg-Ga-uzC" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="299" y="0.0" width="44" height="44"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ozg-Ga-uzC" secondAttribute="height" multiplier="1:1" id="wP5-JG-vsk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="m">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="4H5-d3-L34"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OrU-6a-5qG">
+                            <rect key="frame" x="0.0" y="100" width="343" height="43.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ms-eV-fDB" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="8ms-eV-fDB" secondAttribute="height" multiplier="1:1" id="arN-R4-vPW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="n">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="P0T-xx-rXB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oi9-GH-5gu" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="50" y="0.0" width="43.5" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="oi9-GH-5gu" secondAttribute="height" multiplier="1:1" id="zQd-e4-v20"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="o">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="SRJ-Gz-ciC"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-h0-QYL" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="99.5" y="0.0" width="44" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="9S2-h0-QYL" secondAttribute="height" multiplier="1:1" id="y1a-Yc-QCR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="p">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="Xg6-tT-cz1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uce-vO-pty" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="149.5" y="0.0" width="44" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="uce-vO-pty" secondAttribute="height" multiplier="1:1" id="EI4-bb-go7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="q">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="qLF-tq-O25"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-H9-rC0" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="199.5" y="0.0" width="44" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="YOj-H9-rC0" secondAttribute="height" multiplier="1:1" id="dal-5E-eTz"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="r">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="kBm-f7-yn0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-nw-lRf" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="249.5" y="0.0" width="43.5" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="tbU-nw-lRf" secondAttribute="height" multiplier="1:1" id="PVo-CE-735"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="s">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="9lJ-Mi-aPb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdg-Ww-nEh" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                    <rect key="frame" x="299" y="0.0" width="44" height="43.5"/>
+                                    <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Wdg-Ww-nEh" secondAttribute="height" multiplier="1:1" id="BLR-BZ-UKK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <state key="normal" title="t">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="vkc-ed-i8x"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="ccW-AU-eS1">
+                            <rect key="frame" x="0.0" y="149.5" width="343" height="44"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="KDJ-ra-SQk">
+                                    <rect key="frame" x="25" y="0.0" width="293" height="44.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1N-t3-TAL" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44.5"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="i1N-t3-TAL" secondAttribute="height" multiplier="1:1" id="sE0-fR-Q9I"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="u">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="SLo-Le-b7U"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e37-wO-xbh" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="50" y="0.0" width="43.5" height="44.5"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="e37-wO-xbh" secondAttribute="height" multiplier="1:1" id="o3J-yp-FSh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="v">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="4FN-2N-bC3"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b0-4g-Jdu" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="99.5" y="0.0" width="44" height="44.5"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="8b0-4g-Jdu" secondAttribute="height" multiplier="1:1" id="HOZ-iE-jhx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="w">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="Cqo-of-vWi"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmS-DA-Ob1" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="149.5" y="0.0" width="44" height="44.5"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="QmS-DA-Ob1" secondAttribute="height" multiplier="1:1" id="HH7-u1-gBD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="x">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="qER-XJ-6ax"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-tC-4A3" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="199.5" y="0.0" width="43.5" height="44.5"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="y3A-tC-4A3" secondAttribute="height" multiplier="1:1" id="mHQ-sX-3XQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="y">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="Ivb-ty-8rc"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1J-WF-vKc" customClass="CornerRadiusView" customModule="bully_story" customModuleProvider="target">
+                                            <rect key="frame" x="249" y="0.0" width="44" height="44.5"/>
+                                            <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="U1J-WF-vKc" secondAttribute="height" multiplier="1:1" id="GEo-KC-RKG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="z">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="letterButtonPressed:" destination="-1" eventType="touchUpInside" id="ux8-Wr-ANZ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="KDJ-ra-SQk" firstAttribute="centerY" secondItem="ccW-AU-eS1" secondAttribute="centerY" id="6WP-Zd-0zP"/>
+                                <constraint firstItem="KDJ-ra-SQk" firstAttribute="centerX" secondItem="ccW-AU-eS1" secondAttribute="centerX" id="lHP-ZV-CgI"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MGq-Ow-TfL" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="9JD-3L-sR1"/>
+                        <constraint firstItem="r8a-qc-eIg" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="BFS-eT-tBA"/>
+                        <constraint firstItem="dBb-Ou-Qfi" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="C9I-0X-3Fs"/>
+                        <constraint firstItem="U1J-WF-vKc" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="GM7-z4-gmE"/>
+                        <constraint firstItem="i1N-t3-TAL" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="I9j-v3-U7a"/>
+                        <constraint firstItem="4Xc-pF-xvq" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="c4K-2E-nza"/>
+                        <constraint firstItem="FtH-kG-kc0" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="fhI-sL-peV"/>
+                        <constraint firstItem="zWz-V0-A9a" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="idc-bI-MhF"/>
+                        <constraint firstItem="8b0-4g-Jdu" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="lOo-DJ-6vA"/>
+                        <constraint firstItem="y3A-tC-4A3" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="u3i-wE-eiY"/>
+                        <constraint firstItem="e37-wO-xbh" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="xLO-f9-WeX"/>
+                        <constraint firstItem="QmS-DA-Ob1" firstAttribute="width" secondItem="llr-sp-crs" secondAttribute="width" id="yZl-Hb-nrY"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv6-oM-xiW">
+                    <rect key="frame" x="16" y="380" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-Pz-xvU">
+                    <rect key="frame" x="327" y="378" width="32" height="23"/>
+                    <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="onTapNextBtn:" destination="-1" eventType="touchUpInside" id="cVw-ST-qvY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="s8l-V5-8qp" secondAttribute="trailing" id="25U-9i-Aos"/>
+                <constraint firstItem="s8l-V5-8qp" firstAttribute="top" secondItem="mv6-oM-xiW" secondAttribute="bottom" constant="8.5" id="50z-Pn-kUS"/>
+                <constraint firstItem="s8l-V5-8qp" firstAttribute="leading" secondItem="0s1-Vg-gYx" secondAttribute="leadingMargin" id="DJ9-9j-5rw"/>
+                <constraint firstItem="deb-4x-5Fg" firstAttribute="trailing" secondItem="mv6-oM-xiW" secondAttribute="trailing" constant="16" id="EMc-Sh-ED6"/>
+                <constraint firstItem="s8l-V5-8qp" firstAttribute="centerX" secondItem="0s1-Vg-gYx" secondAttribute="centerX" id="FVx-PV-GYF"/>
+                <constraint firstItem="deb-4x-5Fg" firstAttribute="trailing" secondItem="oLF-JX-a7d" secondAttribute="trailing" constant="16" id="OGy-EE-LiV"/>
+                <constraint firstItem="mv6-oM-xiW" firstAttribute="leading" secondItem="deb-4x-5Fg" secondAttribute="leading" constant="16" id="Rch-0m-Jfe"/>
+                <constraint firstItem="fDO-v4-FcJ" firstAttribute="centerX" secondItem="oLF-JX-a7d" secondAttribute="centerX" id="Rve-6Y-Bxh"/>
+                <constraint firstItem="Onb-FW-oyd" firstAttribute="leading" secondItem="0s1-Vg-gYx" secondAttribute="leadingMargin" id="Smm-iB-3Rs"/>
+                <constraint firstItem="fDO-v4-FcJ" firstAttribute="centerY" secondItem="oLF-JX-a7d" secondAttribute="centerY" id="UVO-8A-gwU"/>
+                <constraint firstItem="oLF-JX-a7d" firstAttribute="leading" secondItem="deb-4x-5Fg" secondAttribute="leading" constant="16" id="Wc6-EV-KPy"/>
+                <constraint firstAttribute="bottomMargin" secondItem="Onb-FW-oyd" secondAttribute="bottom" constant="10" id="Wpi-CJ-qZV"/>
+                <constraint firstItem="p8e-Pz-xvU" firstAttribute="trailing" secondItem="mv6-oM-xiW" secondAttribute="trailing" id="YUy-OH-ysW"/>
+                <constraint firstItem="Onb-FW-oyd" firstAttribute="top" secondItem="s8l-V5-8qp" secondAttribute="bottom" constant="10" id="Ytc-pm-Gy9"/>
+                <constraint firstItem="p8e-Pz-xvU" firstAttribute="top" secondItem="mv6-oM-xiW" secondAttribute="top" id="c2f-gL-kO8"/>
+                <constraint firstAttribute="trailingMargin" secondItem="Onb-FW-oyd" secondAttribute="trailing" id="mMa-jI-nEa"/>
+                <constraint firstItem="p8e-Pz-xvU" firstAttribute="height" secondItem="mv6-oM-xiW" secondAttribute="height" id="mnU-s6-icI"/>
+                <constraint firstItem="oLF-JX-a7d" firstAttribute="top" secondItem="0s1-Vg-gYx" secondAttribute="top" id="ozV-SQ-2Fl"/>
+                <constraint firstItem="s8l-V5-8qp" firstAttribute="top" secondItem="oLF-JX-a7d" secondAttribute="bottom" constant="39.5" id="tnS-N6-8oT"/>
+                <constraint firstItem="mv6-oM-xiW" firstAttribute="top" secondItem="oLF-JX-a7d" secondAttribute="bottom" constant="8" id="wGT-LC-5Yq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="deb-4x-5Fg"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="notebookpaper" width="500" height="500"/>
+    </resources>
+</document>
