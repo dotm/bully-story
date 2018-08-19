@@ -61,6 +61,10 @@ class DialogViewController: UIViewController {
         setupDialogContainer()
         setupBackgroundImage()
         DialogAudioPlayer.setupAudioPlayer()
+        
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
+            self.animateArrowDownIcon()
+        }
     }
     
     //MARK: Actions
@@ -135,7 +139,7 @@ class DialogViewController: UIViewController {
     private func presentChoices(_ choices: Choices){
         emptyDialogContainer()
         view.gestureRecognizers?.forEach(view.removeGestureRecognizer)
-        setupChoiceTitle(title: choices.title)
+//        setupChoiceTitle(title: choices.title)
         setupChoiceOptions(options: choices.options)
     }
     
@@ -150,7 +154,7 @@ class DialogViewController: UIViewController {
         let dialogContainer = UIView()
         view.addSubview(dialogContainer)
         
-        dialogContainer.backgroundColor = UIColor(hex: "7C8FCD")
+        dialogContainer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         dialogContainer.layer.zPosition = 1
         
         dialogContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -175,7 +179,7 @@ class DialogViewController: UIViewController {
         dialogCharacterName.layer.borderColor = borderColor.cgColor
         dialogCharacterName.layer.borderWidth = borderWidth
         dialogCharacterName.layer.cornerRadius = 10
-        dialogCharacterName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//        dialogCharacterName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         dialogCharacterName.translatesAutoresizingMaskIntoConstraints = false
         switch position {
@@ -257,7 +261,29 @@ class DialogViewController: UIViewController {
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.3).isActive = true
     }
-    
+    private func setupChoiceOptions(options: [ChoiceOption]){
+        let subviews = options.map({ (option) -> UIView in
+            return createChoiceOption(title: option.title, handler: option.handler)
+        })
+        let stackView = UIStackView(arrangedSubviews: subviews)
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = CGFloat(10)
+        dialogContainer.addSubview(stackView)
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: 2*dialogContainerPadding).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -2*dialogContainerPadding).isActive = true
+        stackView.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.4).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+    }
+    private func createChoiceOption(title: String, handler: ChoiceHandler) -> UIView {
+        let label = OptionLabel()
+        label.text = title
+        label.handler = handler!
+        
+        return label
+    }
     private func setupDialogTextView(text: String) {
         let dialogText = createDialogText(text: text)
         dialogContainer.addSubview(dialogText)
@@ -266,7 +292,7 @@ class DialogViewController: UIViewController {
         dialogText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
-        dialogText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        dialogText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -3*dialogContainerPadding).isActive = true
         
         setupArrowDownIcon(parent: dialogText)
     }
@@ -282,7 +308,7 @@ class DialogViewController: UIViewController {
         narrationText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
         narrationText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         narrationText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
-        narrationText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        narrationText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -3*dialogContainerPadding).isActive = true
         
         setupArrowDownIcon(parent: narrationText)
     }
@@ -325,7 +351,7 @@ class DialogViewController: UIViewController {
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         backgroundImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.70).isActive = true
+        backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
         self.backgroundImage = backgroundImage
@@ -334,30 +360,6 @@ class DialogViewController: UIViewController {
         view.gestureRecognizers?.forEach(view.removeGestureRecognizer)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(next(_:)))
         view.addGestureRecognizer(recognizer)
-    }
-    
-    private func setupChoiceOptions(options: [ChoiceOption]){
-        let subviews = options.map({ (option) -> UIView in
-            return createChoiceOption(title: option.title, handler: option.handler)
-        })
-        let stackView = UIStackView(arrangedSubviews: subviews)
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.spacing = CGFloat(10)
-        dialogContainer.addSubview(stackView)
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: 2*dialogContainerPadding).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -2*dialogContainerPadding).isActive = true
-        stackView.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.4).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -dialogContainerPadding).isActive = true
-    }
-    private func createChoiceOption(title: String, handler: ChoiceHandler) -> UIView {
-        let label = OptionLabel()
-        label.text = title
-        label.handler = handler!
-        
-        return label
     }
 }
 
