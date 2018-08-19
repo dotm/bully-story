@@ -38,6 +38,7 @@ extension UIColor {
 }
 
 class DialogViewController: UIViewController {
+    
     //MARK: Properties
     var events: Events!
     let defaultBackgroundColor = UIColor(hex: "D2DAF6")
@@ -63,6 +64,7 @@ class DialogViewController: UIViewController {
     
     //MARK: Actions
     @objc func next(_ sender: UITapGestureRecognizer? = nil) {
+        typeWriter?.interruptAnimation()
         let nextEvent: Event? = events.goToNextEvent()
         executeEvent(nextEvent)
     }
@@ -219,6 +221,9 @@ class DialogViewController: UIViewController {
         characterImage.heightAnchor.constraint(equalToConstant: image.size.height * multiplier).isActive = true
         characterImage.widthAnchor.constraint(equalToConstant: image.size.width * multiplier).isActive = true
     }
+    
+    var typeWriter: TypeWriter?
+    
     func createDialogText(text: String) -> UITextView {
         let dialogText = UITextView()
         
@@ -226,12 +231,15 @@ class DialogViewController: UIViewController {
         dialogText.isUserInteractionEnabled = false
         dialogText.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dialogText.setContentOffset(CGPoint.zero, animated: false)
-        dialogText.text = text.replacingOccurrences(of: "#name", with: username)
         dialogText.backgroundColor = defaultBackgroundColor
         dialogText.font = dialogTextFontStyle
         dialogText.layer.cornerRadius = 10
         dialogText.layer.borderColor = borderColor.cgColor
         dialogText.layer.borderWidth = borderWidth
+        
+        let editedText = text.replacingOccurrences(of: "#name", with: username)
+        typeWriter = TypeWriter(textView: dialogText, text: editedText)
+        typeWriter?.animate()
         
         return dialogText
     }
@@ -248,6 +256,7 @@ class DialogViewController: UIViewController {
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.3).isActive = true
     }
+    
     private func setupDialogTextView(text: String) {
         let dialogText = createDialogText(text: text)
         dialogContainer.addSubview(dialogText)

@@ -45,6 +45,7 @@
 		8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62521281C9300362053 /* DialogAudioPlayer.swift */; };
 		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		8509F64321281FEC00362053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509F64221281FEC00362053 /* Assets.xcassets */; };
+		853A51172129273C00388644 /* TypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A51162129273C00388644 /* TypeWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		8509F62421281C9300362053 /* Scene2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		853A51162129273C00388644 /* TypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeWriter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				8509F61521281C9300362053 /* PuzzleViewController.swift */,
 				8509F61621281C9300362053 /* InputNameViewController.swift */,
 				8509F61721281C9300362053 /* Helper.swift */,
+				853A51162129273C00388644 /* TypeWriter.swift */,
 			);
 			path = Cifran;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
 				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,
 				8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */,
+				853A51172129273C00388644 /* TypeWriter.swift in Sources */,
 				8509F62621281C9300362053 /* Global.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
 				8509F63B21281C9300362053 /* EndingViewController.swift in Sources */,
