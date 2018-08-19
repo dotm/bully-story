@@ -268,14 +268,17 @@ class DialogViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: subviews)
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
-        stackView.spacing = CGFloat(10)
-        dialogContainer.addSubview(stackView)
+        stackView.spacing = CGFloat(40)
+        view.addSubview(stackView)
+        stackView.subviews.forEach { (subview) in
+            subview.translatesAutoresizingMaskIntoConstraints = false
+            subview.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        }
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: 2*dialogContainerPadding).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -2*dialogContainerPadding).isActive = true
-        stackView.heightAnchor.constraint(equalTo: dialogContainer.heightAnchor, multiplier: 0.4).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+        stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     private func createChoiceOption(title: String, handler: ChoiceHandler) -> UIView {
         let label = OptionLabel()
@@ -381,7 +384,7 @@ class OptionLabel: UILabel {
         self.layer.borderColor = UIColor(hex: "979797").cgColor
         self.layer.borderWidth = CGFloat(1)
         self.textAlignment = .center
-        self.layer.cornerRadius = CGFloat(10)
+        self.layer.cornerRadius = CGFloat(17)
         self.font = UIFont(name: "PT Sans", size: 20)
         
         self.isUserInteractionEnabled = true
