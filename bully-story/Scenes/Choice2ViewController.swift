@@ -21,19 +21,40 @@ class Choice2ViewController: DialogViewController {
                 
                 ],
             [
-                .presentNarration(text: "From the other side of the class, Jessica is staring at Jane cynically. She realises Jane is very pretty and might be a threat for her popularity."),
-                
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .left,
+                    dialogText: "That girl is kind of pretty.."
+                ),
                 ],
             [
-                .presentNarration(text: "The lesson started, they all studied quietly. At the end of the class the teacher gave them homework for them to do."),
-                
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .left,
+                    dialogText: "Hello everyone. Let's start our lesson today! Open your book at page 10 and do the little quiz there."
+                ),
                 ],
+            [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
             
-            
+            [
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .left,
+                    dialogText: "Okay class dismissed! See you tomorrow everyone!"
+                ),
+                ],
             [.goToNextScene(viewController: Scene2ViewController())],
-        ])
-        
+            ]
+        )
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
     }
 }
+
+

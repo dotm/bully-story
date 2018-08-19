@@ -52,6 +52,7 @@ class DialogViewController: UIViewController {
     //MARK: Outlets
     weak var dialogContainer: UIView!
     weak var backgroundImage: UIImageView!
+    weak var arrowDownIcon: UIImageView?
     
     //MARK: Lifecycle hooks
     override func viewDidLoad() {
@@ -266,6 +267,8 @@ class DialogViewController: UIViewController {
         dialogText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         dialogText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
         dialogText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        setupArrowDownIcon(parent: dialogText)
     }
     private func setupNarrationTextView(text: String) {
         let narrationText = createDialogText(text: text)
@@ -280,6 +283,36 @@ class DialogViewController: UIViewController {
         narrationText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
         narrationText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
         narrationText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        setupArrowDownIcon(parent: narrationText)
+    }
+    private func setupArrowDownIcon(parent: UIView){
+        let arrowDownIcon = UIImageView()
+        arrowDownIcon.image = UIImage(named: "icon-arrow-down")
+        arrowDownIcon.layer.zPosition = 10
+        dialogContainer.addSubview(arrowDownIcon)
+        
+        arrowDownIcon.translatesAutoresizingMaskIntoConstraints = false
+        arrowDownIcon.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -dialogContainerPadding).isActive = true
+        arrowDownIcon.trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        arrowDownIcon.heightAnchor.constraint(equalToConstant: arrowDownIcon.image!.size.height).isActive = true
+        arrowDownIcon.widthAnchor.constraint(equalToConstant: arrowDownIcon.image!.size.width).isActive = true
+        
+        self.arrowDownIcon = arrowDownIcon
+    }
+    private func animateArrowDownIcon(){
+        let distance = CGFloat(10)
+        guard arrowDownIcon != nil else {
+            return
+        }
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .repeat, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
+                self.arrowDownIcon?.frame.origin.y += distance
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                self.arrowDownIcon?.frame.origin.y -= distance
+            })
+        }, completion: nil)
     }
     private func setupBackgroundImage(){
         let backgroundImage = UIImageView()
