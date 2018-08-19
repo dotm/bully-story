@@ -46,12 +46,22 @@ class Choice1ViewController: DialogViewController {
                    [
                     .presentDialog(
                         characterName: "Teacher",
-                        characterNamePosition: .left,
+                        characterNamePosition: .right,
                         characterImage: "jane_Smile",
-                        characterImagePosition: .left,
-                        dialogText: "Hello everyone. Let's start our lesson today! Open your book at page 10 and do the little quiz there."
+                        characterImagePosition: .right,
+                        dialogText: "Hello everyone. Let's start our lesson today! "
                     ),
                     ],
+                   [
+                    .presentDialog(
+                        characterName: "Teacher",
+                        characterNamePosition: .right,
+                        characterImage: "jane_Smile",
+                        characterImagePosition: .right,
+                        dialogText: "Open your book at page 10 and do the little quiz there."
+                    ),
+                    ],
+    
             [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
             [.goToNextScene(viewController: Scene2ViewController())],
             

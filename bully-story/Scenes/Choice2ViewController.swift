@@ -38,6 +38,7 @@ class Choice2ViewController: DialogViewController {
                     dialogText: "Hello everyone. Let's start our lesson today! Open your book at page 10 and do the little quiz there."
                 ),
                 ],
+           [.goToNextScene(viewController: Scene2ViewController())],
             [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
             
             [

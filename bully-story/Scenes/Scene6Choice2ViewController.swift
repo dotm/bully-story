@@ -14,19 +14,18 @@ class Scene6Choice2ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .playSFX(filename: "Scene1Bell", delay: 0.0),
-                .playBGM(filename: "Scene2BGMusic"),
+                .playBGM(filename: "WrongChoiceBGM"),
                 .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "I'm just gonna wipe this all by myself.. "
                 ),
                 ],
             [
-             
+                .playSFX(filename: "Scene6SFXLaugh2", delay: 0.0),
                 .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jessica",

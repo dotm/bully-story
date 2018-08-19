@@ -13,42 +13,20 @@ class Scene6Choice1ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
+           
             [
-                .playSFX(filename: "Scene1Bell", delay: 0.0),
-                .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "classroom"),
-                .presentDialog(
-                    characterName: "Teacher",
-                    characterNamePosition: .right,
-                    characterImage: "jane_Smile",
-                    characterImagePosition: .right,
-                    dialogText: "Good morning everyone. We will start our lesson today. Please open your book now."
-                ),
-                ],
-            [
-                .playSFX(filename: "Scene1Bell", delay: 0.0),
-                .playBGM(filename: "Scene2BGMusic"),
+                
+                .playBGM(filename: "RightChoiceBGM"),
                 .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Smile3",
                     characterImagePosition: .left,
-                    dialogText: "Wait.. where's my book.. I'm pretty sure i brought it this morning.."
+                    dialogText: "Thankyou, thankyou so much for helping me"
                 ),
                 ],
-            [
-                .playSFX(filename: "Scene1Bell", delay: 0.0),
-                .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "classroom"),
-                .presentDialog(
-                    characterName: "Teacher",
-                    characterNamePosition: .right,
-                    characterImage: "jane_Smile",
-                    characterImagePosition: .right,
-                    dialogText: "What's the matter Jane?"
-                ),
-                ],
+            
            [.goToNextScene(viewController: Scene7ViewController())],
             ])
         let startEvent = events.goToStartEvent()

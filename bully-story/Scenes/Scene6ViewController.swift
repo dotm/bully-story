@@ -15,9 +15,10 @@ class Scene6ViewController: DialogViewController {
         
         events = Events(events: [
             [
+                .setBackgroundImage(imageName: "classroom"),
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
-                .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "classroom"),
+                .playBGM(filename: "Scene6BGMusic"),
+               
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
@@ -31,12 +32,13 @@ class Scene6ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "What happened to my table..."
                 ),
                 ],
             [
+                .playSFX(filename: "Scene6SFXLaugh", delay: 0.0),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -44,19 +46,20 @@ class Scene6ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Oh look guys! The new girl is messing with the table!"
                 ),
-                .setBackgroundImage(imageName: "yard"),
+                
                 ],
             [
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "But.. but.. I didn't do this.."
                 ),
-                .setBackgroundImage(imageName: "yard"),
+               
                 ],
             [
+                .playSFX(filename: "Scene6SFXLaugh2", delay: 0.0),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -64,20 +67,20 @@ class Scene6ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Well it's on your table though. How else would you explain it?"
                 ),
-                .setBackgroundImage(imageName: "yard"),
+               
                 ],
             [
+                .playSFX(filename: "Scene6SFXNo", delay: 0.0),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "..................."
                 ),
-                .setBackgroundImage(imageName: "yard"),
+                
                 ],
             [
-                .playBGM(filename: "Scene1BGMusic2"),
                 .presentChoices(choices: (
                     title: "What would you do?",
                     options: [

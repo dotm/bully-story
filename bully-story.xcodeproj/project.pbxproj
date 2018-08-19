@@ -20,6 +20,8 @@
 		26E681D321295FD100407F08 /* Scene6Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */; };
 		26E681D52129609500407F08 /* Scene6Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */; };
 		26E681D72129681200407F08 /* Scene7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D62129681200407F08 /* Scene7ViewController.swift */; };
+		26E681D92129C23400407F08 /* Scene7Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D82129C23400407F08 /* Scene7Choice1ViewController.swift */; };
+		26E681DB2129C25400407F08 /* Scene7Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681DA2129C25400407F08 /* Scene7Choice2ViewController.swift */; };
 		37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */; };
 		37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A91543211C09310076AFFB /* LaunchScreen.storyboard */; };
 		37A91550211C09310076AFFB /* bully_storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9154F211C09310076AFFB /* bully_storyTests.swift */; };
@@ -76,6 +78,8 @@
 		26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6Choice1ViewController.swift; sourceTree = "<group>"; };
 		26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6Choice2ViewController.swift; sourceTree = "<group>"; };
 		26E681D62129681200407F08 /* Scene7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7ViewController.swift; sourceTree = "<group>"; };
+		26E681D82129C23400407F08 /* Scene7Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7Choice1ViewController.swift; sourceTree = "<group>"; };
+		26E681DA2129C25400407F08 /* Scene7Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7Choice2ViewController.swift; sourceTree = "<group>"; };
 		37A91534211C09300076AFFB /* bully-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bully-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9153C211C09300076AFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A9153F211C09300076AFFB /* bully_story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bully_story.xcdatamodel; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */,
 				26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */,
 				26E681D62129681200407F08 /* Scene7ViewController.swift */,
+				26E681D82129C23400407F08 /* Scene7Choice1ViewController.swift */,
+				26E681DA2129C25400407F08 /* Scene7Choice2ViewController.swift */,
 				8509F62321281C9300362053 /* EndingViewController.swift */,
 			);
 			path = Scenes;
@@ -349,6 +355,7 @@
 			files = (
 				8509F62B21281C9300362053 /* Transitions.swift in Sources */,
 				8509F63621281C9300362053 /* Scene4ViewController.swift in Sources */,
+				26E681D92129C23400407F08 /* Scene7Choice1ViewController.swift in Sources */,
 				8509F63321281C9300362053 /* Events.swift in Sources */,
 				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
 				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,
@@ -361,6 +368,7 @@
 				8509F63521281C9300362053 /* StartViewController.swift in Sources */,
 				8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */,
 				26E681D121294A0D00407F08 /* Scene6ViewController.swift in Sources */,
+				26E681DB2129C25400407F08 /* Scene7Choice2ViewController.swift in Sources */,
 				8509F63721281C9300362053 /* Choice2ViewController.swift in Sources */,
 				8509F63121281C9300362053 /* DialogViewController.swift in Sources */,
 				8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */,

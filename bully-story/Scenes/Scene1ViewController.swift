@@ -41,8 +41,7 @@ class Scene1ViewController: DialogViewController {
                                 ]
                         )),
             ],
-            [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
-            [.goToNextScene(viewController: Scene2ViewController())],
+            
         ])
         let startEvent = events.goToStartEvent()
         

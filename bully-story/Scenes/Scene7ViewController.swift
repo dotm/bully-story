@@ -9,27 +9,112 @@
 import UIKit
 
 class Scene7ViewController: DialogViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        events = Events(events: [
+            [
+                .playSFX(filename: "Scene1Bell", delay: 0.0),
+                .playBGM(filename: "Scene2BGMusic"),
+                .setBackgroundImage(imageName : "classroom"),
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .right,
+                    characterImage: "teacher",
+                    characterImagePosition: .right,
+                    dialogText: "Good morning everyone. We will start our lesson today. Please open your book now."
+                ),
+                ],
+            [
+                .playBGM(filename: "Scene7BGMusic"),
+                .playSFX(filename: "Scene7SFXHuh", delay: 0.0),
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .left,
+                    dialogText: "Wait.. where's my book.. I'm pretty sure i brought it this morning.."
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .right,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "What's the matter Jane?"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Sad",
+                    characterImagePosition: .left,
+                    dialogText: "No it's just.. i can't find my book now... I don't know where did it go..."
+                ),
+                ],
+            [
+                .playSFX(filename: "Scene7SFXReally", delay: 0.0),
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .right,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "Are you telling me you didn't bring your book to my class?!"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Sad2",
+                    characterImagePosition: .left,
+                    dialogText: "No madam... I'm really sure i brought it this morning."
+                ),
+                ],
+            [
+                .playSFX(filename: "Scene7SFXLaugh3", delay: 0.0),
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .right,
+                    dialogText: "Then why can't you find it if you're that sure?"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Sad2",
+                    characterImagePosition: .left,
+                    dialogText: "..................."
+                ),
+                
+                ],
+            [
+                .presentChoices(choices: (
+                    title: "What would you do?",
+                    options: [
+                        (
+                            title: "Help Jane to find her book",
+                            //ke yg cari barang, akhirannya Jane blg thankyou
+                            handler: { () in
+                                
+                                self.goToNextScene(Scene7Choice1ViewController()) }
+                        ),
+                        (
+                            title: "Ignore Her",
+                            
+                            handler: { () in self.goToNextScene(Scene7Choice2ViewController()) }
+                        ),
+                        ]
+                )),
+                ],
+            
+            ])
+        let startEvent = events.goToStartEvent()
+        executeEvent(startEvent)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
