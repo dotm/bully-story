@@ -29,7 +29,10 @@ class Scene1ViewController: DialogViewController {
                             options: [
                                 (
                                     title: "Introduce yourself",
-                                    handler: { () in self.goToNextScene(Choice1ViewController()) }
+                                    handler: { () in self.goToNextScene(Choice1ViewController())
+                                        empathymeter += 1
+                                        print(empathymeter)
+                                }
                                 ),
                                 (
                                     title: "Ignore Her",

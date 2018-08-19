@@ -16,6 +16,10 @@
 		267A996721232010008EDFD4 /* PTS56F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995F21232010008EDFD4 /* PTS56F.ttf */; };
 		267A996821232010008EDFD4 /* PTS75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A996021232010008EDFD4 /* PTS75F.ttf */; };
 		267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A9969212323B7008EDFD4 /* kindergarten.ttf */; };
+		26E681D121294A0D00407F08 /* Scene6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D021294A0D00407F08 /* Scene6ViewController.swift */; };
+		26E681D321295FD100407F08 /* Scene6Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */; };
+		26E681D52129609500407F08 /* Scene6Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */; };
+		26E681D72129681200407F08 /* Scene7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E681D62129681200407F08 /* Scene7ViewController.swift */; };
 		37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */; };
 		37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A91543211C09310076AFFB /* LaunchScreen.storyboard */; };
 		37A91550211C09310076AFFB /* bully_storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9154F211C09310076AFFB /* bully_storyTests.swift */; };
@@ -68,6 +72,10 @@
 		267A995F21232010008EDFD4 /* PTS56F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS56F.ttf; sourceTree = "<group>"; };
 		267A996021232010008EDFD4 /* PTS75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS75F.ttf; sourceTree = "<group>"; };
 		267A9969212323B7008EDFD4 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
+		26E681D021294A0D00407F08 /* Scene6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6ViewController.swift; sourceTree = "<group>"; };
+		26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6Choice1ViewController.swift; sourceTree = "<group>"; };
+		26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6Choice2ViewController.swift; sourceTree = "<group>"; };
+		26E681D62129681200407F08 /* Scene7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7ViewController.swift; sourceTree = "<group>"; };
 		37A91534211C09300076AFFB /* bully-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bully-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9153C211C09300076AFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A9153F211C09300076AFFB /* bully_story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bully_story.xcdatamodel; sourceTree = "<group>"; };
@@ -208,13 +216,17 @@
 		8509F61D21281C9300362053 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8509F61E21281C9300362053 /* Scene4ViewController.swift */,
-				8509F61F21281C9300362053 /* Choice2ViewController.swift */,
-				8509F62021281C9300362053 /* Choice1ViewController.swift */,
 				8509F62121281C9300362053 /* Scene1ViewController.swift */,
-				8509F62221281C9300362053 /* Scene3ViewController.swift */,
-				8509F62321281C9300362053 /* EndingViewController.swift */,
+				8509F62021281C9300362053 /* Choice1ViewController.swift */,
+				8509F61F21281C9300362053 /* Choice2ViewController.swift */,
 				8509F62421281C9300362053 /* Scene2ViewController.swift */,
+				8509F62221281C9300362053 /* Scene3ViewController.swift */,
+				8509F61E21281C9300362053 /* Scene4ViewController.swift */,
+				26E681D021294A0D00407F08 /* Scene6ViewController.swift */,
+				26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */,
+				26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */,
+				26E681D62129681200407F08 /* Scene7ViewController.swift */,
+				8509F62321281C9300362053 /* EndingViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -348,11 +360,15 @@
 				8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */,
 				8509F63521281C9300362053 /* StartViewController.swift in Sources */,
 				8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */,
+				26E681D121294A0D00407F08 /* Scene6ViewController.swift in Sources */,
 				8509F63721281C9300362053 /* Choice2ViewController.swift in Sources */,
 				8509F63121281C9300362053 /* DialogViewController.swift in Sources */,
 				8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */,
+				26E681D72129681200407F08 /* Scene7ViewController.swift in Sources */,
 				8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */,
 				8509F62E21281C9300362053 /* PuzzleViewController.swift in Sources */,
+				26E681D321295FD100407F08 /* Scene6Choice1ViewController.swift in Sources */,
+				26E681D52129609500407F08 /* Scene6Choice2ViewController.swift in Sources */,
 				8509F62D21281C9300362053 /* HangmanViewController.swift in Sources */,
 				8509F63221281C9300362053 /* AppDelegate.swift in Sources */,
 				8509F63021281C9300362053 /* Helper.swift in Sources */,
@@ -517,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N55A3MSD3W;
+				DEVELOPMENT_TEAM = 77F35BPUBS;
 				INFOPLIST_FILE = "bully-story/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,7 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N55A3MSD3W;
+				DEVELOPMENT_TEAM = 77F35BPUBS;
 				INFOPLIST_FILE = "bully-story/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,3 +9,4 @@
 import Foundation
 
 var username: String = ""
+var empathymeter: Int = 0
