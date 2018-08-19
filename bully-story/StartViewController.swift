@@ -34,7 +34,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         }
         
         bgAudio.play()
-        bgAudio.numberOfLoops = 0
+        bgAudio.numberOfLoops = -1
         // Do any additional setup after loading the view.
     }
     

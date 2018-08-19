@@ -27,6 +27,7 @@ enum DialogAudioPlayer {
         Timer.scheduledTimer(withTimeInterval: fadeOutTime, repeats: false) { (_) in
             BGM?.stop()
             setBackgroundMusic(mp3_filename: mp3_filename)
+            BGM?.numberOfLoops = -1
             BGM?.play()
         }
     }
