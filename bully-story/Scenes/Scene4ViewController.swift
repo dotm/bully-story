@@ -80,7 +80,8 @@ class Scene4ViewController: DialogViewController {
                     dialogText: "Lucas? He’s going home with Jane? The new girl? He won’t even reply to my text and now he’s going home with the new girl! I’m gonna make her to pay for this."
                 ),
                 .setBackgroundImage(imageName: "canteen"),
-                ], 
+                ],
+            [.goToNextScene(viewController: Helper().getPuzzleVC(dialogVC: self))],
             
             
             
