@@ -17,7 +17,7 @@ class Scene4ViewController: DialogViewController {
             [
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "canteen"),
+                .setBackgroundImage(imageName : "school"),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
@@ -45,7 +45,7 @@ class Scene4ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Again? But yeah okay. Whatever. Your loss"
                 ),
-                .setBackgroundImage(imageName: "yard"),
+                .setBackgroundImage(imageName: "school"),
                 ],
             [
                 .presentDialog(
@@ -55,7 +55,7 @@ class Scene4ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Sorry…"
                 ),
-                .setBackgroundImage(imageName: "yard"),
+                .setBackgroundImage(imageName: "school"),
                 ],
             
             
