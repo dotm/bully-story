@@ -39,10 +39,11 @@ class Choice2ViewController: DialogViewController {
                 ),
                 ],
          
-            [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
+            [   .stopBGM(),
+                .goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
             
             [
-                .presentDialog(
+                .playBGM(filename: "Scene1BGMusic"),                .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
                     characterImage: "jane_Smile",

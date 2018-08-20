@@ -32,7 +32,11 @@ enum DialogAudioPlayer {
         }
     }
     static func stopBackgroundMusic(){
-        BGM?.stop()
+        let duration = 1.0
+        BGM?.setVolume(0, fadeDuration: duration)
+        Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { (_) in
+            BGM?.stop()
+        }
     }
     static func setAndPlay_SFX(mp3_filename: String, delay: Double){
         setSoundEffect(mp3_filename: mp3_filename)
