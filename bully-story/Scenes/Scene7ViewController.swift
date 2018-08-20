@@ -102,7 +102,9 @@ class Scene7ViewController: DialogViewController {
                             //ke yg cari barang, akhirannya Jane blg thankyou
                             handler: { () in
                                 
-                                self.goToNextScene(Scene7Choice1ViewController()) }
+                                self.goToNextScene(Scene7Choice1ViewController())
+                                empathymeter += 1
+                        }
                         ),
                         (
                             title: "Ignore Her",
