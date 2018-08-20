@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HangmanViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
@@ -18,6 +19,8 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var underlineStackView: UIStackView!
     
     var dialogVC: DialogViewController?
+    var bgAudio : AVAudioPlayer!
+    
     
     private var lastButtonPressed: UIButton?
     private var playCount = 0
@@ -54,6 +57,23 @@ class HangmanViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        guard let backgroundMusicData = NSDataAsset(name: "HangmanBGMusic")?.data else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. */
+            bgAudio = try AVAudioPlayer(data: backgroundMusicData, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        bgAudio.numberOfLoops = -1
+        bgAudio.play()
         
         updateWord()
         
@@ -69,6 +89,14 @@ class HangmanViewController: UIViewController {
             self.timerCount -= 1
         }
         nextBtn.isHidden = true
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        let duration = 1.0
+        bgAudio.setVolume(0, fadeDuration: duration)
+        Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { (_) in
+        self.bgAudio.stop()
+        }
+            
     }
     
     @IBAction func letterButtonPressed(_ button: UIButton) {

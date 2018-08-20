@@ -14,6 +14,7 @@ class Scene2ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
+            
             [
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
@@ -60,7 +61,6 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Yeah Jess. See you tomorrow in class!"
                 ),
-                .setBackgroundImage(imageName: "yard"),
                 ],
             [
                 .presentDialog(
