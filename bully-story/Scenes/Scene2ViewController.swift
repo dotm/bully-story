@@ -18,7 +18,7 @@ class Scene2ViewController: DialogViewController {
             [
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "yard"),
+                .setBackgroundImage(imageName : "halaman"),
                 .presentNarration(text: "School is finally over. Jane is walking straight home because she wants to do the homework that was given earlier today. Jessica came up to her to ask her to play with her gang. "),
                 
                 ],
@@ -27,7 +27,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .left,
                     dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like!"
                 ),
@@ -37,7 +37,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad",
                     characterImagePosition: .right,
                     dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need to this homework.."
                 ),
@@ -47,7 +47,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .left,
                     dialogText: "Oh? Okay. Fine then"
                 ),
@@ -67,7 +67,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica_-_-",
                     characterImagePosition: .left,
                     dialogText: "Yeah yeah sure."
                 ),
@@ -83,7 +83,7 @@ class Scene2ViewController: DialogViewController {
                     .presentDialog(
                         characterName: "Jessica",
                         characterNamePosition: .left,
-                        characterImage: "jane_Smile",
+                        characterImage: "Jessica_Angry",
                         characterImagePosition: .left,
                         dialogText: "Gee.. that new girl. How dare she says no to me? Who does she think she is?"
                     ),

@@ -30,9 +30,9 @@ class Scene6Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .right,
-                    dialogText: "Hahahaha! Gotcha! "
+                    dialogText: "Hahahaha! Gotcha!"
                 ),
                 ],
             [.goToNextScene(viewController: Scene7ViewController())],

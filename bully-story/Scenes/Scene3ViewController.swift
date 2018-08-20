@@ -35,7 +35,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Lucas_Smile",
                     characterImagePosition: .right,
                     dialogText: "Thankyou! Such compliment coming from you. Oh by the way, where do you live?"
                 ),
@@ -44,7 +44,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Smile2",
                     characterImagePosition: .left,
                     dialogText: "Oh i live at Orchad Street."
                 ),
@@ -53,7 +53,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Lucas_Smile",
                     characterImagePosition: .right,
                     dialogText: "Oh really? Such coincidence! I pass there every time i go home. Do you want to go together later?"
                 ),
@@ -72,7 +72,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Lucas_melet",
                     characterImagePosition: .right,
                     dialogText: "Go home, of course you silly."
                 ),
@@ -91,7 +91,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Lucas_Smile",
                     characterImagePosition: .right,
                     dialogText: "I see, okay then. The class almost start now, i’ll see you later today!"
                 ),
