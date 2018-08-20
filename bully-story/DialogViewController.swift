@@ -65,9 +65,14 @@ class DialogViewController: UIViewController {
     
     //MARK: Actions
     @objc func next(_ sender: UITapGestureRecognizer? = nil) {
-        typeWriter?.interruptAnimation()
-        let nextEvent: Event? = events.goToNextEvent()
-        executeEvent(nextEvent)
+        let displayedText = typeWriter?.textView.text
+        let intendedText = typeWriter?.text
+        if displayedText != intendedText {
+            typeWriter?.finishTextAnimation()
+        }else{
+            let nextEvent: Event? = events.goToNextEvent()
+            executeEvent(nextEvent)
+        }
     }
     
     //MARK: Private methods (helpers)
