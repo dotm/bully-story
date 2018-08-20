@@ -54,7 +54,9 @@ class HangmanViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         updateWord()
+        
         
         // MARK: setup result views
         for i in 0...4 {

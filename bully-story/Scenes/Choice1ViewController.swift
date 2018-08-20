@@ -63,6 +63,15 @@ class Choice1ViewController: DialogViewController {
                     ],
     
             [.goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
+            [
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile",
+                    characterImagePosition: .left,
+                    dialogText: "Okay class dismissed! See you tomorrow everyone!"
+                ),
+                ],
             [.goToNextScene(viewController: Scene2ViewController())],
             
                            ]
