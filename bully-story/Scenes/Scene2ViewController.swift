@@ -31,6 +31,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like!"
                 ),
+                .setBackgroundImage(imageName: "halaman"),
                 ],
             [
                 .presentDialog(
@@ -40,6 +41,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need to this homework.."
                 ),
+                .setBackgroundImage(imageName: "halaman"),
                 ],
             [
                 .presentDialog(
@@ -49,6 +51,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Oh? Okay. Fine then"
                 ),
+                .setBackgroundImage(imageName: "halaman"),
                 ],
             [
                 .presentDialog(
@@ -67,6 +70,7 @@ class Scene2ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Yeah yeah sure."
                 ),
+                .setBackgroundImage(imageName: "halaman"),
                 ],
             [.playBGM(filename: "Scene2Narration(intense)")],
             [
@@ -82,6 +86,7 @@ class Scene2ViewController: DialogViewController {
                         characterImagePosition: .left,
                         dialogText: "Gee.. that new girl. How dare she says no to me? Who does she think she is?"
                     ),
+                    .setBackgroundImage(imageName: "halaman"),
                     ],
              [.goToNextScene(viewController: Scene3ViewController())],
             

@@ -57,6 +57,16 @@ class Scene7Choice2ViewController: DialogViewController {
 //            [.goToNextScene(viewController: Scene7ViewController())],
             ]
         )
+        
+        if empathymeter > 80 {
+            events = Events(events: [
+                ])
+        } else {
+            
+            events = Events(events: [
+                ])
+        }
+            
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
     }
