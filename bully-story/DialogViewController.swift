@@ -61,10 +61,6 @@ class DialogViewController: UIViewController {
         setupDialogContainer()
         setupBackgroundImage()
         DialogAudioPlayer.setupAudioPlayer()
-        
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
-            self.animateArrowDownIcon()
-        }
     }
     
     //MARK: Actions
@@ -328,6 +324,9 @@ class DialogViewController: UIViewController {
         arrowDownIcon.widthAnchor.constraint(equalToConstant: arrowDownIcon.image!.size.width).isActive = true
         
         self.arrowDownIcon = arrowDownIcon
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (_) in
+            self.animateArrowDownIcon()
+        }
     }
     private func animateArrowDownIcon(){
         let distance = CGFloat(10)
