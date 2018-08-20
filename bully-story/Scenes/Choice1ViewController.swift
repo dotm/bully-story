@@ -37,7 +37,7 @@ class Choice1ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .left,
                     dialogText: "That girl is kind of pretty.."
                 ),
@@ -45,7 +45,7 @@ class Choice1ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "teacher",
                     characterImagePosition: .right,
                     dialogText: "Hello everyone. Let's start our lesson today! "
                 ),
@@ -53,7 +53,7 @@ class Choice1ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "teacher",
                     characterImagePosition: .right,
                     dialogText: "Open your book at page 10 and do the little quiz there."
                 ),
