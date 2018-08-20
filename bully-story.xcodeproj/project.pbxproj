@@ -46,12 +46,13 @@
 		8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62021281C9300362053 /* Choice1ViewController.swift */; };
 		8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62121281C9300362053 /* Scene1ViewController.swift */; };
 		8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62221281C9300362053 /* Scene3ViewController.swift */; };
-		8509F63B21281C9300362053 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62321281C9300362053 /* EndingViewController.swift */; };
+		8509F63B21281C9300362053 /* GoodEndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62321281C9300362053 /* GoodEndingViewController.swift */; };
 		8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62421281C9300362053 /* Scene2ViewController.swift */; };
 		8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62521281C9300362053 /* DialogAudioPlayer.swift */; };
 		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		8509F64321281FEC00362053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509F64221281FEC00362053 /* Assets.xcassets */; };
 		853A51172129273C00388644 /* TypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A51162129273C00388644 /* TypeWriter.swift */; };
+		A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,11 +110,12 @@
 		8509F62021281C9300362053 /* Choice1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
 		8509F62121281C9300362053 /* Scene1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
 		8509F62221281C9300362053 /* Scene3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene3ViewController.swift; sourceTree = "<group>"; };
-		8509F62321281C9300362053 /* EndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
+		8509F62321281C9300362053 /* GoodEndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodEndingViewController.swift; sourceTree = "<group>"; };
 		8509F62421281C9300362053 /* Scene2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853A51162129273C00388644 /* TypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeWriter.swift; sourceTree = "<group>"; };
+		A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadEndingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +234,8 @@
 				26E681D62129681200407F08 /* Scene7ViewController.swift */,
 				26E681D82129C23400407F08 /* Scene7Choice1ViewController.swift */,
 				26E681DA2129C25400407F08 /* Scene7Choice2ViewController.swift */,
-				8509F62321281C9300362053 /* EndingViewController.swift */,
+				8509F62321281C9300362053 /* GoodEndingViewController.swift */,
+				A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -363,7 +366,7 @@
 				853A51172129273C00388644 /* TypeWriter.swift in Sources */,
 				8509F62621281C9300362053 /* Global.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
-				8509F63B21281C9300362053 /* EndingViewController.swift in Sources */,
+				8509F63B21281C9300362053 /* GoodEndingViewController.swift in Sources */,
 				8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */,
 				8509F63521281C9300362053 /* StartViewController.swift in Sources */,
 				8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */,
@@ -376,6 +379,7 @@
 				8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */,
 				8509F62E21281C9300362053 /* PuzzleViewController.swift in Sources */,
 				26E681D321295FD100407F08 /* Scene6Choice1ViewController.swift in Sources */,
+				A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */,
 				26E681D52129609500407F08 /* Scene6Choice2ViewController.swift in Sources */,
 				8509F62D21281C9300362053 /* HangmanViewController.swift in Sources */,
 				8509F63221281C9300362053 /* AppDelegate.swift in Sources */,

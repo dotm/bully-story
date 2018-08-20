@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EndingViewController: DialogViewController {
+class GoodEndingViewController: DialogViewController {
     //MARK: Lifecycle hooks
     override func viewDidLoad() {
         super.viewDidLoad()
