@@ -22,7 +22,7 @@ class Scene6ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "What....."
                 ),
@@ -32,7 +32,7 @@ class Scene6ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad",
+                    characterImage: "jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "What happened to my table..."
                 ),
@@ -42,7 +42,7 @@ class Scene6ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .right,
                     dialogText: "Oh look guys! The new girl is messing with the table!"
                 ),
@@ -63,7 +63,7 @@ class Scene6ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .right,
                     dialogText: "Well it's on your table though. How else would you explain it?"
                 ),

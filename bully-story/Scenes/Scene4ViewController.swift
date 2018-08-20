@@ -17,11 +17,11 @@ class Scene4ViewController: DialogViewController {
             [
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "yard"),
+                .setBackgroundImage(imageName : "canteen"),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica",
                     characterImagePosition: .left,
                     dialogText: "Hi Jane! Do you want to go to the mall with us? I heard there’s lots of discount today!"
                 ),
@@ -32,7 +32,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad",
                     characterImagePosition: .right,
                     dialogText: "Ah.. that sounds so tempting. But i really should go home now.. Otherwise my mom will get mad. Sorry again Jess."
                 ),
@@ -41,7 +41,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica_-_-",
                     characterImagePosition: .left,
                     dialogText: "Again? But yeah okay. Whatever. Your loss"
                 ),
@@ -51,7 +51,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "jane_Sad2",
                     characterImagePosition: .right,
                     dialogText: "Sorry…"
                 ),
@@ -75,11 +75,11 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jessica_Angry",
                     characterImagePosition: .right,
                     dialogText: "Lucas? He’s going home with Jane? The new girl? He won’t even reply to my text and now he’s going home with the new girl! I’m gonna make her to pay for this."
                 ),
-                .setBackgroundImage(imageName: "yard"),
+                .setBackgroundImage(imageName: "canteen"),
                 ], 
             
             
