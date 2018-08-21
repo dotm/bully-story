@@ -19,7 +19,7 @@ class Scene6Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "I'm just gonna wipe this all by myself.. "
                 ),

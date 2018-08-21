@@ -31,7 +31,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jane_Shock",
                     characterImagePosition: .left,
                     dialogText: "Wait.. where's my book.. I'm pretty sure i brought it this morning.."
                 ),
@@ -49,7 +49,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad",
+                    characterImage: "Jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "No it's just.. i can't find my book now... I don't know where did it go..."
                 ),
@@ -59,7 +59,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher",
+                    characterImage: "teacher_Angry",
                     characterImagePosition: .right,
                     dialogText: "Are you telling me you didn't bring your book to my class?!"
                 ),
@@ -68,7 +68,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "No madam... I'm really sure i brought it this morning."
                 ),
@@ -87,7 +87,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad1",
                     characterImagePosition: .left,
                     dialogText: "..................."
                 ),

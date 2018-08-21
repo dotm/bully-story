@@ -27,7 +27,7 @@ class Scene7Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "...... I can't find it....."
                 ),
@@ -38,7 +38,7 @@ class Scene7Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher",
+                    characterImage: "teacher_Angry",
                     characterImagePosition: .right,
                     dialogText: "Well you know the consenquences for not bringing book for my class right? OUT!"
                 ),
@@ -48,7 +48,7 @@ class Scene7Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad3",
                     characterImagePosition: .left,
                     dialogText: ".........."
                 ),

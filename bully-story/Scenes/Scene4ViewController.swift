@@ -32,7 +32,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Sad",
+                    characterImage: "Jane_Sad",
                     characterImagePosition: .right,
                     dialogText: "Ah.. that sounds so tempting. But i really should go home now.. Otherwise my mom will get mad. Sorry again Jess."
                 ),
@@ -41,7 +41,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "Jessica_-_-",
+                    characterImage: "Jessica_Unamused",
                     characterImagePosition: .left,
                     dialogText: "Again? But yeah okay. Whatever. Your loss"
                 ),
@@ -51,7 +51,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .right,
                     dialogText: "Sorry…"
                 ),
