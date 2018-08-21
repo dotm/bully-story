@@ -46,7 +46,7 @@ class Scene7Choice1ViewController: DialogViewController {
                 ),
                 ],
             
-            [.goToNextScene(viewController: Scene7ViewController())],
+            [.goToNextScene(viewController: Scene8ViewController())],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

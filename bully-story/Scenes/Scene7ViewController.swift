@@ -109,11 +109,14 @@ class Scene7ViewController: DialogViewController {
                         (
                             title: "Ignore Her",
                             
-                            handler: { () in self.goToNextScene(Scene7Choice2ViewController()) }
+                            handler: { () in
+                                self.goToNextScene(Scene7Choice2ViewController()) }
                         ),
                         ]
                 )),
                 ],
+            
+            
             
             ])
         let startEvent = events.goToStartEvent()

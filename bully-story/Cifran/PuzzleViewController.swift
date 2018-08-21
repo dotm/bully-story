@@ -112,7 +112,7 @@ class PuzzleViewController: UIViewController {
                     self.pictureCollections[5].transform = CGAffineTransform(translationX: -10, y: -26)
                     self.view.backgroundColor = .black
                 }) { (_) in
-                    self.nextBtn.isHidden = true
+                    self.nextBtn.isHidden = false
                 }
             }
         }

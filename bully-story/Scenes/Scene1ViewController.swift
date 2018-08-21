@@ -36,7 +36,7 @@ class Scene1ViewController: DialogViewController {
                                 ),
                                 (
                                     title: "Ignore Her",
-                                    handler: { () in self.goToNextScene(Choice2ViewController()) }
+                                    handler: { () in self.goToNextScene(Scene7ViewController()) }
                                 ),
                                 ]
                         )),
