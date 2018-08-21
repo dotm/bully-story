@@ -26,7 +26,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jane_Smile",
                     characterImagePosition: .left,
                     dialogText: "Haha, you’re very funny, Lucas"
                 ),
@@ -44,7 +44,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile2",
+                    characterImage: "Jane_Smile2",
                     characterImagePosition: .left,
                     dialogText: "Oh i live at Orchad Street."
                 ),
@@ -62,7 +62,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
                     dialogText: "Go? Go where?"
                 ),
@@ -82,7 +82,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jane_Smile2",
                     characterImagePosition: .left,
                     dialogText: "Yes sure. I wanted to go home earlier anyway today."
                 ),
