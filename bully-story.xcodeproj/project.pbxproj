@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */; };
 		267A996121232010008EDFD4 /* PTS76F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A99592123200F008EDFD4 /* PTS76F.ttf */; };
 		267A996221232010008EDFD4 /* PTN57F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995A21232010008EDFD4 /* PTN57F.ttf */; };
 		267A996321232010008EDFD4 /* PTC55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A995B21232010008EDFD4 /* PTC55F.ttf */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5ViewController.swift; sourceTree = "<group>"; };
 		267A99592123200F008EDFD4 /* PTS76F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS76F.ttf; sourceTree = "<group>"; };
 		267A995A21232010008EDFD4 /* PTN57F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN57F.ttf; sourceTree = "<group>"; };
 		267A995B21232010008EDFD4 /* PTC55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTC55F.ttf; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				8509F62421281C9300362053 /* Scene2ViewController.swift */,
 				8509F62221281C9300362053 /* Scene3ViewController.swift */,
 				8509F61E21281C9300362053 /* Scene4ViewController.swift */,
+				2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */,
 				26E681D021294A0D00407F08 /* Scene6ViewController.swift */,
 				26E681D221295FD100407F08 /* Scene6Choice1ViewController.swift */,
 				26E681D42129609500407F08 /* Scene6Choice2ViewController.swift */,
@@ -359,6 +362,7 @@
 				8509F62B21281C9300362053 /* Transitions.swift in Sources */,
 				8509F63621281C9300362053 /* Scene4ViewController.swift in Sources */,
 				26E681D92129C23400407F08 /* Scene7Choice1ViewController.swift in Sources */,
+				2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */,
 				8509F63321281C9300362053 /* Events.swift in Sources */,
 				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
 				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,

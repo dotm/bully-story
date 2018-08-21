@@ -14,7 +14,6 @@ class Scene2ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
-            
             [
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),

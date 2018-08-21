@@ -88,7 +88,7 @@ class HangmanViewController: UIViewController {
         timerObject = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
             self.timerCount -= 1
         }
-        nextBtn.isHidden = true
+        nextBtn.isHidden = false
     }
     override func viewDidDisappear(_ animated: Bool) {
         let duration = 1.0

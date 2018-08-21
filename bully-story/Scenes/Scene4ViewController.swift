@@ -81,11 +81,11 @@ class Scene4ViewController: DialogViewController {
                 ),
                 .setBackgroundImage(imageName: "canteen"),
                 ],
-            [.goToNextScene(viewController: Helper().getPuzzleVC(dialogVC: self))],
+           
             
             
             
-    [.goToNextScene(viewController: Scene6ViewController())],
+    [.goToNextScene(viewController: Scene5ViewController())],
             
             
             ])
