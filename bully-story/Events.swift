@@ -8,14 +8,28 @@
 
 import UIKit
 
-class Events {
+class Events: NSObject, NSCoding {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(events, forKey: "events")
+        aCoder.encode(eventIndex, forKey: "eventIndex")
+    }
+    required convenience init?(coder aDecoder: NSCoder) {
+        let events = aDecoder.decodeObject(forKey:"events") as! [Event]
+        let eventIndex = aDecoder.decodeInteger(forKey: "eventIndex")
+        self.init(events: events, eventIndex: eventIndex)
+    }
+    
     //MARK: Properties
     private var eventIndex = 0
     var events: [Event] = []
     
     //MARK: Initializers
-    init(events: [Event]) {
+    convenience init(events: [Event]) {
+        self.init(events: events, eventIndex: 0)
+    }
+    init(events: [Event], eventIndex: Int){
         self.events = events
+        self.eventIndex = eventIndex
     }
     
     //MARK: Public methods
