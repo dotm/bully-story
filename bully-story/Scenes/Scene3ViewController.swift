@@ -72,7 +72,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
-                    characterImage: "Lucas_melet",
+                    characterImage: "Lucas_XP",
                     characterImagePosition: .right,
                     dialogText: "Go home, of course you silly."
                 ),

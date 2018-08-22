@@ -30,11 +30,9 @@
 		8509F62621281C9300362053 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F60D21281C9300362053 /* Global.swift */; };
 		8509F62721281C9300362053 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F60E21281C9300362053 /* PuzzleViewController.xib */; };
 		8509F62821281C9300362053 /* ActViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F60F21281C9300362053 /* ActViewController.xib */; };
-		8509F62921281C9300362053 /* HangmanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F61021281C9300362053 /* HangmanViewController.xib */; };
 		8509F62A21281C9300362053 /* InputNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F61121281C9300362053 /* InputNameViewController.xib */; };
 		8509F62B21281C9300362053 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61221281C9300362053 /* Transitions.swift */; };
 		8509F62C21281C9300362053 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61321281C9300362053 /* ActViewController.swift */; };
-		8509F62D21281C9300362053 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61421281C9300362053 /* HangmanViewController.swift */; };
 		8509F62E21281C9300362053 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61521281C9300362053 /* PuzzleViewController.swift */; };
 		8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61621281C9300362053 /* InputNameViewController.swift */; };
 		8509F63021281C9300362053 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F61721281C9300362053 /* Helper.swift */; };
@@ -54,6 +52,14 @@
 		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		8509F64321281FEC00362053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509F64221281FEC00362053 /* Assets.xcassets */; };
 		853A51172129273C00388644 /* TypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A51162129273C00388644 /* TypeWriter.swift */; };
+		85EDA300212D209600921363 /* HangmanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA2FE212D209600921363 /* HangmanViewController.xib */; };
+		85EDA301212D209600921363 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA2FF212D209600921363 /* HangmanViewController.swift */; };
+		85EDA304212D234E00921363 /* EraseGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA302212D234D00921363 /* EraseGameViewController.xib */; };
+		85EDA305212D234E00921363 /* EraseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA303212D234D00921363 /* EraseGameViewController.swift */; };
+		85EDA308212D23AB00921363 /* FindItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA306212D23AB00921363 /* FindItemViewController.swift */; };
+		85EDA309212D23AB00921363 /* FindItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA307212D23AB00921363 /* FindItemViewController.xib */; };
+		85EDA30F212D3C8800921363 /* video_prologue.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA30E212D3C8800921363 /* video_prologue.mp4 */; };
+		85EDA311212D4C3D00921363 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA310212D4C3D00921363 /* Extensions.swift */; };
 		A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,11 +102,9 @@
 		8509F60D21281C9300362053 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		8509F60E21281C9300362053 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
 		8509F60F21281C9300362053 /* ActViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActViewController.xib; sourceTree = "<group>"; };
-		8509F61021281C9300362053 /* HangmanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HangmanViewController.xib; sourceTree = "<group>"; };
 		8509F61121281C9300362053 /* InputNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputNameViewController.xib; sourceTree = "<group>"; };
 		8509F61221281C9300362053 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		8509F61321281C9300362053 /* ActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
-		8509F61421281C9300362053 /* HangmanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
 		8509F61521281C9300362053 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		8509F61621281C9300362053 /* InputNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
 		8509F61721281C9300362053 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853A51162129273C00388644 /* TypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeWriter.swift; sourceTree = "<group>"; };
+		85EDA2FE212D209600921363 /* HangmanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HangmanViewController.xib; sourceTree = "<group>"; };
+		85EDA2FF212D209600921363 /* HangmanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
+		85EDA302212D234D00921363 /* EraseGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EraseGameViewController.xib; sourceTree = "<group>"; };
+		85EDA303212D234D00921363 /* EraseGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraseGameViewController.swift; sourceTree = "<group>"; };
+		85EDA306212D23AB00921363 /* FindItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindItemViewController.swift; sourceTree = "<group>"; };
+		85EDA307212D23AB00921363 /* FindItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindItemViewController.xib; sourceTree = "<group>"; };
+		85EDA30E212D3C8800921363 /* video_prologue.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_prologue.mp4; sourceTree = "<group>"; };
+		85EDA310212D4C3D00921363 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadEndingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,18 +191,21 @@
 			isa = PBXGroup;
 			children = (
 				8509F61921281C9300362053 /* AppDelegate.swift */,
-				8509F60C21281C9300362053 /* Cifran */,
+				8509F60C21281C9300362053 /* Interactions */,
 				8509F62521281C9300362053 /* DialogAudioPlayer.swift */,
 				8509F61821281C9300362053 /* DialogViewController.swift */,
-				8509F61A21281C9300362053 /* Events.swift */,
-				8509F61D21281C9300362053 /* Scenes */,
 				8509F61C21281C9300362053 /* StartViewController.swift */,
+				8509F61A21281C9300362053 /* Events.swift */,
+				8509F60D21281C9300362053 /* Global.swift */,
+				853A51162129273C00388644 /* TypeWriter.swift */,
+				8509F61D21281C9300362053 /* Scenes */,
 				8509F61B21281C9300362053 /* wordList.txt */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
 				37A91543211C09310076AFFB /* LaunchScreen.storyboard */,
 				37A91546211C09310076AFFB /* Info.plist */,
 				37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */,
 				8509F64221281FEC00362053 /* Assets.xcassets */,
+				85EDA30E212D3C8800921363 /* video_prologue.mp4 */,
 			);
 			path = "bully-story";
 			sourceTree = "<group>";
@@ -204,23 +219,26 @@
 			path = "bully-storyTests";
 			sourceTree = "<group>";
 		};
-		8509F60C21281C9300362053 /* Cifran */ = {
+		8509F60C21281C9300362053 /* Interactions */ = {
 			isa = PBXGroup;
 			children = (
-				8509F60D21281C9300362053 /* Global.swift */,
 				8509F60E21281C9300362053 /* PuzzleViewController.xib */,
 				8509F60F21281C9300362053 /* ActViewController.xib */,
-				8509F61021281C9300362053 /* HangmanViewController.xib */,
 				8509F61121281C9300362053 /* InputNameViewController.xib */,
-				8509F61221281C9300362053 /* Transitions.swift */,
+				85EDA2FE212D209600921363 /* HangmanViewController.xib */,
+				85EDA302212D234D00921363 /* EraseGameViewController.xib */,
+				85EDA307212D23AB00921363 /* FindItemViewController.xib */,
+				85EDA303212D234D00921363 /* EraseGameViewController.swift */,
+				85EDA306212D23AB00921363 /* FindItemViewController.swift */,
+				85EDA2FF212D209600921363 /* HangmanViewController.swift */,
 				8509F61321281C9300362053 /* ActViewController.swift */,
-				8509F61421281C9300362053 /* HangmanViewController.swift */,
 				8509F61521281C9300362053 /* PuzzleViewController.swift */,
 				8509F61621281C9300362053 /* InputNameViewController.swift */,
 				8509F61721281C9300362053 /* Helper.swift */,
-				853A51162129273C00388644 /* TypeWriter.swift */,
+				85EDA310212D4C3D00921363 /* Extensions.swift */,
+				8509F61221281C9300362053 /* Transitions.swift */,
 			);
-			path = Cifran;
+			path = Interactions;
 			sourceTree = "<group>";
 		};
 		8509F61D21281C9300362053 /* Scenes */ = {
@@ -331,20 +349,23 @@
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
 				8509F63421281C9300362053 /* wordList.txt in Resources */,
 				267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */,
+				85EDA300212D209600921363 /* HangmanViewController.xib in Resources */,
 				267A996521232010008EDFD4 /* PTC75F.ttf in Resources */,
 				267A996721232010008EDFD4 /* PTS56F.ttf in Resources */,
 				8509F64121281EFC00362053 /* Main.storyboard in Resources */,
 				8509F64321281FEC00362053 /* Assets.xcassets in Resources */,
-				8509F62921281C9300362053 /* HangmanViewController.xib in Resources */,
 				267A996121232010008EDFD4 /* PTS76F.ttf in Resources */,
 				267A996321232010008EDFD4 /* PTC55F.ttf in Resources */,
 				267A996421232010008EDFD4 /* PTS55F.ttf in Resources */,
 				8509F62721281C9300362053 /* PuzzleViewController.xib in Resources */,
 				8509F62821281C9300362053 /* ActViewController.xib in Resources */,
+				85EDA309212D23AB00921363 /* FindItemViewController.xib in Resources */,
 				267A996221232010008EDFD4 /* PTN57F.ttf in Resources */,
 				8509F62A21281C9300362053 /* InputNameViewController.xib in Resources */,
 				267A996621232010008EDFD4 /* PTN77F.ttf in Resources */,
 				267A996821232010008EDFD4 /* PTS75F.ttf in Resources */,
+				85EDA30F212D3C8800921363 /* video_prologue.mp4 in Resources */,
+				85EDA304212D234E00921363 /* EraseGameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +389,10 @@
 				2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */,
 				8509F63321281C9300362053 /* Events.swift in Sources */,
 				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
+				85EDA308212D23AB00921363 /* FindItemViewController.swift in Sources */,
 				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,
 				8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */,
+				85EDA305212D234E00921363 /* EraseGameViewController.swift in Sources */,
 				853A51172129273C00388644 /* TypeWriter.swift in Sources */,
 				8509F62621281C9300362053 /* Global.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
@@ -381,6 +404,7 @@
 				26E681D121294A0D00407F08 /* Scene6ViewController.swift in Sources */,
 				26E681DB2129C25400407F08 /* Scene7Choice2ViewController.swift in Sources */,
 				8509F63721281C9300362053 /* Choice2ViewController.swift in Sources */,
+				85EDA301212D209600921363 /* HangmanViewController.swift in Sources */,
 				8509F63121281C9300362053 /* DialogViewController.swift in Sources */,
 				8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */,
 				26E681D72129681200407F08 /* Scene7ViewController.swift in Sources */,
@@ -389,8 +413,8 @@
 				26E681D321295FD100407F08 /* Scene6Choice1ViewController.swift in Sources */,
 				A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */,
 				26E681D52129609500407F08 /* Scene6Choice2ViewController.swift in Sources */,
-				8509F62D21281C9300362053 /* HangmanViewController.swift in Sources */,
 				8509F63221281C9300362053 /* AppDelegate.swift in Sources */,
+				85EDA311212D4C3D00921363 /* Extensions.swift in Sources */,
 				8509F63021281C9300362053 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
