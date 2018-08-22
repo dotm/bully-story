@@ -29,14 +29,6 @@ class Events {
         eventIndex = index
         return events[safe: eventIndex]
     }
-    
-    //MARK: Operator overloading
-    static func + (left: Events, right: Events) -> Events {
-        return Events(events: left.events + right.events)
-    }
-    static func += (left: inout Events, right: Events) {
-        left.events = left.events + right.events
-    }
 }
 
 //MARK: Extra details
