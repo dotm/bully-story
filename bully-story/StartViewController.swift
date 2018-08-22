@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
+import AVKit
 
 class StartViewController: UIViewController, UINavigationControllerDelegate {
     var bgAudio : AVAudioPlayer!
@@ -41,22 +41,46 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func startGame(_ sender: Any) {
         bgAudio.stop()
         
-        self.navigationController?.delegate = self
-        let vc = ActViewController()
-        vc.actTitle = "Act 1"
-        vc.destinationVC = Scene1ViewController()
-        self.navigationController?.delegate = self
-        let vc1 = ActViewController()
-        vc1.actTitle = "Act 2"
-        vc1.destinationVC = Scene5ViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        // prologue scene
+        
+        guard let path = Bundle.main.path(forResource: "video_prologue", ofType:"mp4") else { return }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        player.isMuted = true
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        playerController.view.isUserInteractionEnabled = false
+        playerController.showsPlaybackControls = false
+        
+        let transition: CATransition = CATransition()
+        transition.duration = 2
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        transition.type = kCATransitionFade
+        transition.subtype = kCATransitionFromTop
+        self.view.window!.layer.add(transition, forKey: nil)
+        
+        self.present(playerController, animated: false, completion: nil)
+        
+        DialogAudioPlayer.setAndPlay_SFX(mp3_filename: "prologue", delay: 1)
+        player.play()
+        Timer.scheduledTimer(withTimeInterval: 15, repeats: false, block: { (_) in
+            playerController.present(ActViewController(title: "Act 1", transitionTo: Scene1ViewController()), animated: false, completion: nil)
+            
+            
+//            let vc1 = ActViewController()
+//            vc1.actTitle = "Act 2"
+//            vc1.destinationVC = Scene5ViewController()
+//            let vc = ActViewController(title: "Act 1", transitionTo: Scene1ViewController())
+//            playerController.navigationController?.delegate = self
+//            playerController.navigationController?.pushViewController(vc, animated: true)
+        })
+        
     }
     @IBAction func continueGame(_ sender: UIButton) {
         loadGlobalData()
     }
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return FadePushAnimator()
-    }
+//    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return FadePushAnimator()
+//    }
     
 }
