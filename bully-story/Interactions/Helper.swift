@@ -42,6 +42,7 @@ struct Helper {
         return navVC
     }
     
+    
     func getInputNameVC(dialogVC: DialogViewController) -> UIViewController {
         let inputNameVC = InputNameViewController()
         inputNameVC.providesPresentationContextTransitionStyle = true
@@ -54,6 +55,10 @@ struct Helper {
     func getHangmanVC(dialogVC: DialogViewController) -> UIViewController {
         return HangmanViewController(dialogVC: dialogVC)
     }
+    
+//    func getEraseGameVC(dialogVC: DialogViewController) -> UIViewController {
+//        return EraseGameViewController(dialogVC: dialogVC)
+//    }
     
     
 }
