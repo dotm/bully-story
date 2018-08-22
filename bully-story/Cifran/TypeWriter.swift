@@ -11,11 +11,13 @@ import UIKit
 class TypeWriter {
     var textView: UITextView!
     var text: String!
+    var completionHandler: (()->())?
     private var index = 0
     
-    init(textView: UITextView, text: String) {
+    init(textView: UITextView, text: String, completionHandler: (()->())? = nil) {
         self.textView = textView
         self.text = text
+        self.completionHandler = completionHandler
     }
     
     private func addCharacterToTextView(){
@@ -27,6 +29,8 @@ class TypeWriter {
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { (_) in
             if self.textView.text != self.text {
                 self.addCharacterToTextView()
+            }else{
+                self.completionHandler?()
             }
         }
     
