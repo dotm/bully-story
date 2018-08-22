@@ -18,8 +18,9 @@ class PuzzleViewController: UIViewController {
     @IBOutlet var placeholderCollection: [UIImageView]!
     private var pictureCollections : [UIImageView] = []
     
-    var dialogVC: DialogViewController?
-    var assetCode: Int?
+    private var dialogVC: DialogViewController?
+    private var assetCode: Int?
+    private let backgroundColors = [#colorLiteral(red: 0.8274509804, green: 0.8549019608, blue: 0.9568627451, alpha: 1), #colorLiteral(red: 0.6926660538, green: 0.719720304, blue: 0.8115821481, alpha: 1), #colorLiteral(red: 0.5348986983, green: 0.5557911992, blue: 0.6267367005, alpha: 1), #colorLiteral(red: 0.4509302974, green: 0.4685434103, blue: 0.5283564329, alpha: 1), #colorLiteral(red: 0.3312414885, green: 0.3441802263, blue: 0.3881245852, alpha: 1)]
     
     convenience init() {
         self.init(dialogVC: nil, assetCode: nil)
@@ -57,8 +58,12 @@ class PuzzleViewController: UIViewController {
             
             imageView.tag = i
             placeholderCollection[i].tag = i
-//            placeholderCollection[i].backgroundColor = .clear
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor = backgroundColors[assetCode!-1]
     }
     
     private func closeEnough(_ a: Int, _ b: Int) -> Bool {
@@ -110,7 +115,7 @@ class PuzzleViewController: UIViewController {
                     self.pictureCollections[3].transform = CGAffineTransform(translationX: -10, y: 0)
                     self.pictureCollections[4].transform = CGAffineTransform(translationX: 10, y: -26)
                     self.pictureCollections[5].transform = CGAffineTransform(translationX: -10, y: -26)
-                    self.view.backgroundColor = .black
+                    self.view.backgroundColor = self.backgroundColors[self.assetCode!]
                 }) { (_) in
                     self.nextBtn.isHidden = false
                 }
