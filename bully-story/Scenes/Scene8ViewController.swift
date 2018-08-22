@@ -14,18 +14,36 @@ class Scene8ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .playSFX(filename: "Scene1Bell", delay: 0.0),
-                .playBGM(filename: "Scene2BGMusic"),
-                .setBackgroundImage(imageName : "classroom"),
+                .stopBGM(),
+                .playSFX(filename: "SFXBellShort", delay: 0.0),
+                .playSFX(filename: "SFXToilet", delay: 1.0),
+                .setBackgroundImage(imageName : "wc"),
                 .presentDialog(
-                    characterName: "Teacher",
-                    characterNamePosition: .right,
-                    characterImage: "teacher",
-                    characterImagePosition: .right,
-                    dialogText: "Good morning everyone. We will start our lesson today. Please open your book now."
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile2",
+                    characterImagePosition: .left,
+                    dialogText: "Fiuh... finally. I've been holding that pee during the lesson."
                 ),
                 ],
-           
+            [
+                .playSFX(filename: "SFXDoor1", delay: 0.0),
+                .setBackgroundImage(imageName : "wc"),
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Sad3",
+                    characterImagePosition: .left,
+                    dialogText: "Wait.... What....?"
+                ),
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Shock",
+                    characterImagePosition: .left,
+                    dialogText: "Why won't it open?"
+                ),
+                ],
             [
                 .presentChoices(choices: (
                     title: "What would you do?",
