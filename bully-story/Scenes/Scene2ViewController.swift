@@ -14,7 +14,6 @@ class Scene2ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
-            
             [
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
@@ -27,7 +26,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "Jessica",
+                    characterImage: "Jessica_Smile",
                     characterImagePosition: .left,
                     dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like!"
                 ),
@@ -37,7 +36,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Sad",
+                    characterImage: "Jane_Persevere",
                     characterImagePosition: .right,
                     dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need to this homework.."
                 ),
@@ -57,7 +56,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "jane_Smile",
+                    characterImage: "Jane_Smile",
                     characterImagePosition: .right,
                     dialogText: "Yeah Jess. See you tomorrow in class!"
                 ),
@@ -66,7 +65,7 @@ class Scene2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "Jessica_-_-",
+                    characterImage: "Jessica_Unamused",
                     characterImagePosition: .left,
                     dialogText: "Yeah yeah sure."
                 ),

@@ -27,7 +27,7 @@ class Scene7Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "...... I can't find it....."
                 ),
@@ -38,7 +38,7 @@ class Scene7Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher",
+                    characterImage: "teacher_Angry",
                     characterImagePosition: .right,
                     dialogText: "Well you know the consenquences for not bringing book for my class right? OUT!"
                 ),
@@ -48,24 +48,24 @@ class Scene7Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad3",
                     characterImagePosition: .left,
                     dialogText: ".........."
                 ),
                 
                 ],
-//            [.goToNextScene(viewController: Scene7ViewController())],
+     [.goToNextScene(viewController: Scene8ViewController())],
             ]
         )
         
-        if empathymeter > 80 {
-            events = Events(events: [
-                ])
-        } else {
-            
-            events = Events(events: [
-                ])
-        }
+//        if empathymeter > 80 {
+//            events = Events(events: [
+//                ])
+//        } else {
+//            
+//            events = Events(events: [
+//                ])
+//        }
             
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

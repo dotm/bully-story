@@ -21,7 +21,7 @@ class Scene7Choice1ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile3",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
                     dialogText: "Found it!!"
                 ),
@@ -40,13 +40,13 @@ class Scene7Choice1ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile3",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
                     dialogText: "This is the second time today you've helped me. Thankyou so much #name!"
                 ),
                 ],
             
-            [.goToNextScene(viewController: Scene7ViewController())],
+            [.goToNextScene(viewController: Scene8ViewController())],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

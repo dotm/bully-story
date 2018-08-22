@@ -54,4 +54,6 @@ struct Helper {
     func getHangmanVC(dialogVC: DialogViewController) -> UIViewController {
         return HangmanViewController(dialogVC: dialogVC)
     }
+    
+    
 }

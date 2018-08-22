@@ -45,6 +45,10 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         let vc = ActViewController()
         vc.actTitle = "Act 1"
         vc.destinationVC = Scene1ViewController()
+        self.navigationController?.delegate = self
+        let vc1 = ActViewController()
+        vc1.actTitle = "Act 2"
+        vc1.destinationVC = Scene5ViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -12,7 +12,7 @@ class Scene1ViewController: DialogViewController {
     //MARK: Lifecycle hooks
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //dapit
         events = Events(events: [
             [
                 .setBackgroundImage(imageName: "classroom"),
