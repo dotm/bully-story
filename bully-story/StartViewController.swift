@@ -51,6 +51,9 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         vc1.destinationVC = Scene5ViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func continueGame(_ sender: UIButton) {
+        loadGlobalData()
+    }
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return FadePushAnimator()

@@ -64,19 +64,8 @@
                                 <rect key="frame" x="87" y="236" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-0G-x7G">
-                                <rect key="frame" x="68" y="515" width="238" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="NEW GAME" backgroundImage="paper">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="0yg-FJ-ui2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
-                                <rect key="frame" x="68" y="622" width="238" height="70"/>
+                                <rect key="frame" x="68" y="689" width="238" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
                                 <state key="normal" title="SETTINGS" backgroundImage="paper">
@@ -95,6 +84,27 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-0G-x7G">
+                                <rect key="frame" x="68" y="515" width="238" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="NEW GAME" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="0yg-FJ-ui2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq3-QQ-8Dr">
+                                <rect key="frame" x="149" y="628" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="ntu-iS-Oow"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.33333333333333331" green="0.41176470588235292" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
