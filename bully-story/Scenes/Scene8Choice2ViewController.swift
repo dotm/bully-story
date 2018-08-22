@@ -40,7 +40,7 @@ class Scene8Choice2ViewController: DialogViewController {
                     dialogText: "Why does this happen to me...."
                 ),
                 ],
-            
+                        ]
         )
         
         //        if empathymeter > 80 {
