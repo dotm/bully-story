@@ -49,6 +49,12 @@ class DialogViewController: UIViewController {
     var dialogTextFontStyle: UIFont {return UIFont(name: "PT Sans", size: 20)! }
     var characterNameFontStyle: UIFont {return UIFont(name: "PTSans-Bold", size: 22)!}
     
+    var backgroundImageName: String = "" {
+        didSet {
+            changeBackgroundImage(backgroundImageName)
+        }
+    }
+    
     //MARK: Outlets
     weak var dialogContainer: UIView!
     weak var backgroundImage: UIImageView!
@@ -87,7 +93,7 @@ class DialogViewController: UIViewController {
     private func executeAction(_ action: StoryAction){
         switch action {
         case let .setBackgroundImage(imageName):
-            changeBackgroundImage(imageName)
+            backgroundImageName = imageName
         case let .presentChoices(choices):
             presentChoices(choices)
         case let .goToNextScene(viewController):
