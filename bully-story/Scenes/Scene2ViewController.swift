@@ -87,7 +87,7 @@ class Scene2ViewController: DialogViewController {
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-             [.goToNextScene(viewController: Scene3ViewController())],
+            [.goToNextScene(viewController: ActViewController(title: "Act 2", transitionTo: Scene3ViewController()))],
             
             
             ])

@@ -10,6 +10,7 @@
 		2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */; };
 		263AF1F4212E5AB7000384A3 /* Scene9GoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AF1F3212E5AB7000384A3 /* Scene9GoodViewController.swift */; };
 		263AF1F6212E680F000384A3 /* Scene9BadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */; };
+		263AF1F8212E7B44000384A3 /* Scene9GoodAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AF1F7212E7B44000384A3 /* Scene9GoodAViewController.swift */; };
 		2658BD75212D6A180021E88A /* Scene8Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658BD74212D6A180021E88A /* Scene8Choice1ViewController.swift */; };
 		2658BD77212D6A270021E88A /* Scene8Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658BD76212D6A270021E88A /* Scene8Choice2ViewController.swift */; };
 		2658BD79212D736B0021E88A /* Scene8Choice1AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658BD78212D736B0021E88A /* Scene8Choice1AViewController.swift */; };
@@ -81,6 +82,7 @@
 		2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5ViewController.swift; sourceTree = "<group>"; };
 		263AF1F3212E5AB7000384A3 /* Scene9GoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9GoodViewController.swift; sourceTree = "<group>"; };
 		263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9BadViewController.swift; sourceTree = "<group>"; };
+		263AF1F7212E7B44000384A3 /* Scene9GoodAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9GoodAViewController.swift; sourceTree = "<group>"; };
 		2658BD74212D6A180021E88A /* Scene8Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8Choice1ViewController.swift; sourceTree = "<group>"; };
 		2658BD76212D6A270021E88A /* Scene8Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8Choice2ViewController.swift; sourceTree = "<group>"; };
 		2658BD78212D736B0021E88A /* Scene8Choice1AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8Choice1AViewController.swift; sourceTree = "<group>"; };
@@ -270,8 +272,9 @@
 				2658BD74212D6A180021E88A /* Scene8Choice1ViewController.swift */,
 				2658BD78212D736B0021E88A /* Scene8Choice1AViewController.swift */,
 				2658BD76212D6A270021E88A /* Scene8Choice2ViewController.swift */,
-				263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */,
 				263AF1F3212E5AB7000384A3 /* Scene9GoodViewController.swift */,
+				263AF1F7212E7B44000384A3 /* Scene9GoodAViewController.swift */,
+				263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */,
 				85EDA305212D234E00921363 /* EraseGameViewController.swift in Sources */,
 				853A51172129273C00388644 /* TypeWriter.swift in Sources */,
+				263AF1F8212E7B44000384A3 /* Scene9GoodAViewController.swift in Sources */,
 				8509F62621281C9300362053 /* Global.swift in Sources */,
 				263AF1F4212E5AB7000384A3 /* Scene9GoodViewController.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,

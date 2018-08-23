@@ -15,6 +15,7 @@ class Scene9GoodViewController: DialogViewController {
      
         events = Events(events: [
             [
+                .setBackgroundImage(imageName: "halaman"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
@@ -50,23 +51,26 @@ class Scene9GoodViewController: DialogViewController {
                     dialogText: "If you didn't do that, i don't think i would be standing here today."
                 ),
                 ],
+            
             [
-                .presentDialog(
-                    characterName: "#name",
-                    characterNamePosition: .left,
-                    characterImage: "",
-                    characterImagePosition: .left,
-                    dialogText: "Ssshh.. Don't say things like that. "
-                ),
-                ],
-            [
-                .presentNarration(text: "Jessica never come close to Jane again after she was being called out the other day."),
-                    ],
-            [
-                .presentNarration(text: "She also never been seen bullying others people maybe she was ashamed and finally realized that she's been doing a wrong thing all along."),
-                ],
-            [
-                .presentNarration(text: "Everyone is finally living the school life peacefully. As for Jane, she can finally enjoy school in peace, without the fear of Jessica messing after her again."),
+                .presentChoices(choices: (
+                    title: "",
+                    options: [
+                        (
+                            title: "Shhhh.. Don't say things like that",
+                            handler: { () in
+                                
+                                self.goToNextScene(Scene9GoodAViewController())
+                        }
+                        ),
+                        (
+                            title: "Of course, my pleasure Jane.",
+                            
+                            handler: { () in
+                                self.goToNextScene(Scene9GoodAViewController()) }
+                        ),
+                        ]
+                )),
                 ],
                       
                       ])
