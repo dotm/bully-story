@@ -9,17 +9,23 @@
 import UIKit
 
 class ActViewController: UIViewController {
+    @IBOutlet weak var quote: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     var actTitle = ""
     var destinationVC: UIViewController!
+    var subtitleString = ""
+    var quoteString = ""
     
     convenience init() {
-        self.init(title: "", transitionTo: nil)
+        self.init(title: "", subtitle: "", quote: "", transitionTo: nil)
     }
     
-    init(title: String, transitionTo destinationVC: UIViewController?) {
+    init(title: String, subtitle: String, quote: String, transitionTo destinationVC: UIViewController?) {
         self.actTitle = title
         self.destinationVC = destinationVC
+        self.subtitleString = subtitle
+        self.quoteString = quote
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,18 +36,19 @@ class ActViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = actTitle
+        subtitle.text = subtitleString
+        quote.text = quoteString
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let transition: CATransition = CATransition()
-        transition.duration = 2
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        transition.type = kCATransitionFade
-        transition.subtype = kCATransitionFromTop
-        self.view.window!.layer.add(transition, forKey: nil)
-        
-        Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { (_) in
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
+            let transition = CATransition()
+            transition.duration = 2
+            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            transition.type = kCATransitionFade
+            transition.subtype = kCATransitionFromTop
+            self.view.window!.layer.add(transition, forKey: nil)
             self.present(self.destinationVC, animated: false, completion: nil)
         }
     }

@@ -38,7 +38,7 @@ class Scene2ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Jane_Persevere",
                     characterImagePosition: .right,
-                    dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need to this homework.."
+                    dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need do to this homework.."
                 ),
                 .setBackgroundImage(imageName: "halaman"),
                 ],

@@ -36,6 +36,8 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         bgAudio.play()
         bgAudio.numberOfLoops = -1
         // Do any additional setup after loading the view.
+        
+//        self.present(FindItemViewController(), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {
@@ -63,15 +65,13 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         DialogAudioPlayer.setAndPlay_SFX(mp3_filename: "prologue", delay: 1)
         player.play()
         Timer.scheduledTimer(withTimeInterval: 15, repeats: false, block: { (_) in
-            playerController.present(ActViewController(title: "Act 1", transitionTo: Scene1ViewController()), animated: false, completion: nil)
-            
-            
-//            let vc1 = ActViewController()
-//            vc1.actTitle = "Act 2"
-//            vc1.destinationVC = Scene5ViewController()
-//            let vc = ActViewController(title: "Act 1", transitionTo: Scene1ViewController())
-//            playerController.navigationController?.delegate = self
-//            playerController.navigationController?.pushViewController(vc, animated: true)
+            let transition = CATransition()
+            transition.duration = 2
+            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            transition.type = kCATransitionFade
+            transition.subtype = kCATransitionFromTop
+            playerController.view.window!.layer.add(transition, forKey: nil)
+            playerController.present(ActViewController(title: "Act 1", subtitle: "Introduction", quote: "\"You have a voice\"\n-Cifran", transitionTo: Scene1ViewController()), animated: false, completion: nil)
         })
         
     }
