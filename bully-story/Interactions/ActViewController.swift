@@ -42,7 +42,7 @@ class ActViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
+        Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { (_) in
             let transition = CATransition()
             transition.duration = 2
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)

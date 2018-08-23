@@ -83,11 +83,11 @@ class Scene2ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jessica_Angry",
                         characterImagePosition: .left,
-                        dialogText: "Gee.. that new girl. How dare she says no to me? Who does she think she is?"
+                        dialogText: "Gee.. that new girl. How dare she says \"no\" to me? Who does she think she is?"
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-            [.goToNextScene(viewController: ActViewController(title: "Act 2", transitionTo: Scene3ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Act 1", subtitle: "Introduction", quote: "\"You have a voice\"\n-Cifran", transitionTo: Scene1ViewController()))],
             
             
             ])

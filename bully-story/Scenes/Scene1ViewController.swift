@@ -28,7 +28,7 @@ class Scene1ViewController: DialogViewController {
                     .presentNarration(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys."),
                     ],
             [
-                .presentNarration(text: "She then introduced herself, and after that she chose to sit beside you."),
+                .presentNarration(text: "She chose to sit beside you."),
                 ],
             [
                         .playBGM(filename: "Scene1BGMusic2"),
