@@ -88,8 +88,9 @@ class Scene6ViewController: DialogViewController {
                             title: "Help Jane to clean her table",
                             //ke yg hapus hapus, akhirannya Jane blg thankyou
                             handler: { () in
+                                self.goToNextScene(Helper().getHangmanVC(dialogVC: self))
                                 
-                                self.goToNextScene(Scene6Choice1ViewController())
+                                //self.goToNextScene(Scene6Choice1ViewController())
                                 empathymeter += 1
                         }
                         ),
