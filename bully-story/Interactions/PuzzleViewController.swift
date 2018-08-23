@@ -18,16 +18,16 @@ class PuzzleViewController: UIViewController {
     @IBOutlet var placeholderCollection: [UIImageView]!
     private var pictureCollections : [UIImageView] = []
     
-    private var dialogVC: DialogViewController?
+    private var nextDialogVC: DialogViewController?
     private var assetCode: Int?
     private let backgroundColors = [#colorLiteral(red: 0.8274509804, green: 0.8549019608, blue: 0.9568627451, alpha: 1), #colorLiteral(red: 0.6926660538, green: 0.719720304, blue: 0.8115821481, alpha: 1), #colorLiteral(red: 0.5348986983, green: 0.5557911992, blue: 0.6267367005, alpha: 1), #colorLiteral(red: 0.4509302974, green: 0.4685434103, blue: 0.5283564329, alpha: 1), #colorLiteral(red: 0.3312414885, green: 0.3441802263, blue: 0.3881245852, alpha: 1)]
     
     convenience init() {
-        self.init(dialogVC: nil, assetCode: nil)
+        self.init(nextDialogVC: nil, assetCode: nil)
     }
     
-    init(dialogVC: DialogViewController?, assetCode: Int?) {
-        self.dialogVC = dialogVC
+    init(nextDialogVC: DialogViewController?, assetCode: Int?) {
+        self.nextDialogVC = nextDialogVC
         self.assetCode = assetCode
         super.init(nibName: nil, bundle: nil)
     }
@@ -123,7 +123,7 @@ class PuzzleViewController: UIViewController {
     }
     
     @IBAction func onTapNextBtn(_ sender: Any) {
-        let nextGame = PuzzleViewController(dialogVC: self.dialogVC, assetCode: self.assetCode!+1)
+        let nextGame = PuzzleViewController(nextDialogVC: self.nextDialogVC, assetCode: self.assetCode!+1)
         
         let transition: CATransition = CATransition()
         transition.duration = 1
@@ -136,8 +136,7 @@ class PuzzleViewController: UIViewController {
 //            self.navigationController?.pushViewController(nextGame, animated: true)
             self.present(nextGame, animated: false, completion: nil)
         } else {
-            self.dialogVC?.next()
-            self.dismiss(animated: true)
+            self.present(nextDialogVC!, animated: false, completion: nil)
         }
     }
     
