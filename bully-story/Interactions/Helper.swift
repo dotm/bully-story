@@ -35,11 +35,12 @@ struct Helper {
         return newImage!
     }
     
-    func getPuzzleVC(dialogVC: DialogViewController) -> UIViewController {
-        let puzzleVC = PuzzleViewController(dialogVC: dialogVC, assetCode: 1)
-        let navVC = UINavigationController(rootViewController: puzzleVC)
-        navVC.isNavigationBarHidden = true
-        return navVC
+    func getPuzzleVC(nextDialogVC: DialogViewController) -> UIViewController {
+        let puzzleVC = PuzzleViewController(nextDialogVC: nextDialogVC, assetCode: 1)
+//        let navVC = UINavigationController(rootViewController: puzzleVC)
+//        navVC.isNavigationBarHidden = true
+//        return navVC
+        return puzzleVC
     }
     
     

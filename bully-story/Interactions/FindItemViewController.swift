@@ -22,6 +22,7 @@ class FindItemViewController: UIViewController {
         //create tap recognizer
         //create animation if tapped
             // scaling to big
+        //kalo salah geter
     }
 
 }
