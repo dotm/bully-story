@@ -62,7 +62,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         
         self.present(playerController, animated: false, completion: nil)
         
-        DialogAudioPlayer.setAndPlay_SFX(mp3_filename: "prologue", delay: 1)
+        DialogAudioPlayer.setAndPlay_SFX(mp3_filename: "MusicProlog", delay: 1)
         player.play()
         Timer.scheduledTimer(withTimeInterval: 15, repeats: false, block: { (_) in
             let transition = CATransition()
@@ -71,7 +71,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
             transition.type = kCATransitionFade
             transition.subtype = kCATransitionFromTop
             playerController.view.window!.layer.add(transition, forKey: nil)
-            playerController.present(ActViewController(title: "Day 1", subtitle: "Introduction", quote: "\"You have a voice\"\n-Anonymous", transitionTo: Scene1ViewController()), animated: false, completion: nil)
+            playerController.present(ActViewController(title: "Day 1", subtitle: "Introduction", quote: "\"You have a voice\"", transitionTo: Scene1ViewController()), animated: false, completion: nil)
         })
         
     }

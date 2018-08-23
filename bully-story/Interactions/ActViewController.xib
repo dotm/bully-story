@@ -42,8 +42,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;You have a voice&quot;  -" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-j1-g8n">
-                    <rect key="frame" x="16" y="684" width="343" height="44"/>
-                    <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="22"/>
+                    <rect key="frame" x="16" y="657.33333333333337" width="343" height="70.666666666666629"/>
+                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
                     <color key="textColor" name="purple-light"/>
                     <nil key="highlightedColor"/>
                 </label>
