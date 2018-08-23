@@ -26,7 +26,7 @@ class Scene8Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "Why........"
                 ),
@@ -35,7 +35,7 @@ class Scene8Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Cry",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "Why does this happen to me...."
                 ),
@@ -57,7 +57,17 @@ class Scene8Choice2ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Maybe it's true what they say... "
                 ),
-                ],]
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Cry",
+                    characterImagePosition: .left,
+                    dialogText: "Maybe i'm better off from this cruel world..."
+                ),
+                ],
+            ]
         )
         
         //        if empathymeter > 80 {

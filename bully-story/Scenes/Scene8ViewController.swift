@@ -22,7 +22,7 @@ class Scene8ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile2",
+                    characterImage: "Jane_Smile2",
                     characterImagePosition: .left,
                     dialogText: "Fiuh... finally. I've been holding that pee during the lesson."
                 ),
@@ -65,7 +65,7 @@ class Scene8ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "Jessica? Is that you? Please help me open this door. I think i'm stuck here..."
                 ),
@@ -102,7 +102,7 @@ class Scene8ViewController: DialogViewController {
                         }
                         ),
                         (
-                            title: "Stand there watching and doing nothing",
+                            title: "Stand there watching",
                             
                             handler: { () in
                                 self.goToNextScene(Scene8Choice2ViewController()) }
