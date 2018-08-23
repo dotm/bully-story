@@ -244,7 +244,7 @@ class HangmanViewController: UIViewController {
         self.dialogVC?.next()
         let transition: CATransition = CATransition()
         transition.duration = 1
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         self.view.window!.layer.add(transition, forKey: nil)

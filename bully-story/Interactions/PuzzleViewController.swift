@@ -88,8 +88,6 @@ class PuzzleViewController: UIViewController {
             for i in 0 ... 5 {
                 if isRightPlace(placeholderCollection[i], objectDragged!) {
                    
-                    self.view.sendSubview(toBack: objectDragged!)
-                    self.view.sendSubview(toBack: placeholderCollection[i])
                     
                     UIView.animate(withDuration: 0.4, animations: {
                         objectDragged?.frame = self.placeholderCollection[i].frame
@@ -97,6 +95,8 @@ class PuzzleViewController: UIViewController {
                         self.placeholderCollection[i].alpha = 0
                     }) { _ in
                         self.snapCount += 1
+                        self.view.sendSubview(toBack: objectDragged!)
+                        self.view.sendSubview(toBack: self.placeholderCollection[i])
                     }
                     break
                 }
@@ -107,7 +107,6 @@ class PuzzleViewController: UIViewController {
     private var snapCount = 0 {
         didSet {
             if snapCount == placeholderCollection.count {
-                
                 UIView.animate(withDuration: 2.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                     self.pictureCollections[0].transform = CGAffineTransform(translationX: 10, y: 26)
                     self.pictureCollections[1].transform = CGAffineTransform(translationX: -10, y: 26)
@@ -125,8 +124,17 @@ class PuzzleViewController: UIViewController {
     
     @IBAction func onTapNextBtn(_ sender: Any) {
         let nextGame = PuzzleViewController(dialogVC: self.dialogVC, assetCode: self.assetCode!+1)
+        
+        let transition: CATransition = CATransition()
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        self.view.window!.layer.add(transition, forKey: nil)
+        
         if assetCode! < 4 {
-            self.navigationController?.pushViewController(nextGame, animated: true)
+//            self.navigationController?.pushViewController(nextGame, animated: true)
+            self.present(nextGame, animated: false, completion: nil)
         } else {
             self.dialogVC?.next()
             self.dismiss(animated: true)

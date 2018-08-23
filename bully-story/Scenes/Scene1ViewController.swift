@@ -20,7 +20,8 @@ class Scene1ViewController: DialogViewController {
                 .playSFX(filename: "Scene1Bell", delay: 3.0),
                 
                 .presentNarration(text: "(Bell Rang) Each students returned to their seat. The teacher came in and brought a girl with him. Looks like it’s the new girl. She has a very pretty face and very charming."),
-                ],[
+                ],
+            [
                     .presentNarration(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys. She then introduced herself, and after that she chose to sit beside you."),
                     ],[
                         .playBGM(filename: "Scene1BGMusic2"),
