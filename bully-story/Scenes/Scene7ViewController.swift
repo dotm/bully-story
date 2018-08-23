@@ -20,7 +20,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher",
+                    characterImage: "Teacher",
                     characterImagePosition: .right,
                     dialogText: "Good morning everyone. We will start our lesson today. Please open your book now."
                 ),
@@ -40,7 +40,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher",
+                    characterImage: "Teacher",
                     characterImagePosition: .right,
                     dialogText: "What's the matter Jane?"
                 ),
@@ -59,7 +59,7 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher_Angry",
+                    characterImage: "Teacher_Angry",
                     characterImagePosition: .right,
                     dialogText: "Are you telling me you didn't bring your book to my class?!"
                 ),

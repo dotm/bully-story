@@ -31,7 +31,7 @@ class Scene7Choice1ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .right,
-                    characterImage: "teacher",
+                    characterImage: "Teacher",
                     characterImagePosition: .right,
                     dialogText: "Very well Jane. Let's continue our class now."
                 ),
