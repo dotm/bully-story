@@ -391,7 +391,8 @@ class OptionLabel: UILabel {
         setupLayout()
     }
     func setupLayout(){
-        self.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
+//        self.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
+        self.layer.backgroundColor = #colorLiteral(red: 0.824000001, green: 0.8550000191, blue: 0.9649999738, alpha: 1)
         self.layer.borderColor = UIColor(hex: "979797").cgColor
         self.layer.borderWidth = CGFloat(1)
         self.textAlignment = .center

@@ -16,6 +16,21 @@ class EraseGameViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var strokeImageView: UIImageView!
     
+    private var dialogVC: DialogViewController?
+    
+    convenience init() {
+        self.init(dialogVC: nil)
+    }
+    
+    init(dialogVC: DialogViewController?) {
+        self.dialogVC = dialogVC
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         strokeImageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
@@ -66,8 +81,16 @@ class EraseGameViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         guard let averageColor = strokeImageView.image?.averageColor else {return}
+        
         if averageColor.isEqual(UIColor(red: 0, green: 0, blue: 0, alpha: 0)) {
-            // show next btn
+            self.dialogVC?.next()
+            let transition: CATransition = CATransition()
+            transition.duration = 1
+            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            transition.type = kCATransitionPush
+            transition.subtype = kCATransitionFromRight
+            self.view.window!.layer.add(transition, forKey: nil)
+            self.dismiss(animated: true)
         }
     }
 }
