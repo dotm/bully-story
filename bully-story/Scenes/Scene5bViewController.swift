@@ -18,10 +18,10 @@ class Scene5bViewController: DialogViewController {
                     characterName: "Jane",
                     characterNamePosition: .left,
                     characterImage: "Jane_Sad2",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "........."
                 ),
-                .setBackgroundImage(imageName: "canteen"),
+                .setBackgroundImage(imageName: "yard"),
                 ],
             [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "The Act", time: "Day", quote: "\"Your silence are their weapon\"", transitionTo: Scene6ViewController()))],
         ])
