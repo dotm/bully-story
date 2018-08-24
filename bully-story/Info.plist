@@ -2,25 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>PTC55F.ttf</string>
-		<string>PTS76F.ttf</string>
-		<string>PTC55F.ttf</string>
-		<string>PTS56F.ttf</string>
-		<string>PTCFF5.ttf</string>
-		<string>PTC55F.ttf</string>
-		<string>PTC75F.ttf</string>
-		<string>PTN57F.ttf</string>
-		<string>PTN77F.ttf</string>
-		<string>PTS55F.ttf</string>
-		<string>PTS56F.ttf</string>
-		<string>PTS75F.ttf</string>
-		<string>PTS76F.ttf</string>
-		<string>kindergarten.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -39,8 +20,25 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PTC55F.ttf</string>
+		<string>PTS76F.ttf</string>
+		<string>PTC55F.ttf</string>
+		<string>PTS56F.ttf</string>
+		<string>PTCFF5.ttf</string>
+		<string>PTC55F.ttf</string>
+		<string>PTC75F.ttf</string>
+		<string>PTN57F.ttf</string>
+		<string>PTN77F.ttf</string>
+		<string>PTS55F.ttf</string>
+		<string>PTS56F.ttf</string>
+		<string>PTS75F.ttf</string>
+		<string>PTS76F.ttf</string>
+		<string>kindergarten.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -60,5 +58,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
