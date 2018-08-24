@@ -17,7 +17,7 @@ class Scene1ViewController: DialogViewController {
             [
                 .setBackgroundImage(imageName: "classroom"),
                 .playBGM(filename: "Scene1BGMusic"),
-                .playSFX(filename: "Scene1Bell", delay: 3.0),
+                .playSFX(filename: "Scene1Bell", delay: 2.0),
                 
                 .presentNarration(text: "(Bell Rang) Each students returned to their seat. The teacher came in and brought a girl with him. "),
                 ],
@@ -46,6 +46,9 @@ class Scene1ViewController: DialogViewController {
                                 ]
                         )),
             ],
+            [
+                .presentNarration(text: "Looks like it’s the new girl. She has a very pretty face and very charming."),
+                ],
             
         ])
         let startEvent = events.goToStartEvent()

@@ -17,7 +17,7 @@ class Scene9GoodAViewController: DialogViewController {
             events = Events(events: [
                 
                 [
-                    .setBackgroundImage(imageName: "wc"),
+                    .setBackgroundImage(imageName: "classroom"),
                     .presentDialog(
                         characterName: "Jane",
                         characterNamePosition: .left,

@@ -102,10 +102,15 @@ class Scene3ViewController: DialogViewController {
 
                 ],
             [
-                .playBGM(filename: "Scene2Narration(intense)"),
-               .presentNarration(text: "Her jealousy starting to increase more. But she chose to ignore that and continue to pay attention to the class."),
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica_Angry ",
+                    characterImagePosition: .right,
+                    dialogText: "Lucas is talking to her now? Hmmph"
+                ),
+                .setBackgroundImage(imageName: "halaman"),
                 ],
-            
              [.goToNextScene(viewController: Scene4ViewController())],
             ])
         let startEvent = events.goToStartEvent()

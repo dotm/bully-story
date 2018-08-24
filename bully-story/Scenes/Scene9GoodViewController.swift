@@ -15,6 +15,7 @@ class Scene9GoodViewController: DialogViewController {
      
         events = Events(events: [
             [
+                .playBGM(filename: "Scene9BGM"),
                 .setBackgroundImage(imageName: "halaman"),
                 .presentDialog(
                     characterName: "Jane",

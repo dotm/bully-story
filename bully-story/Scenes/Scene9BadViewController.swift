@@ -68,7 +68,7 @@ class Scene9BadViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
-                    dialogText: "She took her own life because she couldn't stand of being bullied by Jessica anymore. We know that from the suicide note her family found. "
+                    dialogText: "We know that from the suicide note her family found. "
                 ),
                 ],
             [

@@ -45,6 +45,7 @@ class DialogViewController: UIViewController {
     let borderColor = UIColor(hex: "979797")
     let borderWidth = CGFloat(1)
     let dialogContainerPadding = CGFloat(10)
+    let STACK_VIEW_TAG = 97584657
     
     var dialogTextFontStyle: UIFont {return UIFont(name: "PT Sans", size: 20)! }
     var characterNameFontStyle: UIFont {return UIFont(name: "PTSans-Bold", size: 22)!}
@@ -153,6 +154,11 @@ class DialogViewController: UIViewController {
     private func emptyDialogContainer(){
         dialogContainer.subviews.forEach { (subview) in
             subview.removeFromSuperview()
+        }
+        view.subviews.forEach { (subview) in
+            if subview.tag == STACK_VIEW_TAG {
+                subview.removeFromSuperview()
+            }
         }
     }
     
@@ -278,6 +284,7 @@ class DialogViewController: UIViewController {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = CGFloat(40)
+        stackView.tag = STACK_VIEW_TAG
         view.addSubview(stackView)
         stackView.subviews.forEach { (subview) in
             subview.translatesAutoresizingMaskIntoConstraints = false
