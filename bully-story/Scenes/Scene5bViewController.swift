@@ -23,7 +23,7 @@ class Scene5bViewController: DialogViewController {
                 ),
                 .setBackgroundImage(imageName: "canteen"),
                 ],
-            [.goToNextScene(viewController: Scene6ViewController())],
+           [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "The Act", quote: "\"Your silence are their weapon\"", transitionTo: Scene6ViewController()))],
         ])
         let startEvent = events.goToStartEvent()
         

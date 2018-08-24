@@ -74,7 +74,7 @@ class Scene2ViewController: DialogViewController {
             [.playBGM(filename: "Scene2Narration(intense)")],
             [
                 
-                .presentNarration(text: "Jessica looks pissed because no one ever says no to her. All girls want to befriend with her because of her popularity. This is the first time someone says no to her"),
+                .presentNarration(text: "Jessica looks pissed because no one ever says no to her. All girls want to befriend with her because of her popularity."),
                 
                 ],
             [
@@ -83,11 +83,11 @@ class Scene2ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jessica_Angry",
                         characterImagePosition: .left,
-                        dialogText: "Gee.. that new girl. How dare she says no to me? Who does she think she is?"
+                        dialogText: "Gee.. that new girl. How dare she says \"no\" to me? Who does she think she is?"
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-             [.goToNextScene(viewController: Scene3ViewController())],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", quote: "\"Knowing what’s right doesn’t mean much unless you do what’s right.\"", transitionTo: Scene3ViewController()))],
             
             
             ])

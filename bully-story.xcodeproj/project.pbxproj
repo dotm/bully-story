@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */; };
+		263AF1F4212E5AB7000384A3 /* Scene9GoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AF1F3212E5AB7000384A3 /* Scene9GoodViewController.swift */; };
+		263AF1F6212E680F000384A3 /* Scene9BadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */; };
+		263AF1F8212E7B44000384A3 /* Scene9GoodAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AF1F7212E7B44000384A3 /* Scene9GoodAViewController.swift */; };
 		2658BD75212D6A180021E88A /* Scene8Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658BD74212D6A180021E88A /* Scene8Choice1ViewController.swift */; };
 		2658BD77212D6A270021E88A /* Scene8Choice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658BD76212D6A270021E88A /* Scene8Choice2ViewController.swift */; };
 		2658BD79212D736B0021E88A /* Scene8Choice1AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658BD78212D736B0021E88A /* Scene8Choice1AViewController.swift */; };
@@ -49,7 +52,6 @@
 		8509F63821281C9300362053 /* Choice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62021281C9300362053 /* Choice1ViewController.swift */; };
 		8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62121281C9300362053 /* Scene1ViewController.swift */; };
 		8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62221281C9300362053 /* Scene3ViewController.swift */; };
-		8509F63B21281C9300362053 /* GoodEndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62321281C9300362053 /* GoodEndingViewController.swift */; };
 		8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62421281C9300362053 /* Scene2ViewController.swift */; };
 		8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62521281C9300362053 /* DialogAudioPlayer.swift */; };
 		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
@@ -64,7 +66,6 @@
 		85EDA309212D23AB00921363 /* FindItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA307212D23AB00921363 /* FindItemViewController.xib */; };
 		85EDA30F212D3C8800921363 /* video_prologue.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA30E212D3C8800921363 /* video_prologue.mp4 */; };
 		85EDA311212D4C3D00921363 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA310212D4C3D00921363 /* Extensions.swift */; };
-		A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,9 @@
 
 /* Begin PBXFileReference section */
 		2602F8A3212A7FCC00A5D893 /* Scene5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5ViewController.swift; sourceTree = "<group>"; };
+		263AF1F3212E5AB7000384A3 /* Scene9GoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9GoodViewController.swift; sourceTree = "<group>"; };
+		263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9BadViewController.swift; sourceTree = "<group>"; };
+		263AF1F7212E7B44000384A3 /* Scene9GoodAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9GoodAViewController.swift; sourceTree = "<group>"; };
 		2658BD74212D6A180021E88A /* Scene8Choice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8Choice1ViewController.swift; sourceTree = "<group>"; };
 		2658BD76212D6A270021E88A /* Scene8Choice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8Choice2ViewController.swift; sourceTree = "<group>"; };
 		2658BD78212D736B0021E88A /* Scene8Choice1AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8Choice1AViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +129,6 @@
 		8509F62021281C9300362053 /* Choice1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice1ViewController.swift; sourceTree = "<group>"; };
 		8509F62121281C9300362053 /* Scene1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
 		8509F62221281C9300362053 /* Scene3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene3ViewController.swift; sourceTree = "<group>"; };
-		8509F62321281C9300362053 /* GoodEndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodEndingViewController.swift; sourceTree = "<group>"; };
 		8509F62421281C9300362053 /* Scene2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,7 +142,6 @@
 		85EDA307212D23AB00921363 /* FindItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindItemViewController.xib; sourceTree = "<group>"; };
 		85EDA30E212D3C8800921363 /* video_prologue.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_prologue.mp4; sourceTree = "<group>"; };
 		85EDA310212D4C3D00921363 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadEndingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,8 +272,9 @@
 				2658BD74212D6A180021E88A /* Scene8Choice1ViewController.swift */,
 				2658BD78212D736B0021E88A /* Scene8Choice1AViewController.swift */,
 				2658BD76212D6A270021E88A /* Scene8Choice2ViewController.swift */,
-				8509F62321281C9300362053 /* GoodEndingViewController.swift */,
-				A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */,
+				263AF1F3212E5AB7000384A3 /* Scene9GoodViewController.swift */,
+				263AF1F7212E7B44000384A3 /* Scene9GoodAViewController.swift */,
+				263AF1F5212E680F000384A3 /* Scene9BadViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -407,9 +410,10 @@
 				8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */,
 				85EDA305212D234E00921363 /* EraseGameViewController.swift in Sources */,
 				853A51172129273C00388644 /* TypeWriter.swift in Sources */,
+				263AF1F8212E7B44000384A3 /* Scene9GoodAViewController.swift in Sources */,
 				8509F62621281C9300362053 /* Global.swift in Sources */,
+				263AF1F4212E5AB7000384A3 /* Scene9GoodViewController.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
-				8509F63B21281C9300362053 /* GoodEndingViewController.swift in Sources */,
 				26969086212BC73900429A04 /* Scene8ViewController.swift in Sources */,
 				8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */,
 				2658BD77212D6A270021E88A /* Scene8Choice2ViewController.swift in Sources */,
@@ -417,6 +421,7 @@
 				8509F62F21281C9300362053 /* InputNameViewController.swift in Sources */,
 				26E681D121294A0D00407F08 /* Scene6ViewController.swift in Sources */,
 				26E681DB2129C25400407F08 /* Scene7Choice2ViewController.swift in Sources */,
+				263AF1F6212E680F000384A3 /* Scene9BadViewController.swift in Sources */,
 				8509F63721281C9300362053 /* Choice2ViewController.swift in Sources */,
 				85EDA301212D209600921363 /* HangmanViewController.swift in Sources */,
 				2658BD79212D736B0021E88A /* Scene8Choice1AViewController.swift in Sources */,
@@ -427,7 +432,6 @@
 				8509F63C21281C9300362053 /* Scene2ViewController.swift in Sources */,
 				8509F62E21281C9300362053 /* PuzzleViewController.swift in Sources */,
 				26E681D321295FD100407F08 /* Scene6Choice1ViewController.swift in Sources */,
-				A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */,
 				26E681D52129609500407F08 /* Scene6Choice2ViewController.swift in Sources */,
 				8509F63221281C9300362053 /* AppDelegate.swift in Sources */,
 				85EDA311212D4C3D00921363 /* Extensions.swift in Sources */,
