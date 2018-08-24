@@ -45,6 +45,38 @@ class Choice2ViewController: DialogViewController {
             [
                 .playBGM(filename: "Scene1BGMusic"),
                 .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Smile3",
+                    characterImagePosition: .left,
+                    dialogText: "Yay! I got 100! How about you?"
+                ),
+                ],
+            [
+                .presentChoices(choices: (
+                    title: "",
+                    options: [
+                        (
+                            title: "I've got a good score as well!",
+                            handler: { () in let nextEvent: Event? = self.events.goToNextEvent()
+                                self.executeEvent(nextEvent)
+                                
+                                //self.goToNextScene(Scene6Choice1ViewController())
+                                empathymeter += 1
+                        }
+                        ),
+                        (
+                            title: "Nah it's not that good...",
+                            handler: { () in let nextEvent: Event? = self.events.goToNextEvent()
+                                self.executeEvent(nextEvent)
+                               
+                        }                        ),
+                        ]
+                )),
+                ],
+            [
+                .playBGM(filename: "Scene1BGMusic"),
+                .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
                     characterImage: "Teacher",

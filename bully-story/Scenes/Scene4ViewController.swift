@@ -67,19 +67,26 @@ class Scene4ViewController: DialogViewController {
             [
                 .playSFX(filename: "Scene4SFXWhat", delay: 1.0),
                 .playBGM(filename:"Scene4BGMusicAngry"),
-                .presentNarration(text: "And she saw Jane going home with Lucas! Lucas has been Jessica’s crush since the first time she saw him. But she could never talk much with him because Lucas has always been so cold towards her. "),
-                
-                ],
-            [
-                
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
                     characterImage: "Jessica_Angry",
                     characterImagePosition: .right,
-                    dialogText: "Lucas? He’s going home with Jane? The new girl? He won’t even reply to my text and now he’s going home with the new girl! I’m gonna make her to pay for this."
+                    dialogText: "Lucas? He’s going home with Jane? The new girl?"
                 ),
-                .setBackgroundImage(imageName: "canteen"),
+                .setBackgroundImage(imageName: "school"),
+                ],
+            [
+                .playSFX(filename: "Scene4SFXWhat", delay: 1.0),
+                .playBGM(filename:"Scene4BGMusicAngry"),
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica_Angry",
+                    characterImagePosition: .right,
+                    dialogText: "He won’t even reply to my text and now he’s going home with the new girl! I’m gonna make her to pay for this."
+                ),
+                .setBackgroundImage(imageName: "school"),
                 ],
            
             

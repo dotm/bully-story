@@ -18,26 +18,35 @@ class Scene2ViewController: DialogViewController {
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
                 .setBackgroundImage(imageName : "halaman"),
-                .presentNarration(text: "School is finally over. Jane is walking straight home because she wants to do the homework that was given earlier today. Jessica came up to her to ask her to play with her gang. "),
+                .presentNarration(text: "School is finally over. Jessica came up to her to ask her to play with her gang. "),
                 
                 ],
             [
                 .playSFX(filename: "Scene2SFX", delay: 0.0),
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica_Smile",
-                    characterImagePosition: .left,
-                    dialogText: "Hi Jane! My name is Jessica.  Come join us to eat, we can talk more to get to know each other. I can also show you around school if you like!"
+                    characterImagePosition: .right,
+                    dialogText: "Hi Jane, I'm Jessica! Come join us for lunch! We can talk more to get to know each other"
                 ),
                 .setBackgroundImage(imageName: "halaman"),
                 ],
             [
                 .presentDialog(
-                    characterName: "Jane",
+                    characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "Jane_Persevere",
+                    characterImage: "Jessica_Smile",
                     characterImagePosition: .right,
+                    dialogText: "I can also show you around school if you like!"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Persevere",
+                    characterImagePosition: .left,
                     dialogText: "Um.. I’d like to Jess. But i think i should go straight home. I need do to this homework.."
                 ),
                 .setBackgroundImage(imageName: "halaman"),
@@ -45,49 +54,48 @@ class Scene2ViewController: DialogViewController {
             [
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica",
-                    characterImagePosition: .left,
-                    dialogText: "Oh? Okay. Fine then"
+                    characterImagePosition: .right,
+                    dialogText: "Oh? Okay. Fine then."
                 ),
                 .setBackgroundImage(imageName: "halaman"),
                 ],
             [
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Smile",
-                    characterImagePosition: .right,
-                    dialogText: "Yeah Jess. See you tomorrow in class!"
+                    characterImagePosition: .left,
+                    dialogText: "Yeah Jess. Maybe next time. See you tomorrow in class!"
                 ),
                 ],
             [
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica_Unamused",
-                    characterImagePosition: .left,
+                    characterImagePosition: .right,
                     dialogText: "Yeah yeah sure."
                 ),
                 .setBackgroundImage(imageName: "halaman"),
                 ],
-            [.playBGM(filename: "Scene2Narration(intense)")],
             [
-                
-                .presentNarration(text: "Jessica looks pissed because no one ever says no to her. All girls want to befriend with her because of her popularity. This is the first time someone says no to her"),
+                .playBGM(filename: "Scene2Narration(intense)"),
+                .presentNarration(text: "Jessica looks pissed because no one ever says no to her. All girls want to befriend with her because of her popularity."),
                 
                 ],
             [
                     .presentDialog(
                         characterName: "Jessica",
-                        characterNamePosition: .left,
+                        characterNamePosition: .right,
                         characterImage: "Jessica_Angry",
-                        characterImagePosition: .left,
-                        dialogText: "Gee.. that new girl. How dare she says no to me? Who does she think she is?"
+                        characterImagePosition: .right,
+                        dialogText: "Gee.. that new girl. How dare she says \"no\" to me? Who does she think she is?"
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-             [.goToNextScene(viewController: Scene3ViewController())],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", quote: "\"Knowing what’s right doesn’t mean much unless you do what’s right.\"", transitionTo: Scene3ViewController()))],
             
             
             ])

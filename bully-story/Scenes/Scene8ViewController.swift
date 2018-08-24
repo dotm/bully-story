@@ -17,19 +17,27 @@ class Scene8ViewController: DialogViewController {
                 .stopBGM(),
                 .playBGM(filename: "Scene8BGMusic"),
                 .playSFX(filename: "SFXBellShort", delay: 0.0),
-                .playSFX(filename: "Scene8SFXToilet", delay: 1.0),
-                .setBackgroundImage(imageName : "wc"),
+                .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile2",
+                    characterImage: "Jane_Smile2",
                     characterImagePosition: .left,
-                    dialogText: "Fiuh... finally. I've been holding that pee during the lesson."
+                    dialogText: "Fiuh... finally I've finished this assignment."
+                ),
+                ],
+            [
+                
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Shock",
+                    characterImagePosition: .left,
+                    dialogText: "Oops now i'm the last one who stayed here. It's time to go home now"
                 ),
                 ],
             [
                 .playSFX(filename: "Scene8SFXDoor1", delay: 0.0),
-                .setBackgroundImage(imageName : "wc"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
@@ -49,7 +57,6 @@ class Scene8ViewController: DialogViewController {
                 ],
             [
                 .playSFX(filename: "Scene8SFXGirlLaugh", delay: 0.0),
-                .setBackgroundImage(imageName : "wc"),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -61,11 +68,10 @@ class Scene8ViewController: DialogViewController {
                 ],
             [
                 .playSFX(filename: "Scene8SFXDoor1", delay: 0.0),
-                .setBackgroundImage(imageName : "wc"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad2",
+                    characterImage: "Jane_Sad2",
                     characterImagePosition: .left,
                     dialogText: "Jessica? Is that you? Please help me open this door. I think i'm stuck here..."
                 ),
@@ -102,7 +108,7 @@ class Scene8ViewController: DialogViewController {
                         }
                         ),
                         (
-                            title: "Stand there watching and doing nothing",
+                            title: "Stand there watching",
                             
                             handler: { () in
                                 self.goToNextScene(Scene8Choice2ViewController()) }

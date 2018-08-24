@@ -15,7 +15,7 @@ class Scene8Choice1AViewController: DialogViewController {
         events = Events(events: [
             [
                 .playBGM(filename: "Scene8RightChoice"),
-                .setBackgroundImage(imageName : "wc"),
+                .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -89,6 +89,44 @@ class Scene8Choice1AViewController: DialogViewController {
                     dialogText: "Yes of course. You don't deserve to be treated this way."
                 ),
                 ],
+            [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .right,
+                    characterImage: "",
+                    characterImagePosition: .right,
+                    dialogText: "Say this, why don't you join us after school everyday? That way maybe Jessica wouldn't bother you as much again."
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile3",
+                    characterImagePosition: .left,
+                    dialogText: "Oh really? Of course I'd like to! Yes.. maybe that way she won't do it anymore.."
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .right,
+                    characterImage: "",
+                    characterImagePosition: .right,
+                    dialogText: "Yes, you've got friends that have your back now. Don't you worry anymore Jane. I'll be sure to stand up when she's doing things to you again. "
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "jane_Smile3",
+                    characterImagePosition: .left,
+                    dialogText: "Thankyou. Thankyou so much #name"
+                ),
+                ],
+            
+            [.goToNextScene(viewController: Scene9GoodViewController())],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
