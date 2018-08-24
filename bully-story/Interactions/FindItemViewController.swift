@@ -47,6 +47,15 @@ class FindItemViewController: UIViewController {
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200).isActive = true
+        
+        
+        lostItemImageView.alpha = 0
+        imageView.addSubview(lostItemImageView)
+        
+        lostItemImageView.isUserInteractionEnabled = true
+//        let tap = UITapGestureRecognizer(target: self, action: #selector())
+//        lostItemImageView.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
+        
     }
 
 }
