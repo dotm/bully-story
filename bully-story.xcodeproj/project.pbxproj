@@ -66,6 +66,9 @@
 		85EDA309212D23AB00921363 /* FindItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA307212D23AB00921363 /* FindItemViewController.xib */; };
 		85EDA30F212D3C8800921363 /* video_prologue.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA30E212D3C8800921363 /* video_prologue.mp4 */; };
 		85EDA311212D4C3D00921363 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA310212D4C3D00921363 /* Extensions.swift */; };
+		A33F7BA4212FA28600523E4D /* RepetitiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33F7BA2212FA28600523E4D /* RepetitiveViewController.swift */; };
+		A33F7BA5212FA28600523E4D /* RepetitiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33F7BA3212FA28600523E4D /* RepetitiveViewController.xib */; };
+		A3D21D79212A75ED001B07CE /* BadEndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,9 @@
 		85EDA307212D23AB00921363 /* FindItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindItemViewController.xib; sourceTree = "<group>"; };
 		85EDA30E212D3C8800921363 /* video_prologue.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_prologue.mp4; sourceTree = "<group>"; };
 		85EDA310212D4C3D00921363 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A33F7BA2212FA28600523E4D /* RepetitiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitiveViewController.swift; sourceTree = "<group>"; };
+		A33F7BA3212FA28600523E4D /* RepetitiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepetitiveViewController.xib; sourceTree = "<group>"; };
+		A3D21D78212A75ED001B07CE /* BadEndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadEndingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +253,8 @@
 				8509F61721281C9300362053 /* Helper.swift */,
 				85EDA310212D4C3D00921363 /* Extensions.swift */,
 				8509F61221281C9300362053 /* Transitions.swift */,
+				A33F7BA2212FA28600523E4D /* RepetitiveViewController.swift */,
+				A33F7BA3212FA28600523E4D /* RepetitiveViewController.xib */,
 			);
 			path = Interactions;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
+				A33F7BA5212FA28600523E4D /* RepetitiveViewController.xib in Resources */,
 				8509F63421281C9300362053 /* wordList.txt in Resources */,
 				267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */,
 				85EDA300212D209600921363 /* HangmanViewController.xib in Resources */,
@@ -405,6 +414,7 @@
 				2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */,
 				8509F63321281C9300362053 /* Events.swift in Sources */,
 				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
+				A33F7BA4212FA28600523E4D /* RepetitiveViewController.swift in Sources */,
 				85EDA308212D23AB00921363 /* FindItemViewController.swift in Sources */,
 				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,
 				8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */,
