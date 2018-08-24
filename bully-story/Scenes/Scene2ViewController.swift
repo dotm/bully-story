@@ -95,7 +95,7 @@ class Scene2ViewController: DialogViewController {
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", quote: "\"Knowing what’s right doesn’t mean much unless you do what’s right.\"", transitionTo: Scene3ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene3ViewController()))],
             
             
             ])

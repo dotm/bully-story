@@ -20,6 +20,7 @@
             <connections>
                 <outlet property="quote" destination="eUW-j1-g8n" id="GGo-kQ-aJO"/>
                 <outlet property="subtitle" destination="HJD-qJ-WjU" id="b5s-la-BDv"/>
+                <outlet property="timeLabel" destination="GTh-ar-u3m" id="b1F-To-pVh"/>
                 <outlet property="titleLabel" destination="c5e-kZ-WJt" id="FIx-UL-N8C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,20 +31,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Act 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-kZ-WJt">
-                    <rect key="frame" x="16" y="150" width="343" height="49"/>
+                    <rect key="frame" x="16" y="123.99999999999999" width="343" height="58.333333333333329"/>
                     <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
                     <color key="textColor" name="purple-light"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Introduction&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJD-qJ-WjU">
-                    <rect key="frame" x="16" y="272" width="343" height="49"/>
+                    <rect key="frame" x="16" y="274.66666666666669" width="343" height="58.333333333333314"/>
                     <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
                     <color key="textColor" name="purple-light"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;You have a voice&quot;  -" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-j1-g8n">
-                    <rect key="frame" x="16" y="657.33333333333337" width="343" height="70.666666666666629"/>
-                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
+                    <rect key="frame" x="16" y="680" width="343" height="48"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                    <color key="textColor" name="purple-light"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTh-ar-u3m">
+                    <rect key="frame" x="16" y="203" width="343" height="31.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                     <color key="textColor" name="purple-light"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -52,12 +59,15 @@
             <constraints>
                 <constraint firstItem="c5e-kZ-WJt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8Qd-cT-wap"/>
                 <constraint firstItem="HJD-qJ-WjU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Gzg-ox-wHt"/>
+                <constraint firstItem="GTh-ar-u3m" firstAttribute="top" secondItem="c5e-kZ-WJt" secondAttribute="bottom" constant="20" id="LkV-U8-jZq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GTh-ar-u3m" secondAttribute="trailing" constant="16" id="SVm-Vs-K8t"/>
                 <constraint firstItem="eUW-j1-g8n" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-50" id="XKP-pF-2es"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eUW-j1-g8n" secondAttribute="trailing" constant="16" id="aF7-r5-bQC"/>
-                <constraint firstItem="c5e-kZ-WJt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="106" id="bXM-D4-ZAh"/>
+                <constraint firstItem="c5e-kZ-WJt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="bXM-D4-ZAh"/>
+                <constraint firstItem="GTh-ar-u3m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="e3p-AN-g80"/>
                 <constraint firstItem="eUW-j1-g8n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fhr-X9-FjJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c5e-kZ-WJt" secondAttribute="trailing" constant="16" id="pvx-y3-JaY"/>
-                <constraint firstItem="HJD-qJ-WjU" firstAttribute="top" secondItem="c5e-kZ-WJt" secondAttribute="bottom" constant="73" id="uda-zg-EjR"/>
+                <constraint firstItem="HJD-qJ-WjU" firstAttribute="top" secondItem="GTh-ar-u3m" secondAttribute="bottom" constant="40" id="sle-Op-o8T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HJD-qJ-WjU" secondAttribute="trailing" constant="16" id="vhl-Dy-ff2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -67,6 +77,9 @@
     <resources>
         <namedColor name="purple">
             <color red="0.48600000143051147" green="0.56099998950958252" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple-light">
+            <color red="0.82400000095367432" green="0.85500001907348633" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="purple-light">
             <color red="0.82400000095367432" green="0.85500001907348633" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

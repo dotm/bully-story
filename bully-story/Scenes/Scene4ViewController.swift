@@ -21,7 +21,7 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
-                    characterImage: "Jessica",
+                    characterImage: "Jessica_Smug",
                     characterImagePosition: .left,
                     dialogText: "Hi Jane! Do you want to go to the mall with us? I heard there’s lots of discount today!"
                 ),
@@ -32,9 +32,19 @@ class Scene4ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .right,
-                    characterImage: "Jane_Sad",
+                    characterImage: "Jane_Sad3",
                     characterImagePosition: .right,
-                    dialogText: "Ah.. that sounds so tempting. But i really should go home now.. Otherwise my mom will get mad. Sorry again Jess."
+                    dialogText: "Ah.. that sounds so tempting. But i really should go home now.."
+                ),
+                ],
+            [
+                
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .right,
+                    characterImage: "Jane_Sad2",
+                    characterImagePosition: .right,
+                    dialogText: "Otherwise my mom will get mad. Sorry again Jess."
                 ),
                 ],
             [
@@ -58,10 +68,9 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
             
-            
             [
                 
-                .presentNarration(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too, with Lucas as she promised earlier before. Unexpectedly, Jessica turned around…"),
+                .presentNarration(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
                 
                 ],
             [
@@ -84,7 +93,7 @@ class Scene4ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Jessica_Angry",
                     characterImagePosition: .right,
-                    dialogText: "He won’t even reply to my text and now he’s going home with the new girl! I’m gonna make her to pay for this."
+                    dialogText: "He won’t even reply to my text and now he’s going home with the new girl!"
                 ),
                 .setBackgroundImage(imageName: "school"),
                 ],
