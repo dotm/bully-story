@@ -17,7 +17,7 @@ class Scene8Choice2ViewController: DialogViewController {
         events = Events(events: [
             
             [
-                .setBackgroundImage(imageName: "wc"),
+                .setBackgroundImage(imageName: "classroom"),
                 .presentNarration(text: "You chose to ignore Jane."),
                 .playBGM(filename: "WrongChoiceBGM")
                 

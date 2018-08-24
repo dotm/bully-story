@@ -15,7 +15,7 @@ class Scene8Choice1ViewController: DialogViewController {
         events = Events(events: [
             [
                 .playBGM(filename: "Scene8RightChoice"),
-                .setBackgroundImage(imageName : "wc"),
+                .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "#name",
                     characterNamePosition: .left,
