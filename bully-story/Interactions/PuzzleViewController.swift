@@ -43,8 +43,8 @@ class PuzzleViewController: UIViewController {
         
         for i in 0...5 {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 130, height: 150))
-//            imageView.image = UIImage(named: "puzzle-\(assetCode!)-\(i+1)")
-            imageView.image = UIImage(named: "puzzle-1-\(i+1)")
+            imageView.image = UIImage(named: "puzzle-\(assetCode!)-\(i+1)")
+//            imageView.image = UIImage(named: "puzzle-1-\(i+1)")
             self.view.addSubview(imageView)
             pictureCollections.append(imageView)
             

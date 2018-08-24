@@ -22,11 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canteen" translatesAutoresizingMaskIntoConstraints="NO" id="fNO-pf-tiB">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erase_back" translatesAutoresizingMaskIntoConstraints="NO" id="fNO-pf-tiB">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ans_correct" translatesAutoresizingMaskIntoConstraints="NO" id="weP-Fd-WK4">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erase_front" translatesAutoresizingMaskIntoConstraints="NO" id="weP-Fd-WK4">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,15 +37,15 @@
                 <constraint firstItem="weP-Fd-WK4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="c85-xx-ifX"/>
                 <constraint firstItem="fNO-pf-tiB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ceo-01-yTD"/>
                 <constraint firstAttribute="bottom" secondItem="fNO-pf-tiB" secondAttribute="bottom" id="oHJ-hM-ONQ"/>
-                <constraint firstItem="weP-Fd-WK4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uJQ-ne-OAn"/>
-                <constraint firstAttribute="bottom" secondItem="weP-Fd-WK4" secondAttribute="bottom" id="wvV-Ye-Bd4"/>
+                <constraint firstItem="weP-Fd-WK4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uJQ-ne-OAn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="weP-Fd-WK4" secondAttribute="bottom" id="wvV-Ye-Bd4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="54"/>
         </view>
     </objects>
     <resources>
-        <image name="ans_correct" width="96" height="96"/>
-        <image name="canteen" width="1551" height="2322"/>
+        <image name="erase_back" width="1125" height="2436"/>
+        <image name="erase_front" width="1125" height="2402"/>
     </resources>
 </document>
