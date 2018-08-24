@@ -10,8 +10,9 @@ import UIKit
 
 class RepetitiveViewController: UIViewController {
     @IBOutlet weak var dayCount: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     private var timerObject: Timer?
-    var currentDay = 5
+    var currentDay = 4
     var timerTime = 1.5
     var imageNum = 1
     
@@ -64,11 +65,28 @@ class RepetitiveViewController: UIViewController {
             let image = UIImage(named: imageName)
             let imageView = UIImageView(image: image!)
             
+            self.view.addSubview(imageView)
+            
+            self.dayCount.layoutIfNeeded()
+            
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            
+            
+            imageView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant : 120).isActive = true
+            imageView.layoutIfNeeded()
+            print("ini bottom anchor = \(imageView.frame.minY)")
+            
+            imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+            imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            
             imageView.transform = imageView.transform.rotated(by: CGFloat(randomNum))
             imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
             imageView.contentMode = UIViewContentMode.scaleAspectFill
             
-            self.view.addSubview(imageView)
+            
+            
+//
             
             self.dayCount.text = "Day \(self.currentDay)"
             if self.currentDay < 100{
