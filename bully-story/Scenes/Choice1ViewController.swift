@@ -119,7 +119,7 @@ class Choice1ViewController: DialogViewController {
                         dialogText: "Okay class dismissed! See you tomorrow everyone!"
                     ),
                     ],
-                  [.goToNextScene(viewController: Scene2ViewController())],
+                  [.goToNextScene(viewController: ActViewController(title: "Day 1", subtitle: "Introduction", time: "Noon", quote: "\"You have a voice\"", transitionTo: Scene2ViewController()))],
                   ]
         )
         let startEvent = events.goToStartEvent()

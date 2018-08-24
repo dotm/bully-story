@@ -12,20 +12,23 @@ class ActViewController: UIViewController {
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     var actTitle = ""
     var destinationVC: UIViewController!
     var subtitleString = ""
     var quoteString = ""
+    var timeString = ""
     
     convenience init() {
-        self.init(title: "", subtitle: "", quote: "", transitionTo: nil)
+        self.init(title: "", subtitle: "", time: "", quote: "", transitionTo: nil)
     }
     
-    init(title: String, subtitle: String, quote: String, transitionTo destinationVC: UIViewController?) {
+    init(title: String, subtitle: String, time: String, quote: String, transitionTo destinationVC: UIViewController?) {
         self.actTitle = title
         self.destinationVC = destinationVC
         self.subtitleString = subtitle
         self.quoteString = quote
+        self.timeString = time
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,6 +41,7 @@ class ActViewController: UIViewController {
         titleLabel.text = actTitle
         subtitle.text = subtitleString
         quote.text = quoteString
+        timeLabel.text = timeString
     }
     
     override func viewDidAppear(_ animated: Bool) {

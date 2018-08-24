@@ -21,7 +21,7 @@ class Scene5ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "You just see what am i going to do to you, Jane"
                 ),
-                .setBackgroundImage(imageName: "canteen"),
+                .setBackgroundImage(imageName: "school"),
                 ],
             [.goToNextScene(viewController: Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()))],
         ])
