@@ -39,7 +39,7 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jessica",
                     characterImagePosition: .left,
-                    dialogText: "That girl is kind of pretty.."
+                    dialogText: "That girl is kind of pretty..."
                 ),
             ],[
                 .presentDialog(
@@ -57,22 +57,71 @@ class Choice1ViewController: DialogViewController {
                     characterImagePosition: .right,
                     dialogText: "Open your book at page 10 and do the little quiz there."
                 ),
-            ],[
-                .stopBGM(),
-                .goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))
-            ],[
-                .playBGM(filename: "Scene1BGMusic"),
-                .presentDialog(
-                    characterName: "Teacher",
-                    characterNamePosition: .left,
-                    characterImage: "Teacher",
-                    characterImagePosition: .left,
-                    dialogText: "Okay class dismissed! See you tomorrow everyone!"
-                ),
-            ],[
-                .goToNextScene(viewController: Scene2ViewController())
-            ],
-      ])
+                ],[   .stopBGM(),
+                      .goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
+                  
+                  [
+                    .playBGM(filename: "Scene1BGMusic"),
+                    .presentDialog(
+                        characterName: "Jane",
+                        characterNamePosition: .left,
+                        characterImage: "Jane_Smile3",
+                        characterImagePosition: .left,
+                        dialogText: "Yay! I got 100! How about you?"
+                    ),
+                    ],
+                  [
+                    .presentChoices(choices: (
+                        title: "",
+                        options: [
+                            (
+                                title: "I've got a good score as well!",
+                                handler: { () in let nextEvent: Event? = self.events.goToNextEvent()
+                                    self.executeEvent(nextEvent)
+                                    
+                                    //self.goToNextScene(Scene6Choice1ViewController())
+                                    empathymeter += 1
+                            }
+                            ),
+                            (
+                                title: "Nah it's not that good...",
+                                handler: { () in let nextEvent: Event? = self.events.goToNextEvent()
+                                    self.executeEvent(nextEvent)
+                                    
+                            }                        ),
+                            ]
+                    )),
+                    ],
+                  [
+                    .presentDialog(
+                        characterName: "Jane",
+                        characterNamePosition: .left,
+                        characterImage: "Jane_Smile2",
+                        characterImagePosition: .left,
+                        dialogText: "Either way it's okay! You've done a good job!"
+                    ),
+                    ],
+                  [
+                    .presentDialog(
+                        characterName: "Jessica",
+                        characterNamePosition: .left,
+                        characterImage: "Jessica_Angry",
+                        characterImagePosition: .left,
+                        dialogText: "....She seems smart too."
+                    ),
+                    ],
+                  [
+                    .presentDialog(
+                        characterName: "Teacher",
+                        characterNamePosition: .left,
+                        characterImage: "Teacher",
+                        characterImagePosition: .left,
+                        dialogText: "Okay class dismissed! See you tomorrow everyone!"
+                    ),
+                    ],
+                  [.goToNextScene(viewController: Scene2ViewController())],
+                  ]
+        )
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
     }
