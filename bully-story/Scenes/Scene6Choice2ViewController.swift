@@ -30,13 +30,18 @@ class Scene6Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "Jessica",
+                    characterImage: "Jessica_Smug",
                     characterImagePosition: .right,
                     dialogText: "Hahahaha! Gotcha!"
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Day", quote: "\"Your silence are their weapon\"", transitionTo: Scene7ViewController()))],
+            [
+                .presentNarration(text: ".....And Jessica's bully towards Jane is getting worse."),
+                
+                ],
             
+            //           [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Day", quote: "\"Your silence are their weapon\"", transitionTo: Scene7ViewController()))],
+            [.goToNextScene(viewController: Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()))]
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

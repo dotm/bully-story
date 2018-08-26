@@ -64,7 +64,7 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Teacher",
                     characterImagePosition: .right,
-                    dialogText: "We're going learn about Science today."
+                    dialogText: "We're going to learn about Science today."
                 ),
                 ],[
                     .presentDialog(
@@ -84,7 +84,7 @@ class Choice1ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jane_Smile3",
                         characterImagePosition: .left,
-                        dialogText: "Yay! I got 100! How about you?"
+                        dialogText: "Yay! I got 100! How about you, #name?"
                     ),
                     ],
                   [
@@ -136,7 +136,7 @@ class Choice1ViewController: DialogViewController {
                         dialogText: "Okay class dismissed! See you tomorrow everyone!"
                     ),
                     ],
-                  [.goToNextScene(viewController: ActViewController(title: "Day 1", subtitle: "Introduction", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene2ViewController()))],
+                  [.goToNextScene(viewController: ActViewController(title: "Day 1", subtitle: "", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene2ViewController()))],
                   ]
         )
         let startEvent = events.goToStartEvent()

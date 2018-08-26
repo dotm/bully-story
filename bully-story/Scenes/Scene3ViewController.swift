@@ -28,7 +28,7 @@ class Scene3ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
-                    dialogText: "Haha, you’re very funny, Lucas"
+                    dialogText: "Haha, you’re very funny, Lucas."
                 ),
                 ],
             [
@@ -111,7 +111,7 @@ class Scene3ViewController: DialogViewController {
                     dialogText: "Lucas is talking to her now?! Hmmph!"
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene4ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "", time: "Afternoon", quote: "\"Strong people stand up from themselves. But the strongest people stand up for others\"", transitionTo: Scene4ViewController()))],
             ])
         let startEvent = events.goToStartEvent()
         

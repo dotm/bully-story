@@ -18,11 +18,7 @@ class Scene8Choice2ViewController: DialogViewController {
             
             [
                 .setBackgroundImage(imageName: "classroom"),
-                .presentNarration(text: "You chose to ignore Jane."),
-                .playBGM(filename: "WrongChoiceBGM")
-                
-            ],
-            [
+                .playBGM(filename: "WrongChoiceBGM"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
@@ -46,7 +42,7 @@ class Scene8Choice2ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jane_Cry",
                     characterImagePosition: .left,
-                    dialogText: "I didn't ever do anything to her..."
+                    dialogText: "I never did anything to her..."
                 ),
                 ],
             [
@@ -67,6 +63,8 @@ class Scene8Choice2ViewController: DialogViewController {
                     dialogText: "Maybe i'm better off from this cruel world..."
                 ),
                 ],
+            [.goToNextScene(viewController: ActViewController(title: "", subtitle: "The Ending", time: "", quote: "\"Don't be afraid to speak up!\"", transitionTo: Scene9BadViewController()))],
+            
             ]
         )
         
