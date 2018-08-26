@@ -53,7 +53,7 @@ class Scene4ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jessica_Unamused",
                     characterImagePosition: .left,
-                    dialogText: "Again? But yeah okay. Whatever. Your loss"
+                    dialogText: "Again? But yeah okay. Whatever. Your loss."
                 ),
                 .setBackgroundImage(imageName: "school"),
                 ],
@@ -69,9 +69,7 @@ class Scene4ViewController: DialogViewController {
                 ],
             
             [
-                
                 .presentNarration(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
-                
                 ],
             [
                 .playSFX(filename: "Scene4SFXWhat", delay: 1.0),
@@ -86,7 +84,6 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
             [
-                .playBGM(filename:"Scene4BGMusicAngry"),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -97,8 +94,6 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
            
-            
-            
             
     [.goToNextScene(viewController: Scene5ViewController())],
             

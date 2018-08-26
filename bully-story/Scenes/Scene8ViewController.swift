@@ -16,7 +16,7 @@ class Scene8ViewController: DialogViewController {
             [
                 .stopBGM(),
                 .playBGM(filename: "Scene8BGMusic"),
-                .playSFX(filename: "SFXBellShort", delay: 0.0),
+                .playSFX(filename: "SFXShortBell", delay: 0.0),
                 .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jane",
@@ -33,7 +33,7 @@ class Scene8ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jane_Shock",
                     characterImagePosition: .left,
-                    dialogText: "Oops now i'm the last one who stayed here. It's time to go home now"
+                    dialogText: "Oops now i'm the last one who stayed here. It's time to go home now."
                 ),
                 ],
             [
@@ -83,15 +83,18 @@ class Scene8ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Jessica_Smug2",
                     characterImagePosition: .right,
-                    dialogText: "Why don't you try to open it yourself? Bye bye I'm leaving for class!"
+                    dialogText: "Why don't you try to open it yourself? Bye bye I'm leaving!"
                 ),
                 ],
-            [.presentDialog(
+            [.presentNarration(text: "I was just about to go home when i heard this conversation. I also heard Jane was screaming for help")],
+            
+            [.playSFX(filename: "Scene8SFXDoor1", delay: 0.0),
+                .presentDialog(
                 characterName: "Jane",
                 characterNamePosition: .left,
                 characterImage: "Jane_Cry",
                 characterImagePosition: .left,
-                dialogText: "........."
+                dialogText: "HELPPP! SOMEONE HELP!"
                 ),
              ],
             

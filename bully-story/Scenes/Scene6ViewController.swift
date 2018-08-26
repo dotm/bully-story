@@ -90,7 +90,7 @@ class Scene6ViewController: DialogViewController {
                             handler: { () in
                                
 //                                self.goToNextScene(Scene6Choice1ViewController())
-                                empathymeter += 1
+                                empathymeter += 1;
                                 self.goToNextScene(Helper().getEraseGameVC(nextDialogVC: Scene6Choice1ViewController()))
                         }
                         ),

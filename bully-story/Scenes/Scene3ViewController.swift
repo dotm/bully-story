@@ -19,7 +19,7 @@ class Scene3ViewController: DialogViewController {
                 .playBGM(filename: "Scene1BGMusic"),
                 .playSFX(filename: "Scene1Bell", delay: 3.0),
                 
-                .presentNarration(text: "The next morning, Lucas, one of Jane’s classmate come by to Jane’s seat and is talking to Jane. They both look so in tune. They talked and they talked.."),
+                .presentNarration(text: "The next morning when i arrived, i saw Lucas, one of our classmate come by to Jane’s seat and is talking to Jane. They both look so in tune. They talked and they talked.."),
                 ],
             [
             .playBGM(filename: "Scene3BGMusic"),
@@ -37,7 +37,7 @@ class Scene3ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Lucas_Smile",
                     characterImagePosition: .right,
-                    dialogText: "Thankyou! Such compliment coming from you. Oh by the way, where do you live?"
+                    dialogText: "Thankyou! Such compliment coming from you. Oh by the way Jane, where do you live?"
                 ),
                 ],
             [
@@ -97,6 +97,12 @@ class Scene3ViewController: DialogViewController {
                 ),
                 ],
             [
+             .presentNarration(text: "I look back to take a peek at Jessica."),
+             ],
+            [
+                .presentNarration(text: "I can see that she is pissed because the whole class know that Lucas has been her crush since 2 years ago."),
+                ],
+            [
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -105,7 +111,7 @@ class Scene3ViewController: DialogViewController {
                     dialogText: "Lucas is talking to her now?! Hmmph!"
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene4ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene4ViewController()))],
             ])
         let startEvent = events.goToStartEvent()
         

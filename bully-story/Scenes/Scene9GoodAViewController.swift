@@ -17,7 +17,7 @@ class Scene9GoodAViewController: DialogViewController {
             events = Events(events: [
                 
                 [
-                    .setBackgroundImage(imageName: "classroom"),
+                    .setBackgroundImage(imageName: "halaman"),
                     .presentDialog(
                         characterName: "Jane",
                         characterNamePosition: .left,
@@ -32,11 +32,14 @@ class Scene9GoodAViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jane_Smile3",
                         characterImagePosition: .left,
-                        dialogText: "So once again, thankyou"
+                        dialogText: "So once again, thankyou."
                     ),
                     ],
                 [
-                    .presentNarration(text: "Ever since then Jane looks much happier than she did before. Jessica is also never shown to bully other people anymore."),
+                    .presentNarration(text: "Ever since then Jane looks much happier than she did before."),
+                    ],
+                [
+                    .presentNarration(text: "Jessica is also never shown to bully other people anymore. Maybe after all, she realizes that she's been doing the wrong thing."),
                     ],
                 ]
             )
