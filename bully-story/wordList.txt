@@ -1,8 +1,6 @@
-apple
-developer
-academy
-world
-class
-green
-office
-park
+bonus
+hydrogen
+water
+mercury
+watt
+bones

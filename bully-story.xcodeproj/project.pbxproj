@@ -68,6 +68,7 @@
 		85EDA311212D4C3D00921363 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA310212D4C3D00921363 /* Extensions.swift */; };
 		A33F7BA4212FA28600523E4D /* RepetitiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33F7BA2212FA28600523E4D /* RepetitiveViewController.swift */; };
 		A33F7BA5212FA28600523E4D /* RepetitiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33F7BA3212FA28600523E4D /* RepetitiveViewController.xib */; };
+		A3DD25822132AC2A00DCE804 /* questionList.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3DD25812132AC2A00DCE804 /* questionList.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		85EDA310212D4C3D00921363 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A33F7BA2212FA28600523E4D /* RepetitiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitiveViewController.swift; sourceTree = "<group>"; };
 		A33F7BA3212FA28600523E4D /* RepetitiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepetitiveViewController.xib; sourceTree = "<group>"; };
+		A3DD25812132AC2A00DCE804 /* questionList.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = questionList.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				853A51162129273C00388644 /* TypeWriter.swift */,
 				8509F61D21281C9300362053 /* Scenes */,
 				8509F61B21281C9300362053 /* wordList.txt */,
+				A3DD25812132AC2A00DCE804 /* questionList.txt */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
 				37A91543211C09310076AFFB /* LaunchScreen.storyboard */,
 				37A91546211C09310076AFFB /* Info.plist */,
@@ -370,6 +373,7 @@
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
 				A33F7BA5212FA28600523E4D /* RepetitiveViewController.xib in Resources */,
 				8509F63421281C9300362053 /* wordList.txt in Resources */,
+				A3DD25822132AC2A00DCE804 /* questionList.txt in Resources */,
 				267A996A212323BF008EDFD4 /* kindergarten.ttf in Resources */,
 				85EDA300212D209600921363 /* HangmanViewController.xib in Resources */,
 				267A996521232010008EDFD4 /* PTC75F.ttf in Resources */,

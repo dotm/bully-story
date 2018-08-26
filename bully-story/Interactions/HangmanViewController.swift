@@ -20,11 +20,14 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var wordStackView: UIStackView!
     @IBOutlet weak var underlineStackView: UIStackView!
     @IBOutlet weak var gradeLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     
     private var bgAudio : AVAudioPlayer!
     private var gradeValue = 0
+    private var indexQuestion = 0
     private var dialogVC: DialogViewController?
     private var currentWord = ""
+    private var currentQuestion = ""
     private var lastButtonPressed: UIButton?
     private var playCount = 0
     private var hintTimerObject: Timer?
@@ -191,14 +194,17 @@ class HangmanViewController: UIViewController {
             button.isEnabled = true
             button.backgroundColor = #colorLiteral(red: 0.4860000014, green: 0.5609999895, blue: 0.80400002, alpha: 1)
         }
-        
+        print(playCount)
+        print(gradeValue)
         // end game
         if playCount == 5 {
             animateGameEnd()
             return false
         }
         
+        indexQuestion += 1
         playCount += 1
+        
         
         // get random word
         func wordList() -> [String]? {
@@ -211,9 +217,29 @@ class HangmanViewController: UIViewController {
         guard let words = wordList() else { return true }
         currentWord = ""
         while currentWord == "" || resultLabels.contains(where: { self.currentWord == $0.text }) {
-            let randomIndex = Int(arc4random_uniform(UInt32((words.count))))
-            currentWord = (words[randomIndex])
+            currentWord = (words[indexQuestion])
         }
+        
+        
+        //random q
+        func questionList() -> [String]? {
+            print("ayam")
+            guard let url = Bundle.main.url(forResource: "questionList", withExtension: "txt") else {
+                return nil
+            }
+            let content = try! String(contentsOf: url)
+            return content.components(separatedBy: "\n")
+            print("ayam")
+        }
+        guard let questions = questionList() else { return true }
+        
+        currentQuestion = ""
+        while currentQuestion == ""{
+            currentQuestion = (questions[indexQuestion])
+            
+        }
+        
+        questionLabel.text = currentQuestion
         
         //add labels
         let characters = Array(currentWord.characters)
@@ -237,6 +263,10 @@ class HangmanViewController: UIViewController {
             underline.widthAnchor.constraint(equalToConstant: 24).isActive = true
             underline.layoutIfNeeded()
         }
+        
+        
+        
+        
         return true
     }
     
@@ -272,7 +302,7 @@ class HangmanViewController: UIViewController {
     private func animateGameEnd() {
         pauseTimer()
         timerLabel.alpha = 0
-        
+        questionLabel.isHidden = true
         for button in self.letterButtons {
             button.isUserInteractionEnabled = false
             UIView.animate(withDuration: TimeInterval(arc4random_uniform(4) + 2)) {
