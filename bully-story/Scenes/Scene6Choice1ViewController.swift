@@ -13,7 +13,7 @@ class Scene6Choice1ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
-           
+            [.goToNextScene(viewController: Helper().getEraseGameVC(dialogVC: self))],
             [
                 
                 .playBGM(filename: "RightChoiceBGM"),

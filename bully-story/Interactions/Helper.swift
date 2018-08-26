@@ -58,7 +58,7 @@ struct Helper {
     }
     
     func getEraseGameVC(dialogVC: DialogViewController) -> UIViewController {
-        return EraseGameViewController()
+        return EraseGameViewController(dialogVC: dialogVC)
     }
     
     
