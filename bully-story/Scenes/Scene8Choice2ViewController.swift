@@ -26,7 +26,7 @@ class Scene8Choice2ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Sad",
+                    characterImage: "Jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "Why........"
                 ),

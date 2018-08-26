@@ -39,7 +39,7 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jessica",
                     characterImagePosition: .left,
-                    dialogText: "That girl is kind of pretty..."
+                    dialogText: "That new girl is kind of pretty..."
                 ),
             ],[
                 .presentDialog(
