@@ -43,9 +43,15 @@ class ActViewController: UIViewController {
         quote.text = quoteString
         quote.alpha = 0
         timeLabel.text = timeString
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        if timeString == "Afternoon"{
+            self.view.backgroundColor = UIColor(red: CGFloat(221/255.0), green: CGFloat(133/255.0), blue: CGFloat(74/255.0), alpha: 1.0)
+        }
+        
         let duration_toNextScene = 8.0
         UIView.animateKeyframes(withDuration: duration_toNextScene, delay: 0, options: .calculationModeLinear, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.3, animations: {

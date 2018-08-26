@@ -46,7 +46,7 @@ class Scene7Choice1ViewController: DialogViewController {
                 ),
                 ],
             
-            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Noon", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Afternoon", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
