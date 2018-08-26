@@ -19,6 +19,7 @@ class InputNameViewController: UIViewController, UITextFieldDelegate {
         self.textField.becomeFirstResponder()
         self.view.backgroundColor = UIColor(white: 0.4, alpha: 0.8)
         self.textField.delegate = self
+        self.textField.returnKeyType = .done
         self.contentView.layer.cornerRadius = 10
         self.contentView.layer.borderColor = UIColor(hex: "979797").cgColor
         self.contentView.layer.borderWidth = CGFloat(1)
