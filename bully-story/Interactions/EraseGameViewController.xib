@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EraseGameViewController" customModule="bully_story" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImageView" destination="fNO-pf-tiB" id="urB-Hl-bnr"/>
+                <outlet property="eraser" destination="9YH-Jo-H8z" id="K5Q-81-b9r"/>
                 <outlet property="strokeImageView" destination="weP-Fd-WK4" id="SxG-sJ-BLN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,6 +28,10 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erase_front" translatesAutoresizingMaskIntoConstraints="NO" id="weP-Fd-WK4">
                     <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eraser" translatesAutoresizingMaskIntoConstraints="NO" id="9YH-Jo-H8z">
+                    <rect key="frame" x="239" y="713" width="120" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,5 +52,6 @@
     <resources>
         <image name="erase_back" width="1125" height="2436"/>
         <image name="erase_front" width="1125" height="2402"/>
+        <image name="eraser" width="2524" height="1080"/>
     </resources>
 </document>

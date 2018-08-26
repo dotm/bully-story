@@ -26,7 +26,7 @@ class Scene3ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Smile",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
                     dialogText: "Haha, you’re very funny, Lucas"
                 ),
@@ -97,19 +97,13 @@ class Scene3ViewController: DialogViewController {
                 ),
                 ],
             [
-                .playBGM(filename: "Scene2Narration(intense)"),
-                .presentNarration(text: "Lucas returned back to his seat. Jessica saw it when Lucas and Jane were having fun and laughing while chatting. "),
-
-                ],
-            [
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "Jessica_Angry ",
+                    characterImage: "Jessica_Angry",
                     characterImagePosition: .right,
-                    dialogText: "Lucas is talking to her now? Hmmph"
+                    dialogText: "Lucas is talking to her now?! Hmmph!"
                 ),
-                .setBackgroundImage(imageName: "halaman"),
                 ],
             [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Noon", quote: "\"You have a voice\"", transitionTo: Scene4ViewController()))],
             ])

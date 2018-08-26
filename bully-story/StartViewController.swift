@@ -36,8 +36,9 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         bgAudio.play()
         bgAudio.numberOfLoops = -1
         // Do any additional setup after loading the view.
-//        
-//        self.present(RepetitiveViewController(), animated: true, completion: nil)
+        
+        self.present(EraseGameViewController(), animated: true, completion: nil)
+//        self.present(FindItemViewController(), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {
@@ -71,7 +72,8 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
             transition.type = kCATransitionFade
             transition.subtype = kCATransitionFromTop
             playerController.view.window!.layer.add(transition, forKey: nil)
-            playerController.present(ActViewController(title: "Day 1", subtitle: "Introduction", time: "Day", quote: "\"You have a voice\"", transitionTo: Scene1ViewController()), animated: false, completion: nil)
+           playerController.present(ActViewController(title: "Day 1", subtitle: "Introduction", time: "Day", quote: "\"Research indicates that persistent bullying can lead to suicidal behavior.\"", transitionTo: Scene6ViewController()), animated: false, completion: nil)
+            
         })
         
     }
