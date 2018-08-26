@@ -21,7 +21,7 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Smile2",
+                    characterImage: "Teacher",
                     characterImagePosition: .left,
                     dialogText: "Good morning everyone. I have a bad news today.."
                 ),
@@ -30,7 +30,7 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "teacher_Persevere",
                     characterImagePosition: .left,
                     dialogText: "Unfortunately, our friend Jane, has passed away yesterday. She took her own life..."
                 ),
@@ -39,7 +39,7 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "Jessica_Fearful",
                     characterImagePosition: .right,
                     dialogText: "..."
                 ),
@@ -48,7 +48,7 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Lucas",
                     characterNamePosition: .right,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "Lucas_Sweat",
                     characterImagePosition: .right,
                     dialogText: "..."
                 ),
@@ -57,16 +57,16 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "teacher_Persevere",
                     characterImagePosition: .left,
-                    dialogText: "She took her own life because she couldn't stand of being bullied by Jessica anymore. We know that from the suicide note her family found. "
+                    dialogText: "She took her own life because she couldn't stand of being bullied by Jessica anymore."
                 ),
             ],
             [
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "teacher_Persevere",
                     characterImagePosition: .left,
                     dialogText: "We know that from the suicide note her family found. "
                 ),
@@ -75,7 +75,7 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "Teacher",
                     characterImagePosition: .left,
                     dialogText: "Jessica, you are expected in the headmaster office now."
                 ),
@@ -84,13 +84,40 @@ class Scene9BadViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "Jane_Smile3",
+                    characterImage: "Jessica_Fearful",
                     characterImagePosition: .right,
-                    dialogText: "..."
+                    dialogText: "But... but... I didn't mean to."
                 ),
                 ],
             [
-                .presentNarration(text: "Ever since then, Jessica is never shown to bully the others. Her regrets of being the reason that Jane commited suicide has been haunting her ever since."),
+                .presentDialog(
+                    characterName: "Teacher",
+                    characterNamePosition: .left,
+                    characterImage: "Teacher_Angry",
+                    characterImagePosition: .left,
+                    dialogText: "Office! Now!"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica_Sob",
+                    characterImagePosition: .right,
+                    dialogText: "......"
+                ),
+                ],
+            [
+                .presentNarration(text: "Jessica then being dealt to the Headmaster and got kicked out from the school."),
+                ],
+            [
+                .presentNarration(text: "Ever since then, Jessica is never shown to bully the others. She really regrets it that her actions cause someone else to took their own life."),
+                ],
+            [
+                .presentNarration(text: "But still, no matter how big her regrets are, Jane is never coming back."),
+                ],
+            [
+                .presentNarration(text: "And now she's been living with her regrets ever since...."),
                 ],
             ]
         )
