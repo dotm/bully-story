@@ -14,7 +14,6 @@ class Scene8Choice1AViewController: DialogViewController {
         
         events = Events(events: [
             [
-                .playBGM(filename: "Scene8RightChoice"),
                 .setBackgroundImage(imageName : "classroom"),
                 .presentDialog(
                     characterName: "Jessica",
@@ -37,9 +36,9 @@ class Scene8Choice1AViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
-                    characterImage: "Jessica",
+                    characterImage: "Jessica_Angry",
                     characterImagePosition: .right,
-                    dialogText: "So? I don't care!"
+                    dialogText: "So? I don't care! Haven't i told you that if you stand in my way again, I will make you as my next target?!"
                 ),
             ],
             [
@@ -48,7 +47,43 @@ class Scene8Choice1AViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "",
                     characterImagePosition: .left,
-                    dialogText: "She has never done anything bad to you! Have you ever imagine what it's like to be in her position?"
+                    dialogText: "I'm not scared of you Jessica! I've got my other friends to stand up about what have you been doing to Jane."
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .left,
+                    characterImage: "",
+                    characterImagePosition: .left,
+                    dialogText: "I can even tell it to the teachers and you know you will get your punishment because of that!"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .left,
+                    characterImage: "",
+                    characterImagePosition: .left,
+                    dialogText: "Jane has never done anything bad to you! So why are you doing this to her? Have you ever imagine what it's like to be in her position?"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .left,
+                    characterImage: "",
+                    characterImagePosition: .left,
+                    dialogText: "Have you ever imagine what it's like to be in her position?"
+                ),
+                ],
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica",
+                    characterImagePosition: .right,
+                    dialogText: "Arrrghhhh! You are so annoying! Don't even bother telling it to the teacher!"
                 ),
                 ],
             [
@@ -62,12 +97,13 @@ class Scene8Choice1AViewController: DialogViewController {
                 .playSFX(filename: "Scene8SFXDoorCloses", delay: 1.0),
                 ],
             [
+                .playBGM(filename: "RightChoiceBGM"),
                 .presentDialog(
                     characterName: "#name",
                     characterNamePosition: .right,
                     characterImage: "",
                     characterImagePosition: .right,
-                    dialogText: "Wait Jane, let me help you."
+                    dialogText: "Wait Jane, let me help you out of there."
                 ),
                 ],
             [
@@ -75,9 +111,9 @@ class Scene8Choice1AViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile3",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
-                    dialogText: "Thankyou. Thankyou so much. You've been helping me a lot."
+                    dialogText: "Thankyou. Thankyou so much #name. You've been helping me a lot."
                 ),
             ],
             [
@@ -102,7 +138,7 @@ class Scene8Choice1AViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile3",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
                     dialogText: "Oh really? Of course I'd like to! Yes.. maybe that way she won't do it anymore.."
                 ),
@@ -120,13 +156,13 @@ class Scene8Choice1AViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "jane_Smile3",
+                    characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
                     dialogText: "Thankyou. Thankyou so much #name"
                 ),
                 ],
+            [.goToNextScene(viewController: ActViewController(title: "", subtitle: "The Ending", time: "", quote: "\"Don't be afraid to speak up!\"", transitionTo: Scene9GoodViewController()))],
             
-            [.goToNextScene(viewController: Scene9GoodViewController())],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

@@ -87,12 +87,14 @@ class Scene7ViewController: DialogViewController {
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
-                    characterImage: "Jane_Sad1",
+                    characterImage: "Jane_Sad",
                     characterImagePosition: .left,
                     dialogText: "..................."
                 ),
                 
                 ],
+            [
+            .presentNarration(text: "I'm pretty sure it's Jessica who is behind this. So I decided to.... ")],
             [
                 .presentChoices(choices: (
                     title: "What would you do?",

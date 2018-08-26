@@ -42,7 +42,17 @@ class Scene7Choice1ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
-                    dialogText: "Thank you for always helping me. Thank you so much #name!"
+                    dialogText: "Thank you for helping me. Thank you so much #name!"
+                ),
+                ],
+            
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica_Angry",
+                    characterImagePosition: .right,
+                    dialogText: "Arrrgghh!"
                 ),
                 ],
             

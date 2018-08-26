@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PuzzleViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class PuzzleViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet var placeholderCollection: [UIImageView]!
     private var pictureCollections : [UIImageView] = []
+    
     
     private var nextDialogVC: DialogViewController?
     private var assetCode: Int?
@@ -38,6 +40,7 @@ class PuzzleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         nextBtn.isHidden = true
         

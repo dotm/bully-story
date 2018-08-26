@@ -33,7 +33,16 @@ class Choice1ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Hello, #name. This school looks really nice. Looking forward to more days here!"
                 ),
-            ],[
+            ],
+              [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .right,
+                    characterImage: "",
+                    characterImagePosition: .right,
+                    dialogText: "Welcome here Jane. I hope you enjoy it here!"
+                ),
+                ],[
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
@@ -47,7 +56,7 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Teacher",
                     characterImagePosition: .right,
-                    dialogText: "Hello everyone. Let's start our lesson today! "
+                    dialogText: "Hello everyone. Let's start our lesson!"
                 ),
             ],[
                 .presentDialog(
@@ -55,9 +64,17 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Teacher",
                     characterImagePosition: .right,
-                    dialogText: "Open your book at page 10 and do the little quiz there."
+                    dialogText: "We're going learn about Science today."
                 ),
-                ],[   .stopBGM(),
+                ],[
+                    .presentDialog(
+                        characterName: "Teacher",
+                        characterNamePosition: .right,
+                        characterImage: "Teacher",
+                        characterImagePosition: .right,
+                        dialogText: "Open your book at page 10 and do the little quiz there."
+                    ),
+                    ],[   .stopBGM(),
                       .goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
                   
                   [
@@ -104,9 +121,9 @@ class Choice1ViewController: DialogViewController {
                   [
                     .presentDialog(
                         characterName: "Jessica",
-                        characterNamePosition: .left,
+                        characterNamePosition: .right,
                         characterImage: "Jessica_Angry",
-                        characterImagePosition: .left,
+                        characterImagePosition: .right,
                         dialogText: "....That new girl seems smart too."
                     ),
                     ],
