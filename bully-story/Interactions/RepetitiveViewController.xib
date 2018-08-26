@@ -48,6 +48,9 @@
                         <constraint firstAttribute="width" secondItem="tAF-a0-CY6" secondAttribute="height" multiplier="1:1" id="Mx7-hS-m4O"/>
                     </constraints>
                     <state key="normal" image="interaksi_next"/>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="SMm-zu-K4b"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" name="purple"/>

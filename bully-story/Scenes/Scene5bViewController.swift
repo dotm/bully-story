@@ -21,9 +21,9 @@ class Scene5bViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "........."
                 ),
-                .setBackgroundImage(imageName: "yard"),
+                .setBackgroundImage(imageName: "room"),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "The Act", time: "Day", quote: "\"Your silence are their weapon\"", transitionTo: Scene6ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 100", subtitle: "The Act", time: "Morning", quote: "\"Your silence are their weapon\"", transitionTo: Scene6ViewController()))],
         ])
         let startEvent = events.goToStartEvent()
         

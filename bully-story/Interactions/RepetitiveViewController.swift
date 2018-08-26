@@ -117,6 +117,9 @@ class RepetitiveViewController: UIViewController {
         }
     }
     
+    @IBAction func buttonClicked(_ sender: Any) {
+        self.present(Scene5bViewController(), animated: false, completion: nil)
+    }
     private func countStop() {
         timerObject?.invalidate()
         

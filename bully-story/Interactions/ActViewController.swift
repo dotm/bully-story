@@ -43,6 +43,7 @@ class ActViewController: UIViewController {
         quote.text = quoteString
         quote.alpha = 0
         timeLabel.text = timeString
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
