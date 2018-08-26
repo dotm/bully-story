@@ -136,7 +136,9 @@ class PuzzleViewController: UIViewController {
 //            self.navigationController?.pushViewController(nextGame, animated: true)
             self.present(nextGame, animated: false, completion: nil)
         } else {
-            self.present(nextDialogVC!, animated: false, completion: nil)
+            self.present(RepetitiveViewController(), animated: false, completion: nil)
+//            self.present(nextDialogVC!, animated: false, completion: nil)
+            
         }
     }
     
