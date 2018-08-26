@@ -39,6 +39,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         
 //        self.present(EraseGameViewController(nextDialogVC: Scene1ViewController()), animated: true, completion: nil)
         self.present(FindItemViewController(), animated: true, completion: nil)
+//        self.present(PuzzleViewController(nextDialogVC: Scene1ViewController(), assetCode: 1), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {
