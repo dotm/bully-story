@@ -13,7 +13,6 @@ class Scene6Choice1ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
-           
             [
                 
                 .playBGM(filename: "RightChoiceBGM"),

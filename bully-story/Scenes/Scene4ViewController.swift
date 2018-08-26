@@ -86,7 +86,6 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
             [
-                .playSFX(filename: "Scene4SFXWhat", delay: 1.0),
                 .playBGM(filename:"Scene4BGMusicAngry"),
                 .presentDialog(
                     characterName: "Jessica",
