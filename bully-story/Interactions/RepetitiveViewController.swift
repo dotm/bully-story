@@ -11,14 +11,20 @@ import UIKit
 class RepetitiveViewController: UIViewController {
     @IBOutlet weak var dayCount: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     private var timerObject: Timer?
     var currentDay = 4
     var timerTime = 1.5
+    var timertotal = 0.0
     var imageNum = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.backgroundColor = .purple
+        
         countStart()
+        
+        
         
         // Do any additional setup after loading the view.
     }
@@ -28,10 +34,23 @@ class RepetitiveViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        changeBG()
+    }
+
+    private func changeBG(){
+        UIView.animate(withDuration: 16.1, animations: {
+           self.view.backgroundColor = .black
+        }) { (nil) in
+            print("hehe")
+        }
+    }
+    
     private func countStart(){
         timerObject = Timer.scheduledTimer(withTimeInterval: timerTime, repeats: false) { (_) in
             self.currentDay += 1
-            
+            self.timertotal += self.timerTime
+            print(self.timertotal)
             if self.timerTime >= 0.1{
                 self.timerTime -= 0.1
             }
@@ -74,7 +93,6 @@ class RepetitiveViewController: UIViewController {
             
             imageView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant : 120).isActive = true
             imageView.layoutIfNeeded()
-            print("ini bottom anchor = \(imageView.frame.minY)")
             
             imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
             imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
@@ -93,6 +111,7 @@ class RepetitiveViewController: UIViewController {
                 self.countStart()
             }
             else {
+                self.nextButton.isHidden = false
                 self.countStop()
             }
         }
