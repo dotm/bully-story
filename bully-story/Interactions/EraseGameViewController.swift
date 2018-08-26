@@ -11,19 +11,22 @@ import UIKit
 class EraseGameViewController: UIViewController {
     var swiped = false
     var lastPoint = CGPoint.zero
-    var brushWidth: CGFloat = 100.0
+    lazy var brushWidth: CGFloat = {
+        self.eraser.frame.height
+    } ()
     var opacity: CGFloat = 1.0
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var strokeImageView: UIImageView!
+    @IBOutlet weak var eraser: UIImageView!
     
-    private var dialogVC: DialogViewController?
+    private var nextDialogVC: DialogViewController?
     
     convenience init() {
-        self.init(dialogVC: nil)
+        self.init(nextDialogVC: nil)
     }
     
-    init(dialogVC: DialogViewController?) {
-        self.dialogVC = dialogVC
+    init(nextDialogVC: DialogViewController?) {
+        self.nextDialogVC = nextDialogVC
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -56,8 +59,11 @@ class EraseGameViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        swiped = false
-        if let touch = touches.first {
+        guard let touch = touches.first else { return }
+        
+        if eraser.frame.contains(touch.location(in: self.view)) {
+            eraser.transform = .init(rotationAngle: CGFloat.pi / 5)
+            swiped = false
             lastPoint = touch.location(in: self.view)
         }
     }
@@ -65,6 +71,7 @@ class EraseGameViewController: UIViewController {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first {
+            eraser.center = touch.location(in: self.view)
             let currentPoint = touch.location(in: self.view)
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
             
@@ -73,6 +80,7 @@ class EraseGameViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        eraser.transform = .identity
         if !swiped {
             drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
         }
@@ -83,14 +91,21 @@ class EraseGameViewController: UIViewController {
         guard let averageColor = strokeImageView.image?.averageColor else {return}
         
         if averageColor.isEqual(UIColor(red: 0, green: 0, blue: 0, alpha: 0)) {
-            self.dialogVC?.next()
-            let transition: CATransition = CATransition()
+            let transition = CATransition()
             transition.duration = 1
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
             transition.type = kCATransitionPush
             transition.subtype = kCATransitionFromRight
             self.view.window!.layer.add(transition, forKey: nil)
-            self.dismiss(animated: true)
+            self.present(self.nextDialogVC!, animated: false, completion: nil)
+            
+//            let transition: CATransition = CATransition()
+//            transition.duration = 1
+//            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+//            transition.type = kCATransitionPush
+//            transition.subtype = kCATransitionFromRight
+//            self.view.window!.layer.add(transition, forKey: nil)
+//            self.dismiss(animated: true)
         }
     }
 }
