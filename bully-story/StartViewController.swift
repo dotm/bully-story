@@ -81,7 +81,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         loadGlobalData()
     }
     @IBAction func gotoContinue(_ sender: Any) {
-        
+        bgAudio.stop()
     }
     
 //    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
