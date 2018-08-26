@@ -57,6 +57,8 @@
 		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		8509F64321281FEC00362053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509F64221281FEC00362053 /* Assets.xcassets */; };
 		853A51172129273C00388644 /* TypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A51162129273C00388644 /* TypeWriter.swift */; };
+		85B49B9F2132A1610092EFF9 /* FindItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B49B9E2132A1610092EFF9 /* FindItemImageView.swift */; };
+		85B49BA12132A16C0092EFF9 /* FindItemImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B49BA02132A16C0092EFF9 /* FindItemImageView.xib */; };
 		85D637D7212E5FA700A421C1 /* Scene5bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D637D6212E5FA700A421C1 /* Scene5bViewController.swift */; };
 		85EDA300212D209600921363 /* HangmanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85EDA2FE212D209600921363 /* HangmanViewController.xib */; };
 		85EDA301212D209600921363 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA2FF212D209600921363 /* HangmanViewController.swift */; };
@@ -135,6 +137,8 @@
 		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853A51162129273C00388644 /* TypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeWriter.swift; sourceTree = "<group>"; };
+		85B49B9E2132A1610092EFF9 /* FindItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemImageView.swift; sourceTree = "<group>"; };
+		85B49BA02132A16C0092EFF9 /* FindItemImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindItemImageView.xib; sourceTree = "<group>"; };
 		85D637D6212E5FA700A421C1 /* Scene5bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5bViewController.swift; sourceTree = "<group>"; };
 		85EDA2FE212D209600921363 /* HangmanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HangmanViewController.xib; sourceTree = "<group>"; };
 		85EDA2FF212D209600921363 /* HangmanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				8509F61221281C9300362053 /* Transitions.swift */,
 				A33F7BA2212FA28600523E4D /* RepetitiveViewController.swift */,
 				A33F7BA3212FA28600523E4D /* RepetitiveViewController.xib */,
+				85B49B9E2132A1610092EFF9 /* FindItemImageView.swift */,
+				85B49BA02132A16C0092EFF9 /* FindItemImageView.xib */,
 			);
 			path = Interactions;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B49BA12132A16C0092EFF9 /* FindItemImageView.xib in Resources */,
 				37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */,
 				A33F7BA5212FA28600523E4D /* RepetitiveViewController.xib in Resources */,
 				8509F63421281C9300362053 /* wordList.txt in Resources */,
@@ -405,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B49B9F2132A1610092EFF9 /* FindItemImageView.swift in Sources */,
 				8509F62B21281C9300362053 /* Transitions.swift in Sources */,
 				8509F63621281C9300362053 /* Scene4ViewController.swift in Sources */,
 				26E681D92129C23400407F08 /* Scene7Choice1ViewController.swift in Sources */,

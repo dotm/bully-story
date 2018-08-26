@@ -37,8 +37,8 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         bgAudio.numberOfLoops = -1
         // Do any additional setup after loading the view.
         
-        self.present(EraseGameViewController(), animated: true, completion: nil)
-//        self.present(FindItemViewController(), animated: true, completion: nil)
+//        self.present(EraseGameViewController(nextDialogVC: Scene1ViewController()), animated: true, completion: nil)
+        self.present(FindItemViewController(), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {

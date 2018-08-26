@@ -28,9 +28,11 @@ class FindItemViewController: UIViewController {
             // scaling to big
         //kalo salah geter
         
+        let bookImg = Helper().resizeImage(image: UIImage(named: "find_book")!, targetSize: CGSize(width: 100, height: 100))
+        
         imageView = UIImageView(image: UIImage(named: "find_bg1"))
-        lostItemImageView = UIImageView(image: UIImage(named: "find_book"))
-        lostItemShadowImageView = UIImageView(image: UIImage(named: "find_book"))
+        lostItemImageView = UIImageView(image: bookImg)
+        lostItemShadowImageView = UIImageView(image: bookImg)
         
         scrollView = UIScrollView(frame: view.bounds)
         scrollView.contentSize = imageView.bounds.size
@@ -39,9 +41,10 @@ class FindItemViewController: UIViewController {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.bounces = false
         
-        scrollView.addSubview(imageView)
-        view.addSubview(scrollView)
-        
+        self.scrollView.addSubview(imageView)    //background
+        self.view.addSubview(scrollView)
+        self.view.addSubview(lostItemShadowImageView)
+        self.view.addSubview(lostItemImageView)
         
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -50,13 +53,9 @@ class FindItemViewController: UIViewController {
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200).isActive = true
         
-        
-        self.view.addSubview(lostItemShadowImageView)
         lostItemShadowImageView.translatesAutoresizingMaskIntoConstraints = false
         lostItemShadowImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         lostItemShadowImageView.topAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: 40).isActive = true
-//        lostItemShadowImageView.widthAnchor.constraint(equalTo: lostItemImageView.widthAnchor).isActive = true
-//        lostItemShadowImageView.heightAnchor.constraint(equalTo: lostItemImageView.heightAnchor).isActive = true
         
         lostItemImageView.isUserInteractionEnabled = true
         imageView.isUserInteractionEnabled = true
@@ -66,7 +65,8 @@ class FindItemViewController: UIViewController {
         
         lostItemImageView.alpha = 0
         lostItemImageView.backgroundColor = .clear
-        imageView.addSubview(lostItemImageView)
+        lostItemShadowImageView.image = bookImg.withRenderingMode(.alwaysTemplate)
+        lostItemShadowImageView.tintColor = .lightGray
         
     }
     
@@ -77,7 +77,6 @@ class FindItemViewController: UIViewController {
         if itemFrame.contains(tapPoint) {
             self.lostItemImageView.alpha = 1
             self.scrollView.isUserInteractionEnabled = false
-//            self.imageView.removeGestureRecognizer(gesture)
             
             UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseOut, animations: {
                 self.lostItemImageView.center = self.lostItemShadowImageView.center
