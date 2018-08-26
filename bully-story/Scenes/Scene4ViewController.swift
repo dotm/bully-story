@@ -20,9 +20,9 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName : "school"),
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica_Smug",
-                    characterImagePosition: .left,
+                    characterImagePosition: .right,
                     dialogText: "Hi Jane! Do you want to go to the mall with us? I heard there’s lots of discount today!"
                 ),
                 
@@ -31,9 +31,9 @@ class Scene4ViewController: DialogViewController {
                 
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Sad3",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Ah.. that sounds so tempting. But i really should go home now.."
                 ),
                 ],
@@ -41,18 +41,18 @@ class Scene4ViewController: DialogViewController {
                 
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Sad2",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Otherwise my mom will get mad. Sorry again Jess."
                 ),
                 ],
             [
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica_Unamused",
-                    characterImagePosition: .left,
+                    characterImagePosition: .right,
                     dialogText: "Again? But yeah okay. Whatever. Your loss."
                 ),
                 .setBackgroundImage(imageName: "school"),
@@ -60,9 +60,9 @@ class Scene4ViewController: DialogViewController {
             [
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Sad2",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Sorry…"
                 ),
                 .setBackgroundImage(imageName: "school"),

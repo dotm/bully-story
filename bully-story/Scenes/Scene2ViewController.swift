@@ -82,7 +82,7 @@ class Scene2ViewController: DialogViewController {
                 ],
             [
                 .playBGM(filename: "Scene2Narration(intense)"),
-                .presentNarration(text: "I can see the look on Jessica's face that she is pissed because no one ever says no to her."),
+                .presentNarration(text: "I can see from the look on Jessica's face that she is pissed because no one ever says no to her."),
                 
                 ],
             [
@@ -99,7 +99,7 @@ class Scene2ViewController: DialogViewController {
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene3ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Morning", quote: "\"Stand Up and Speak Out!\"", transitionTo: Scene3ViewController()))],
             
             
             ])

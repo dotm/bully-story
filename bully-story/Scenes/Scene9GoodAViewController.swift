@@ -41,6 +41,19 @@ class Scene9GoodAViewController: DialogViewController {
                 [
                     .presentNarration(text: "Jessica is also never shown to bully other people anymore. Maybe after all, she realizes that she's been doing the wrong thing."),
                     ],
+                [
+                .presentNarration(text: "It's true what they say, being a bystander of bullying we can step up, speak up and help stop bullying."),
+                    ],
+                [
+                    .presentNarration(text: "It can be really scary to step up and help the person being bullied."),
+                    ],
+                [
+                    .presentNarration(text: "But bystanders can be either part of the bullying problem by ignoring it or be an important part of the solution"),
+                    ],
+                [
+                    .presentNarration(text: "So rather than adding more problems about bullying, we better be the HERO to step up and help stop bullying!"),
+                    ],
+                
                 ]
             )
             

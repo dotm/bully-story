@@ -17,7 +17,7 @@ class Scene6Choice1ViewController: DialogViewController {
                 
                 .playBGM(filename: "RightChoiceBGM"),
                 .setBackgroundImage(imageName : "classroom"),
-                .presentNarration(text: "I couldn't stand anymore seeing Jane is being treated like that by Jessica, so i decided to help her clean off her table."),
+                .presentNarration(text: "I couldn't stand anymore seeing Jane is being treated like that by Jessica, so i decided to help her to clean off her table."),
                 ],
             [
                 .presentDialog(
@@ -29,10 +29,10 @@ class Scene6Choice1ViewController: DialogViewController {
                 ),
                 ],
             [
-                .playBGM(filename:"IntenseBGM"),
+                .playBGM(filename:"Scene4BGMusicAngry"),
                 
                 .setBackgroundImage(imageName : "halaman"),
-                .presentNarration(text: "But after i helped her that day, Jessica blocked me when i was walking to home."),
+                .presentNarration(text: "But after i helped her that day, Jessica blocked me when I was walking home."),
                 ],
             [
                 .presentDialog(
@@ -59,7 +59,6 @@ class Scene6Choice1ViewController: DialogViewController {
                 .presentNarration(text: "So i decided to back down... And Jessica's bully towards Jane is getting worse."),
                 
                 ],
-            [.playBGM(filename: "Scene4BGMusicAngry"),],
             
 //           [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Day", quote: "\"Your silence are their weapon\"", transitionTo: Scene7ViewController()))],
            [.goToNextScene(viewController: Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()))]
