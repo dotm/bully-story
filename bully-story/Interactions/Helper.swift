@@ -57,8 +57,8 @@ struct Helper {
         return HangmanViewController(dialogVC: dialogVC)
     }
     
-    func getEraseGameVC(dialogVC: DialogViewController) -> UIViewController {
-        return EraseGameViewController(dialogVC: dialogVC)
+    func getEraseGameVC(nextDialogVC: DialogViewController) -> UIViewController {
+        return EraseGameViewController(nextDialogVC: nextDialogVC)
     }
     
     
