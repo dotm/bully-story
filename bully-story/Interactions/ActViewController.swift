@@ -47,6 +47,10 @@ class ActViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if timeString == "Afternoon"{
+            self.view.backgroundColor = .orange
+        }
+        
         let duration_toNextScene = 6.0
         UIView.animateKeyframes(withDuration: duration_toNextScene, delay: 0, options: .calculationModeLinear, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.3, animations: {
