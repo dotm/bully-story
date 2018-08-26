@@ -98,7 +98,7 @@ class Choice1ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jane_Smile2",
                         characterImagePosition: .left,
-                        dialogText: "Either way it's okay! You've done a good job!"
+                        dialogText: "That's great! You've done a good job!"
                     ),
                     ],
                   [
@@ -107,7 +107,7 @@ class Choice1ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jessica_Angry",
                         characterImagePosition: .left,
-                        dialogText: "....She seems smart too."
+                        dialogText: "....That new girl seems smart too."
                     ),
                     ],
                   [

@@ -59,9 +59,9 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-JS-Gbr">
-                    <rect key="frame" x="162" y="709" width="50" height="50"/>
+                    <rect key="frame" x="144" y="677" width="83" height="88"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Next" image="interaksi_next">
+                    <state key="normal" image="interaksi_next">
                         <color key="titleColor" name="purple-light"/>
                     </state>
                     <connections>
@@ -70,6 +70,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="60"/>
         </view>
     </objects>
     <resources>

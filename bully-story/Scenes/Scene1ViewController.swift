@@ -31,7 +31,7 @@ class Scene1ViewController: DialogViewController {
                 .presentNarration(text: "She chose to sit beside you."),
                 ],
             [
-                        .playBGM(filename: "Scene1BGMusic2"),
+                        .playBGM(filename: "MusicScene1"),
                         .presentChoices(choices: (
                             title: "Jane sat beside you. What would you do?",
                             options: [
