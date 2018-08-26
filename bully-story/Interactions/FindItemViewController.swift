@@ -28,7 +28,7 @@ class FindItemViewController: UIViewController {
             // scaling to big
         //kalo salah geter
         
-        imageView = UIImageView(image: UIImage(named: "find_bg0"))
+        imageView = UIImageView(image: UIImage(named: "find_bg1"))
         lostItemImageView = UIImageView(image: UIImage(named: "find_book"))
         lostItemShadowImageView = UIImageView(image: UIImage(named: "find_book"))
         
