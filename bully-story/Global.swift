@@ -8,7 +8,7 @@
 
 import UIKit
 
-var username: String = ""
+var username: String = "Vanessa"
 var empathymeter: Int = 0
 
 func saveGlobalData(){

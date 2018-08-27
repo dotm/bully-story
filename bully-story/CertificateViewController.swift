@@ -9,7 +9,8 @@
 import UIKit
 
 class CertificateViewController: UIViewController {
-    private weak var certificateImage: UIImage! = UIImage(named: "certificate")
+    private var certificateImage = UIImage(named: "certificate")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class CertificateViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(named: "warnamain")
         setupImageView()
+        
         setupSaveButton()
     }
     private func setupImageView(){
@@ -28,9 +30,17 @@ class CertificateViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive = true
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         let multiplier = CGFloat(0.3)
-        imageView.heightAnchor.constraint(equalToConstant: certificateImage.size.height * multiplier).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: certificateImage.size.width * multiplier).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: certificateImage!.size.height * multiplier).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: certificateImage!.size.width * multiplier).isActive = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            UIView.animate(withDuration: 2, animations: {
+                imageView.transform = CGAffineTransform(scaleX: 1.35, y: 1.35)
+            })
+        })
     }
+    
+    
     private func setupSaveButton(){
         let button = UIButton()
         button.backgroundColor = UIColor(named: "purple")
@@ -44,9 +54,10 @@ class CertificateViewController: UIViewController {
         button.topAnchor.constraint(equalTo: view.topAnchor, constant: 500).isActive = true
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        
     }
     @objc func saveCertificateImage(){
-        UIImageWriteToSavedPhotosAlbum(self.certificateImage, nil, nil, nil)
+        UIImageWriteToSavedPhotosAlbum(self.certificateImage!, nil, nil, nil)
         UIApplication.shared.open(URL(string:"photos-redirect://")!, options: [:], completionHandler: nil)
     }
 
