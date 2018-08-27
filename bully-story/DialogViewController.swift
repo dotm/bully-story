@@ -66,9 +66,31 @@ class DialogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupHomeButton()
         setupDialogContainer()
         setupBackgroundImage()
         DialogAudioPlayer.setupAudioPlayer()
+    }
+    private func setupHomeButton(){
+        let button = UIButton()
+        button.layer.zPosition = 20
+        button.backgroundColor = UIColor(named: "purple")
+        button.titleEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20)
+        button.layer.cornerRadius = CGFloat(10)
+        button.setTitle("Home", for: .normal)
+        button.addTarget(self, action: #selector(goToHome), for: .touchUpInside)
+        self.view.addSubview(button)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 80).isActive = true
+    }
+    @objc func goToHome(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homePage = storyboard.instantiateViewController(withIdentifier: "home") as! UINavigationController
+        self.present(homePage, animated: true, completion: nil)
     }
     
     //MARK: Actions

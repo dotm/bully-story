@@ -330,7 +330,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Hw0-0C-4UR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xXG-gG-tmn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="home" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="xXG-gG-tmn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QQn-xP-Nsf">
                         <autoresizingMask key="autoresizingMask"/>
@@ -351,6 +351,6 @@
         <image name="paper" width="3101" height="1030"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gf6-9y-YL6"/>
+        <segue reference="CfQ-tw-L7G"/>
     </inferredMetricsTieBreakers>
 </document>
