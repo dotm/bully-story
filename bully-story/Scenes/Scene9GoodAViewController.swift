@@ -53,6 +53,9 @@ class Scene9GoodAViewController: DialogViewController {
                 [
                     .presentNarration(text: "So rather than adding more problems about bullying, we better be the HERO to step up and help stop bullying!"),
                     ],
+                [
+                    .goToNextScene(viewController: CertificateViewController())
+                ],
                 
                 ]
             )

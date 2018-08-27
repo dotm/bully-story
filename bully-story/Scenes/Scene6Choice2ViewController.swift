@@ -36,7 +36,7 @@ class Scene6Choice2ViewController: DialogViewController {
                 ),
                 ],
             [
-                .presentNarration(text: ".....And Jessica's bully towards Jane is getting worse."),
+                .presentNarration(text: "And Jessica's bully towards Jane is getting worse...."),
                 
                 ],
             
