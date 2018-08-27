@@ -192,7 +192,7 @@ class DialogViewController: UIViewController {
         dialogCharacterName.layer.zPosition = 3
         dialogCharacterName.isUserInteractionEnabled = false
         dialogCharacterName.isScrollEnabled = false
-        dialogCharacterName.text = text
+        dialogCharacterName.text = text.replacingOccurrences(of: "#name", with: username)
         dialogCharacterName.font = characterNameFontStyle
         dialogCharacterName.backgroundColor = defaultBackgroundColor
         dialogCharacterName.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)

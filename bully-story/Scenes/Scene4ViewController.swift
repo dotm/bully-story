@@ -104,7 +104,7 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
             
-    [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene5ViewController()))],
+    [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "", time: "", quote: "\"You have a voice\"", transitionTo: Scene5ViewController()))],
             ])
         
         let startEvent = events.goToStartEvent()

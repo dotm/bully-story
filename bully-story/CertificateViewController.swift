@@ -15,7 +15,7 @@ class CertificateViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(named: "purple-light")
+        view.backgroundColor = UIColor(named: "warnamain")
         setupImageView()
         setupSaveButton()
     }

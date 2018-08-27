@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActOne:" destination="v6b-zB-War" eventType="touchUpInside" id="rp8-Nl-Rhh"/>
+                                    <action selector="gotoActOne:" destination="L0A-8j-GUI" eventType="touchUpInside" id="e2J-nT-J6o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-Ga-LR6">
@@ -56,7 +56,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActTwo:" destination="v6b-zB-War" eventType="touchUpInside" id="y9B-bh-GBA"/>
+                                    <action selector="gotoActTwo:" destination="L0A-8j-GUI" eventType="touchUpInside" id="Y7V-Bq-M21"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-Wb-Mx3">
@@ -72,21 +72,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActThree:" destination="v6b-zB-War" eventType="touchUpInside" id="SZa-ci-GiB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Lv-DvP">
-                                <rect key="frame" x="68" y="583" width="238" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="WVV-Qe-cbW"/>
-                                    <constraint firstAttribute="width" constant="238" id="m3f-8y-2ci"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="BACK" backgroundImage="paper">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="z0p-Rs-2Lf" kind="show" id="gf6-9y-YL6"/>
+                                    <action selector="gotoActThree:" destination="L0A-8j-GUI" eventType="touchUpInside" id="Fp0-b6-77S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy5-v3-xTr">
@@ -100,7 +86,36 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActFour:" destination="v6b-zB-War" eventType="touchUpInside" id="v7C-wn-w9W"/>
+                                    <action selector="gotoActFour:" destination="L0A-8j-GUI" eventType="touchUpInside" id="ynp-Qc-0yR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRt-gD-3fq">
+                                <rect key="frame" x="68" y="583" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="BFM-uc-bgV"/>
+                                    <constraint firstAttribute="height" constant="70" id="X9k-dP-LMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="ACT 5" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoActFive:" destination="L0A-8j-GUI" eventType="touchUpInside" id="bgX-mF-snW"/>
+                                    <action selector="gotoActFour:" destination="L0A-8j-GUI" eventType="touchUpInside" id="cGI-cz-FfT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Lv-DvP">
+                                <rect key="frame" x="68" y="673" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="wyV-Ip-Pzx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="BACK" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoMainMenu:" destination="L0A-8j-GUI" eventType="touchUpInside" id="xnz-qa-tbf"/>
+                                    <segue destination="z0p-Rs-2Lf" kind="show" id="gf6-9y-YL6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,17 +123,21 @@
                         <color key="tintColor" red="0.35895008309999998" green="0.86815326479999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="aK6-eg-6hr" firstAttribute="top" secondItem="vO2-Gv-udr" secondAttribute="bottom" constant="80" id="1no-Gc-NUw"/>
-                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="0LX-Lv-DvP" secondAttribute="trailing" constant="69" id="2On-zO-Ga7"/>
                             <constraint firstItem="vO2-Gv-udr" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="16" id="5SX-Ld-E3R"/>
+                            <constraint firstItem="JRt-gD-3fq" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="8uH-Wt-Ued"/>
+                            <constraint firstItem="JRt-gD-3fq" firstAttribute="top" secondItem="jy5-v3-xTr" secondAttribute="bottom" constant="20" id="Clg-Hw-XDO"/>
                             <constraint firstItem="EDg-Wb-Mx3" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="H8x-KX-o9A"/>
                             <constraint firstItem="jy5-v3-xTr" firstAttribute="top" secondItem="EDg-Wb-Mx3" secondAttribute="bottom" constant="20" id="JSf-DV-O2y"/>
+                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="top" secondItem="JRt-gD-3fq" secondAttribute="bottom" constant="20" id="NWK-Kb-7Wn"/>
+                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="Qqr-7w-uCi"/>
                             <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="Azs-Ga-LR6" secondAttribute="trailing" constant="69" id="RUU-bV-yiR"/>
                             <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="aK6-eg-6hr" secondAttribute="trailing" constant="69" id="Rvv-KM-kAc"/>
                             <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="vO2-Gv-udr" secondAttribute="trailing" constant="16" id="Rzz-fU-S2N"/>
-                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="top" secondItem="jy5-v3-xTr" secondAttribute="bottom" constant="20" id="bRa-5d-AYn"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="0LX-Lv-DvP" secondAttribute="trailing" constant="69" id="Xds-wB-kb7"/>
                             <constraint firstItem="vO2-Gv-udr" firstAttribute="top" secondItem="Jjw-b9-kHj" secondAttribute="top" constant="50" id="cYU-ef-Ge6"/>
-                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="cem-Ij-7Mh"/>
                             <constraint firstItem="jy5-v3-xTr" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="fWF-10-vkg"/>
+                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="top" secondItem="JRt-gD-3fq" secondAttribute="bottom" constant="20" id="keg-O0-Ylk"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="JRt-gD-3fq" secondAttribute="trailing" constant="69" id="nCo-0j-dy8"/>
                             <constraint firstItem="Azs-Ga-LR6" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="nG9-eM-ImK"/>
                             <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="EDg-Wb-Mx3" secondAttribute="trailing" constant="69" id="qUQ-jG-BZn"/>
                             <constraint firstItem="aK6-eg-6hr" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="tfD-3z-PZr"/>
@@ -131,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQh-Ig-SkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="742"/>
+            <point key="canvasLocation" x="764" y="838"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -148,39 +167,61 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gambarteam" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-F4-bB5">
-                                <rect key="frame" x="16" y="237" width="343" height="212"/>
+                                <rect key="frame" x="16" y="211" width="343" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cifran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-us-0sl">
-                                <rect key="frame" x="198" y="480" width="161" height="43"/>
+                                <rect key="frame" x="238" y="422" width="121" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rayo Roderik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-9Y-baC">
-                                <rect key="frame" x="16" y="511" width="119" height="40"/>
+                                <rect key="frame" x="34" y="435" width="119" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omM-5X-4N6">
-                                <rect key="frame" x="131" y="559" width="140" height="40"/>
+                                <rect key="frame" x="135" y="483" width="140" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-RG-Xso">
-                                <rect key="frame" x="16" y="624" width="140" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Felita Tangono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-RG-Xso">
+                                <rect key="frame" x="29" y="528" width="140" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yoshua Elmaryono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-nY-JuA">
+                                <rect key="frame" x="186" y="563" width="165" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WE CARE ABOUT BULLYING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9T-8F-ckG">
+                                <rect key="frame" x="65" y="628" width="241" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AND YOU SHOULD TOO!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FQ-NV-Pe2">
+                                <rect key="frame" x="34" y="688" width="319" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.41176470588235292" green="0.62352941176470589" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GWt-zK-Srg" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="16" id="9Gp-Nh-hom"/>
                             <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="GWt-zK-Srg" secondAttribute="trailing" constant="16" id="Yaw-ne-WoN"/>
