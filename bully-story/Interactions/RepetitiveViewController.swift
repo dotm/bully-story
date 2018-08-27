@@ -80,7 +80,9 @@ class RepetitiveViewController: UIViewController {
                 imageName = "puzzle4.png"
             }
             
-            let randomNum = (drand48() * 2) - 1
+//            let randomNum = (drand48() * 2) - 1
+            let randomNum = Float.pi * (Float(arc4random_uniform(50))/100) 
+            print(randomNum)
             
             let image = UIImage(named: imageName)
             let imageView = UIImageView(image: image!)
