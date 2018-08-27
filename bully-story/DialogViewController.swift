@@ -101,6 +101,8 @@ class DialogViewController: UIViewController {
             goToNextScene(viewController)
         case let .presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText):
             presentDialog(characterName, characterNamePosition, characterImage, characterImagePosition, dialogText)
+        case let .presentMonolog(text):
+            presentMonolog(text)
         case let .presentNarration(text):
             presentNarration(text)
         case let .playBGM(filename):
@@ -137,6 +139,11 @@ class DialogViewController: UIViewController {
         setupDialogTextView(text: dialogText)
         setupCharacterName(text: characterName, position: characterNamePosition)
         setupCharacterImage(imageName: characterImage, position: characterImagePosition)
+        setupTapGestureRecognizer_forDialog()
+    }
+    private func presentMonolog(_ text: String){
+        emptyDialogContainer()
+        setupMonologTextView(text: text)
         setupTapGestureRecognizer_forDialog()
     }
     private func presentNarration(_ text: String){
@@ -303,6 +310,21 @@ class DialogViewController: UIViewController {
         
         return label
     }
+    private func setupNarrationTextView(text: String) {
+        let text = createDialogText(text: text)
+        text.textAlignment = .center
+        text.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
+        text.layer.borderColor = UIColor(hex: "979797").cgColor
+        text.font = UIFont(name: "PTSans-Italic", size: 22)
+        view.addSubview(text)
+        
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
+        text.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        text.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        setupArrowDownIcon(parent: text)
+    }
     private func setupDialogTextView(text: String) {
         let dialogText = createDialogText(text: text)
         dialogContainer.addSubview(dialogText)
@@ -315,21 +337,21 @@ class DialogViewController: UIViewController {
         
         setupArrowDownIcon(parent: dialogText)
     }
-    private func setupNarrationTextView(text: String) {
-        let narrationText = createDialogText(text: text)
-        narrationText.textAlignment = .center
-        narrationText.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
-        narrationText.layer.borderColor = UIColor(hex: "979797").cgColor
-        narrationText.font = UIFont(name: "PTSans-Italic", size: 22)
-        dialogContainer.addSubview(narrationText)
+    private func setupMonologTextView(text: String) {
+        let text = createDialogText(text: text)
+        text.textAlignment = .center
+        text.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
+        text.layer.borderColor = UIColor(hex: "979797").cgColor
+        text.font = UIFont(name: "PTSans-Italic", size: 22)
+        dialogContainer.addSubview(text)
         
-        narrationText.translatesAutoresizingMaskIntoConstraints = false
-        narrationText.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
-        narrationText.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
-        narrationText.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
-        narrationText.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -3*dialogContainerPadding).isActive = true
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.leadingAnchor.constraint(equalTo: dialogContainer.leadingAnchor, constant: dialogContainerPadding).isActive = true
+        text.trailingAnchor.constraint(equalTo: dialogContainer.trailingAnchor, constant: -dialogContainerPadding).isActive = true
+        text.topAnchor.constraint(equalTo: dialogContainer.topAnchor, constant: dialogContainerPadding).isActive = true
+        text.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -3*dialogContainerPadding).isActive = true
         
-        setupArrowDownIcon(parent: narrationText)
+        setupArrowDownIcon(parent: text)
     }
     private func setupArrowDownIcon(parent: UIView){
         let arrowDownIcon = UIImageView()

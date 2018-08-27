@@ -69,7 +69,7 @@ class Scene4ViewController: DialogViewController {
                 ],
             
             [
-                .presentNarration(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
+                .presentMonolog(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
                 ],
             [
                 .playSFX(filename: "Scene4SFXWhat", delay: 1.0),

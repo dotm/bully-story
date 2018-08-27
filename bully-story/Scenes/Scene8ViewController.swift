@@ -86,7 +86,7 @@ class Scene8ViewController: DialogViewController {
                     dialogText: "Why don't you try to open it yourself? Bye bye I'm leaving!"
                 ),
                 ],
-            [.presentNarration(text: "I was just about to go home when i heard this conversation. I also heard Jane was screaming for help")],
+            [.presentMonolog(text: "I was just about to go home when i heard this conversation. I also heard Jane was screaming for help")],
             
             [.playSFX(filename: "Scene8SFXDoor1", delay: 0.0),
                 .presentDialog(

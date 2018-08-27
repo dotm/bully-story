@@ -17,7 +17,7 @@ class Choice2ViewController: DialogViewController {
             
             [
                  .setBackgroundImage(imageName: "classroom"),
-                 .presentNarration(text: "You chose to ignore Jane. \n She's then preparing her things to study and you're preparing yours too."),
+                 .presentMonolog(text: "You chose to ignore Jane. \n She's then preparing her things to study and you're preparing yours too."),
                 
                 ],
             [
