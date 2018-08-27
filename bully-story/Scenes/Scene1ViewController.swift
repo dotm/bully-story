@@ -19,16 +19,16 @@ class Scene1ViewController: DialogViewController {
                 .playBGM(filename: "Scene1BGMusic"),
                 .playSFX(filename: "Scene1Bell", delay: 2.0),
                 
-                .presentNarration(text: "(Bell Rang) First day of school today. I came to the class and pick any empty seat. After a while, the teacher came in and i saw a girl walking behind her. "),
+                .presentMonolog(text: "(Bell Rang) First day of school today. I came to the class and pick any empty seat. After a while, the teacher came in and i saw a girl walking behind her. "),
                 ],
             [
-                .presentNarration(text: "Looks like it’s the new girl. She has a very pretty face and very charming."),
+                .presentMonolog(text: "Looks like it’s the new girl. She has a very pretty face and very charming."),
                 ],
             [
-                    .presentNarration(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys."),
+                    .presentMonolog(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys."),
                     ],
             [
-                .presentNarration(text: "She chose to sit beside me."),
+                .presentMonolog(text: "She chose to sit beside me."),
                 ],
             [
                         .playBGM(filename: "MusicScene1"),

@@ -70,6 +70,7 @@ enum StoryAction {
         characterImagePosition: DialogPosition,
         dialogText: String
     )
+    case presentMonolog(text: String)
     case presentNarration(text: String)
     case presentChoices(choices: Choices)
     case goToNextScene(viewController: UIViewController)

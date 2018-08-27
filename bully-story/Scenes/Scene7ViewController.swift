@@ -94,7 +94,7 @@ class Scene7ViewController: DialogViewController {
                 
                 ],
             [
-            .presentNarration(text: "I'm pretty sure it's Jessica who is behind this. So I decided to.... ")],
+            .presentMonolog(text: "I'm pretty sure it's Jessica who is behind this. So I decided to.... ")],
             [
                 .presentChoices(choices: (
                     title: "What would you do?",

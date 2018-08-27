@@ -18,7 +18,7 @@ class Scene2ViewController: DialogViewController {
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
                 .setBackgroundImage(imageName : "halaman"),
-                .presentNarration(text: "School is finally over. I see Jessica came up to Jane to ask her to play with her gang. "),
+                .presentMonolog(text: "School is finally over. I see Jessica came up to Jane to ask her to play with her gang. "),
                 
                 ],
             [
@@ -82,11 +82,11 @@ class Scene2ViewController: DialogViewController {
                 ],
             [
                 .playBGM(filename: "Scene2Narration(intense)"),
-                .presentNarration(text: "I can see from the look on Jessica's face that she is pissed because no one ever says no to her."),
+                .presentMonolog(text: "I can see from the look on Jessica's face that she is pissed because no one ever says no to her."),
                 
                 ],
             [
-                .presentNarration(text: "All girls want to befriend with her because of her popularity."),
+                .presentMonolog(text: "All girls want to befriend with her because of her popularity."),
                 
                 ],
             [
@@ -99,7 +99,7 @@ class Scene2ViewController: DialogViewController {
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Morning", quote: "\"Stand Up and Speak Out!\"", transitionTo: Scene3ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "", quote: "\"Stand Up and Speak Out!\"", transitionTo: Scene3ViewController()))],
             
             
             ])

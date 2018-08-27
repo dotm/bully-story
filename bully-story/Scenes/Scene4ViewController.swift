@@ -69,7 +69,7 @@ class Scene4ViewController: DialogViewController {
                 ],
             
             [
-                .presentNarration(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
+                .presentMonolog(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
                 ],
             [
                 .playSFX(filename: "Scene4SFXWhat", delay: 1.0),
@@ -104,7 +104,7 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
             
-    [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene5ViewController()))],
+    [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "", time: "", quote: "\"You have a voice\"", transitionTo: Scene5ViewController()))],
             ])
         
         let startEvent = events.goToStartEvent()

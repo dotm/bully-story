@@ -19,7 +19,7 @@ class Scene3ViewController: DialogViewController {
                 .playBGM(filename: "Scene1BGMusic"),
                 .playSFX(filename: "Scene1Bell", delay: 3.0),
                 
-                .presentNarration(text: "The next morning when i arrived, i saw Lucas, one of our classmate come by to Jane’s seat and is talking to Jane. They both look so in tune. They talked and they talked.."),
+                .presentMonolog(text: "The next morning when i arrived, i saw Lucas, one of our classmate come by to Jane’s seat and is talking to Jane. They both look so in tune. They talked and they talked.."),
                 ],
             [
             .playBGM(filename: "Scene3BGMusic"),
@@ -97,10 +97,10 @@ class Scene3ViewController: DialogViewController {
                 ),
                 ],
             [
-             .presentNarration(text: "I look back to take a peek at Jessica."),
+             .presentMonolog(text: "I look back to take a peek at Jessica."),
              ],
             [
-                .presentNarration(text: "I can see that she is pissed because the whole class know that Lucas has been her crush since 2 years ago."),
+                .presentMonolog(text: "I can see that she is pissed because the whole class know that Lucas has been her crush since 2 years ago."),
                 ],
             [
                 .presentDialog(
@@ -111,7 +111,7 @@ class Scene3ViewController: DialogViewController {
                     dialogText: "Lucas is talking to her now?! Hmmph!"
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "", time: "Afternoon", quote: "\"Strong people stand up from themselves. But the strongest people stand up for others\"", transitionTo: Scene4ViewController()))],
+            [.goToNextScene(viewController: Scene4ViewController())],
             ])
         let startEvent = events.goToStartEvent()
         

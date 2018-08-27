@@ -63,19 +63,21 @@ class Scene8Choice2ViewController: DialogViewController {
                     dialogText: "Maybe i'm better off from this cruel world..."
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "", subtitle: "The Ending", time: "", quote: "\"Don't be afraid to speak up!\"", transitionTo: Scene9BadViewController()))],
+//            [.goToNextScene(viewController: ActViewController(title: "", subtitle: "The Ending", time: "", quote: "\"Don't be afraid to speak up!\"", transitionTo: Scene9BadViewController()))],
             
             ]
         )
         
-        //        if empathymeter > 80 {
-        //            events = Events(events: [
-        //                ])
-        //        } else {
-        //
-        //            events = Events(events: [
-        //                ])
-        //        }
+                if empathymeter >= 2 {
+                    events = Events(events: [
+                        [.goToNextScene(viewController: Scene9BadViewController())],
+                        ])
+                } else {
+        
+                    events = Events(events: [
+                        [.goToNextScene(viewController: Scene9GoodViewController())],
+                        ])
+                }
         
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

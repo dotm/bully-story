@@ -17,7 +17,7 @@ class Choice2ViewController: DialogViewController {
             
             [
                  .setBackgroundImage(imageName: "classroom"),
-                 .presentNarration(text: "You chose to ignore Jane. \n She's then preparing her things to study and you're preparing yours too."),
+                 .presentMonolog(text: "You chose to ignore Jane. \n She's then preparing her things to study and you're preparing yours too."),
                 
                 ],
             [
@@ -84,7 +84,7 @@ class Choice2ViewController: DialogViewController {
                     dialogText: "Okay class dismissed! See you tomorrow everyone!"
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 1", subtitle: "", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene2ViewController()))],
+            [.goToNextScene(viewController: Scene2ViewController())],
             ]
         )
         let startEvent = events.goToStartEvent()

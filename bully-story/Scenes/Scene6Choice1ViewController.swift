@@ -17,7 +17,7 @@ class Scene6Choice1ViewController: DialogViewController {
                 
                 .playBGM(filename: "RightChoiceBGM"),
                 .setBackgroundImage(imageName : "classroom"),
-                .presentNarration(text: "I couldn't stand anymore seeing Jane is being treated like that by Jessica, so i decided to help her to clean off her table."),
+                .presentMonolog(text: "I couldn't stand anymore seeing Jane is being treated like that by Jessica, so i decided to help her to clean off her table."),
                 ],
             [
                 .presentDialog(
@@ -32,7 +32,7 @@ class Scene6Choice1ViewController: DialogViewController {
                 .playBGM(filename:"Scene4BGMusicAngry"),
                 
                 .setBackgroundImage(imageName : "halaman"),
-                .presentNarration(text: "But after i helped her that day, Jessica blocked me when I was walking home."),
+                .presentMonolog(text: "But after i helped her that day, Jessica blocked me when I was walking home."),
                 ],
             [
                 .presentDialog(
@@ -53,10 +53,10 @@ class Scene6Choice1ViewController: DialogViewController {
                 ),
                 ],
             [
-                .presentNarration(text: "I was scared because Jessica has her power and she can really make me as her next target."),
+                .presentMonolog(text: "I was scared because Jessica has her power and she can really make me as her next target."),
                 ],
             [
-                .presentNarration(text: "So i decided to back down... And Jessica's bully towards Jane is getting worse."),
+                .presentMonolog(text: "So i decided to back down... And Jessica's bully towards Jane is getting worse."),
                 
                 ],
             

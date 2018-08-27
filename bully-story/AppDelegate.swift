@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.isStatusBarHidden = true
         
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = Scene1ViewController()
+//        window?.makeKeyAndVisible()
+        
         return true
     }
 

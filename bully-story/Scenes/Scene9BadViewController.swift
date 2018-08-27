@@ -108,16 +108,16 @@ class Scene9BadViewController: DialogViewController {
                 ),
                 ],
             [
-                .presentNarration(text: "Jessica then being dealt to the Headmaster and got kicked out from the school."),
+                .presentMonolog(text: "Jessica then being dealt to the Headmaster and got kicked out from the school."),
                 ],
             [
-                .presentNarration(text: "Ever since then, Jessica is never shown to bully the others. She really regrets it that her actions cause someone else to took their own life."),
+                .presentMonolog(text: "Ever since then, Jessica is never shown to bully the others. She really regrets it that her actions cause someone else to took their own life."),
                 ],
             [
-                .presentNarration(text: "But still, no matter how big her regrets are, Jane is never coming back."),
+                .presentMonolog(text: "But still, no matter how big her regrets are, Jane is never coming back."),
                 ],
             [
-                .presentNarration(text: "And now she's been living with her regrets ever since...."),
+                .presentMonolog(text: "And she's been living with her regrets ever since...."),
                 ],
             ]
         )
