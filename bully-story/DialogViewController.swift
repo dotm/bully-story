@@ -46,6 +46,7 @@ class DialogViewController: UIViewController {
     let borderWidth = CGFloat(1)
     let dialogContainerPadding = CGFloat(10)
     let STACK_VIEW_TAG = 97584657
+    let NARRATION_TAG = 65389
     
     var dialogTextFontStyle: UIFont {return UIFont(name: "PT Sans", size: 20)! }
     var characterNameFontStyle: UIFont {return UIFont(name: "PTSans-Bold", size: 22)!}
@@ -163,7 +164,7 @@ class DialogViewController: UIViewController {
             subview.removeFromSuperview()
         }
         view.subviews.forEach { (subview) in
-            if subview.tag == STACK_VIEW_TAG {
+            if subview.tag == STACK_VIEW_TAG || subview.tag == NARRATION_TAG {
                 subview.removeFromSuperview()
             }
         }
@@ -316,14 +317,14 @@ class DialogViewController: UIViewController {
         text.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
         text.layer.borderColor = UIColor(hex: "979797").cgColor
         text.font = UIFont(name: "PTSans-Italic", size: 22)
+        text.tag = NARRATION_TAG
         view.addSubview(text)
         
         text.translatesAutoresizingMaskIntoConstraints = false
         text.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
+        text.heightAnchor.constraint(equalToConstant: 200).isActive = true
         text.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         text.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        setupArrowDownIcon(parent: text)
     }
     private func setupDialogTextView(text: String) {
         let dialogText = createDialogText(text: text)
