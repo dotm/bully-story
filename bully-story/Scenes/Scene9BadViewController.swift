@@ -117,7 +117,7 @@ class Scene9BadViewController: DialogViewController {
                 .presentNarration(text: "But still, no matter how big her regrets are, Jane is never coming back."),
                 ],
             [
-                .presentNarration(text: "And now she's been living with her regrets ever since...."),
+                .presentNarration(text: "And she's been living with her regrets ever since...."),
                 ],
             ]
         )
