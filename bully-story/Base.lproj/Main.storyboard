@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.41960784313725491" green="0.63529411764705879" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.63529411764705879" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.35895008309999998" green="0.86815326479999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="aK6-eg-6hr" firstAttribute="top" secondItem="vO2-Gv-udr" secondAttribute="bottom" constant="80" id="1no-Gc-NUw"/>
@@ -141,18 +141,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qcF-hm-2hZ">
-                                <rect key="frame" x="128" y="250" width="118" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="developers behind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-zK-Srg">
+                                <rect key="frame" x="16" y="94" width="343" height="98"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gambarteam" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-F4-bB5">
+                                <rect key="frame" x="16" y="237" width="343" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cifran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-us-0sl">
+                                <rect key="frame" x="198" y="480" width="161" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rayo Roderik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-9Y-baC">
+                                <rect key="frame" x="16" y="511" width="119" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omM-5X-4N6">
+                                <rect key="frame" x="131" y="559" width="140" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-RG-Xso">
+                                <rect key="frame" x="16" y="624" width="140" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.41176470588235292" green="0.62352941176470589" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GWt-zK-Srg" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="16" id="9Gp-Nh-hom"/>
+                            <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="GWt-zK-Srg" secondAttribute="trailing" constant="16" id="Yaw-ne-WoN"/>
+                            <constraint firstItem="GWt-zK-Srg" firstAttribute="top" secondItem="BhM-Oy-jqR" secondAttribute="top" constant="50" id="w3A-VC-c52"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BhM-Oy-jqR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2Z-2T-K98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="742"/>
+            <point key="canvasLocation" x="-178.40000000000001" y="741.87192118226608"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="J3y-ST-L20">
@@ -162,14 +201,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
-                                <rect key="frame" x="68" y="403" width="238" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
+                                <rect key="frame" x="68" y="405" width="238" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="h9D-3Y-gFw"/>
                                     <constraint firstAttribute="height" constant="70" id="yhG-y0-ToS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="SETTINGS" backgroundImage="paper">
+                                <state key="normal" title="ABOUT US" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -203,8 +242,8 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-EO-Od8">
-                                <rect key="frame" x="68" y="313" width="238" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-EO-Od8">
+                                <rect key="frame" x="68" y="315" width="238" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="1gg-bF-rTN"/>
                                     <constraint firstAttribute="height" constant="70" id="Ga2-Z2-wH0"/>
@@ -266,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gambarteam" width="1086" height="724"/>
         <image name="menuJane" width="374" height="679"/>
         <image name="paper" width="3101" height="1030"/>
     </resources>
