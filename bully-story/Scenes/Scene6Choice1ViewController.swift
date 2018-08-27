@@ -14,11 +14,16 @@ class Scene6Choice1ViewController: DialogViewController {
         
         events = Events(events: [
             [
-                
                 .playBGM(filename: "RightChoiceBGM"),
                 .setBackgroundImage(imageName : "classroom"),
-                .presentMonolog(text: "I couldn't stand anymore seeing Jane is being treated like that by Jessica, so i decided to help her to clean off her table."),
+                .presentNarration(text: "Great Choice! You chose to help her to clean off her table! Keep doing small action like this and you can stop Jessica from bullying Jane!"),
                 ],
+//            [
+//                
+//                .playBGM(filename: "RightChoiceBGM"),
+//                .setBackgroundImage(imageName : "classroom"),
+//                .presentMonolog(text: "I couldn't stand anymore seeing Jane is being treated like that by Jessica, so i decided to help her to clean off her table."),
+//                ],
             [
                 .presentDialog(
                     characterName: "Jane",
