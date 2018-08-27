@@ -77,10 +77,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         })
         
     }
-    @IBAction func continueGame(_ sender: UIButton) {
-        loadGlobalData()
-    }
-    @IBAction func gotoContinue(_ sender: Any) {
+    @IBAction func gotoContinue(_ sender: UIButton) {
         bgAudio.stop()
     }
     

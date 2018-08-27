@@ -33,6 +33,7 @@
 		37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9153E211C09300076AFFB /* bully_story.xcdatamodeld */; };
 		37A91545211C09310076AFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A91543211C09310076AFFB /* LaunchScreen.storyboard */; };
 		37A91550211C09310076AFFB /* bully_storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9154F211C09310076AFFB /* bully_storyTests.swift */; };
+		37F43C7C213391CC006BAB09 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F43C7A213391CC006BAB09 /* CertificateViewController.swift */; };
 		8509F62621281C9300362053 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F60D21281C9300362053 /* Global.swift */; };
 		8509F62721281C9300362053 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F60E21281C9300362053 /* PuzzleViewController.xib */; };
 		8509F62821281C9300362053 /* ActViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8509F60F21281C9300362053 /* ActViewController.xib */; };
@@ -116,6 +117,7 @@
 		37A9154B211C09310076AFFB /* bully-storyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bully-storyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9154F211C09310076AFFB /* bully_storyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bully_storyTests.swift; sourceTree = "<group>"; };
 		37A91551211C09310076AFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37F43C7A213391CC006BAB09 /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		8509F60D21281C9300362053 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		8509F60E21281C9300362053 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
 		8509F60F21281C9300362053 /* ActViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActViewController.xib; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				8509F60D21281C9300362053 /* Global.swift */,
 				853A51162129273C00388644 /* TypeWriter.swift */,
 				8509F61D21281C9300362053 /* Scenes */,
+				37F43C7A213391CC006BAB09 /* CertificateViewController.swift */,
 				8509F61B21281C9300362053 /* wordList.txt */,
 				A3DD25812132AC2A00DCE804 /* questionList.txt */,
 				37A9153B211C09300076AFFB /* Main.storyboard */,
@@ -427,6 +430,7 @@
 				2602F8A4212A7FCC00A5D893 /* Scene5ViewController.swift in Sources */,
 				8509F63321281C9300362053 /* Events.swift in Sources */,
 				8509F63921281C9300362053 /* Scene1ViewController.swift in Sources */,
+				37F43C7C213391CC006BAB09 /* CertificateViewController.swift in Sources */,
 				A33F7BA4212FA28600523E4D /* RepetitiveViewController.swift in Sources */,
 				85EDA308212D23AB00921363 /* FindItemViewController.swift in Sources */,
 				8509F62C21281C9300362053 /* ActViewController.swift in Sources */,
