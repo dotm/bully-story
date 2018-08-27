@@ -111,7 +111,7 @@ class Scene3ViewController: DialogViewController {
                     dialogText: "Lucas is talking to her now?! Hmmph!"
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "", time: "Afternoon", quote: "\"Strong people stand up from themselves. But the strongest people stand up for others\"", transitionTo: Scene4ViewController()))],
+            [.goToNextScene(viewController: Scene4ViewController())],
             ])
         let startEvent = events.goToStartEvent()
         
