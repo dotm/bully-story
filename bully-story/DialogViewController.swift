@@ -94,6 +94,8 @@ class DialogViewController: UIViewController {
     @objc func goToHome(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let homePage = storyboard.instantiateViewController(withIdentifier: "home") as! UINavigationController
+        DialogAudioPlayer.stopBackgroundMusic()
+        DialogAudioPlayer.stopSoundEffect()
         self.present(homePage, animated: true, completion: nil)
     }
     

@@ -79,8 +79,10 @@ class FindItemViewController: UIViewController {
             item.isUserInteractionEnabled = true
             item.addGestureRecognizer(tap)
         }
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(userTapLostBook(_:)))
         let tap = UITapGestureRecognizer(target: self, action: #selector(userTapLostBook(_:)))
         imageView.lostBook.isUserInteractionEnabled = true
+        imageView.lostBook.addGestureRecognizer(pan)
         imageView.lostBook.addGestureRecognizer(tap)
         
 //        lostItemImageView = UIImageView(image: bookImg)
@@ -191,79 +193,110 @@ class FindItemViewController: UIViewController {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
     
-    @objc func userTapLostBook(_ gesture: UITapGestureRecognizer) {
-        let copyImage = UIImageView()
-        let bookImg = Helper().resizeImage(image: UIImage(named: "find_book")!, targetSize: CGSize(width: 100, height: 100))
-        imageView.lostBook.isHidden = true
-        copyImage.image = bookImg
-        copyImage.frame = scrollView.convert(imageView.lostBook.frame, to: self.view)
-        
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(userGiveBookToJane(_:)))
-        copyImage.isUserInteractionEnabled = true
-        copyImage.addGestureRecognizer(panGesture)
-        
-        
-        self.view.addSubview(copyImage)
-        
-        UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseOut, animations: {
-            copyImage.center = self.lostItemShadowImageView.center
-        })
-        self.scrollView.isUserInteractionEnabled = false
-    }
+    private var canPickBook = true
     
-    @objc func userGiveBookToJane(_ gesture: UIPanGestureRecognizer) {
-        self.lostItemShadowImageView.isHidden = true
-        guard let book = gesture.view else { return }
-        
-        let oldCenterY = book.center.y
-        book.center = CGPoint(x: book.center.x, y: gesture.location(in: self.view).y)
-        
-        let transitionY = (oldCenterY - book.center.y) * 2
-        
-        closingView1.frame = CGRect(x: 0,
-                               y: 0,
-                               width: closingView1.frame.width,
-                               height: closingView1.frame.height + transitionY)
-        closingView2.frame = CGRect(x: 0,
-                               y: closingView2.frame.origin.y - transitionY,
-                               width: closingView2.frame.width,
-                               height: closingView2.frame.height + transitionY)
-        
-        var progress = closingView1.frame.height / scrollView.frame.height
-        progress = progress > 1 ? 1 : progress
-        progress = progress < 0 ? 0 : progress
-        
-        switch progress {
-        case 0 ..< 0.01:
-            janeImageView.alpha = 0
-        case 0.01 ..< 0.4 :
-            janeImageView.alpha = progress*2 + 0.1
-        case 0.4 ..< 0.5:
-            janeImageView.alpha = 1
-            janeImageView.image = UIImage(named: "Jane_Sad2")
-        case 0.6 ..< 0.7:
-            janeImageView.image = UIImage(named: "Jane_Sad3")
-        case 0.7 ..< 0.8:
-            janeImageView.image = UIImage(named: "Jane_Shock")
-        case 0.8 ..< 1:
-            janeImageView.image = UIImage(named: "Jane_Smile")
-        case 1:
-            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
-                book.center = self.janeImageView.center
-            }) { (_) in
-                let transition = CATransition()
-                transition.duration = 1
-                transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-                transition.type = kCATransitionPush
-                transition.subtype = kCATransitionFromRight
-                self.view.window!.layer.add(transition, forKey: nil)
-                self.present(self.nextDialogVC!, animated: false)
+    @objc func userTapLostBook(_ gesture: UITapGestureRecognizer) {
+        if canPickBook {
+            canPickBook = false
+            let copyImage = UIImageView()
+            let bookImg = Helper().resizeImage(image: UIImage(named: "find_book")!, targetSize: CGSize(width: 100, height: 100))
+            imageView.lostBook.isHidden = true
+            copyImage.image = bookImg
+            copyImage.frame = scrollView.convert(imageView.lostBook.frame, to: self.view)
+            
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(userGiveBookToJane(_:)))
+            copyImage.isUserInteractionEnabled = true
+            copyImage.addGestureRecognizer(panGesture)
+            
+            self.view.addSubview(copyImage)
+            self.scrollView.isUserInteractionEnabled = false
+            
+            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseOut, animations: {
+                copyImage.center = self.lostItemShadowImageView.center
+            }) { _ in
+    //            self.lostItemShadowImageView.isHidden = true
+                self.view.bringSubview(toFront: self.lostItemShadowImageView)
+                self.view.bringSubview(toFront: copyImage)
+                self.lostItemShadowImageView.alpha = 1
+                
+                self.shadowTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
+                    UIView.animate(withDuration: 1, animations: {
+                        self.lostItemShadowImageView.transform = .init(translationX: 0, y: -50)
+                        self.lostItemShadowImageView.alpha = 0.5
+                    }) { _ in
+                        self.lostItemShadowImageView.transform = .identity
+                        self.lostItemShadowImageView.alpha = 1
+                    }
+                })
             }
-        default:
-            break
         }
     }
     
+    private var shadowTimer: Timer?
+
+    @objc func userGiveBookToJane(_ gesture: UIPanGestureRecognizer) {
+        shadowTimer?.invalidate()
+        lostItemShadowImageView.alpha = 0
+        if canMove {
+            guard let book = gesture.view else { return }
+            book.layer.removeAllAnimations()
+            
+            let oldCenterY = book.center.y
+            book.center = CGPoint(x: book.center.x, y: gesture.location(in: self.view).y)
+            
+            let transitionY = (oldCenterY - book.center.y) * 2
+            
+            closingView1.frame = CGRect(x: 0,
+                                   y: 0,
+                                   width: closingView1.frame.width,
+                                   height: closingView1.frame.height + transitionY)
+            closingView2.frame = CGRect(x: 0,
+                                   y: closingView2.frame.origin.y - transitionY,
+                                   width: closingView2.frame.width,
+                                   height: closingView2.frame.height + transitionY)
+            
+            var progress = closingView1.frame.height / scrollView.frame.height
+            progress = progress > 1 ? 1 : progress
+            progress = progress < 0 ? 0 : progress
+            
+            switch progress {
+            case 0 ..< 0.01:
+                janeImageView.alpha = 0
+            case 0.01 ..< 0.3 :
+                janeImageView.alpha = progress*2 + 0.1
+            case 0.3 ..< 0.4:
+                janeImageView.alpha = 1
+                janeImageView.image = UIImage(named: "Jane_Sad2")
+            case 0.4 ..< 0.5:
+                janeImageView.image = UIImage(named: "Jane_Sad3")
+            case 0.5 ..< 0.6:
+                janeImageView.image = UIImage(named: "Jane_Shock")
+            case 0.6 ..< 0.8:
+                janeImageView.image = UIImage(named: "Jane_Smile")
+            default:
+                break
+            }
+            if self.janeImageView.frame.intersects(book.frame) {
+                canMove = false
+                UIView.animate(withDuration: 2, delay: 0, options: .curveEaseInOut, animations: {
+                    book.center = self.janeImageView.center
+                    book.alpha = 0
+                    self.janeImageView.image = UIImage(named: "Jane_Smile2")
+                }) { (_) in
+                    let transition = CATransition()
+                    transition.duration = 1
+                    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+                    transition.type = kCATransitionPush
+                    transition.subtype = kCATransitionFromRight
+                    self.view.window!.layer.add(transition, forKey: nil)
+                    self.present(self.nextDialogVC!, animated: false)
+                }
+            }
+        }
+        
+    }
+    
+    var canMove = true
     
     
 //    @objc func lostItemFound(_ gesture: UITapGestureRecognizer) {
