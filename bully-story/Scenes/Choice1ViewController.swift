@@ -33,7 +33,16 @@ class Choice1ViewController: DialogViewController {
                     characterImagePosition: .left,
                     dialogText: "Hello, #name. This school looks really nice. Looking forward to more days here!"
                 ),
-            ],[
+            ],
+              [
+                .presentDialog(
+                    characterName: "#name",
+                    characterNamePosition: .right,
+                    characterImage: "",
+                    characterImagePosition: .right,
+                    dialogText: "Welcome here Jane. I hope you enjoy it here!"
+                ),
+                ],[
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .left,
@@ -47,7 +56,7 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Teacher",
                     characterImagePosition: .right,
-                    dialogText: "Hello everyone. Let's start our lesson today! "
+                    dialogText: "Hello everyone. Let's start our lesson!"
                 ),
             ],[
                 .presentDialog(
@@ -55,9 +64,17 @@ class Choice1ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Teacher",
                     characterImagePosition: .right,
-                    dialogText: "Open your book at page 10 and do the little quiz there."
+                    dialogText: "We're going to learn about Science today."
                 ),
-                ],[   .stopBGM(),
+                ],[
+                    .presentDialog(
+                        characterName: "Teacher",
+                        characterNamePosition: .right,
+                        characterImage: "Teacher",
+                        characterImagePosition: .right,
+                        dialogText: "Open your book at page 10 and do the little quiz there."
+                    ),
+                    ],[   .stopBGM(),
                       .goToNextScene(viewController: Helper().getHangmanVC(dialogVC: self))],
                   
                   [
@@ -67,7 +84,7 @@ class Choice1ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jane_Smile3",
                         characterImagePosition: .left,
-                        dialogText: "Yay! I got 100! How about you?"
+                        dialogText: "Yay! I got 100! How about you, #name?"
                     ),
                     ],
                   [
@@ -98,16 +115,16 @@ class Choice1ViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "Jane_Smile2",
                         characterImagePosition: .left,
-                        dialogText: "Either way it's okay! You've done a good job!"
+                        dialogText: "That's great! You've done a good job!"
                     ),
                     ],
                   [
                     .presentDialog(
                         characterName: "Jessica",
-                        characterNamePosition: .left,
+                        characterNamePosition: .right,
                         characterImage: "Jessica_Angry",
-                        characterImagePosition: .left,
-                        dialogText: "....She seems smart too."
+                        characterImagePosition: .right,
+                        dialogText: "....That new girl seems smart too."
                     ),
                     ],
                   [
@@ -119,7 +136,7 @@ class Choice1ViewController: DialogViewController {
                         dialogText: "Okay class dismissed! See you tomorrow everyone!"
                     ),
                     ],
-                  [.goToNextScene(viewController: ActViewController(title: "Day 1", subtitle: "Introduction", time: "Noon", quote: "\"You have a voice\"", transitionTo: Scene2ViewController()))],
+                  [.goToNextScene(viewController: ActViewController(title: "Day 1", subtitle: "", time: "Afternoon", quote: "\"You have a voice\"", transitionTo: Scene2ViewController()))],
                   ]
         )
         let startEvent = events.goToStartEvent()

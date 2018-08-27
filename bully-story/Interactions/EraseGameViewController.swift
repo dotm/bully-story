@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
+
+private var bgAudio : AVAudioPlayer!
 
 class EraseGameViewController: UIViewController {
     var swiped = false
@@ -36,8 +39,33 @@ class EraseGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let backgroundMusicData = NSDataAsset(name: "EraseGameBGM")?.data else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. */
+            bgAudio = try AVAudioPlayer(data: backgroundMusicData, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        bgAudio.numberOfLoops = -1
+        bgAudio.play()
         strokeImageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         backgroundImageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        let duration = 1.0
+        bgAudio.setVolume(0, fadeDuration: duration)
+        Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { (_) in
+            bgAudio.stop()
+        }
+        
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
@@ -98,6 +126,9 @@ class EraseGameViewController: UIViewController {
             transition.subtype = kCATransitionFromRight
             self.view.window!.layer.add(transition, forKey: nil)
             self.present(self.nextDialogVC!, animated: false, completion: nil)
+            
+            
+            
             
 //            let transition: CATransition = CATransition()
 //            transition.duration = 1

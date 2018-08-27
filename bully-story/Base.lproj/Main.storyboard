@@ -29,7 +29,125 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631.2" y="36.945812807881772"/>
+            <point key="canvasLocation" x="1564" y="37"/>
+        </scene>
+        <!--Continue View Controller-->
+        <scene sceneID="PZD-YI-CV6">
+            <objects>
+                <viewController id="L0A-8j-GUI" customClass="ContinueViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v6b-zB-War" customClass="ContinueViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO2-Gv-udr">
+                                <rect key="frame" x="16" y="94" width="343" height="49"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK6-eg-6hr">
+                                <rect key="frame" x="68" y="223" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0gQ-Rq-7io"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="HpL-9T-nZP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="bvT-9a-BZc"/>
+                                    <constraint firstAttribute="width" constant="238" id="jeo-M8-EHt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="ACT 1" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoActOne:" destination="v6b-zB-War" eventType="touchUpInside" id="rp8-Nl-Rhh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-Ga-LR6">
+                                <rect key="frame" x="68" y="313" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5bn-xb-Aob"/>
+                                    <constraint firstAttribute="width" constant="238" id="niR-9k-s4s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="ACT 2" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoActTwo:" destination="v6b-zB-War" eventType="touchUpInside" id="y9B-bh-GBA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-Wb-Mx3">
+                                <rect key="frame" x="68" y="403" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="9xF-Rx-j97"/>
+                                    <constraint firstAttribute="width" constant="238" id="Us5-Kg-GNo"/>
+                                    <constraint firstAttribute="height" constant="70" id="j4J-Q5-mDH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="pKe-Xe-MPg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="ACT 3" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoActThree:" destination="v6b-zB-War" eventType="touchUpInside" id="SZa-ci-GiB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Lv-DvP">
+                                <rect key="frame" x="68" y="583" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="WVV-Qe-cbW"/>
+                                    <constraint firstAttribute="width" constant="238" id="m3f-8y-2ci"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="BACK" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="z0p-Rs-2Lf" kind="show" id="gf6-9y-YL6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy5-v3-xTr">
+                                <rect key="frame" x="68" y="493" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="BAm-Qj-CXT"/>
+                                    <constraint firstAttribute="height" constant="70" id="y8P-Dt-Z9B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="ACT 4" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoActFour:" destination="v6b-zB-War" eventType="touchUpInside" id="v7C-wn-w9W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41960784313725491" green="0.63529411764705879" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.35895008309999998" green="0.86815326479999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="aK6-eg-6hr" firstAttribute="top" secondItem="vO2-Gv-udr" secondAttribute="bottom" constant="80" id="1no-Gc-NUw"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="0LX-Lv-DvP" secondAttribute="trailing" constant="69" id="2On-zO-Ga7"/>
+                            <constraint firstItem="vO2-Gv-udr" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="16" id="5SX-Ld-E3R"/>
+                            <constraint firstItem="EDg-Wb-Mx3" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="H8x-KX-o9A"/>
+                            <constraint firstItem="jy5-v3-xTr" firstAttribute="top" secondItem="EDg-Wb-Mx3" secondAttribute="bottom" constant="20" id="JSf-DV-O2y"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="Azs-Ga-LR6" secondAttribute="trailing" constant="69" id="RUU-bV-yiR"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="aK6-eg-6hr" secondAttribute="trailing" constant="69" id="Rvv-KM-kAc"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="vO2-Gv-udr" secondAttribute="trailing" constant="16" id="Rzz-fU-S2N"/>
+                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="top" secondItem="jy5-v3-xTr" secondAttribute="bottom" constant="20" id="bRa-5d-AYn"/>
+                            <constraint firstItem="vO2-Gv-udr" firstAttribute="top" secondItem="Jjw-b9-kHj" secondAttribute="top" constant="50" id="cYU-ef-Ge6"/>
+                            <constraint firstItem="0LX-Lv-DvP" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="cem-Ij-7Mh"/>
+                            <constraint firstItem="jy5-v3-xTr" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="fWF-10-vkg"/>
+                            <constraint firstItem="Azs-Ga-LR6" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="nG9-eM-ImK"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="EDg-Wb-Mx3" secondAttribute="trailing" constant="69" id="qUQ-jG-BZn"/>
+                            <constraint firstItem="aK6-eg-6hr" firstAttribute="leading" secondItem="Jjw-b9-kHj" secondAttribute="leading" constant="68" id="tfD-3z-PZr"/>
+                            <constraint firstItem="Jjw-b9-kHj" firstAttribute="trailing" secondItem="jy5-v3-xTr" secondAttribute="trailing" constant="69" id="vxp-wg-3nE"/>
+                            <constraint firstItem="EDg-Wb-Mx3" firstAttribute="top" secondItem="Azs-Ga-LR6" secondAttribute="bottom" constant="20" id="wyD-Ap-dyi"/>
+                            <constraint firstItem="Azs-Ga-LR6" firstAttribute="top" secondItem="aK6-eg-6hr" secondAttribute="bottom" constant="20" id="zeF-Gu-TVD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jjw-b9-kHj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQh-Ig-SkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="742"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -60,13 +178,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuJane" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-n1-OdX">
-                                <rect key="frame" x="111" y="575" width="153" height="259"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
-                                <rect key="frame" x="68" y="414" width="238" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Oe-2qL">
+                                <rect key="frame" x="68" y="403" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="h9D-3Y-gFw"/>
+                                    <constraint firstAttribute="height" constant="70" id="yhG-y0-ToS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
                                 <state key="normal" title="SETTINGS" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,28 +192,12 @@
                                     <segue destination="dbC-Ig-msh" kind="show" id="Zh4-po-NVo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" bystander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-Zw-FbR">
-                                <rect key="frame" x="53" y="122" width="269" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-0G-x7G">
+                                <rect key="frame" x="68" y="223" width="238" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="hv6-Yb-zxH"/>
+                                    <constraint firstAttribute="width" constant="238" id="Q2W-YW-C8r"/>
+                                    <constraint firstAttribute="height" constant="70" id="fhU-4t-TiK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq3-QQ-8Dr">
-                                <rect key="frame" x="149" y="715" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CONTINUE">
-                                    <color key="titleColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="continueGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="ntu-iS-Oow"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDV-0G-x7G">
-                                <rect key="frame" x="68" y="336" width="238" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
                                 <state key="normal" title="NEW GAME" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,12 +206,64 @@
                                     <action selector="startGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="0yg-FJ-ui2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq3-QQ-8Dr">
+                                <rect key="frame" x="298" y="646" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueGame:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="ntu-iS-Oow"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuJane" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-n1-OdX">
+                                <rect key="frame" x="111" y="573" width="153" height="259"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="VmK-Cr-EXU"/>
+                                    <constraint firstAttribute="height" constant="259" id="lIE-iB-vpm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" bystander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-Zw-FbR">
+                                <rect key="frame" x="16" y="94" width="343" height="49"/>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="50"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-EO-Od8">
+                                <rect key="frame" x="68" y="313" width="238" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="1gg-bF-rTN"/>
+                                    <constraint firstAttribute="height" constant="70" id="Ga2-Z2-wH0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
+                                <state key="normal" title="CONTINUE" backgroundImage="paper">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoContinue:" destination="z0p-Rs-2Lf" eventType="touchUpInside" id="bMg-DH-Pot"/>
+                                    <segue destination="L0A-8j-GUI" kind="show" id="1ID-lI-1nv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35686274509803922" green="0.63529411764705879" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.35895008309999998" green="0.86815326479999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Jeo-Zw-FbR" firstAttribute="top" secondItem="O1n-3U-s75" secondAttribute="top" constant="50" id="Fng-o7-51A"/>
+                            <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="2OQ-EO-Od8" secondAttribute="trailing" constant="69" id="I3O-e5-j3r"/>
+                            <constraint firstItem="nWw-n1-OdX" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="111" id="Ivz-fj-zal"/>
+                            <constraint firstItem="2OQ-EO-Od8" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="68" id="JQZ-u4-LOg"/>
+                            <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="Jeo-Zw-FbR" secondAttribute="trailing" constant="16" id="KC8-sD-uUM"/>
+                            <constraint firstItem="Jeo-Zw-FbR" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="16" id="Pyb-g4-Dx3"/>
+                            <constraint firstItem="2OQ-EO-Od8" firstAttribute="top" secondItem="VDV-0G-x7G" secondAttribute="bottom" constant="20" id="XAm-ZY-VIW"/>
+                            <constraint firstItem="fSB-Oe-2qL" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="68" id="XcG-Lx-seg"/>
+                            <constraint firstItem="Jeo-Zw-FbR" firstAttribute="centerX" secondItem="pX9-Cr-jeY" secondAttribute="centerX" id="a7v-DZ-2sv"/>
+                            <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="VDV-0G-x7G" secondAttribute="trailing" constant="69" id="ayt-Ak-dar"/>
+                            <constraint firstItem="VDV-0G-x7G" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="68" id="cCY-vf-Uej"/>
+                            <constraint firstItem="fSB-Oe-2qL" firstAttribute="top" secondItem="2OQ-EO-Od8" secondAttribute="bottom" constant="20" id="grW-PV-kHR"/>
+                            <constraint firstItem="VDV-0G-x7G" firstAttribute="top" secondItem="Jeo-Zw-FbR" secondAttribute="bottom" constant="80" id="hRk-NG-qp7"/>
+                            <constraint firstItem="nWw-n1-OdX" firstAttribute="top" secondItem="fSB-Oe-2qL" secondAttribute="bottom" constant="100" id="koq-hD-6g3"/>
                             <constraint firstItem="Jeo-Zw-FbR" firstAttribute="centerX" secondItem="pX9-Cr-jeY" secondAttribute="centerX" id="l7S-r3-Nvq"/>
-                            <constraint firstItem="Jeo-Zw-FbR" firstAttribute="top" secondItem="O1n-3U-s75" secondAttribute="top" constant="78" id="ydE-9o-6U2"/>
+                            <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="fSB-Oe-2qL" secondAttribute="trailing" constant="69" id="o7c-zl-Ud0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1n-3U-s75"/>
                     </view>
@@ -142,4 +295,7 @@
         <image name="menuJane" width="374" height="679"/>
         <image name="paper" width="3101" height="1030"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gf6-9y-YL6"/>
+    </inferredMetricsTieBreakers>
 </document>

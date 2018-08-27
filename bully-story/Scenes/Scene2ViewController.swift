@@ -18,7 +18,7 @@ class Scene2ViewController: DialogViewController {
                 .playSFX(filename: "Scene1Bell", delay: 0.0),
                 .playBGM(filename: "Scene2BGMusic"),
                 .setBackgroundImage(imageName : "halaman"),
-                .presentNarration(text: "School is finally over. Jessica came up to her to ask her to play with her gang. "),
+                .presentNarration(text: "School is finally over. I see Jessica came up to Jane to ask her to play with her gang. "),
                 
                 ],
             [
@@ -28,7 +28,7 @@ class Scene2ViewController: DialogViewController {
                     characterNamePosition: .right,
                     characterImage: "Jessica_Smile",
                     characterImagePosition: .right,
-                    dialogText: "Hi Jane, I'm Jessica! Come join us for lunch! We can talk more to get to know each other"
+                    dialogText: "Hi Jane, I'm Jessica! Come join us for lunch! We can talk more to get to know each other."
                 ),
                 .setBackgroundImage(imageName: "halaman"),
                 ],
@@ -82,7 +82,11 @@ class Scene2ViewController: DialogViewController {
                 ],
             [
                 .playBGM(filename: "Scene2Narration(intense)"),
-                .presentNarration(text: "Jessica looks pissed because no one ever says no to her. All girls want to befriend with her because of her popularity."),
+                .presentNarration(text: "I can see from the look on Jessica's face that she is pissed because no one ever says no to her."),
+                
+                ],
+            [
+                .presentNarration(text: "All girls want to befriend with her because of her popularity."),
                 
                 ],
             [
@@ -95,7 +99,7 @@ class Scene2ViewController: DialogViewController {
                     ),
                     .setBackgroundImage(imageName: "halaman"),
                     ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene3ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 2", subtitle: "The Beginning", time: "Morning", quote: "\"Stand Up and Speak Out!\"", transitionTo: Scene3ViewController()))],
             
             
             ])

@@ -18,12 +18,7 @@ class Scene7Choice2ViewController: DialogViewController {
             
             [
                 .setBackgroundImage(imageName: "classroom"),
-                .presentNarration(text: "You chose to ignore Jane."),
-                .playBGM(filename: "WrongChoiceBGM")
-                
-                ],
-            [
-               
+                .playBGM(filename: "WrongChoiceBGM"),
                 .presentDialog(
                     characterName: "Jane",
                     characterNamePosition: .left,
@@ -54,7 +49,30 @@ class Scene7Choice2ViewController: DialogViewController {
                 ),
                 
                 ],
-     [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Noon", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
+            [
+                .playSFX(filename: "Scene7SFXSigh", delay: 0.0),
+                .presentDialog(
+                    characterName: "Jane",
+                    characterNamePosition: .left,
+                    characterImage: "Jane_Cry",
+                    characterImagePosition: .left,
+                    dialogText: "Alright then... I'm sorry madam..."
+                ),
+                ],
+            [
+                .playSFX(filename: "Scene7SFXLaugh3", delay: 0.0),
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica",
+                    characterImagePosition: .right,
+                    dialogText: "Hahahaa! Gotcha again!"
+                ),
+                ],
+            
+            
+            
+     [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "", time: "Afternoon", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
             ]
         )
         

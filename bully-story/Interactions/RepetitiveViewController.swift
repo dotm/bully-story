@@ -107,7 +107,7 @@ class RepetitiveViewController: UIViewController {
 //
             
             self.dayCount.text = "Day \(self.currentDay)"
-            if self.currentDay < 100{
+            if self.currentDay < 99{
                 self.countStart()
             }
             else {
@@ -117,8 +117,12 @@ class RepetitiveViewController: UIViewController {
         }
     }
     
+    @IBAction func buttonClicked(_ sender: Any) {
+        self.present(Scene5bViewController(), animated: false, completion: nil)
+    }
     private func countStop() {
         timerObject?.invalidate()
+        
     }
 
     /*

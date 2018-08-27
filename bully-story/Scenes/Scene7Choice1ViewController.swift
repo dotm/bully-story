@@ -42,11 +42,21 @@ class Scene7Choice1ViewController: DialogViewController {
                     characterNamePosition: .left,
                     characterImage: "Jane_Smile3",
                     characterImagePosition: .left,
-                    dialogText: "Thank you for always helping me. Thank you so much #name!"
+                    dialogText: "Thank you for helping me. Thank you so much #name!"
                 ),
                 ],
             
-            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "Noon", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica_Angry",
+                    characterImagePosition: .right,
+                    dialogText: "Arrrgghh!"
+                ),
+                ],
+            
+            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "", time: "Morning", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()))],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)

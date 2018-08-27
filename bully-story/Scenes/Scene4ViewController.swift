@@ -20,9 +20,9 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName : "school"),
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica_Smug",
-                    characterImagePosition: .left,
+                    characterImagePosition: .right,
                     dialogText: "Hi Jane! Do you want to go to the mall with us? I heard there’s lots of discount today!"
                 ),
                 
@@ -31,9 +31,9 @@ class Scene4ViewController: DialogViewController {
                 
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Sad3",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Ah.. that sounds so tempting. But i really should go home now.."
                 ),
                 ],
@@ -41,37 +41,35 @@ class Scene4ViewController: DialogViewController {
                 
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Sad2",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Otherwise my mom will get mad. Sorry again Jess."
                 ),
                 ],
             [
                 .presentDialog(
                     characterName: "Jessica",
-                    characterNamePosition: .left,
+                    characterNamePosition: .right,
                     characterImage: "Jessica_Unamused",
-                    characterImagePosition: .left,
-                    dialogText: "Again? But yeah okay. Whatever. Your loss"
+                    characterImagePosition: .right,
+                    dialogText: "Again? But yeah okay. Whatever. Your loss."
                 ),
                 .setBackgroundImage(imageName: "school"),
                 ],
             [
                 .presentDialog(
                     characterName: "Jane",
-                    characterNamePosition: .right,
+                    characterNamePosition: .left,
                     characterImage: "Jane_Sad2",
-                    characterImagePosition: .right,
+                    characterImagePosition: .left,
                     dialogText: "Sorry…"
                 ),
                 .setBackgroundImage(imageName: "school"),
                 ],
             
             [
-                
                 .presentNarration(text: "Before Jane can even finish her words, Jessica already left her. So Jane decided to go home too. Unexpectedly, Jessica turned around…"),
-                
                 ],
             [
                 .playSFX(filename: "Scene4SFXWhat", delay: 1.0),
@@ -86,7 +84,6 @@ class Scene4ViewController: DialogViewController {
                 .setBackgroundImage(imageName: "school"),
                 ],
             [
-                .playBGM(filename:"Scene4BGMusicAngry"),
                 .presentDialog(
                     characterName: "Jessica",
                     characterNamePosition: .right,
@@ -96,13 +93,18 @@ class Scene4ViewController: DialogViewController {
                 ),
                 .setBackgroundImage(imageName: "school"),
                 ],
-           
+            [
+                .presentDialog(
+                    characterName: "Jessica",
+                    characterNamePosition: .right,
+                    characterImage: "Jessica_Angry",
+                    characterImagePosition: .right,
+                    dialogText: "I’m gonna make her to pay for this."
+                ),
+                .setBackgroundImage(imageName: "school"),
+                ],
             
-            
-            
-    [.goToNextScene(viewController: Scene5ViewController())],
-            
-            
+    [.goToNextScene(viewController: ActViewController(title: "Day 3", subtitle: "", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene5ViewController()))],
             ])
         
         let startEvent = events.goToStartEvent()

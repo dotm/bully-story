@@ -8,6 +8,8 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
+private var bgAudio : AVAudioPlayer!
 
 class FindItemViewController: UIViewController {
     
@@ -19,6 +21,23 @@ class FindItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let backgroundMusicData = NSDataAsset(name: "HangmanBGMusic")?.data else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. */
+            bgAudio = try AVAudioPlayer(data: backgroundMusicData, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        bgAudio.numberOfLoops = -1
+        bgAudio.play()
         
         //calculate position of lost item based on backgroundImage frame
             // x, y, width, height

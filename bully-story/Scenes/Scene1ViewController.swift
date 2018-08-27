@@ -19,7 +19,7 @@ class Scene1ViewController: DialogViewController {
                 .playBGM(filename: "Scene1BGMusic"),
                 .playSFX(filename: "Scene1Bell", delay: 2.0),
                 
-                .presentNarration(text: "(Bell Rang) Each students returned to their seat. The teacher came in and brought a girl with him. "),
+                .presentNarration(text: "(Bell Rang) First day of school today. I came to the class and pick any empty seat. After a while, the teacher came in and i saw a girl walking behind her. "),
                 ],
             [
                 .presentNarration(text: "Looks like it’s the new girl. She has a very pretty face and very charming."),
@@ -28,10 +28,10 @@ class Scene1ViewController: DialogViewController {
                     .presentNarration(text: "She also looks very excited with smile all over her face. All eyes are on her, especially the boys."),
                     ],
             [
-                .presentNarration(text: "She chose to sit beside you."),
+                .presentNarration(text: "She chose to sit beside me."),
                 ],
             [
-                        .playBGM(filename: "Scene1BGMusic2"),
+                        .playBGM(filename: "MusicScene1"),
                         .presentChoices(choices: (
                             title: "Jane sat beside you. What would you do?",
                             options: [
@@ -46,9 +46,7 @@ class Scene1ViewController: DialogViewController {
                                 ]
                         )),
             ],
-            [
-                .presentNarration(text: "Looks like it’s the new girl. She has a very pretty face and very charming."),
-                ],
+           
             
         ])
         let startEvent = events.goToStartEvent()
