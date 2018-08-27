@@ -277,7 +277,7 @@ class HangmanViewController: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
-        self.view.window!.layer.add(transition, forKey: nil)
+        self.view.window?.layer.add(transition, forKey: nil)
         self.dismiss(animated: true)
     }
     

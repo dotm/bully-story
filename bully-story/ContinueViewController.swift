@@ -56,6 +56,7 @@ class ContinueViewController: UIViewController {
     }
     
     @IBAction func gotoMainMenu(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwind", sender: nil)
     }
     
     /*

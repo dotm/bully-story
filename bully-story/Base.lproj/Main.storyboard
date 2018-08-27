@@ -19,7 +19,7 @@
         <scene sceneID="PZD-YI-CV6">
             <objects>
                 <viewController id="L0A-8j-GUI" customClass="ContinueViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v6b-zB-War" customClass="ContinueViewController">
+                    <view key="view" contentMode="scaleToFill" id="v6b-zB-War">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -115,7 +115,6 @@
                                 </state>
                                 <connections>
                                     <action selector="gotoMainMenu:" destination="L0A-8j-GUI" eventType="touchUpInside" id="xnz-qa-tbf"/>
-                                    <segue destination="z0p-Rs-2Lf" kind="show" id="gf6-9y-YL6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,10 +146,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjw-b9-kHj"/>
                     </view>
+                    <connections>
+                        <segue destination="hzQ-WL-4ce" kind="unwind" identifier="unwind" unwindAction="unwindToMain:" id="PXH-RO-9zv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQh-Ig-SkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hzQ-WL-4ce" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="764" y="838"/>
+            <point key="canvasLocation" x="1674" y="37"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
@@ -350,7 +353,4 @@
         <image name="menuJane" width="374" height="679"/>
         <image name="paper" width="3101" height="1030"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="CfQ-tw-L7G"/>
-    </inferredMetricsTieBreakers>
 </document>

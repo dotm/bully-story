@@ -62,7 +62,7 @@ class ActViewController: UIViewController {
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             transition.type = kCATransitionFade
             transition.subtype = kCATransitionFromTop
-            self.view.window!.layer.add(transition, forKey: nil)
+            self.view.window?.layer.add(transition, forKey: nil)
             self.present(self.destinationVC, animated: false, completion: nil)
         }
     }

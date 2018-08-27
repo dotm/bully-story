@@ -41,7 +41,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
 //        self.present(FindItemViewController(nextDialogVC: Scene7Choice1ViewController()), animated: true, completion: nil)
 //        self.present(HangmanViewController(), animated: true, completion: nil)
 //        self.present(Scene1ViewController(), animated: true, completion: nil)
-        self.present(Scene1ViewController(), animated: true, completion: nil)
+//        self.present(Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {
@@ -62,7 +62,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         transition.type = kCATransitionFade
         transition.subtype = kCATransitionFromTop
-        self.view.window!.layer.add(transition, forKey: nil)
+        self.view.window?.layer.add(transition, forKey: nil)
         
         self.present(playerController, animated: false, completion: nil)
         
@@ -82,6 +82,11 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
     }
     @IBAction func gotoContinue(_ sender: UIButton) {
         bgAudio.stop()
+    }
+    
+    @IBAction func unwindToMain(_ sender: UIStoryboardSegue) {
+//        let sourceViewController = sender.sourceViewController
+//        // Use data from the view controller which initiated the unwind segue
     }
     
 //    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

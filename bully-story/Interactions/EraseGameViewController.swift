@@ -124,16 +124,9 @@ class EraseGameViewController: UIViewController {
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
             transition.type = kCATransitionPush
             transition.subtype = kCATransitionFromRight
-            self.view.window!.layer.add(transition, forKey: nil)
+            self.view.window?.layer.add(transition, forKey: nil)
             self.present(self.nextDialogVC!, animated: false, completion: nil)
             
-//            let transition: CATransition = CATransition()
-//            transition.duration = 1
-//            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-//            transition.type = kCATransitionPush
-//            transition.subtype = kCATransitionFromRight
-//            self.view.window!.layer.add(transition, forKey: nil)
-//            self.dismiss(animated: true)
         }
     }
 }
