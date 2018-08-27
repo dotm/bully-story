@@ -13,18 +13,12 @@ class Scene5ViewController: DialogViewController {
         super.viewDidLoad()
         
         events = Events(events: [
-            [
-                .presentDialog(
-                    characterName: "Jessica",
-                    characterNamePosition: .right,
-                    characterImage: "Jessica_Angry",
-                    characterImagePosition: .right,
-                    dialogText: "I’m gonna make her to pay for this."
-                ),
-                .setBackgroundImage(imageName: "school"),
-                ],
+            
+            
+             
             [
                 .presentNarration(text: "Since that day, I can see that Jessica has been making Jane as her target. She took her seat at canteen when Jane wants to sit down."),
+                .setBackgroundImage(imageName: "school"),
                 ],
             [
                 .presentNarration(text: "She pushes Jane around when Jane is walking through the corridor."),
@@ -37,7 +31,7 @@ class Scene5ViewController: DialogViewController {
                 ],
             
             
-            [.goToNextScene(viewController: Scene6ViewController())],
+            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "", time: "Morning", quote: "\"You have a voice\"", transitionTo: Scene6ViewController()))],
 //            [.goToNextScene(viewController: Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()))],
         ])
         let startEvent = events.goToStartEvent()
