@@ -20,6 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepetitiveViewController" customModule="bully_story" customModuleProvider="target">
             <connections>
                 <outlet property="dayCount" destination="6gs-XB-Hf2" id="cI2-Ig-YIM"/>
+                <outlet property="janeImage" destination="X8O-0Q-bTO" id="BR6-WZ-00O"/>
                 <outlet property="nextButton" destination="tAF-a0-CY6" id="fWb-cm-d3f"/>
                 <outlet property="titleLabel" destination="LmJ-Pr-0Lx" id="xcs-bV-9cK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -52,6 +53,10 @@
                         <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="SMm-zu-K4b"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jane_black" translatesAutoresizingMaskIntoConstraints="NO" id="X8O-0Q-bTO">
+                    <rect key="frame" x="74" y="290" width="227" height="388"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" name="purple"/>
             <constraints>
@@ -66,10 +71,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tAF-a0-CY6" secondAttribute="trailing" constant="163" id="yST-Lc-Ee7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="33.5" y="53"/>
         </view>
     </objects>
     <resources>
+        <image name="Jane_black" width="1088" height="1880"/>
         <image name="interaksi_next" width="100" height="100"/>
         <namedColor name="purple">
             <color red="0.48600000143051147" green="0.56099998950958252" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

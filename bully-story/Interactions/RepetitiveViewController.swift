@@ -12,6 +12,7 @@ class RepetitiveViewController: UIViewController {
     @IBOutlet weak var dayCount: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var janeImage: UIImageView!
     private var timerObject: Timer?
     var currentDay = 4
     var timerTime = 1.5
@@ -101,17 +102,47 @@ class RepetitiveViewController: UIViewController {
             imageView.transform = imageView.transform.rotated(by: CGFloat(randomNum))
             imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
             imageView.contentMode = UIViewContentMode.scaleAspectFill
-            
-            
-            
-//
+    
             
             self.dayCount.text = "Day \(self.currentDay)"
             if self.currentDay < 99{
                 self.countStart()
             }
             else {
-                self.nextButton.isHidden = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                   
+                    let image = UIImage(named: "Jane_black")
+                    let imageView = UIImageView(image: image!)
+                    self.view.addSubview(imageView)
+                    imageView.translatesAutoresizingMaskIntoConstraints = false
+                    
+                    
+                    imageView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant : 120).isActive = true
+                    imageView.layoutIfNeeded()
+                    
+                    imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+                    imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+                    imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+                    
+                    
+                    imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
+                    imageView.contentMode = UIViewContentMode.scaleAspectFill
+                   
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        
+                    UIView.animate(withDuration: 2, animations: {
+                        imageView.transform = CGAffineTransform(scaleX: 1.9, y: 1.9)
+                    }, completion: { (true) in
+                        self.nextButton.superview?.bringSubview(toFront: self.nextButton)
+                        self.nextButton.isHidden = false
+                    })
+                    })
+                })
+                
+            
+                
+                
+                
                 self.countStop()
             }
         }

@@ -58,7 +58,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActOne:" destination="v6b-zB-War" eventType="touchUpInside" id="rp8-Nl-Rhh"/>
+                                    <action selector="gotoActOne:" destination="L0A-8j-GUI" eventType="touchUpInside" id="e2J-nT-J6o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-Ga-LR6">
@@ -72,7 +72,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActTwo:" destination="v6b-zB-War" eventType="touchUpInside" id="y9B-bh-GBA"/>
+                                    <action selector="gotoActTwo:" destination="L0A-8j-GUI" eventType="touchUpInside" id="Y7V-Bq-M21"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-Wb-Mx3">
@@ -88,7 +88,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActThree:" destination="v6b-zB-War" eventType="touchUpInside" id="SZa-ci-GiB"/>
+                                    <action selector="gotoActThree:" destination="L0A-8j-GUI" eventType="touchUpInside" id="Fp0-b6-77S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Lv-DvP">
@@ -102,6 +102,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="gotoMainMenu:" destination="L0A-8j-GUI" eventType="touchUpInside" id="xnz-qa-tbf"/>
                                     <segue destination="z0p-Rs-2Lf" kind="show" id="gf6-9y-YL6"/>
                                 </connections>
                             </button>
@@ -116,7 +117,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoActFour:" destination="v6b-zB-War" eventType="touchUpInside" id="v7C-wn-w9W"/>
+                                    <action selector="gotoActFour:" destination="L0A-8j-GUI" eventType="touchUpInside" id="ynp-Qc-0yR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQh-Ig-SkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="742"/>
+            <point key="canvasLocation" x="764" y="838"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8v-Kg-2kZ">

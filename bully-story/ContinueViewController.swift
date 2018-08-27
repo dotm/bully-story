@@ -10,10 +10,11 @@ import UIKit
 import AVKit
 
 class ContinueViewController: UIViewController {
+    
     var bgAudio : AVAudioPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -23,19 +24,23 @@ class ContinueViewController: UIViewController {
     }
     
     @IBAction func gotoActOne(_ sender: Any) {
-        
+        self.present(ActViewController(title: "Day 1", subtitle: "Introduction", time: "Day", quote: "\"Research indicates that persistent bullying can lead to suicidal behavior.\"", transitionTo: Scene6Choice2ViewController()), animated: false, completion: nil)
     }
     
     @IBAction func gotoActTwo(_ sender: Any) {
+        self.present(RepetitiveViewController(), animated: true, completion: nil)
     }
     
     @IBAction func gotoActThree(_ sender: Any) {
+        self.present(Scene1ViewController(), animated: true, completion: nil)
     }
     
     @IBAction func gotoActFour(_ sender: Any) {
+        self.present(Scene1ViewController(), animated: true, completion: nil)
     }
     
-   
+    @IBAction func gotoMainMenu(_ sender: Any) {
+    }
     
     /*
     // MARK: - Navigation
