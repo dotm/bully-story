@@ -38,7 +38,8 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         // Do any additional setup after loading the view.
         
 //        self.present(RepetitiveViewController(), animated: true, completion: nil)
-//////        self.present(FindItemViewController(), animated: true, completion: nil)
+        self.present(FindItemViewController(), animated: true, completion: nil)
+//        self.present(HangmanViewController(), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {
