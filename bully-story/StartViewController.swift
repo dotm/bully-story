@@ -40,6 +40,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
 //        self.present(RepetitiveViewController(), animated: true, completion: nil)
 //        self.present(FindItemViewController(nextDialogVC: Scene7Choice1ViewController()), animated: true, completion: nil)
 //        self.present(HangmanViewController(), animated: true, completion: nil)
+        self.present(Scene1ViewController(), animated: true, completion: nil)
     }
     
     @IBAction func startGame(_ sender: Any) {
@@ -73,7 +74,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
             transition.type = kCATransitionFade
             transition.subtype = kCATransitionFromTop
             playerController.view.window!.layer.add(transition, forKey: nil)
-           playerController.present(ActViewController(title: "Day 1", subtitle: "Introduction", time: "", quote: "\"Research indicates that persistent bullying can lead to suicidal behavior.\"", transitionTo: Scene6Choice2ViewController()), animated: false, completion: nil)
+           playerController.present(ActViewController(title: "Day 1", subtitle: "Introduction", time: "", quote: "\"Research indicates that persistent bullying can lead to suicidal behavior.\"", transitionTo: Scene1ViewController()), animated: false, completion: nil)
             
         })
         

@@ -234,19 +234,21 @@ class FindItemViewController: UIViewController {
         progress = progress < 0 ? 0 : progress
         
         switch progress {
-        case 0 ..< 0.5 :
+        case 0 ..< 0.01:
+            janeImageView.alpha = 0
+        case 0.01 ..< 0.4 :
             janeImageView.alpha = progress*2 + 0.1
-        case 0.5 ..< 0.6:
+        case 0.4 ..< 0.5:
             janeImageView.alpha = 1
             janeImageView.image = UIImage(named: "Jane_Sad2")
-        case 0.5 ..< 0.6:
-            janeImageView.image = UIImage(named: "Jane_Sad3")
         case 0.6 ..< 0.7:
+            janeImageView.image = UIImage(named: "Jane_Sad3")
+        case 0.7 ..< 0.8:
             janeImageView.image = UIImage(named: "Jane_Shock")
-        case 0.7 ... 1:
+        case 0.8 ..< 1:
             janeImageView.image = UIImage(named: "Jane_Smile")
-            self.view.isUserInteractionEnabled = false
-            UIView.animate(withDuration: 3, delay: 0, options: .curveEaseInOut, animations: {
+        case 1:
+            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
                 book.center = self.janeImageView.center
             }) { (_) in
                 let transition = CATransition()
@@ -258,7 +260,7 @@ class FindItemViewController: UIViewController {
                 self.present(self.nextDialogVC!, animated: false)
             }
         default:
-            janeImageView.alpha = 0
+            break
         }
     }
     
