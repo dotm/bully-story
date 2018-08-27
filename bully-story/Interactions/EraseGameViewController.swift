@@ -108,26 +108,32 @@ class EraseGameViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        eraser.transform = .identity
-        if !swiped {
-            drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
-        }
-        UIGraphicsBeginImageContext(view.frame.size)
-        strokeImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: .clear, alpha: opacity)
-        UIGraphicsEndImageContext()
-        
-        guard let averageColor = strokeImageView.image?.averageColor else {return}
-        
-        if averageColor.isEqual(UIColor(red: 0, green: 0, blue: 0, alpha: 0)) {
-            let transition = CATransition()
-            transition.duration = 1
-            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-            transition.type = kCATransitionPush
-            transition.subtype = kCATransitionFromRight
-            self.view.window?.layer.add(transition, forKey: nil)
-            self.present(self.nextDialogVC!, animated: false, completion: nil)
+        if testBool {
+            testBool = false
+            eraser.transform = .identity
+            if !swiped {
+                drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
+            }
+            UIGraphicsBeginImageContext(view.frame.size)
+            strokeImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: .clear, alpha: opacity)
+            UIGraphicsEndImageContext()
             
+            guard let averageColor = strokeImageView.image?.averageColor else {return}
+            
+            if averageColor.isEqual(UIColor(red: 0, green: 0, blue: 0, alpha: 0)) {
+                let transition = CATransition()
+                transition.duration = 1
+                transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+                transition.type = kCATransitionPush
+                transition.subtype = kCATransitionFromRight
+                self.view.window?.layer.add(transition, forKey: nil)
+                self.present(self.nextDialogVC!, animated: false, completion: nil)
+    //            UIApplication.shared.keyWindow?.rootViewController?.present(self.nextDialogVC!, animated: false, completion: nil)
+                
+            }
         }
     }
+    
+    var testBool = true
 }
 
