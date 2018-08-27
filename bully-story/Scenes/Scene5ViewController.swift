@@ -17,17 +17,17 @@ class Scene5ViewController: DialogViewController {
             
              
             [
-                .presentNarration(text: "Since that day, I can see that Jessica has been making Jane as her target. She took her seat at canteen when Jane wants to sit down."),
+                .presentMonolog(text: "Since that day, I can see that Jessica has been making Jane as her target. She took her seat at canteen when Jane wants to sit down."),
                 .setBackgroundImage(imageName: "school"),
                 ],
             [
-                .presentNarration(text: "She pushes Jane around when Jane is walking through the corridor."),
+                .presentMonolog(text: "She pushes Jane around when Jane is walking through the corridor."),
                 ],
             [
-                .presentNarration(text: "I even heard that she ask other girls to not hang out with Jane."),
+                .presentMonolog(text: "I even heard that she ask other girls to not hang out with Jane."),
                 ],
             [
-                .presentNarration(text: "And one day....."),
+                .presentMonolog(text: "And one day....."),
                 ],
             
             
