@@ -56,7 +56,7 @@ class Scene7Choice1ViewController: DialogViewController {
                 ),
                 ],
             
-            [.goToNextScene(viewController: ActViewController(title: "Day 101", subtitle: "", time: "Morning", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 101", subtitle: "", time: "", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()))],
             ])
         let startEvent = events.goToStartEvent()
         executeEvent(startEvent)
