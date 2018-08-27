@@ -38,7 +38,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         // Do any additional setup after loading the view.
         
 //        self.present(RepetitiveViewController(), animated: true, completion: nil)
-        self.present(FindItemViewController(), animated: true, completion: nil)
+        self.present(FindItemViewController(nextDialogVC: Scene7Choice1ViewController()), animated: true, completion: nil)
 //        self.present(HangmanViewController(), animated: true, completion: nil)
     }
     

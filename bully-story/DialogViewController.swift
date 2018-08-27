@@ -362,7 +362,7 @@ class DialogViewController: UIViewController {
     }
     private func setupMonologTextView(text: String) {
         let text = createDialogText(text: text)
-        text.textAlignment = .center
+        text.textAlignment = .left
         text.layer.backgroundColor = UIColor(hex: "F8F9FF").cgColor
         text.layer.borderColor = UIColor(hex: "979797").cgColor
         text.font = UIFont(name: "PTSans-Italic", size: 22)
