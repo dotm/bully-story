@@ -57,6 +57,7 @@
 		8509F63D21281C9300362053 /* DialogAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8509F62521281C9300362053 /* DialogAudioPlayer.swift */; };
 		8509F64121281EFC00362053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9153B211C09300076AFFB /* Main.storyboard */; };
 		8509F64321281FEC00362053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509F64221281FEC00362053 /* Assets.xcassets */; };
+		85182C9D2134DE9C00F61688 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85182C9C2134DE9C00F61688 /* AboutUsViewController.swift */; };
 		853A51172129273C00388644 /* TypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A51162129273C00388644 /* TypeWriter.swift */; };
 		85B49B9F2132A1610092EFF9 /* FindItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B49B9E2132A1610092EFF9 /* FindItemImageView.swift */; };
 		85B49BA12132A16C0092EFF9 /* FindItemImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B49BA02132A16C0092EFF9 /* FindItemImageView.xib */; };
@@ -140,6 +141,7 @@
 		8509F62421281C9300362053 /* Scene2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 		8509F62521281C9300362053 /* DialogAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAudioPlayer.swift; sourceTree = "<group>"; };
 		8509F64221281FEC00362053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85182C9C2134DE9C00F61688 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		853A51162129273C00388644 /* TypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeWriter.swift; sourceTree = "<group>"; };
 		85B49B9E2132A1610092EFF9 /* FindItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemImageView.swift; sourceTree = "<group>"; };
 		85B49BA02132A16C0092EFF9 /* FindItemImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindItemImageView.xib; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				8509F62521281C9300362053 /* DialogAudioPlayer.swift */,
 				8509F61821281C9300362053 /* DialogViewController.swift */,
 				8509F61C21281C9300362053 /* StartViewController.swift */,
+				85182C9C2134DE9C00F61688 /* AboutUsViewController.swift */,
 				A3DD25832133190000DCE804 /* ContinueViewController.swift */,
 				8509F61A21281C9300362053 /* Events.swift */,
 				8509F60D21281C9300362053 /* Global.swift */,
@@ -441,6 +444,7 @@
 				263AF1F8212E7B44000384A3 /* Scene9GoodAViewController.swift in Sources */,
 				8509F62621281C9300362053 /* Global.swift in Sources */,
 				263AF1F4212E5AB7000384A3 /* Scene9GoodViewController.swift in Sources */,
+				85182C9D2134DE9C00F61688 /* AboutUsViewController.swift in Sources */,
 				37A91540211C09300076AFFB /* bully_story.xcdatamodeld in Sources */,
 				26969086212BC73900429A04 /* Scene8ViewController.swift in Sources */,
 				8509F63A21281C9300362053 /* Scene3ViewController.swift in Sources */,

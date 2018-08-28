@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="width" constant="238" id="jeo-M8-EHt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="ACT 1" backgroundImage="paper">
+                                <state key="normal" title="The Beginning" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -52,7 +52,7 @@
                                     <constraint firstAttribute="width" constant="238" id="niR-9k-s4s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="ACT 2" backgroundImage="paper">
+                                <state key="normal" title="The Target" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="pKe-Xe-MPg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="ACT 3" backgroundImage="paper">
+                                <state key="normal" title="The Struggle" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -82,7 +82,7 @@
                                     <constraint firstAttribute="height" constant="70" id="y8P-Dt-Z9B"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="ACT 4" backgroundImage="paper">
+                                <state key="normal" title="The Act" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -96,7 +96,7 @@
                                     <constraint firstAttribute="height" constant="70" id="X9k-dP-LMk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="22"/>
-                                <state key="normal" title="ACT 5" backgroundImage="paper">
+                                <state key="normal" title="The Courage" backgroundImage="paper">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -104,7 +104,7 @@
                                     <action selector="gotoActFour:" destination="L0A-8j-GUI" eventType="touchUpInside" id="cGI-cz-FfT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Lv-DvP">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Lv-DvP">
                                 <rect key="frame" x="68" y="673" width="238" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="wyV-Ip-Pzx"/>
@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="1674" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us View Controller-->
         <scene sceneID="h8v-Kg-2kZ">
             <objects>
-                <viewController id="dbC-Ig-msh" sceneMemberID="viewController">
+                <viewController id="dbC-Ig-msh" customClass="AboutUsViewController" customModule="bully_story" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hjs-WV-KbW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,10 +232,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BhM-Oy-jqR"/>
                     </view>
+                    <connections>
+                        <segue destination="q2M-DS-8iz" kind="unwind" identifier="unwind" unwindAction="unwindToMain:" id="S6Z-Ou-Ksf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2Z-2T-K98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="q2M-DS-8iz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-178.40000000000001" y="741.87192118226608"/>
+            <point key="canvasLocation" x="764" y="760"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="J3y-ST-L20">

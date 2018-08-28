@@ -52,6 +52,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         guard let path = Bundle.main.path(forResource: "video_prologue", ofType:"mp4") else { return }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         player.isMuted = true
+        player.volume = 0
         let playerController = AVPlayerViewController()
         playerController.player = player
         playerController.view.isUserInteractionEnabled = false

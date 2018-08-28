@@ -93,23 +93,25 @@ class EraseGameViewController: UIViewController {
             eraser.transform = .init(rotationAngle: CGFloat.pi / 5)
             swiped = false
             lastPoint = touch.location(in: self.view)
+            isEraserOn = true
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first {
-            eraser.center = touch.location(in: self.view)
-            let currentPoint = touch.location(in: self.view)
-            drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
-            
-            lastPoint = currentPoint
+            if isEraserOn {
+                eraser.center = touch.location(in: self.view)
+                let currentPoint = touch.location(in: self.view)
+                drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
+                lastPoint = currentPoint
+            }
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isEraserOn = false
         if testBool {
-            testBool = false
             eraser.transform = .identity
             if !swiped {
                 drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
@@ -121,6 +123,8 @@ class EraseGameViewController: UIViewController {
             guard let averageColor = strokeImageView.image?.averageColor else {return}
             
             if averageColor.isEqual(UIColor(red: 0, green: 0, blue: 0, alpha: 0)) {
+                testBool = false
+                
                 let transition = CATransition()
                 transition.duration = 1
                 transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -128,12 +132,12 @@ class EraseGameViewController: UIViewController {
                 transition.subtype = kCATransitionFromRight
                 self.view.window?.layer.add(transition, forKey: nil)
                 self.present(self.nextDialogVC!, animated: false, completion: nil)
-    //            UIApplication.shared.keyWindow?.rootViewController?.present(self.nextDialogVC!, animated: false, completion: nil)
                 
             }
         }
     }
     
-    var testBool = true
+    private var testBool = true
+    private var isEraserOn = false
 }
 
