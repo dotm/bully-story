@@ -68,7 +68,7 @@ class Scene8Choice1AViewController: DialogViewController {
                         characterNamePosition: .left,
                         characterImage: "",
                         characterImagePosition: .left,
-                        dialogText: "Jane has never done anything bad to you! So why are you doing this to her? Have you ever imagine what it's like to be in her position?"
+                        dialogText: "Jane has never done anything bad to you! So why are you doing this to her? "
                     ),
                     ],
                 [
