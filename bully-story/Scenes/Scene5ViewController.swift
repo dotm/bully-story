@@ -30,8 +30,8 @@ class Scene5ViewController: DialogViewController {
                 .presentMonolog(text: "And one day....."),
                 ],
             
-            
-            [.goToNextScene(viewController: Scene6ViewController())],
+            [.goToNextScene(viewController: ActViewController(title: "Day 4", subtitle: "The Act", time: "", quote: "\"Your silence are their weapon\"", transitionTo: Scene6ViewController()))],
+//            [.goToNextScene(viewController: Scene6ViewController())],
 //            [.goToNextScene(viewController: Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()))],
         ])
         let startEvent = events.goToStartEvent()

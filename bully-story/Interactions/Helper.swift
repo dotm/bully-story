@@ -37,9 +37,6 @@ struct Helper {
     
     func getPuzzleVC(nextDialogVC: DialogViewController) -> UIViewController {
         let puzzleVC = PuzzleViewController(nextDialogVC: nextDialogVC, assetCode: 3)
-//        let navVC = UINavigationController(rootViewController: puzzleVC)
-//        navVC.isNavigationBarHidden = true
-//        return navVC
         return puzzleVC
     }
     

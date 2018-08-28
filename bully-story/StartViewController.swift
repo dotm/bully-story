@@ -51,6 +51,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         guard let path = Bundle.main.path(forResource: "video_prologue", ofType:"mp4") else { return }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         player.isMuted = true
+        player.volume = 0
         let playerController = AVPlayerViewController()
         playerController.player = player
         playerController.view.isUserInteractionEnabled = false
@@ -61,7 +62,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         transition.type = kCATransitionFade
         transition.subtype = kCATransitionFromTop
-        self.view.window!.layer.add(transition, forKey: nil)
+        self.view.window?.layer.add(transition, forKey: nil)
         
         self.present(playerController, animated: false, completion: nil)
         
@@ -81,6 +82,11 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
     }
     @IBAction func gotoContinue(_ sender: UIButton) {
         bgAudio.stop()
+    }
+    
+    @IBAction func unwindToMain(_ sender: UIStoryboardSegue) {
+//        let sourceViewController = sender.sourceViewController
+//        // Use data from the view controller which initiated the unwind segue
     }
     
 //    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
