@@ -49,7 +49,7 @@ class ContinueViewController: UIViewController {
     
     @IBAction func gotoActFive(_ sender: Any) {
         loadGlobalData()
-        empathymeter += 3
+        empathymeter += 0
         print(empathymeter)
         self.present(ActViewController(title: "Day 101", subtitle: "The Finale", time: "", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()), animated: false, completion: nil)
     }

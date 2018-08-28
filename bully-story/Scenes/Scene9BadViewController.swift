@@ -17,7 +17,7 @@ class Scene9BadViewController: DialogViewController {
         events = Events(events: [
             
             [
-                .setBackgroundImage(imageName: "classroom"),
+                .setBackgroundImage(imageName: "black"),
                 .presentDialog(
                     characterName: "Teacher",
                     characterNamePosition: .left,
@@ -119,6 +119,10 @@ class Scene9BadViewController: DialogViewController {
             [
                 .presentMonolog(text: "And she's been living with her regrets ever since...."),
                 ],
+            [
+            .presentNarration(text: "You failed to save Jane from her misery of living under Jessica’s bully. Which results in Jane taking her own life…") ],
+            [
+            .presentNarration(text: "You should have took the small actions when you see someone like Jane is being bullied! Take action when you see bullying happens next time! You could be saving someone else’s life!") ],
             ]
         )
         
