@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -278,10 +279,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuJane" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-n1-OdX">
-                                <rect key="frame" x="111" y="573" width="153" height="259"/>
+                                <rect key="frame" x="111" y="571" width="153" height="259"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="VmK-Cr-EXU"/>
-                                    <constraint firstAttribute="height" constant="259" id="lIE-iB-vpm"/>
+                                    <constraint firstAttribute="height" constant="259" id="hhe-nN-vWu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" bystander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-Zw-FbR">
@@ -309,20 +309,22 @@
                         <color key="backgroundColor" red="0.35686274509803922" green="0.63529411764705879" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.35895008309999998" green="0.86815326479999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="nWw-n1-OdX" firstAttribute="width" secondItem="pX9-Cr-jeY" secondAttribute="height" multiplier="153:812" id="6La-AY-CPq"/>
                             <constraint firstItem="Jeo-Zw-FbR" firstAttribute="top" secondItem="O1n-3U-s75" secondAttribute="top" constant="50" id="Fng-o7-51A"/>
                             <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="2OQ-EO-Od8" secondAttribute="trailing" constant="69" id="I3O-e5-j3r"/>
-                            <constraint firstItem="nWw-n1-OdX" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="111" id="Ivz-fj-zal"/>
                             <constraint firstItem="2OQ-EO-Od8" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="68" id="JQZ-u4-LOg"/>
                             <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="Jeo-Zw-FbR" secondAttribute="trailing" constant="16" id="KC8-sD-uUM"/>
                             <constraint firstItem="Jeo-Zw-FbR" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="16" id="Pyb-g4-Dx3"/>
                             <constraint firstItem="2OQ-EO-Od8" firstAttribute="top" secondItem="VDV-0G-x7G" secondAttribute="bottom" constant="20" id="XAm-ZY-VIW"/>
+                            <constraint firstItem="nWw-n1-OdX" firstAttribute="top" secondItem="fSB-Oe-2qL" secondAttribute="bottom" constant="98" id="XXq-ff-Qwa"/>
                             <constraint firstItem="fSB-Oe-2qL" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="68" id="XcG-Lx-seg"/>
+                            <constraint firstAttribute="bottom" secondItem="nWw-n1-OdX" secondAttribute="bottom" constant="-18" id="Y5b-td-m37"/>
                             <constraint firstItem="Jeo-Zw-FbR" firstAttribute="centerX" secondItem="pX9-Cr-jeY" secondAttribute="centerX" id="a7v-DZ-2sv"/>
                             <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="VDV-0G-x7G" secondAttribute="trailing" constant="69" id="ayt-Ak-dar"/>
                             <constraint firstItem="VDV-0G-x7G" firstAttribute="leading" secondItem="O1n-3U-s75" secondAttribute="leading" constant="68" id="cCY-vf-Uej"/>
                             <constraint firstItem="fSB-Oe-2qL" firstAttribute="top" secondItem="2OQ-EO-Od8" secondAttribute="bottom" constant="20" id="grW-PV-kHR"/>
                             <constraint firstItem="VDV-0G-x7G" firstAttribute="top" secondItem="Jeo-Zw-FbR" secondAttribute="bottom" constant="80" id="hRk-NG-qp7"/>
-                            <constraint firstItem="nWw-n1-OdX" firstAttribute="top" secondItem="fSB-Oe-2qL" secondAttribute="bottom" constant="100" id="koq-hD-6g3"/>
+                            <constraint firstItem="nWw-n1-OdX" firstAttribute="centerX" secondItem="O1n-3U-s75" secondAttribute="centerX" id="i9Z-nM-3ji"/>
                             <constraint firstItem="Jeo-Zw-FbR" firstAttribute="centerX" secondItem="pX9-Cr-jeY" secondAttribute="centerX" id="l7S-r3-Nvq"/>
                             <constraint firstItem="O1n-3U-s75" firstAttribute="trailing" secondItem="fSB-Oe-2qL" secondAttribute="trailing" constant="69" id="o7c-zl-Ud0"/>
                         </constraints>
