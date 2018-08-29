@@ -51,7 +51,7 @@ class ContinueViewController: UIViewController {
         loadGlobalData()
         empathymeter += 0
         print(empathymeter)
-        self.present(ActViewController(title: "Day 101", subtitle: "The Finale", time: "", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()), animated: false, completion: nil)
+        self.present(ActViewController(title: "Day 101", subtitle: "The Courage", time: "", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()), animated: false, completion: nil)
     }
     
     @IBAction func gotoMainMenu(_ sender: Any) {
@@ -73,7 +73,8 @@ class ContinueViewController: UIViewController {
         self.view.addSubview(button)
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -35).isActive = true
+//        button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -35).isActive = true
+        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
         //        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -100).isActive = true
         button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         button.widthAnchor.constraint(equalToConstant: 50).isActive = true

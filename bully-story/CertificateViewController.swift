@@ -20,6 +20,7 @@ class CertificateViewController: UIViewController {
         setupImageView()
         
         setupSaveButton()
+        setupHomeButton()
     }
     private func setupImageView(){
         let imageView = UIImageView()
@@ -60,21 +61,37 @@ class CertificateViewController: UIViewController {
         UIImageWriteToSavedPhotosAlbum(self.certificateImage!, nil, nil, nil)
         UIApplication.shared.open(URL(string:"photos-redirect://")!, options: [:], completionHandler: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @objc func gotoMainMenu(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homePage = storyboard.instantiateViewController(withIdentifier: "home") as! UINavigationController
+        DialogAudioPlayer.stopBackgroundMusic()
+        DialogAudioPlayer.stopSoundEffect()
+        self.present(homePage, animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    private func setupHomeButton(){
+        let button = UIButton()
+        button.layer.zPosition = 20
+        button.backgroundColor = UIColor(named:"purple-light")
+        //        button.titleEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
+        button.layer.cornerRadius = CGFloat(10)
+        //        button.setTitle("Home", for: .normal)
+        let img = Helper().resizeImage(image: UIImage(named: "home")!, targetSize: CGSize(width: 15, height: 15)).withRenderingMode(.alwaysTemplate)
+        button.setImage(img, for: .normal)
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(gotoMainMenu(_:)), for: .touchUpInside)
+        self.view.addSubview(button)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -35).isActive = true
+        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        //        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -100).isActive = true
+        button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
-    */
 
 }

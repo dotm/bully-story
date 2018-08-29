@@ -72,7 +72,9 @@ class Scene7Choice2ViewController: DialogViewController {
             
             
             
-     [.goToNextScene(viewController: ActViewController(title: "Day 101", subtitle: "", time: "", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
+//     [.goToNextScene(viewController: ActViewController(title: "Day 101", subtitle: "", time: "", quote: "\"Your silence are their weapon\"", transitionTo: Scene8ViewController()))],
+     
+     [.goToNextScene(viewController: ActViewController(title: "Day 101", subtitle: "The Courage", time: "", quote: "\"Courage is fire, and bullying is smoke.\"", transitionTo: Scene8ViewController()))],
             ]
         )
         
