@@ -41,6 +41,7 @@ class StartViewController: UIViewController, UINavigationControllerDelegate {
 //        self.present(FindItemViewController(nextDialogVC: Scene7Choice1ViewController()), animated: true, completion: nil)
 //        self.present(HangmanViewController(), animated: true, completion: nil)
 //        self.present(Scene1ViewController(), animated: true, completion: nil)
+        self.present(Helper().getPuzzleVC(nextDialogVC: Scene5bViewController()), animated: true)
     }
     
     @IBAction func startGame(_ sender: Any) {
