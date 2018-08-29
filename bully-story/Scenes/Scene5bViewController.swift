@@ -41,7 +41,7 @@ class Scene5bViewController: DialogViewController {
                     dialogText: "I don't see the point of me living if it's always gonna be like this...."
                 ),
                 ],
-            [.goToNextScene(viewController: ActViewController(title: "Day 100", subtitle: "The Act", time: "Morning", quote: "\"Your silence are their weapon\"", transitionTo: Scene7ViewController()))],
+            [.goToNextScene(viewController: ActViewController(title: "Day 100", subtitle: "The Act", time: "", quote: "\"Your silence are their weapon\"", transitionTo: Scene7ViewController()))],
         ])
         let startEvent = events.goToStartEvent()
         
