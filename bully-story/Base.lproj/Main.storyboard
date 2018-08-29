@@ -176,51 +176,71 @@
                                     <constraint firstAttribute="height" constant="212" id="4Yy-Eb-QOy"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cifran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-us-0sl">
-                                <rect key="frame" x="238" y="422" width="121" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rayo Roderik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-us-0sl">
+                                <rect key="frame" x="142" y="456" width="217" height="20"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rayo Roderik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-9Y-baC">
-                                <rect key="frame" x="34" y="435" width="119" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vanessa Wijaya" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-9Y-baC">
+                                <rect key="frame" x="34" y="466.33333333333331" width="139.66666666666666" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omM-5X-4N6">
-                                <rect key="frame" x="117.66666666666667" y="478.33333333333331" width="139.66666666666663" height="39.999999999999943"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cifran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omM-5X-4N6">
+                                <rect key="frame" x="153" y="498.66666666666669" width="69" height="19.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="omM-5X-4N6" secondAttribute="height" multiplier="139:40" id="4yO-cU-hZj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felita Tangono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-RG-Xso">
                                 <rect key="frame" x="29" y="534" width="131.33333333333334" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoshua Elmaryono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-nY-JuA">
                                 <rect key="frame" x="195" y="573.66666666666663" width="165" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE CARE ABOUT BULLYING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9T-8F-ckG">
                                 <rect key="frame" x="5" y="633.33333333333337" width="365" height="59"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND YOU SHOULD TOO!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FQ-NV-Pe2">
                                 <rect key="frame" x="28.333333333333343" y="722.33333333333337" width="318.66666666666663" height="29.666666666666629"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="40"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.41176470588235292" green="0.62352941176470589" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,13 +252,17 @@
                             <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="jnI-F4-bB5" secondAttribute="trailing" constant="16" id="9Ba-G1-JN6"/>
                             <constraint firstItem="GWt-zK-Srg" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="16" id="9Gp-Nh-hom"/>
                             <constraint firstItem="k9T-8F-ckG" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="5" id="Bi5-C0-ZPZ"/>
+                            <constraint firstItem="omM-5X-4N6" firstAttribute="top" secondItem="Edl-9Y-baC" secondAttribute="bottom" constant="13" id="EJk-93-t3q"/>
                             <constraint firstItem="jnI-F4-bB5" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="16" id="EKd-9S-M1u"/>
                             <constraint firstItem="jnI-F4-bB5" firstAttribute="centerX" secondItem="BhM-Oy-jqR" secondAttribute="centerX" id="ERG-LD-b1b"/>
                             <constraint firstAttribute="trailing" secondItem="k9T-8F-ckG" secondAttribute="trailing" constant="5" id="GCa-oE-G84"/>
+                            <constraint firstItem="vGm-us-0sl" firstAttribute="leading" secondItem="Edl-9Y-baC" secondAttribute="trailing" constant="64.333333333333343" id="GSa-ba-Lmd"/>
+                            <constraint firstItem="omM-5X-4N6" firstAttribute="top" secondItem="vGm-us-0sl" secondAttribute="bottom" constant="23.329999999999998" id="HB5-fR-DWc"/>
                             <constraint firstItem="vGm-us-0sl" firstAttribute="leading" secondItem="jnI-F4-bB5" secondAttribute="trailing" constant="-121" id="I94-kW-Vqy"/>
                             <constraint firstAttribute="bottom" secondItem="5FQ-NV-Pe2" secondAttribute="bottom" constant="60" id="Ial-oz-E48"/>
                             <constraint firstItem="jnI-F4-bB5" firstAttribute="top" secondItem="GWt-zK-Srg" secondAttribute="bottom" constant="19" id="J7g-kY-N9I"/>
                             <constraint firstItem="k9T-8F-ckG" firstAttribute="top" secondItem="qUx-nY-JuA" secondAttribute="bottom" constant="40" id="OYM-po-1Qh"/>
+                            <constraint firstItem="Edl-9Y-baC" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="34" id="VYE-oe-mHq"/>
                             <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="GWt-zK-Srg" secondAttribute="trailing" constant="16" id="Yaw-ne-WoN"/>
                             <constraint firstItem="qUx-nY-JuA" firstAttribute="top" secondItem="kRw-RG-Xso" secondAttribute="bottom" constant="20" id="Z52-UN-teV"/>
                             <constraint firstItem="kRw-RG-Xso" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="29" id="emE-5z-qat"/>
@@ -258,7 +282,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2Z-2T-K98" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="q2M-DS-8iz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="764" y="760"/>
+            <point key="canvasLocation" x="764" y="759.60591133004925"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="J3y-ST-L20">
