@@ -170,13 +170,14 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gambarteam" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-F4-bB5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gambarteam" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-F4-bB5">
                                 <rect key="frame" x="16" y="211" width="343" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="4Yy-Eb-QOy"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cifran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-us-0sl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cifran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-us-0sl">
                                 <rect key="frame" x="238" y="422" width="121" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -188,37 +189,35 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omM-5X-4N6">
-                                <rect key="frame" x="135" y="483" width="140" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vanessa Wijaya" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omM-5X-4N6">
+                                <rect key="frame" x="117.66666666666667" y="478.33333333333331" width="139.66666666666663" height="39.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="omM-5X-4N6" secondAttribute="height" multiplier="139:40" id="4yO-cU-hZj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Felita Tangono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-RG-Xso">
-                                <rect key="frame" x="29" y="528" width="140" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felita Tangono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-RG-Xso">
+                                <rect key="frame" x="29" y="534" width="131.33333333333334" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yoshua Elmaryono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-nY-JuA">
-                                <rect key="frame" x="186" y="563" width="165" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoshua Elmaryono" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-nY-JuA">
+                                <rect key="frame" x="195" y="573.66666666666663" width="165" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WE CARE ABOUT BULLYING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9T-8F-ckG">
-                                <rect key="frame" x="65" y="628" width="241" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE CARE ABOUT BULLYING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9T-8F-ckG">
+                                <rect key="frame" x="5" y="633.33333333333337" width="365" height="59"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AND YOU SHOULD TOO!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FQ-NV-Pe2">
-                                <rect key="frame" x="34" y="688" width="319" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND YOU SHOULD TOO!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FQ-NV-Pe2">
+                                <rect key="frame" x="28.333333333333343" y="722.33333333333337" width="318.66666666666663" height="29.666666666666629"/>
                                 <fontDescription key="fontDescription" name="kindergarten" family="kindergarten" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -227,9 +226,28 @@
                         <color key="backgroundColor" red="0.41176470588235292" green="0.62352941176470589" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="kRw-RG-Xso" firstAttribute="top" secondItem="omM-5X-4N6" secondAttribute="bottom" constant="15.67" id="0A4-i2-DIi"/>
+                            <constraint firstItem="jnI-F4-bB5" firstAttribute="trailing" secondItem="vGm-us-0sl" secondAttribute="trailing" id="34m-lH-7Wf"/>
+                            <constraint firstItem="5FQ-NV-Pe2" firstAttribute="top" secondItem="k9T-8F-ckG" secondAttribute="bottom" constant="30" id="3sr-oS-5uo"/>
+                            <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="jnI-F4-bB5" secondAttribute="trailing" constant="16" id="9Ba-G1-JN6"/>
                             <constraint firstItem="GWt-zK-Srg" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="16" id="9Gp-Nh-hom"/>
+                            <constraint firstItem="k9T-8F-ckG" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="5" id="Bi5-C0-ZPZ"/>
+                            <constraint firstItem="jnI-F4-bB5" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="16" id="EKd-9S-M1u"/>
+                            <constraint firstItem="jnI-F4-bB5" firstAttribute="centerX" secondItem="BhM-Oy-jqR" secondAttribute="centerX" id="ERG-LD-b1b"/>
+                            <constraint firstAttribute="trailing" secondItem="k9T-8F-ckG" secondAttribute="trailing" constant="5" id="GCa-oE-G84"/>
+                            <constraint firstItem="vGm-us-0sl" firstAttribute="leading" secondItem="jnI-F4-bB5" secondAttribute="trailing" constant="-121" id="I94-kW-Vqy"/>
+                            <constraint firstAttribute="bottom" secondItem="5FQ-NV-Pe2" secondAttribute="bottom" constant="60" id="Ial-oz-E48"/>
+                            <constraint firstItem="jnI-F4-bB5" firstAttribute="top" secondItem="GWt-zK-Srg" secondAttribute="bottom" constant="19" id="J7g-kY-N9I"/>
+                            <constraint firstItem="k9T-8F-ckG" firstAttribute="top" secondItem="qUx-nY-JuA" secondAttribute="bottom" constant="40" id="OYM-po-1Qh"/>
                             <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="GWt-zK-Srg" secondAttribute="trailing" constant="16" id="Yaw-ne-WoN"/>
+                            <constraint firstItem="qUx-nY-JuA" firstAttribute="top" secondItem="kRw-RG-Xso" secondAttribute="bottom" constant="20" id="Z52-UN-teV"/>
+                            <constraint firstItem="kRw-RG-Xso" firstAttribute="leading" secondItem="BhM-Oy-jqR" secondAttribute="leading" constant="29" id="emE-5z-qat"/>
+                            <constraint firstItem="BhM-Oy-jqR" firstAttribute="trailing" secondItem="qUx-nY-JuA" secondAttribute="trailing" constant="15" id="f9e-5O-Mlu"/>
+                            <constraint firstItem="omM-5X-4N6" firstAttribute="centerX" secondItem="hjs-WV-KbW" secondAttribute="centerX" id="ls0-4N-90n"/>
+                            <constraint firstItem="k9T-8F-ckG" firstAttribute="centerX" secondItem="hjs-WV-KbW" secondAttribute="centerX" id="p1M-Vd-fP1"/>
+                            <constraint firstItem="jnI-F4-bB5" firstAttribute="leading" secondItem="GWt-zK-Srg" secondAttribute="leading" id="uWb-W8-Gzq"/>
                             <constraint firstItem="GWt-zK-Srg" firstAttribute="top" secondItem="BhM-Oy-jqR" secondAttribute="top" constant="50" id="w3A-VC-c52"/>
+                            <constraint firstItem="5FQ-NV-Pe2" firstAttribute="centerX" secondItem="hjs-WV-KbW" secondAttribute="centerX" id="zDE-Ok-FUd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BhM-Oy-jqR"/>
                     </view>
